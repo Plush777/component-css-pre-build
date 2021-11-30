@@ -1,0 +1,162 @@
+@charset "utf-8";
+
+@font-face {
+  font-family: 'Noto Sans Light';
+  font-style: normal;
+  font-weight: 400;
+  src: url(./font/notoSans/eot/NotoSansKR-Light-Hestia.eot);
+  src: url(./font/notoSans/eot/NotoSansKR-Light-Hestia.eot?#iefix) format("embedded-opentype"), url(./font/notoSans/woff/NotoSansKR-Light-Hestia.woff) format("woff");
+}
+
+@font-face {
+  font-family: 'Noto Sans DemLight';
+  font-style: normal;
+  font-weight: 400;
+  src: url(./font/notoSans/eot/NotoSansKR-DemiLight-Hestia.eot);
+  src: url(./font/notoSans/eot/NotoSansKR-DemiLight-Hestia.eot?#iefix) format("embedded-opentype"), url(./font/notoSans/woff/NotoSansKR-DemiLight-Hestia.woff) format("woff");
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url(./font/notoSans/eot/NotoSansKR-Regular-Hestia.eot);
+  src: url(./font/notoSans/eot/NotoSansKR-Regular-Hestia.eot?#iefix) format("embedded-opentype"), url(./font/notoSans/woff/NotoSansKR-Regular-Hestia.woff) format("woff");
+}
+
+@font-face {
+  font-family: 'Noto Sans Medium';
+  font-style: normal;
+  font-weight: 400;
+  src: url(./font/notoSans/eot/NotoSansKR-Medium-Hestia.eot);
+  src: url(./font/notoSans/eot/NotoSansKR-Medium-Hestia.eot?#iefix) format("embedded-opentype"), url(./font/notoSans/woff/NotoSansKR-Medium-Hestia.woff) format("woff");
+}
+
+
+/* reset */
+html, body, div, span, object,h1, h2, h3, h4, h5, h6, p, blockquote, a, button, abbr, address, img, q,dl, dt, dd, ol, ul, li,fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td,article, aside, footer, header, section, summary{margin:0;padding:0;border:0;font:inherit;}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section{display: block;}/* HTML5 display-role reset for older browsers */
+body,html{width: 100%;height: 100%; margin: 0; padding: 0;}ol, ul{list-style: none;}
+table{border-collapse: collapse;border-spacing: 0;}
+img{border: none;}
+a{text-decoration: none;color: inherit;}
+address{font-style: normal;}
+button{display: inline-block;border: none;background-color: transparent;cursor: pointer;}
+input,button,a,select,option{font-family:inherit;font-size:inherit;}
+input[type="checkbox"]{border: none !important;}/* for lte IE10 */
+input[type="radio"]{border: none !important;}/* for lte IE10 */
+input[type="text"]::-ms-clear {display:none;}
+button:focus{outline:none;}
+caption,hr{display:none;}
+pre{word-break:break-all;white-space:pre-line;}
+li{list-style: none;}
+
+/* common */
+body,html{font-family:'Noto Sans DemLight', "맑은 고딕", "Malgun Gothic", Dotum, sans-serif;font-size:13px;color: #333;letter-spacing:-0.045em !important;}
+.hidden{display:block;margin: 0;padding: 0;width: 0;height: 0;overflow: hidden;font-size: 0;line-height: 0;visibility: hidden;}
+
+#wrap{width: 100%; height: 100%;
+  &.main{position: relative; transition: .5s; background-color: #4e4e4e;
+    .logo a{display: block; width: 800px; height: 136px; transition: .5s ease-in-out;
+    background: url("../images/common/main-logo-g.png")no-repeat center;
+      &.change{background: url("../images/common/main-logo-w.png")no-repeat center;}
+    } 
+    .centerArea{position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); text-align: center;}
+    .btnStart{position: relative; display: inline-block; width: 170px; height: 56px; box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    background-color: rgba($color: #fff, $alpha: 0.5); transform: perspective(1px) translateZ(0); 
+      span{position: relative; font-size: 22px; font-family: 'Noto Sans'; margin-right: 20px; transition: .3s;
+      color: #fff; letter-spacing: 6.6px;
+        &:after{content: ''; position: absolute; top: 6px; right: -30px; min-width: 20px; height: 20px; transition: .3s;
+        background: url("../images/ico/ico-arrow-right-w-shw.png")no-repeat center;}
+      }
+      &:before{content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: -1;
+      transform: scaleX(0); transform-origin: 0 50%;  transition-duration: 0.3s; transition-property: transform; 
+      transition-timing-function: ease-out; background: #fff;}
+      &:hover{
+        span{color: #333;
+          &:after{background: url("../images/ico/ico-arrow-right-bk-shw.png")no-repeat center;}
+        }
+        &:before{transform: scaleX(1);}
+      }
+    }
+    &.blue{background: #1694d2; transition: .5s ease-in-out;}
+  }
+}
+
+#container{position: relative; display: flex; width: inherit; height: inherit;}
+
+.leftArea{width: 300px; height: 100%; border-right: 1px solid #ddd; overflow-y: auto; background-color: #f5f5f5;
+  >.leftMenu{
+    >li{position: relative; cursor: pointer;
+      a{display: block;}
+      &.noDepth{
+        span:after{display: none;}
+      }
+      &:first-child{padding: 16px 0 16px 28px; border-bottom: 1px solid rgba($color: #000012, $alpha: 0.08);}
+      &.active{
+        span{color: #266bf7;
+          &:after{transform: translateY(-50%) rotate(180deg); background: url("../images/ico/ico-down-active.png")no-repeat;}
+        }
+      }
+      >span{position: relative; display: block; padding: 16px 0; text-indent: 28px;border-bottom: 1px solid rgba($color: #000012, $alpha: 0.08);
+      font-family: 'Noto Sans'; font-size: 22px; color: #707070; transition: .5s;
+        &:after{content: ''; width: 15px;height: 9px; position: absolute; top: 50%; right: 28px; transition: .5s;
+        transform: translateY(-50%);background: url("../images/ico/ico-down.png")no-repeat;}
+      }
+      >a{display: block;}
+      >ul.leftSubMenu{display: none; padding: 16px 28px 16px 28px; box-sizing: border-box;
+      border-bottom: 1px solid rgba($color: #000012, $alpha: 0.08); background-color: #eee;
+        li{padding-bottom: 8px; border-bottom: 1px solid rgba($color: #000012, $alpha: 0.08);
+          a{display: block; font-family: 'Noto Sans'; font-size: 18px; color: #707070;
+            &:hover{text-decoration: underline;}
+          }
+          +li{margin-top: 17px;}
+        }
+      }
+    }
+  }
+}
+
+.backArea{position: absolute; left: 340px; top: 22px;
+  .btnBack{position: relative; display: block; width: 30px; height: 30px; background: url("../images/ico/ico-back.png")no-repeat center;
+    &:before{content: ''; opacity: 0; visibility: hidden; position: absolute; left: -5px; top: -5px; z-index: -1;
+      width: 40px; height: 40px; border-radius: 50px; transition: .5s ease-in-out; background-color: rgba($color: #ddd, $alpha: 0.5);}
+    &:hover{
+      &:before{opacity: 1; visibility: visible;}
+    }
+  }
+  &.none{display: none;}
+}
+
+.utilArea{position: absolute; top: 22px; right: 30px;
+  ul{display: flex;align-items: center;}
+  li{position: relative;
+    &:before{content: ''; opacity: 0; visibility: hidden; position: absolute; left: -5px; top: -5px; z-index: -1;
+    width: 40px; height: 40px; border-radius: 50px; transition: .5s ease-in-out; background-color: rgba($color: #ddd, $alpha: 0.5);}
+    button,a{display: block; width: 30px;height: 30px;
+      &.btnMail{background: url("../images/ico/ico-mail.png")no-repeat center;}
+      &.btnShare{background: url("../images/ico/ico-share-bk.png")no-repeat center;}
+      &.btnMore{background: url("../images/ico/ico-more.png")no-repeat center;}
+    }
+    +li{margin-left: 30px;}
+    &:hover{
+      &:before{opacity: 1; visibility: visible;}
+    }
+  }
+}
+
+.rightArea{width: 1200px; margin: 0 auto; padding: 115px 0;
+
+  .textBox{
+    +.textBox{margin-top: 75px;}
+  }
+
+  /* h1 ~ h6 */
+  .titleH1,.titleH2,.titleH3,.titleH4,.titleH5,.titleH6{font-family: 'Noto Sans'; color: #202020;}
+  .titleH1,.titleH2{margin-bottom: 20px; padding-bottom: 15px; font-weight: bold; border-bottom: 1px solid #ddd;}
+  .titleH1{font-size: 32px;}
+  .titleH2{font-size: 24px;}
+  
+  /* 본문 텍스트 */
+  .mainTxt{font-size: 16px; font-family: 'Noto Sans'; line-height: 1.5; color: #333;}
+}

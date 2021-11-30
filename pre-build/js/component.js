@@ -21,15 +21,27 @@ $(document).ready(function(){
         }
     });
 
+
+    backReferrer = document.referrer;
+    console.log(document.referrer);
+
     $('.backArea .btnBack').on({
         "click":function(){
-            if (document.referrer && document.referrer.indexOf("main.html") != -1 ){ 
+            if (backReferrer.indexOf('sub_first.html') != -1) { 
                 history.back();
             }
-            else {
-                $(this).parent('.backArea').addClass('none');
+            else { 
                 location.href = "main.html";
             }
         }
     })
+
+    historyCount = history.length;
+    console.log(historyCount);
+
+    if(historyCount <= 1){
+        $('.backArea').hide();
+    }else{
+        $('.backArea').show();
+    }
 })

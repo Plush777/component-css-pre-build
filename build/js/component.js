@@ -1,5 +1,9 @@
 $(document).ready(function(){
-   
+
+    document.getElementById('url1').value = window.location.href;
+    // document.getElementById('url2').value = location.href;
+    // document.getElementById('url3').value = document.URL;
+
     $('.btnArea .btnStart').on({
         "mouseenter":function(){
             $(this).parents('#wrap').addClass('blue');

@@ -1,12 +1,28 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    @@include('./include/head.html')
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" href="../images/ico/ico-favi.png" sizes="16x16" />
+<link rel="stylesheet" href="../css/component.css" type="text/css" />
+<link rel="stylesheet" href="../lib/swiper/css/swiper.css" />
+<link rel="stylesheet" href="../css/prism.css" />
+<!-- 깃허브 스타일 -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/github.min.css"> -->
+<!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/vs2015.min.css"> -->
+<script type="text/javascript" src="../lib/jquery-1.12.4.js"></script>
+<script type="text/javascript" src="../lib/swiper/js/swiper.js"></script>
+<!-- <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/highlightjs-line-numbers.js@2.8.0/dist/highlightjs-line-numbers.min.js"></script> -->
+<script src="../../js/prism.js"></script>
+<script src="../../js/component.js"></script>
+<title>Component css</title>
+
 </head>
 <body>
     <div id="wrap">
         <div id="container">
-            
             <div class="leftArea cScroll">
                 <ul class="leftMenu">
                   <li>
@@ -147,31 +163,83 @@
                 </button>
             </div>
 
-            @@include('./include/util.html')
+            <div class="utilArea">
+  <ul>
+      <li>
+          <a href="mailto:sky11916@naver.com" class="btnMail">
+              <span class="hidden">문의</span>
+              <div class="toolTip mail">
+                  <span>메일 문의</span>
+              </div>
+          </a>
+      </li>
+      <li>
+          <button type="button" class="btnShare">
+              <span class="hidden">공유</span>
+              <div class="toolTip share">
+                  <span>공유하기</span>
+              </div>
+          </button>
+          
+      </li>
+      <li>
+          <button type="button" class="btnMore">
+              <span class="hidden">더보기</span>
+              <div class="toolTip more">
+                  <span>더보기</span>
+              </div>
+          </button>
+      </li>
+  </ul>
+</div>
             
             <div class="rightArea">
                 <div class="textBox">
                     <div class="titleH1">
-                        <h1>component css 소개</h1>
+                        <h1>Overflow scroll</h1>
                     </div>
-                    <div class="mainTxt">
-                        <p>component css 사이트는 웹 퍼블리싱 작업에 필요한 여러가지 요소들의
-                        스타일들을 정리하여 제공하는 사이트입니다.
-                        </p>
-                        <p>물론 모든 스타일을 다 제공할 수는 없겠지만 어느정도 기본 틀이되는 css 컴포넌트들을
-                        제공하여 원하는 색상이나 모양을 바꿔서</p>
-                        <p>그대로 쓸 수 있는 컴포넌트들입니다.</p>
-                    </div>
-                </div>
 
-                <div class="textBox">
-                    <div class="titleH2">
-                        <h2>목적</h2>
+                    <div class="highlightArea cScroll">
+                        <pre>
+                            <code class="language-html">
+&lt;div class="exBox overflow-y"&gt;
+    &lt;div class="overflowDiv"&gt;&lt;/div&gt;
+&lt;/div&gt;
+                            </code>
+                        </pre>
+
+                        <pre>
+                            <code class="language-scss">
+.exBox{border: 1px solid #222; height: 150px;
+    .overflowDiv{width: 100%; height: 200px;}
+}                              
+                            </code>
+                        </pre>
+
+                        <pre>
+                            <code class="language-css">
+.exBox {
+    border: 1px solid #222;
+    height: 150px;
+}
+
+.exBox .overflowDiv {
+    width: 100%;
+    height: 200px;
+}
+                            </code>
+                        </pre>
                     </div>
-                    <div class="mainTxt">
-                        <p>웹사이트에 자주 사용되는 css 스타일들을 기록해서 바로바로 코드를 긁어서
-                        사용할 수 있도록 하는 것이 주 목적입니다.</p>
-                        <p></p>
+
+                    <div class="titleH2">
+                        <h2>Result</h2>
+                    </div>
+                    <div class="resultArea">
+                        <div class="inner">
+                            <div class="exBox overflow-y">
+                                <div class="overflowDiv"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

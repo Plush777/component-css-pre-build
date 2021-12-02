@@ -1,8 +1,12 @@
 $(document).ready(function(){
-
-    document.getElementById('url1').value = window.location.href;
-    // document.getElementById('url2').value = location.href;
-    // document.getElementById('url3').value = document.URL;
+    document.getElementById('subUrl').value = window.location.href;
+   
+    $('#dimmed').on({
+        "click":function(){
+            $(this).fadeOut();
+            $('.popup.share').fadeOut();
+        }
+    });
 
     $('.btnArea .btnStart').on({
         "mouseenter":function(){
@@ -26,6 +30,7 @@ $(document).ready(function(){
     });
 
 
+    /* 뒤로가기 버튼 */
     backReferrer = document.referrer;
     console.log(document.referrer);
 
@@ -40,6 +45,7 @@ $(document).ready(function(){
         }
     })
 
+    /* 히스토리 개수 */
     historyCount = history.length;
     console.log(historyCount);
 
@@ -48,4 +54,35 @@ $(document).ready(function(){
     }else{
         $('.backArea').show();
     }
-})
+});
+
+
+
+function copyUrl(btnCopy) {
+    const copyBtn = document.getElementById(btnCopy);
+    const textElement = document.getElementById(btnCopy.replace('-btn', ''));
+    let text;
+    if (textElement.tagName === 'TEXTAREA' || textElement.tagName === 'INPUT') {
+      text = textElement.value;
+    } else {
+      text = textElement.textContent;
+    }
+
+    if (text) {
+      navigator.clipboard.writeText(text)
+        // 성공인 경우
+        .then(() => {
+          if (copyBtn.textContent !== '복사됨!') {
+            const originalText = copyBtn.textContent;
+            copyBtn.textContent = '복사됨!';
+            setTimeout(() => {
+              copyBtn.textContent = originalText;
+            }, 1000);
+          }
+        })
+        // 실패인 경우
+        .catch(err => {
+          console.log('클립보드에 복사 실패', err);
+        })
+    }
+  }

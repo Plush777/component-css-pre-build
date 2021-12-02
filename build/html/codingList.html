@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" href="../images/ico/ico-favi.png" sizes="16x16" />
+<link rel="stylesheet" href="../css/component.css" type="text/css" />
+<link rel="stylesheet" href="../lib/swiper/css/swiper.css" />
+<link rel="stylesheet" href="../css/prism.css" />
+<!-- 깃허브 스타일 -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/github.min.css"> -->
+<!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/vs2015.min.css"> -->
+<script type="text/javascript" src="../lib/jquery-1.12.4.js"></script>
+<script type="text/javascript" src="../lib/swiper/js/swiper.js"></script>
+<!-- <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/highlightjs-line-numbers.js@2.8.0/dist/highlightjs-line-numbers.min.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
+<script src="../../js/prism.js"></script>
+<script src="../../js/component.js"></script>
+<title>Component css</title>
+
+    <style>
+        *{text-align: center;}
+        th{font-size: 22px;}
+        td{font-size: 15px;}
+        a{color: blue; text-decoration: underline;}
+        .desc{margin:30px 0; font-size: 26px; color: #000; font-weight: bold;}
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="desc">서브 페이지 공통</div>
+        <div class="table">
+            <table>
+                <colgroup>
+                    <col style="width: 70px;">
+                    <col style="width: auto;">
+                    <col style="width: 160px;">
+                    <col style="width: 160px;">
+                    <col style="width: 160px;">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th scope="col">순서</th>
+                        <th scope="col">파일명</th>
+                        <th scope="col">추가 및 수정사항</th>
+                        <th scope="col">날짜</th>
+                        <th scope="col">이슈사항</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>
+                            <a href="main.html">main.html</a>
+                        </td>
+                        <td></td>
+                        <td>2021-12-02</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>
+                            <a href="sub_first.html">sub_first.html</a>
+                        </td>
+                        <td></td>
+                        <td>2021-12-02</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>
+                            <a href="default.html">default.html</a>
+                        </td>
+                        <td></td>
+                        <td>2021-12-02</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="desc">scroll element</div>
+        <div class="table">
+            <table>
+                <colgroup>
+                    <col style="width: 70px;">
+                    <col style="width: auto;">
+                    <col style="width: 160px;">
+                    <col style="width: 160px;">
+                    <col style="width: 160px;">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th scope="col">순서</th>
+                        <th scope="col">파일명</th>
+                        <th scope="col">추가 및 수정사항</th>
+                        <th scope="col">날짜</th>
+                        <th scope="col">이슈사항</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>
+                            <a href="scroll-ele-table.html">scroll-ele-table.html</a>
+                        </td>
+                        <td></td>
+                        <td>2021-12-02</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>
+                            <a href="scroll-ele-overflow.html">scroll-ele-overflow.html</a>
+                        </td>
+                        <td></td>
+                        <td>2021-12-02</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="desc">custom</div>
+        <div class="table">
+            <table>
+                <colgroup>
+                    <col style="width: 70px;">
+                    <col style="width: auto;">
+                    <col style="width: 160px;">
+                    <col style="width: 160px;">
+                    <col style="width: 160px;">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th scope="col">순서</th>
+                        <th scope="col">파일명</th>
+                        <th scope="col">추가 및 수정사항</th>
+                        <th scope="col">날짜</th>
+                        <th scope="col">이슈사항</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>
+                            <a href="custom-contextMenu.html">custom-contextMenu.html</a>
+                        </td>
+                        <td></td>
+                        <td>2021-12-02</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>
+                            <a href="custom-scroll.html">custom-scroll.html</a>
+                        </td>
+                        <td></td>
+                        <td>2021-12-02</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

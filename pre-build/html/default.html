@@ -163,8 +163,8 @@
               <p>아래 주소를 복사하여 다른 곳에 붙여넣으세요.</p>
               <div class="inputArea flex">
                 <input type="text" id="subUrl" class="full">
-                <button type="button" id="btn-copy" onclick="copyUrl(this.id)" class="button Bgblue w75">
-                  <span class="c-white">복사</span>
+                <button type="button" data-clipboard-target="#subUrl" class="button Bgblue w75 btnClip">
+                  복사
                 </button>
               </div>
             </div>

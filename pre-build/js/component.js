@@ -97,33 +97,14 @@ $(document).ready(function(){
             return false;
         }
     })
+    // clipboard.js
+    var clipboard = new ClipboardJS('.btnClip');
+    clipboard.on( 'success', function() {
+        alert('클립보드에 복사되었습니다. 다른 곳에 이 링크를 붙여넣으세요.');
+    });
+    clipboard.on( 'error', function() {
+        alert('클립보드 복사에 실패하였습니다. 다시 시도해주세요.');
+    });
+
 });
 
-function copyUrl(btnID) {
-    const copyBtn = document.getElementById(btnID);
-    const textElement = document.getElementById(btnID.replace('-btn', ''));
-    let text;
-    if (textElement.tagName === 'TEXTAREA' || textElement.tagName === 'INPUT') {
-      text = textElement.value;
-    } else {
-      text = textElement.textContent;
-    }
-
-    if (text) {
-      navigator.clipboard.writeText(text)
-        // 성공인 경우
-        .then(() => {
-          if (copyBtn.textContent !== '복사됨!') {
-            const originalText = copyBtn.textContent;
-            copyBtn.textContent = '복사됨!';
-            setTimeout(() => {
-              copyBtn.textContent = originalText;
-            }, 1000);
-          }
-        })
-        // 실패인 경우
-        .catch(err => {
-          console.log('클립보드에 복사 실패', err);
-        })
-    }
-}

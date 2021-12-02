@@ -15,6 +15,7 @@
 <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
 <script src="//cdn.jsdelivr.net/npm/highlightjs-line-numbers.js@2.8.0/dist/highlightjs-line-numbers.min.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
 <script src="../../js/prism.js"></script>
 <script src="../../js/component.js"></script>
 <title>Component css</title>
@@ -416,8 +417,8 @@
               <p>아래 주소를 복사하여 다른 곳에 붙여넣으세요.</p>
               <div class="inputArea flex">
                 <input type="text" id="subUrl" class="full">
-                <button type="button" id="btn-copy" onclick="copyUrl(this.id)" class="button Bgblue w75">
-                  <span class="c-white">복사</span>
+                <button type="button" data-clipboard-target="#subUrl" class="button Bgblue w75 btnClip">
+                  복사
                 </button>
               </div>
             </div>

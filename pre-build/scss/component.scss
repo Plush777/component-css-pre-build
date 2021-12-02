@@ -55,10 +55,15 @@ li{list-style: none;}
 body,html{font-family:'Noto Sans DemLight', "맑은 고딕", "Malgun Gothic", Dotum, sans-serif;font-size:13px;color: #333;letter-spacing:-0.045em !important;}
 .hidden{display:block;margin: 0;padding: 0;width: 0;height: 0;overflow: hidden;font-size: 0;line-height: 0;visibility: hidden;}
 
+$c-white: #fff;
+
 .block{display: block;}
+
+.h400{height: 400px;}
 
 .overflow-y{overflow-y: auto;
   &.maxH{max-height: 100px;}
+  &.maxH4{max-height: 400px;}
 }
 .tScroll{display: block;}
 
@@ -222,3 +227,55 @@ overflow-y: auto; background-color: #f5f5f5; z-index: 1000;
   &.jc{justify-content: center;}
   &.sb{justify-content: space-between;}
 }
+
+.popup{display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 9999;
+box-shadow: 0px 0px 8px rgba($color: #000, $alpha: 0.35);
+  &.share{width: 350px;
+    .cont{border-radius: 4px; text-align: center;
+      .inner{padding: 20px;}
+    }
+  }
+  .head{background-color: #fff;
+    .inner{padding: 10px; box-sizing: border-box;}
+  }
+  .cont{background-color: #fff;
+    .inner{padding: 10px; box-sizing: border-box;
+      p{font-size: 14px; color: #222; font-family: 'Noto Sans';
+        +.inputArea{margin-top: 25px;}
+      }
+      .inputArea{
+        input{margin-right: 15px;}
+      }
+    }
+  }
+}
+
+input[type="text"]{height: 30px; border: 1px solid #ddd; padding-left: 5px; box-sizing: border-box; 
+font-family: 'Noto Sans'; border-radius: 4px; background-color: #fff;
+  &.full{width: 100%;}
+}
+
+.button{display: flex; align-items: center; height: 30px; padding: 0 5px; box-sizing: border-box; border-radius: 4px; font-family: 'Noto Sans';
+font-size: 14px; color: #fff;
+  &.w75{min-width: 75px;}
+  &.Bgblue{background-color: #266bf7;}
+  span{
+    &.c-white{color: $c-white;}
+  }
+}
+
+i.ico{display: inline-block; background-repeat: repeat; background-position: center;
+  &.share{width: 30px;height: 30px; background-image: url("../images/ico/ico-share-hover.png");}
+}
+
+.btnArea{display: flex;}
+
+.mouseMenu{display:none; position:absolute; z-index:10000; padding:10px 0;border:1px solid #ccc;
+border-radius:4px; background:#f5f5f5;
+  li{width:150px; padding:5px; font-family: 'Noto Sans';
+    &:hover{background:#dee1e7;}
+    a{display: block;}
+  }
+}
+
+#dimmed{display: none; position: fixed; z-index: 9998; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0, 0, 0,0.6);}

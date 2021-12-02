@@ -1,10 +1,18 @@
 $(document).ready(function(){
+
     document.getElementById('subUrl').value = window.location.href;
-   
+
+    $('.btnShare').on({
+        "click":function(){
+            $('#dimmed').fadeIn();
+            $('.popup').fadeIn();
+        }
+    });
+
     $('#dimmed').on({
         "click":function(){
             $(this).fadeOut();
-            $('.popup.share').fadeOut();
+            $('.popup').fadeOut();
         }
     });
 
@@ -54,13 +62,46 @@ $(document).ready(function(){
     }else{
         $('.backArea').show();
     }
+
+    $('.resultArea').on({
+        'contextmenu': function (e){
+            if(e.pageX > $(window).width()-$('.mouseMenu').outerWidth() && e.pageY > $(window).height()-$('.mouseMenu').outerHeight()){
+                $('.mouseMenu').css({left:e.pageX-$('.mouseMenu').outerWidth(),top:e.pageY-$('.mouseMenu').outerHeight()}).show();
+            }else if(e.pageX <= $(window).width()-$('.mouseMenu').outerWidth() && e.pageY > $(window).height()-$('.mouseMenu').outerHeight()){
+                $('.mouseMenu').css({left:e.pageX,top:e.pageY-$('.mouseMenu').outerHeight()}).show();
+            }else if(e.pageX > $(window).width()-$('.mouseMenu').outerWidth() && e.pageY <= $(window).height()-$('.mouseMenu').outerHeight()){
+                $('.mouseMenu').css({left:e.pageX-$('.mouseMenu').outerWidth(),top:e.pageY}).show();
+            }else{
+                $('.mouseMenu').css({left:e.pageX,top:e.pageY}).show();
+            }
+        }
+    });
+
+    $(document).on({
+        "click":function(){
+            $('.mouseMenu').hide();
+        },
+        /* 1 = left , 2 = center , 3 = right */
+        "mousedown":function(e){
+            if(e.which === 3){
+                $('.mouseMenu').hide();
+            }
+        }
+    })
+
+    $('#context').on({
+        "click":function(){
+            $('.mouseMenu').show();
+        },
+        "contextmenu": function (){
+            return false;
+        }
+    })
 });
 
-
-
-function copyUrl(btnCopy) {
-    const copyBtn = document.getElementById(btnCopy);
-    const textElement = document.getElementById(btnCopy.replace('-btn', ''));
+function copyUrl(btnID) {
+    const copyBtn = document.getElementById(btnID);
+    const textElement = document.getElementById(btnID.replace('-btn', ''));
     let text;
     if (textElement.tagName === 'TEXTAREA' || textElement.tagName === 'INPUT') {
       text = textElement.value;
@@ -85,4 +126,4 @@ function copyUrl(btnCopy) {
           console.log('클립보드에 복사 실패', err);
         })
     }
-  }
+}

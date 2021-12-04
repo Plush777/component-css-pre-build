@@ -1,5 +1,5 @@
 $(document).ready(function(){
-
+    
     document.getElementById('subUrl').value = window.location.href;
 
     $('.btnShare').on({
@@ -37,6 +37,25 @@ $(document).ready(function(){
         }
     });
 
+    $('.customSelect').on({
+        "click":function(){
+            $(this).toggleClass('active').siblings('.customSelect').removeClass('active');
+        }
+    });
+
+    /* 요소 밖에 클릭 시 셀렉트 닫힘 */
+    $(document).on({"click":function(e){
+        if($('.customSelect').has(e.target).length == 0){
+            $('.customSelect').removeClass('active');
+        }
+        }
+    });
+
+    $('.customSelect > ul > li > .selList > li').on({
+        "click":function(){
+            $(this).parents('ul').prev('span').text($(this).text());
+        }
+    });
 
     /* 뒤로가기 버튼 */
     backReferrer = document.referrer;
@@ -63,7 +82,7 @@ $(document).ready(function(){
         $('.backArea').show();
     }
 
-    $('.resultArea').on({
+    $('#context').on({
         'contextmenu': function (e){
             if(e.pageX > $(window).width()-$('.mouseMenu').outerWidth() && e.pageY > $(window).height()-$('.mouseMenu').outerHeight()){
                 $('.mouseMenu').css({left:e.pageX-$('.mouseMenu').outerWidth(),top:e.pageY-$('.mouseMenu').outerHeight()}).show();
@@ -97,6 +116,7 @@ $(document).ready(function(){
             return false;
         }
     })
+
     // clipboard.js
     var clipboard = new ClipboardJS('.btnClip');
     clipboard.on( 'success', function() {
@@ -105,6 +125,5 @@ $(document).ready(function(){
     clipboard.on( 'error', function() {
         alert('클립보드 복사에 실패하였습니다. 다시 시도해주세요.');
     });
-
 });
 

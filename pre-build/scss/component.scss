@@ -110,13 +110,13 @@ overflow-y: auto; background-color: #f5f5f5; z-index: 1000;
       &:first-child{padding: 16px 0 16px 28px; border-bottom: 1px solid rgba($color: #000012, $alpha: 0.08);}
       &.active{
         span{color: #266bf7;
-          &:after{transform: translateY(-50%) rotate(180deg); background: url("../images/ico/ico-down-active.png")no-repeat;}
+          &:after{transform: translateY(-50%) rotate(180deg); background: url("../images/ico/ico-down-active.svg")no-repeat;}
         }
       }
       >span{position: relative; display: block; padding: 16px 0; text-indent: 28px;border-bottom: 1px solid rgba($color: #000012, $alpha: 0.08);
       font-family: 'Noto Sans'; font-size: 22px; color: #707070; transition: .5s;
         &:after{content: ''; width: 15px;height: 9px; position: absolute; top: 50%; right: 28px; transition: .5s;
-        transform: translateY(-50%);background: url("../images/ico/ico-down.png")no-repeat;}
+        transform: translateY(-50%);background: url("../images/ico/ico-down.svg")no-repeat;}
       }
       >a{display: block;}
       >ul.leftSubMenu{display: none; padding: 16px 28px 16px 28px; box-sizing: border-box;
@@ -137,7 +137,7 @@ overflow-y: auto; background-color: #f5f5f5; z-index: 1000;
 }
 
 .backArea{position: absolute; left: 340px; top: 22px;
-  .btnBack{position: relative; display: block; width: 30px; height: 30px; background: url("../images/ico/ico-back.png")no-repeat center;
+  .btnBack{position: relative; display: block; width: 30px; height: 30px; background: url("../images/ico/ico-back.svg")no-repeat center;
     &:before{content: ''; opacity: 0; visibility: hidden; position: absolute; left: -5px; top: -5px; z-index: -1;
       width: 40px; height: 40px; border-radius: 50px; transition: .5s ease-in-out; background-color: rgba($color: #ddd, $alpha: 0.5);}
     &:hover{
@@ -158,17 +158,17 @@ overflow-y: auto; background-color: #f5f5f5; z-index: 1000;
     &:before{content: ''; opacity: 0; visibility: hidden; position: absolute; left: -5px; top: -5px; z-index: -1;
     width: 40px; height: 40px; border-radius: 50px; transition: .5s ease-in-out; background-color: rgba($color: #ddd, $alpha: 0.5);}
     button,a{display: block; width: 30px;height: 30px;
-      &.btnMail{background: url("../images/ico/ico-mail.png")no-repeat center;
+      &.btnMail{background: url("../images/ico/ico-mail.svg")no-repeat center;
         &:hover{
           .toolTip.mail{opacity: 1; visibility: visible;}
         }
       }
-      &.btnShare{background: url("../images/ico/ico-share-bk.png")no-repeat center;
+      &.btnShare{background: url("../images/ico/ico-share-bk.svg")no-repeat center;
         &:hover{
           .toolTip.share{opacity: 1; visibility: visible;}
         }
       }
-      &.btnMore{background: url("../images/ico/ico-more.png")no-repeat center;
+      &.btnMore{background: url("../images/ico/ico-more.svg")no-repeat center;
         &:hover{
           .toolTip.more{opacity: 1; visibility: visible;}
         }
@@ -186,6 +186,7 @@ overflow-y: auto; background-color: #f5f5f5; z-index: 1000;
     .exBox{border: 1px solid #222; height: 150px;
       .overflowDiv{width: 100%; height: 200px;}
     }
+    .textBox+.textBox{margin-top: 30px;}
   }
   +.btnArea{margin-top: 50px;}
 }
@@ -196,17 +197,21 @@ overflow-y: auto; background-color: #f5f5f5; z-index: 1000;
   }
 
   .textBox{
+    label{vertical-align: middle;}
     +.textBox{margin-top: 75px;}
   }
 
-  /* h1 ~ h6 */
-  .titleH1,.titleH2,.titleH3,.titleH4,.titleH5,.titleH6{font-family: 'Noto Sans'; color: #202020;}
-  .titleH1,.titleH2{margin-bottom: 20px; padding-bottom: 15px; font-weight: bold; border-bottom: 1px solid #ddd;}
+  /* h1 ~ h3 */
+  .titleH1,.titleH2,.titleH3{font-family: 'Noto Sans'; color: #202020;}
+  .titleH1,.titleH2,.titleH3{margin-bottom: 20px; padding-bottom: 15px; font-weight: bold; border-bottom: 1px solid #ddd;}
   .titleH1{font-size: 32px;}
   .titleH2{font-size: 24px;}
+  .titleH3{font-size: 20px;}
   
   /* 본문 텍스트 */
-  .mainTxt{font-size: 16px; font-family: 'Noto Sans'; line-height: 1.5; color: #333;}
+  .mainTxt{font-size: 16px; font-family: 'Noto Sans'; line-height: 1.5; color: #333;
+    +.highlightArea{margin-top: 15px;}
+  }
 }
 
 .table{
@@ -243,15 +248,62 @@ box-shadow: 0px 0px 8px rgba($color: #000, $alpha: 0.35);
   }
 }
 
-input[type="text"]{height: 30px; border: 1px solid #ddd; padding-left: 5px; box-sizing: border-box; 
-font-family: 'Noto Sans'; border-radius: 4px; background-color: #fff;
+input{height: 30px; border: 1px solid #ddd; padding-left: 5px; box-sizing: border-box; 
+font-family: 'Noto Sans'; border-radius: 4px; color: #222; background-color: #fff;
   &.full{width: 100%;}
+}
+
+input[type="image"],input[type="color"],input[type="button"]{display: inline-block; vertical-align: middle;}
+
+.select{display: inline-block; height: 30px; border: 1px solid #ddd; padding: 0 5px; box-sizing: border-box;
+font-family: 'Noto Sans'; border-radius: 2px; color: #222; vertical-align: middle;background-color: #fff;}
+
+.selContainer{display: flex;
+  label{display: flex;align-items: center; margin-right: 7px;}
+}
+
+.customSelect{display: flex;
+  >ul{
+    >li{position: relative; border: 1px solid #ddd;
+    width: 210px; height: 30px; text-indent: 5px; box-sizing: border-box; background: url("../images/ico/ico-select-down.svg")no-repeat center right 10px;
+      span{display: block; line-height: 28px; color: #222; font-family: 'Noto Sans'; cursor: pointer;}
+      .selList{display: none; position: absolute; top: 29px; left: -1px; width: 100%; z-index: 200; 
+      border: 1px solid #ddd; border-top: 0; border-radius: 0 0 4px 4px; background-color: #fff;
+        li{
+          &:hover{background-color: #3399ff;
+            span{color: #fff;}
+          }
+        }
+      }
+    }
+  }
+  &.active{
+    ul li .selList{display: block;}
+  }
+  +.customSelect{margin-left: 10px;}
+}
+
+a.link{margin: 0px 5px 0 3px; color: #266bf7; font-family: 'Noto Sans Medium';
+  &:hover{text-decoration: underline;}
+}
+
+.checkbox{display: inline-block;
+  input[type="checkbox"]{display: none;
+    &:checked+label{
+      &:before{background: url("../images/ico/ico-chk-active.svg")no-repeat;}
+    }
+  }
+  label{vertical-align: middle; font-size: 14px; color: #222; font-family: 'Noto Sans';
+    &:before{content: ''; display: inline-block; width: 20px; height: 20px; border-radius: 4px; 
+    margin-right: 5px; vertical-align: sub; border: 1px solid #ddd; background-color: #fff;}
+  }
 }
 
 .button{display: flex; align-items: center; justify-content: center; height: 34px; line-height: 34px;
 padding: 0 5px; box-sizing: border-box; border-radius: 4px; font-family: 'Noto Sans';
 font-size: 14px; color: #fff;
   &.w75{min-width: 75px;}
+  &.type01{padding: 0 10px 0 5px;}
   &.Bgblue{background-color: #266bf7;}
   span{
     &.c-white{color: $c-white;}
@@ -259,7 +311,7 @@ font-size: 14px; color: #fff;
 }
 
 i.ico{display: inline-block; background-repeat: repeat; background-position: center;
-  &.share{width: 33px;height: 33px; background-image: url("../images/ico/ico-share.png");}
+  &.share{width: 33px;height: 33px; background-image: url("../images/ico/ico-share-w.svg");}
 }
 
 .btnArea{position: relative; display: flex;}
@@ -273,3 +325,11 @@ border-radius:4px; background:#f5f5f5;
 }
 
 #dimmed{display: none; position: fixed; z-index: 9998; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0, 0, 0,0.6);}
+
+
+/* supports */
+
+// :is(input[type="image"],input[type="color"],input[type="button"]){display: inline-block; vertical-align: middle;}
+// @supports not selector(:is( input[type="image"],input[type="color"],input[type="button"] )) {
+//   input[type="image"],input[type="color"],input[type="button"]{display: inline-block; vertical-align: middle;}
+// }

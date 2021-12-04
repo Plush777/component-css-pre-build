@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./include/head.html')
+</head>
+<body>
+    <div id="wrap">
+        <div id="container">
+            <div class="leftArea cScroll">
+                <ul class="leftMenu">
+                  <li>
+                    <a href="main.html" title="메인으로">
+                      <img src="../images/common/logo.svg" alt="서브 메인로고" />
+                      <span class="hidden">메인으로</span>
+                    </a>
+                  </li>
+                  <li class="noDepth">
+                    <span>
+                      <a href="sub_first.html" title="홈">Home</a>
+                    </span>
+                  </li>
+                  <li>
+                    <span title="Header">Header</span>
+                    <ul class="leftSubMenu">
+                      <li>
+                        <a href="#" title="Header fixed">Header fixed</a>
+                      </li>
+                      <li>
+                        <a href="#" title="Header Toggle">Header Toggle</a>
+                      </li>
+                      <li>
+                        <a href="#" title="scroll Header">scroll Header</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <span title="GNB">GNB</span>
+                    <ul class="leftSubMenu">
+                      <li>
+                        <a href="#" title="GNB Hover">GNB Hover</a>
+                      </li>
+                      <li>
+                        <a href="#" title="GNB li Hover">GNB li Hover</a>
+                      </li>
+                      <li>
+                        <a href="#" title="GNB li find Hover">GNB li find Hover</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <span title="Footer">Footer</span>
+                    <ul class="leftSubMenu">
+                      <li>
+                        <a href="#" title="Footer basic">Footer basic</a>
+                      </li>
+                      <li>
+                        <a href="#" title="Footer fixed">Footer fixed</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <span title="Layout">Layout</span>
+                    <ul class="leftSubMenu">
+                      <li>
+                        <a href="#" title="Center element">Center element</a>
+                      </li>
+                      <li>
+                        <a href="#" title="Tab">Tab</a>
+                      </li>
+                      <li>
+                        <a href="#" title="Background-image 100%">Background-image 100%</a>
+                      </li>
+                      <li>
+                        <a href="#" title="Slide">Slide</a>
+                      </li>
+                      <li>
+                        <a href="#" title="Flex">Flex</a>
+                      </li>
+                      <li>
+                        <a href="#" title="Grid">Grid</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="active">
+                    <span title="Input">Input</span>
+                    <ul class="leftSubMenu block">
+                      <li>
+                        <a href="#" title="Input">input</a>
+                      </li>
+                      <li>
+                        <a href="#" title="Radio">radio</a>
+                      </li>
+                      <li class="active">
+                        <a href="#" title="Select">select</a>
+                      </li>
+                      <li>
+                        <a href="#" title="textarea">textarea</a>
+                      </li>
+                      <li>
+                        <a href="#" title="checkbox">checkbox</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <span title="Scroll element">Scroll element</span>
+                    <ul class="leftSubMenu">
+                      <li>
+                        <a href="scroll-ele-table.html" title="table 내부 스크롤">table 내부 스크롤</a>
+                      </li>
+                      <li>
+                        <a href="scroll-ele-overflow.html" title="Overflow scroll">Overflow scroll</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <span title="Custom">Custom</span>
+                    <ul class="leftSubMenu">
+                      <li>
+                        <a href="custom-contextMenu.html" title="Context Menu">Context Menu</a>
+                      </li>
+                      <li>
+                        <a href="custom-scroll.html" title="Scroll design">Scroll design</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <span title="Interaction">Interaction</span>
+                    <ul class="leftSubMenu">
+                      <li>
+                        <a href="#" title="Hover transfrom">Hover transfrom</a>
+                      </li>
+                      <li>
+                        <a href="#" title="FadeIn & FadeOut">FadeIn & FadeOut</a>
+                      </li>
+                      <li>
+                        <a href="#" title="Click popup">Click popup</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+            </div>
+
+            <div class="backArea">
+                <button type="button" class="btnBack">
+                    <span class="hidden">뒤로가기</span>
+                </button>
+            </div>
+
+            @@include('./include/util.html')
+            
+            <div class="rightArea">
+                <div class="textBox">
+                    <div class="titleH1">
+                        <h1>select</h1>
+                    </div>
+                    <div class="highlightArea cScroll">
+                        <pre>
+                            <code></code>
+                        </pre>
+
+                        <pre>
+                            <code class="language-scss">
+input{display:inline-block; height: 30px; border: 1px solid #ddd; padding-left: 5px; box-sizing: border-box; 
+font-family: 'Noto Sans'; vertical-align:sub; border-radius: 4px; background-color: #fff;
+    &.full{width: 100%;}
+}
+                            </code>
+                        </pre>
+
+                        <pre>
+                            <code class="language-css">
+input {
+    display:inline-block;
+	height: 30px;
+	border: 1px solid #ddd;
+	padding-left: 5px;
+	box-sizing: border-box;
+	font-family: 'Noto Sans';
+    vertical-align:sub;
+	border-radius: 4px;
+	background-color: #fff;
+}
+
+input.full {
+	width: 100%;
+}
+                            </code>
+                        </pre>
+                    </div>
+
+                    <div class="titleH2">
+                        <h2>Result</h2>
+                    </div>
+                    <div class="resultArea">
+                        <div class="inner">
+                            <div class="textBox">
+                                <div class="titleH3">
+                                    <p>기본 셀렉트</p>
+                                </div>
+                                <label for="select01">라벨</label>
+                                <select id="select01" class="select">
+                                    <option>선택</option>
+                                </select>
+                            </div>
+                            <div class="textBox">
+                                <div class="titleH3">
+                                    <p>커스텀 셀렉트</p>
+                                </div>
+                                <div class="selContainer">
+                                    <label>라벨</label>
+                                    <div class="customSelect">
+                                        <ul>
+                                            <li>
+                                                <span>선택</span>
+                                                <ul class="selList">
+                                                    <li>
+                                                        <span>리스트1</span>
+                                                    </li>
+                                                    <li>
+                                                        <span>리스트2</span>
+                                                    </li>
+                                                    <li>
+                                                        <span>리스트3</span>
+                                                    </li>
+                                                    <li>
+                                                        <span>리스트4</span>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="customSelect">
+                                        <ul>
+                                            <li>
+                                                <span>선택</span>
+                                                <ul class="selList">
+                                                    <li>
+                                                        <span>리스트1</span>
+                                                    </li>
+                                                    <li>
+                                                        <span>리스트2</span>
+                                                    </li>
+                                                    <li>
+                                                        <span>리스트3</span>
+                                                    </li>
+                                                    <li>
+                                                        <span>리스트4</span>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="popup share">
+          <div class="cont">
+            <div class="inner">
+              <p>아래 주소를 복사하여 다른 곳에 붙여넣으세요.</p>
+              <div class="inputArea flex">
+                <input type="text" id="subUrl" class="full">
+                <button type="button" data-clipboard-target="#subUrl" class="button Bgblue w75 btnClip">
+                  복사
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+</body>
+</html>

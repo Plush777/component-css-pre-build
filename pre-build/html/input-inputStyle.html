@@ -156,8 +156,19 @@
                     <div class="mainTxt">
                         <p>input type text를 포함한 다른 타입의 input들도 다룹니다. input type의 자세한 설명은 <a href="https://developer.mozilla.org/ko/docs/Web/HTML/Element/Input" target="_blank" class="link">이 링크</a>를 참고하세요.</p>
                     </div>
-                    <div class="highlightArea cScroll">
-                        <pre>
+
+                    <div class="tabWrap type01">
+                      <div class="tabNav">
+                        <ul class="tabList">
+                          <li class="active orange">HTML</li>
+                          <li class="pink">SCSS</li>
+                          <li class="blue">CSS</li>
+                        </ul>
+                      </div>
+
+                      <div class="tabCont active">
+                        <div class="highlightArea cScroll">
+                          <pre>
                             <code class="language-html">
 &lt;div class="textBox"&gt;
     &lt;div class="titleH3"&gt;
@@ -287,18 +298,26 @@
     &lt;input type="button" value="value" id="input16"&gt;
 &lt;/div&gt;
                             </code>
-                        </pre>
+                          </pre>
+                        </div>
+                      </div>
 
-                        <pre>
+                      <div class="tabCont">
+                        <div class="highlightArea cScroll">
+                          <pre>
                             <code class="language-scss">
 input{display:inline-block; height: 30px; border: 1px solid #ddd; padding-left: 5px; box-sizing: border-box; 
 font-family: 'Noto Sans'; vertical-align:sub; border-radius: 4px; background-color: #fff;
     &.full{width: 100%;}
 }
                             </code>
-                        </pre>
+                          </pre>
+                        </div>
+                      </div>
 
-                        <pre>
+                      <div class="tabCont">
+                        <div class="highlightArea cScroll">
+                          <pre>
                             <code class="language-css">
 input {
     display:inline-block;
@@ -317,6 +336,8 @@ input.full {
 }
                             </code>
                         </pre>
+                        </div>
+                      </div>
                     </div>
 
                     <div class="titleH2">

@@ -193,39 +193,182 @@
                     <div class="titleH1">
                         <h1>select</h1>
                     </div>
-                    <div class="highlightArea cScroll">
-                        <pre>
-                            <code></code>
-                        </pre>
 
-                        <pre>
-                            <code class="language-scss">
-input{display:inline-block; height: 30px; border: 1px solid #ddd; padding-left: 5px; box-sizing: border-box; 
-font-family: 'Noto Sans'; vertical-align:sub; border-radius: 4px; background-color: #fff;
-    &.full{width: 100%;}
-}
+                    <div class="tabWrap type01">
+                      <div class="tabNav">
+                        <ul class="tabList">
+                          <li class="active orange">HTML</li>
+                          <li class="pink">SCSS</li>
+                          <li class="blue">CSS</li>
+                        </ul>
+                      </div>
+
+                      <div class="tabCont active">
+                        <div class="highlightArea cScroll">
+                          <pre>
+                            <code class="language-html">
+&lt;label for="select01"&gt;라벨&lt;/label&gt;
+&lt;select id="select01" class="select"&gt;
+    &lt;option&gt;선택&lt;/option&gt;
+&lt;/select&gt;
+
+&lt;div class="selContainer"&gt;
+    &lt;label&gt;라벨&lt;/label&gt;
+    &lt;div class="customSelect"&gt;
+        &lt;ul&gt;
+            &lt;li&gt;
+                &lt;span&gt;선택&lt;/span&gt;
+                &lt;ul class="selList"&gt;
+                    &lt;li&gt;
+                        &lt;span&gt;리스트1&lt;/span&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;span&gt;리스트2&lt;/span&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;span&gt;리스트3&lt;/span&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;span&gt;리스트4&lt;/span&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;div class="customSelect"&gt;
+        &lt;ul&gt;
+            &lt;li&gt;
+                &lt;span&gt;선택&lt;/span&gt;
+                &lt;ul class="selList"&gt;
+                    &lt;li&gt;
+                        &lt;span&gt;리스트1&lt;/span&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;span&gt;리스트2&lt;/span&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;span&gt;리스트3&lt;/span&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;span&gt;리스트4&lt;/span&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
                             </code>
-                        </pre>
+                          </pre>
+                        </div>
+                      </div>
 
-                        <pre>
+                      <div class="tabCont">
+                        <div class="highlightArea cScroll">
+                          <pre>
+                            <code class="language-scss">
+.select{display: inline-block; height: 30px; border: 1px solid #ddd; padding: 0 5px; box-sizing: border-box;
+font-family: 'Noto Sans'; border-radius: 2px; color: #222; vertical-align: middle;background-color: #fff;}
+                            
+.selContainer{display: flex;
+  label{display: flex;align-items: center; margin-right: 7px;}
+}
+
+.customSelect{display: flex;
+  >ul{
+    >li{position: relative; border: 1px solid #ddd;
+    width: 210px; height: 30px; text-indent: 5px; box-sizing: border-box; background: url("../images/ico/ico-select-down.svg")no-repeat center right 10px;
+      span{display: block; line-height: 28px; color: #222; font-family: 'Noto Sans'; cursor: pointer;}
+      .selList{display: none; position: absolute; top: 29px; left: -1px; width: 100%; z-index: 200; 
+      border: 1px solid #ddd; border-top: 0; border-radius: 0 0 4px 4px; background-color: #fff;
+        li{
+          &:hover{background-color: #3399ff;
+            span{color: #fff;}
+          }
+        }
+      }
+    }
+  }
+  &.active{
+    ul li .selList{display: block;}
+  }
+  +.customSelect{margin-left: 10px;}
+}
+</code>
+                          </pre>
+                        </div>
+                      </div>
+
+                      <div class="tabCont">
+                        <div class="highlightArea cScroll">
+                          <pre>
                             <code class="language-css">
-input {
-    display:inline-block;
-	height: 30px;
+.select {
+  display: inline-block;
+  height: 30px;
+  border: 1px solid #ddd;
+  padding: 0 5px;
+  box-sizing: border-box;
+  font-family: 'Noto Sans';
+  border-radius: 2px;
+  color: #222;
+  vertical-align: middle;
+  background-color: #fff;
+}
+
+.customSelect {
+	display: flex;
+}
+
+.customSelect > ul > li {
+	position: relative;
 	border: 1px solid #ddd;
-	padding-left: 5px;
+	width: 210px;
+	height: 30px;
+	text-indent: 5px;
 	box-sizing: border-box;
+	background: url("../images/ico/ico-select-down.svg") no-repeat center right 10px;
+}
+
+.customSelect > ul > li span {
+	display: block;
+	line-height: 28px;
+	color: #222;
 	font-family: 'Noto Sans';
-    vertical-align:sub;
-	border-radius: 4px;
+	cursor: pointer;
+}
+
+.customSelect > ul > li .selList {
+	display: none;
+	position: absolute;
+	top: 29px;
+	left: -1px;
+	width: 100%;
+	z-index: 200;
+	border: 1px solid #ddd;
+	border-top: 0;
+	border-radius: 0 0 4px 4px;
 	background-color: #fff;
 }
 
-input.full {
-	width: 100%;
+.customSelect > ul > li .selList li:hover {
+	background-color: #3399ff;
+}
+
+.customSelect > ul > li .selList li:hover span {
+	color: #fff;
+}
+
+.customSelect.active ul li .selList {
+	display: block;
+}
+
+.customSelect + .customSelect {
+	margin-left: 10px;
 }
                             </code>
-                        </pre>
+                          </pre>
+                        </div>
+                      </div>
                     </div>
 
                     <div class="titleH2">

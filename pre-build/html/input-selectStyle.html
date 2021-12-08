@@ -163,6 +163,7 @@
                           <li class="active orange">HTML</li>
                           <li class="pink">SCSS</li>
                           <li class="blue">CSS</li>
+                          <li class="yellow">JS</li>
                         </ul>
                       </div>
 
@@ -328,6 +329,33 @@ font-family: 'Noto Sans'; border-radius: 2px; color: #222; vertical-align: middl
 .customSelect + .customSelect {
 	margin-left: 10px;
 }
+                            </code>
+                          </pre>
+                        </div>
+                      </div>
+
+                      <div class="tabCont">
+                        <div class="highlightArea cScroll">
+                          <pre>
+                            <code class="language-javascript">
+$('.customSelect').on({
+  "click":function(){
+    $(this).toggleClass('active').siblings('.customSelect').removeClass('active');
+  }
+});
+
+$(document).on({"click":function(e){
+  if($('.customSelect').has(e.target).length == 0){
+    $('.customSelect').removeClass('active');
+  }
+}
+});
+
+$('.customSelect > ul > li > .selList > li').on({
+  "click":function(){
+    $(this).parents('ul').prev('span').text($(this).text());
+  }
+});
                             </code>
                           </pre>
                         </div>

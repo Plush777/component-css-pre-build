@@ -193,171 +193,60 @@
                     <div class="titleH1">
                         <h1>radio</h1>
                     </div>
-                    <!-- <div class="mainTxt">
-                        <p>input type text를 포함한 다른 타입의 input들도 다룹니다. input type의 자세한 설명은 <a href="https://developer.mozilla.org/ko/docs/Web/HTML/Element/Input" target="_blank" class="link">이 링크</a>를 참고하세요.</p>
-                    </div> -->
-                    <div class="highlightArea cScroll">
-                        <pre>
+                    <div class="tabWrap type01">
+                      <div class="tabNav">
+                        <ul class="tabList">
+                          <li class="active orange">HTML</li>
+                          <li class="pink">SCSS</li>
+                          <li class="blue">CSS</li>
+                        </ul>
+                      </div>
+
+                      <div class="tabCont active">
+                        <div class="highlightArea cScroll">
+                          <pre>
                             <code class="language-html">
-&lt;div class="textBox"&gt;
-    &lt;div class="titleH3"&gt;
-        &lt;h3&gt;type : text&lt;/h3&gt;
+&lt;div class="radioBox"&gt;
+    &lt;div class="radio"&gt;
+        &lt;input type="radio" name="exRd01" id="rd01"&gt;
+        &lt;label for="rd01"&gt;라벨&lt;/label&gt;
     &lt;/div&gt;
-    &lt;label for="input01"&gt;라벨&lt;/label&gt;
-    &lt;input type="text" id="input01"&gt;
-&lt;/div&gt;
-
-&lt;div class="textBox"&gt;
-    &lt;div class="titleH3"&gt;
-        &lt;h3&gt;type : date&lt;/h3&gt;
+    &lt;div class="radio"&gt;
+        &lt;input type="radio" name="exRd01" id="rd02"&gt;
+        &lt;label for="rd02"&gt;라벨&lt;/label&gt;
     &lt;/div&gt;
-    &lt;label for="input02"&gt;라벨&lt;/label&gt;
-    &lt;input type="date" id="input02"&gt;
-&lt;/div&gt;
-
-&lt;div class="textBox"&gt;
-    &lt;div class="titleH3"&gt;
-        &lt;h3&gt;type : url&lt;/h3&gt;
+    &lt;div class="radio"&gt;
+        &lt;input type="radio" name="exRd01" id="rd03"&gt;
+        &lt;label for="rd03"&gt;라벨&lt;/label&gt;
     &lt;/div&gt;
-    &lt;label for="input03"&gt;라벨&lt;/label&gt;
-    &lt;input type="url" id="input03"&gt;
 &lt;/div&gt;
-
-&lt;div class="textBox"&gt;
-    &lt;div class="titleH3"&gt;
-        &lt;h3&gt;type : time&lt;/h3&gt;
-    &lt;/div&gt;
-    &lt;label for="input04"&gt;라벨&lt;/label&gt;
-    &lt;input type="time" id="input04"&gt;
-&lt;/div&gt;
-
-&lt;div class="textBox"&gt;
-    &lt;div class="titleH3"&gt;
-        &lt;h3&gt;type : week&lt;/h3&gt;
-    &lt;/div&gt;
-    &lt;label for="input05"&gt;라벨&lt;/label&gt;
-    &lt;input type="week" id="input05"&gt;
-&lt;/div&gt;
-
-&lt;div class="textBox"&gt;
-    &lt;div class="titleH3"&gt;
-        &lt;h3&gt;type : tel&lt;/h3&gt;
-    &lt;/div&gt;
-    &lt;label for="input06"&gt;라벨&lt;/label&gt;
-    &lt;input type="tel" id="input06"&gt;
-&lt;/div&gt;
-
-&lt;div class="textBox"&gt;
-    &lt;div class="titleH3"&gt;
-        &lt;h3&gt;type : email&lt;/h3&gt;
-    &lt;/div&gt;
-    &lt;label for="input07"&gt;라벨&lt;/label&gt;
-    &lt;input type="email" id="input07"&gt;
-&lt;/div&gt;
-
-&lt;div class="textBox"&gt;
-    &lt;div class="titleH3"&gt;
-        &lt;h3&gt;type : password&lt;/h3&gt;
-    &lt;/div&gt;
-    &lt;label for="input08"&gt;라벨&lt;/label&gt;
-    &lt;input type="password" id="input08"&gt;
-&lt;/div&gt;
-
-&lt;div class="textBox"&gt;
-    &lt;div class="titleH3"&gt;
-        &lt;h3&gt;type : datetime-local&lt;/h3&gt;
-    &lt;/div&gt;
-    &lt;label for="input09"&gt;라벨&lt;/label&gt;
-    &lt;input type="datetime-local" id="input09"&gt;
-&lt;/div&gt;
-
-&lt;div class="textBox"&gt;
-    &lt;div class="titleH3"&gt;
-        &lt;h3&gt;type : month&lt;/h3&gt;
-    &lt;/div&gt;
-    &lt;label for="input10"&gt;라벨&lt;/label&gt;
-    &lt;input type="month" id="input10"&gt;
-&lt;/div&gt;
-
-&lt;div class="textBox"&gt;
-    &lt;div class="titleH3"&gt;
-        &lt;h3&gt;type : number&lt;/h3&gt;
-    &lt;/div&gt;
-    &lt;label for="input11"&gt;라벨&lt;/label&gt;
-    &lt;input type="number" id="input11"&gt;
-&lt;/div&gt;
-
-&lt;div class="textBox"&gt;
-    &lt;div class="titleH3"&gt;
-        &lt;h3&gt;type : search&lt;/h3&gt;
-    &lt;/div&gt;
-    &lt;label for="input12"&gt;라벨&lt;/label&gt;
-    &lt;input type="search" id="input12"&gt;
-&lt;/div&gt;
-
-&lt;div class="textBox"&gt;
-    &lt;div class="titleH3"&gt;
-        &lt;h3&gt;type : hidden&lt;/h3&gt;
-    &lt;/div&gt;
-    &lt;label for="input13"&gt;라벨&lt;/label&gt;
-    &lt;input type="hidden" id="input13"&gt;
-&lt;/div&gt;
-
-&lt;div class="textBox"&gt;
-    &lt;div class="titleH3"&gt;
-        &lt;h3&gt;type : image&lt;/h3&gt;
-    &lt;/div&gt;
-    &lt;label for="input14"&gt;라벨&lt;/label&gt;
-    &lt;input type="image" id="input14"&gt;
-&lt;/div&gt;
-
-&lt;div class="textBox"&gt;
-    &lt;div class="titleH3"&gt;
-        &lt;h3&gt;type : color&lt;/h3&gt;
-    &lt;/div&gt;
-    &lt;label for="input15"&gt;라벨&lt;/label&gt;
-    &lt;input type="color" id="input15"&gt;
-&lt;/div&gt;
-
-&lt;div class="textBox"&gt;
-    &lt;div class="titleH3"&gt;
-        &lt;h3&gt;type : button&lt;/h3&gt;
-    &lt;/div&gt;
-    &lt;label for="input16"&gt;라벨&lt;/label&gt;
-    &lt;input type="button" value="value" id="input16"&gt;
-&lt;/div&gt;
+                         
                             </code>
-                        </pre>
+                          </pre>
+                        </div>
+                      </div>
 
-                        <pre>
+                      <div class="tabCont">
+                        <div class="highlightArea cScroll">
+                          <pre>
                             <code class="language-scss">
-input{display:inline-block; height: 30px; border: 1px solid #ddd; padding-left: 5px; box-sizing: border-box; 
-font-family: 'Noto Sans'; vertical-align:sub; border-radius: 4px; background-color: #fff;
-    &.full{width: 100%;}
-}
+ 
                             </code>
                         </pre>
+                        </div>
+                      </div>
 
-                        <pre>
+                      <div class="tabCont">
+                        <div class="highlightArea cScroll">
+                          <pre>
                             <code class="language-css">
-input {
-    display:inline-block;
-	height: 30px;
-	border: 1px solid #ddd;
-	padding-left: 5px;
-	box-sizing: border-box;
-	font-family: 'Noto Sans';
-    vertical-align:sub;
-	border-radius: 4px;
-	background-color: #fff;
-}
 
-input.full {
-	width: 100%;
-}
                             </code>
-                        </pre>
+                          </pre>
+                        </div>
+                      </div>
                     </div>
+                    
 
                     <div class="titleH2">
                         <h2>Result</h2>
@@ -365,12 +254,41 @@ input.full {
                     <div class="resultArea">
                         <div class="inner">
                             <div class="textBox">
-                                <div class="radioBox">
-                                  <div class="radio">
-                                    <input type="radio" name="exRd01" id="rd01">
-                                    <label for="rd01">라벨</label>
-                                  </div>
+                              <div class="titleH3">
+                                <h3>css를 활용한 라디오 버튼</h3>
+                              </div>
+                              <div class="radioBox">
+                                <div class="radio">
+                                  <input type="radio" name="exRd01" id="rd01">
+                                  <label for="rd01">라벨</label>
                                 </div>
+                                <div class="radio">
+                                  <input type="radio" name="exRd01" id="rd02">
+                                  <label for="rd02">라벨</label>
+                                </div>
+                                <div class="radio">
+                                  <input type="radio" name="exRd01" id="rd03">
+                                  <label for="rd03">라벨</label>
+                                </div>
+                              </div>
+
+                              <div class="titleH3">
+                                <h3>이미지를 활용한 라디오 버튼</h3>
+                              </div>
+                              <div class="radioBox">
+                                <div class="radio imgType">
+                                  <input type="radio" name="exRd02" id="rd04">
+                                  <label for="rd04">라벨</label>
+                                </div>
+                                <div class="radio imgType">
+                                  <input type="radio" name="exRd02" id="rd05">
+                                  <label for="rd05">라벨</label>
+                                </div>
+                                <div class="radio imgType">
+                                  <input type="radio" name="exRd02" id="rd06">
+                                  <label for="rd06">라벨</label>
+                                </div>
+                              </div>
                             </div>
                         </div>
                     </div>

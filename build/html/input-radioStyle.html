@@ -26,7 +26,7 @@
                       <span class="hidden">메인으로</span>
                     </a>
                   </li>
-                  <li class="noDepth active">
+                  <li class="noDepth">
                     <span>
                       <a href="sub_first.html" title="홈">Home</a>
                     </span>
@@ -230,7 +230,25 @@
                         <div class="highlightArea cScroll">
                           <pre>
                             <code class="language-scss">
- 
+.radio{display: inline-block; margin-right: 10px;margin-top: 0; cursor: pointer;
+  input[type="radio"]{display: none;}
+  &:last-child {margin-right: 0;}
+  label{position: relative; display: flex;align-items: center; font-family: "Noto Sans"; font-size: 14px; color: #141414; cursor: pointer; text-indent: 5px;
+    &:before{content: ''; display: inline-block; width: 14px; height: 14px; border: 1px solid #ddd; border-radius: 50%; background-color: #fff;}
+  }
+  input[type="radio"]:checked+label{
+    &:after{content: ''; position: absolute; top: 50%; transform: translateY(-50%); left: 5px; 
+    width: 6px;height: 6px; border-radius: 50%; background-color: #266bf7;}
+  }
+  &.imgType{
+    input[type="radio"]:checked+label{
+      &:after{content: ''; border: 0; width: 16px; height: 16px; left: 0;
+      background-image: url("../images/ico/ico-radio-checked.svg");
+      background-repeat: no-repeat ; background-position: center; background-size: 16px 16px;
+      }
+    }
+  }
+}
                             </code>
                         </pre>
                         </div>
@@ -240,7 +258,65 @@
                         <div class="highlightArea cScroll">
                           <pre>
                             <code class="language-css">
+.radio {
+  display: inline-block;
+  margin-right: 10px;
+  margin-top: 0;
+  cursor: pointer;
+}
 
+.radio input[type="radio"] {
+  display: none;
+}
+
+.radio:last-child {
+  margin-right: 0;
+}
+
+.radio label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-family: "Noto Sans";
+  font-size: 14px;
+  color: #141414;
+  cursor: pointer;
+  text-indent: 5px;
+}
+
+.radio label:before {
+  content: '';
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.radio input[type="radio"]:checked + label:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 5px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #266bf7;
+}
+
+.radio.imgType input[type="radio"]:checked + label:after {
+  content: '';
+  border: 0;
+  width: 16px;
+  height: 16px;
+  left: 0;
+  background-image: url("../images/ico/ico-radio-checked.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 16px 16px;
+}
                             </code>
                           </pre>
                         </div>
@@ -271,7 +347,9 @@
                                   <label for="rd03">라벨</label>
                                 </div>
                               </div>
+                            </div>
 
+                            <div class="textBox">
                               <div class="titleH3">
                                 <h3>이미지를 활용한 라디오 버튼</h3>
                               </div>

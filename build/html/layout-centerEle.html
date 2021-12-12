@@ -1,7 +1,19 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    @@include('./include/head.html')
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" href="../images/ico/ico-favi.png" sizes="16x16" />
+<link rel="stylesheet" href="../css/component.css" type="text/css" />
+<link rel="stylesheet" href="../lib/swiper/css/swiper.css" />
+<link rel="stylesheet" href="../css/prism.css" />
+<script type="text/javascript" src="../lib/jquery-1.12.4.js"></script>
+<script type="text/javascript" src="../lib/swiper/js/swiper.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
+<script src="../../js/prism.js"></script>
+<script src="../../js/component.js"></script>
+<title>Component css</title>
+
 </head>
 <body>
     <div id="wrap">
@@ -58,10 +70,10 @@
                       </li>
                     </ul>
                   </li>
-                  <li>
+                  <li class="active">
                     <span title="Layout">Layout</span>
-                    <ul class="leftSubMenu">
-                      <li>
+                    <ul class="leftSubMenu block">
+                      <li class="active">
                         <a href="#" title="Center element">Center element</a>
                       </li>
                       <li>
@@ -81,13 +93,13 @@
                       </li>
                     </ul>
                   </li>
-                  <li class="active">
+                  <li>
                     <span title="Input">Input</span>
-                    <ul class="leftSubMenu block">
+                    <ul class="leftSubMenu">
                       <li>
                         <a href="#" title="Input">input</a>
                       </li>
-                      <li class="active">
+                      <li>
                         <a href="#" title="Radio">radio</a>
                       </li>
                       <li>
@@ -146,12 +158,40 @@
                 </button>
             </div>
 
-            @@include('./include/util.html')
+            <div class="utilArea">
+  <ul>
+      <li>
+          <a href="mailto:sky11916@naver.com" class="btnMail">
+              <span class="hidden">문의</span>
+              <div class="toolTip mail">
+                  <span>메일 문의</span>
+              </div>
+          </a>
+      </li>
+      <li>
+          <button type="button" class="btnShare">
+              <span class="hidden">공유</span>
+              <div class="toolTip share">
+                  <span>공유하기</span>
+              </div>
+          </button>
+          
+      </li>
+      <li>
+          <button type="button" class="btnMore">
+              <span class="hidden">더보기</span>
+              <div class="toolTip more">
+                  <span>더보기</span>
+              </div>
+          </button>
+      </li>
+  </ul>
+</div>
             
             <div class="rightArea">
                 <div class="textBox">
                     <div class="titleH1">
-                        <h1>radio</h1>
+                        <h1>Center element</h1>
                     </div>
                     <div class="tabWrap type01">
                       <div class="tabNav">
@@ -166,21 +206,40 @@
                         <div class="highlightArea cScroll">
                           <pre>
                             <code class="language-html">
-&lt;div class="radioBox"&gt;
-    &lt;div class="radio"&gt;
-        &lt;input type="radio" name="exRd01" id="rd01"&gt;
-        &lt;label for="rd01"&gt;라벨&lt;/label&gt;
+&lt;div class="resultCont type01"&gt;
+    &lt;div class="titleH3"&gt;
+        &lt;h3&gt;Flex를 이용한 가운데 정렬&lt;/h3&gt;
     &lt;/div&gt;
-    &lt;div class="radio"&gt;
-        &lt;input type="radio" name="exRd01" id="rd02"&gt;
-        &lt;label for="rd02"&gt;라벨&lt;/label&gt;
-    &lt;/div&gt;
-    &lt;div class="radio"&gt;
-        &lt;input type="radio" name="exRd01" id="rd03"&gt;
-        &lt;label for="rd03"&gt;라벨&lt;/label&gt;
+    &lt;div class="container"&gt;
+        &lt;div class="centerBox"&gt;
+            &lt;span&gt;가운데 정렬&lt;/span&gt;
+        &lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;
-                         
+
+&lt;div class="resultCont type02"&gt;
+    &lt;div class="titleH3"&gt;
+        &lt;h3&gt;Flex + vh를 이용한 가운데 정렬&lt;/h3&gt;
+    &lt;/div&gt;
+    &lt;div class="container"&gt;
+        &lt;div class="innerBox"&gt;
+            &lt;div class="centerBox"&gt;
+                &lt;span&gt;가운데 정렬&lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="resultCont type03"&gt;
+    &lt;div class="titleH3"&gt;
+        &lt;h3&gt;position을 이용한 가운데 정렬&lt;/h3&gt;
+    &lt;/div&gt;
+    &lt;div class="container"&gt;
+        &lt;div class="centerBox"&gt;
+            &lt;span&gt;가운데 정렬&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
                             </code>
                           </pre>
                         </div>
@@ -190,25 +249,20 @@
                         <div class="highlightArea cScroll">
                           <pre>
                             <code class="language-scss">
-.radio{display: inline-block; margin-right: 10px;margin-top: 0; cursor: pointer;
-  input[type="radio"]{display: none;}
-  &:last-child {margin-right: 0;}
-  label{position: relative; display: flex;align-items: center; font-family: "Noto Sans"; font-size: 14px; color: #141414; cursor: pointer; text-indent: 5px;
-    &:before{content: ''; display: inline-block; width: 14px; height: 14px; border: 1px solid #ddd; border-radius: 50%; background-color: #fff;}
-  }
-  input[type="radio"]:checked+label{
-    &:after{content: ''; position: absolute; top: 50%; transform: translateY(-50%); left: 5px; 
-    width: 6px;height: 6px; border-radius: 50%; background-color: #266bf7;}
-  }
-  &.imgType{
-    input[type="radio"]:checked+label{
-      &:after{content: ''; border: 0; width: 16px; height: 16px; left: 0;
-      background-image: url("../images/ico/ico-radio-checked.svg");
-      background-repeat: no-repeat ; background-position: center; background-size: 16px 16px;
-      }
+.resultCont{position: relative; padding: 50px; box-sizing: border-box;
+    &.type01{height: 100%; 
+        .container{height: 100%; display: flex; align-items: center; justify-content: center;}
     }
-  }
+    &.type02{
+        .innerBox{display: flex; align-items: center; justify-content: center; height: 100vh;
+    }
+    }
+    &.type03{height: 100%;
+        .container{position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);}
+    }
 }
+.titleH3{margin-bottom: 0; padding-bottom: 10px;}
+.centerBox{padding: 50px; border: 2px solid #000; font-size: 22px; font-family: 'Noto Sans';}
                             </code>
                         </pre>
                         </div>
@@ -218,117 +272,62 @@
                         <div class="highlightArea cScroll">
                           <pre>
                             <code class="language-css">
-.radio {
-  display: inline-block;
-  margin-right: 10px;
-  margin-top: 0;
-  cursor: pointer;
+#wrap.pre.centerEle .resultCont {
+    position: relative;
+    padding: 50px;
+    box-sizing: border-box;
 }
 
-.radio input[type="radio"] {
-  display: none;
+#wrap.pre.centerEle .resultCont.type01 {
+    height: 100%;
 }
 
-.radio:last-child {
-  margin-right: 0;
+#wrap.pre.centerEle .resultCont.type01 .container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.radio label {
-  position: relative;
-  display: flex;
-  align-items: center;
-  font-family: "Noto Sans";
-  font-size: 14px;
-  color: #141414;
-  cursor: pointer;
-  text-indent: 5px;
+#wrap.pre.centerEle .resultCont.type02 .innerBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
 }
 
-.radio label:before {
-  content: '';
-  display: inline-block;
-  width: 14px;
-  height: 14px;
-  border: 1px solid #ddd;
-  border-radius: 50%;
-  background-color: #fff;
+#wrap.pre.centerEle .resultCont.type03 {
+    height: 100%;
 }
 
-.radio input[type="radio"]:checked + label:after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 5px;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background-color: #266bf7;
+#wrap.pre.centerEle .resultCont.type03 .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-.radio.imgType input[type="radio"]:checked + label:after {
-  content: '';
-  border: 0;
-  width: 16px;
-  height: 16px;
-  left: 0;
-  background-image: url("../images/ico/ico-radio-checked.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 16px 16px;
+#wrap.pre.centerEle .titleH3 {
+    margin-bottom: 0;
+    padding-bottom: 10px;
+}
+
+#wrap.pre.centerEle .centerBox {
+    padding: 50px;
+    border: 2px solid #000;
+    font-size: 22px;
+    font-family: 'Noto Sans';
 }
                             </code>
                           </pre>
                         </div>
                       </div>
                     </div>
-                    
-
-                    <div class="titleH2">
-                        <h2>Result</h2>
-                    </div>
-                    <div class="resultArea">
-                        <div class="inner">
-                            <div class="textBox">
-                              <div class="titleH3">
-                                <h3>css를 활용한 라디오 버튼</h3>
-                              </div>
-                              <div class="radioBox">
-                                <div class="radio">
-                                  <input type="radio" name="exRd01" id="rd01">
-                                  <label for="rd01">라벨</label>
-                                </div>
-                                <div class="radio">
-                                  <input type="radio" name="exRd01" id="rd02">
-                                  <label for="rd02">라벨</label>
-                                </div>
-                                <div class="radio">
-                                  <input type="radio" name="exRd01" id="rd03">
-                                  <label for="rd03">라벨</label>
-                                </div>
-                              </div>
-                            </div>
-
-                            <div class="textBox">
-                              <div class="titleH3">
-                                <h3>이미지를 활용한 라디오 버튼</h3>
-                              </div>
-                              <div class="radioBox">
-                                <div class="radio imgType">
-                                  <input type="radio" name="exRd02" id="rd04">
-                                  <label for="rd04">라벨</label>
-                                </div>
-                                <div class="radio imgType">
-                                  <input type="radio" name="exRd02" id="rd05">
-                                  <label for="rd05">라벨</label>
-                                </div>
-                                <div class="radio imgType">
-                                  <input type="radio" name="exRd02" id="rd06">
-                                  <label for="rd06">라벨</label>
-                                </div>
-                              </div>
-                            </div>
-                        </div>
+                    <div class="btnArea end">
+                        <button type="button" class="button Bgblue" onclick="window.open('result-centerEle.html');">
+                          <span>결과보기</span>
+                          <i class="ico result"></i>
+                        </button>
                     </div>
                 </div>
                 

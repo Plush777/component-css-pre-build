@@ -1,7 +1,19 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    @@include('./include/head.html')
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" href="../images/ico/ico-favi.png" sizes="16x16" />
+<link rel="stylesheet" href="../css/component.css" type="text/css" />
+<link rel="stylesheet" href="../lib/swiper/css/swiper.css" />
+<link rel="stylesheet" href="../css/prism.css" />
+<script type="text/javascript" src="../lib/jquery-1.12.4.js"></script>
+<script type="text/javascript" src="../lib/swiper/js/swiper.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
+<script src="../../js/prism.js"></script>
+<script src="../../js/component.js"></script>
+<title>Component css</title>
+
 </head>
 <body>
     <div id="wrap">
@@ -85,7 +97,7 @@
                 <span title="Input">Input</span>
                 <ul class="leftSubMenu">
                   <li>
-                    <a href="input-inputStyle.html" title="Input">input</a>
+                    <a href="#" title="Input">input</a>
                   </li>
                   <li>
                     <a href="#" title="Radio">radio</a>
@@ -146,21 +158,47 @@
                 </button>
             </div>
 
-            @@include('./include/util.html')
+            <div class="utilArea">
+  <ul>
+      <li>
+          <a href="mailto:sky11916@naver.com" class="btnMail">
+              <span class="hidden">문의</span>
+              <div class="toolTip mail">
+                  <span>메일 문의</span>
+              </div>
+          </a>
+      </li>
+      <li>
+          <button type="button" class="btnShare">
+              <span class="hidden">공유</span>
+              <div class="toolTip share">
+                  <span>공유하기</span>
+              </div>
+          </button>
+          
+      </li>
+      <li>
+          <button type="button" class="btnMore">
+              <span class="hidden">더보기</span>
+              <div class="toolTip more">
+                  <span>더보기</span>
+              </div>
+          </button>
+      </li>
+  </ul>
+</div>
             
             <div class="rightArea">
                 <div class="textBox">
                     <div class="titleH1">
-                        <h1>Context Menu</h1>
+                        <h1>Overflow scroll</h1>
                     </div>
-
                     <div class="tabWrap type01">
                       <div class="tabNav">
                         <ul class="tabList">
                           <li class="active orange">HTML</li>
                           <li class="pink">SCSS</li>
                           <li class="blue">CSS</li>
-                          <li class="yellow">JS</li>
                         </ul>
                       </div>
 
@@ -168,12 +206,9 @@
                         <div class="highlightArea cScroll">
                           <pre>
                             <code class="language-html">
-&lt;ul class="mouseMenu"&gt;
-  &lt;li&gt;&lt;a href="#"&gt;메뉴1&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="#"&gt;메뉴2&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="#"&gt;메뉴3&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="#"&gt;메뉴4&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;div class="exBox overflow-y"&gt;
+    &lt;div class="overflowDiv"&gt;&lt;/div&gt;
+&lt;/div&gt;
                             </code>
                           </pre>
                         </div>
@@ -183,11 +218,8 @@
                         <div class="highlightArea cScroll">
                           <pre>
                             <code class="language-scss">
-.mouseMenu{display:none; position:absolute; z-index:10000; padding:10px 0;border:1px solid #ccc; border-radius:4px; background:#f5f5f5;
-  li{width:150px; padding:5px; font-family: 'Noto Sans';
-    &:hover{background:#dee1e7;}
-    a{display: block;}
-  }
+.exBox{border: 1px solid #222; height: 150px;
+  .overflowDiv{width: 100%; height: 200px;}
 }   
                             </code>
                         </pre>
@@ -198,51 +230,15 @@
                         <div class="highlightArea cScroll">
                           <pre>
                             <code class="language-css">
-.mouseMenu {
-    display: none;
-    position: absolute;
-    z-index: 10000;
-    padding: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background: #f5f5f5;
+.exBox {
+  border: 1px solid #222;
+  height: 150px;
 }
 
-.mouseMenu li {
-    width: 150px;
-    padding: 5px;
-    font-family: 'Noto Sans';
+.exBox .overflowDiv {
+  width: 100%;
+  height: 200px;
 }
-
-.mouseMenu li:hover {
-    background: #dee1e7;
-}
-
-.mouseMenu li a {
-    display: block;
-}
-                            </code>
-                          </pre>
-                        </div>
-                      </div>
-
-                      <div class="tabCont">
-                        <div class="highlightArea cScroll">
-                          <pre>
-                            <code class="language-javascript">
-$('').on({
-  'contextmenu': function (e){
-      if(e.pageX > $(window).width()-$('.mouseMenu').outerWidth() && e.pageY > $(window).height()-$('.mouseMenu').outerHeight()){
-        $('.mouseMenu').css({left:e.pageX-$('.mouseMenu').outerWidth(),top:e.pageY-$('.mouseMenu').outerHeight()}).show();
-      }else if(e.pageX <= $(window).width()-$('.mouseMenu').outerWidth() && e.pageY > $(window).height()-$('.mouseMenu').outerHeight()){
-        $('.mouseMenu').css({left:e.pageX,top:e.pageY-$('.mouseMenu').outerHeight()}).show();
-      }else if(e.pageX > $(window).width()-$('.mouseMenu').outerWidth() && e.pageY <= $(window).height()-$('.mouseMenu').outerHeight()){
-        $('.mouseMenu').css({left:e.pageX-$('.mouseMenu').outerWidth(),top:e.pageY}).show();
-      }else{
-        $('.mouseMenu').css({left:e.pageX,top:e.pageY}).show();
-      }
-    }
-});
                             </code>
                           </pre>
                         </div>
@@ -252,21 +248,16 @@ $('').on({
                     <div class="titleH2">
                         <h2>Result</h2>
                     </div>
-                    <div class="resultArea h400" id="context">
+                    <div class="resultArea">
                         <div class="inner">
-                            <p>마우스 우클릭을 해보세요!</p>
+                            <div class="exBox overflow-y">
+                                <div class="overflowDiv"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
-        <ul class="mouseMenu">
-            <li><a href="#">메뉴1</a></li>
-            <li><a href="#">메뉴2</a></li>
-            <li><a href="#">메뉴3</a></li>
-            <li><a href="#">메뉴4</a></li>
-        </ul>
 
         <div class="popup share">
           <div class="cont">

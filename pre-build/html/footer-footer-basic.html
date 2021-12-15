@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    @@include('./include/head.html')
+</head>
+<body>
+    <div id="wrap">
+        <div id="container">
+          <div class="leftArea cScroll">
+            <ul class="leftMenu">
+              <li>
+                <a href="main.html" title="메인으로">
+                  <img src="../images/common/logo.svg" alt="서브 메인로고" />
+                  <span class="hidden">메인으로</span>
+                </a>
+              </li>
+              <li class="noDepth">
+                <span>
+                  <a href="sub_first.html" title="홈">Home</a>
+                </span>
+              </li>
+              <li>
+                <span title="Header">Header</span>
+                <ul class="leftSubMenu">
+                  <li>
+                    <a href="#" title="Header fixed">Header fixed</a>
+                  </li>
+                  <li>
+                    <a href="#" title="Header Toggle">Header Toggle</a>
+                  </li>
+                  <li>
+                    <a href="#" title="scroll Header">scroll Header</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <span title="GNB">GNB</span>
+                <ul class="leftSubMenu">
+                  <li>
+                    <a href="#" title="GNB Hover">GNB Hover</a>
+                  </li>
+                  <li>
+                    <a href="#" title="GNB li Hover">GNB li Hover</a>
+                  </li>
+                  <li>
+                    <a href="#" title="GNB li find Hover">GNB li find Hover</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="active">
+                <span title="Footer">Footer</span>
+                <ul class="leftSubMenu block">
+                  <li class="active">
+                    <a href="#" title="Footer basic">Footer basic</a>
+                  </li>
+                  <li>
+                    <a href="#" title="Footer fixed">Footer fixed</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <span title="Layout">Layout</span>
+                <ul class="leftSubMenu">
+                  <li>
+                    <a href="layout-centerEle.html" title="Center element">Center element</a>
+                  </li>
+                  <li>
+                    <a href="layout-tab.html" title="Tab">Tab</a>
+                  </li>
+                  <li>
+                    <a href="layout-bg-image.html" title="Background-image 100%">Background-image 100%</a>
+                  </li>
+                  <li>
+                    <a href="#" title="Slide">Slide</a>
+                  </li>
+                  <li>
+                    <a href="#" title="Flex">Flex</a>
+                  </li>
+                  <li>
+                    <a href="#" title="Grid">Grid</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <span title="Input">Input</span>
+                <ul class="leftSubMenu">
+                  <li>
+                    <a href="input-inputStyle.html" title="Input">input</a>
+                  </li>
+                  <li>
+                    <a href="input-radioStyle.html" title="Radio">radio</a>
+                  </li>
+                  <li>
+                    <a href="input-selectStyle.html" title="Select">select</a>
+                  </li>
+                  <li>
+                    <a href="input-textareaStyle.html" title="textarea">textarea</a>
+                  </li>
+                  <li>
+                    <a href="input-chkboxStyle.html" title="checkbox">checkbox</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <span title="Scroll element">Scroll element</span>
+                <ul class="leftSubMenu">
+                  <li>
+                    <a href="scroll-ele-table.html" title="table 내부 스크롤">table 내부 스크롤</a>
+                  </li>
+                  <li>
+                    <a href="scroll-ele-overflow.html" title="Overflow scroll">Overflow scroll</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <span title="Custom">Custom</span>
+                <ul class="leftSubMenu">
+                  <li>
+                    <a href="custom-contextMenu.html" title="Context Menu">Context Menu</a>
+                  </li>
+                  <li>
+                    <a href="custom-scroll.html" title="Scroll design">Scroll design</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <span title="Interaction">Interaction</span>
+                <ul class="leftSubMenu">
+                  <li>
+                    <a href="#" title="Hover transfrom">Hover transfrom</a>
+                  </li>
+                  <li>
+                    <a href="#" title="FadeIn & FadeOut">FadeIn & FadeOut</a>
+                  </li>
+                  <li>
+                    <a href="#" title="Click popup">Click popup</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+            <div class="backArea">
+                <button type="button" class="btnBack">
+                    <span class="hidden">뒤로가기</span>
+                </button>
+            </div>
+
+            @@include('./include/util.html')
+            
+            <div class="rightArea">
+                <div class="textBox">
+                    <div class="titleH1">
+                        <h1>Footer basic</h1>
+                    </div>
+                    <div class="tabWrap type01">
+                      <div class="tabNav">
+                        <ul class="tabList">
+                          <li class="active orange">HTML</li>
+                          <li class="pink">SCSS</li>
+                          <li class="blue">CSS</li>
+                        </ul>
+                      </div>
+
+                      <div class="tabCont active">
+                        <div class="highlightArea cScroll">
+                          <pre>
+                            <code class="language-html">
+&lt;div class="textBox"&gt;
+    &lt;div class="checkbox"&gt;
+        &lt;input type="checkbox" id="chk01"&gt;
+        &lt;label for="chk01"&gt;라벨&lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div class="checkbox"&gt;
+        &lt;input type="checkbox" id="chk02" checked&gt;
+        &lt;label for="chk02"&gt;checked&lt;/label&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+                            </code>
+                          </pre>
+                        </div>
+                      </div>
+
+                      <div class="tabCont">
+                        <div class="highlightArea cScroll">
+                          <pre>
+                            <code class="language-scss">
+.checkbox{display: inline-block;
+    input[type="checkbox"]{display: none;
+        &:checked+label{
+            &:before{background-image: url("../images/ico/ico-checkbox-checked.svg");
+            background-repeat: no-repeat; background-position: center; background-size: 25px 25px;
+            border: 0;}
+        }
+    }
+    label{vertical-align: middle; font-size: 14px; color: #222; font-family: 'Noto Sans';cursor: pointer;
+        &:before{content: ''; display: inline-block; width: 20px; height: 20px; border-radius: 4px; box-sizing: border-box;
+        margin-right: 5px; vertical-align: sub; border: 1px solid #ddd; background-color: #fff;}
+    }
+    +.checkbox{margin-left: 10px;}
+}
+                            </code>
+                        </pre>
+                        </div>
+                      </div>
+
+                      <div class="tabCont">
+                        <div class="highlightArea cScroll">
+                          <pre>
+                            <code class="language-css">
+.checkbox {
+    display: inline-block;
+}
+
+.checkbox input[type="checkbox"] {
+    display: none;
+}
+
+.checkbox input[type="checkbox"]:checked + label:before {
+    background-image: url("../images/ico/ico-checkbox-checked.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 25px 25px;
+    border: 0;
+}
+
+.checkbox label {
+    vertical-align: middle;
+    font-size: 14px;
+    color: #222;
+    font-family: 'Noto Sans';
+    cursor: pointer;
+}
+
+.checkbox label:before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-right: 5px;
+    vertical-align: sub;
+    border: 1px solid #ddd;
+    background-color: #fff;
+}
+
+.checkbox + .checkbox {
+    margin-left: 10px;
+}
+                            </code>
+                          </pre>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="btnArea end">
+                        <button type="button" class="button Bgblue" onclick="window.open('result-footer-basic.html');">
+                          <span>결과보기</span>
+                          <i class="ico result"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="popup share">
+          <div class="cont">
+            <div class="inner">
+              <p>아래 주소를 복사하여 다른 곳에 붙여넣으세요.</p>
+              <div class="inputArea flex">
+                <input type="text" id="subUrl" class="full">
+                <button type="button" data-clipboard-target="#subUrl" class="button Bgblue w75 btnClip">
+                  복사
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="dimmed"></div>
+    </div>
+</body>
+</html>

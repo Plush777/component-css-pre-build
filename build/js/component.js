@@ -1,9 +1,5 @@
 $(document).ready(function(){
 
-    if($('.tabList li').first().hasClass('active')){
-        $('.tabList li').parents('.tabNav').siblings('.tabCont').first().find('.toolbar').children('.toolbar-item').last().addClass('htmlStyle');
-    }
-    
     /* 공유 버튼 팝업 input에 현재 url 가져오기 */
     document.getElementById('subUrl').value = window.location.href;
 
@@ -21,12 +17,27 @@ $(document).ready(function(){
         }
     });
 
+    var tabList = $('.tabList li');
+
+    $(tabList).on({
+		"click":function(){
+			$(this).addClass('active').siblings('li').removeClass('active');
+			$(this).closest('.tabNav').siblings('.tabCont').eq($(this).index()).addClass('active').siblings('.tabCont').removeClass('active');
+		}
+	})
+
+    // var toolBarActive = $('.tabWrap .tabCont');
+
+    // function tabListInit(){
+    //     $(toolBarActive).eq(0).find('.toolbar').addClass('sss');
+    // }
+
+    // tabListInit();
+
+
     /* prism js 코드 하이라이트 툴팁에 클래스추가 */
-    $('.tabList li').on({
+    $(tabList).on({
         "click":function(){
-            if($(this).eq(1).click()){
-                $(this).parents('.tabNav').siblings('.tabCont').first().find('.toolbar').children('.toolbar-item').last().addClass('htmlStyle');
-            }
             if($(this).eq(2).click()){
                 $(this).parents('.tabNav').siblings('.tabCont').eq(1).find('.toolbar').children('.toolbar-item').last().addClass('scssStyle');
             }
@@ -105,13 +116,6 @@ $(document).ready(function(){
             }
         }
     });
-
-    $('.tabList li').on({
-		"click":function(){
-			$(this).addClass('active').siblings('li').removeClass('active');
-			$(this).closest('.tabNav').siblings('.tabCont').eq($(this).index()).addClass('active').siblings('.tabCont').removeClass('active');
-		}
-	})
 
     /* 마우스 커스텀메뉴가 나온 상태에서 밖을 클릭하거나 우클릭 시 hide */
     $(document).on({

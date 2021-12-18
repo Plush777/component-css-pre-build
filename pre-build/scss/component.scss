@@ -449,9 +449,30 @@ border-radius:4px; background:#f5f5f5;
   }
 }
 
-/* supports */
-
-// :is(input[type="image"],input[type="color"],input[type="button"]){display: inline-block; vertical-align: middle;}
-// @supports not selector(:is( input[type="image"],input[type="color"],input[type="button"] )) {
-//   input[type="image"],input[type="color"],input[type="button"]{display: inline-block; vertical-align: middle;}
-// }
+.highlightArea{
+  .code-toolbar{
+    .toolbar{top: 8px !important; right: 8px !important;}
+    .toolbar-item{cursor: pointer;
+      &:last-child span{font-weight: bold !important;}
+      button{font-size: 12px !important; padding: 0 !important;}
+      span{display: inline-block !important; min-width: 40px !important; 
+      padding: 0 10px !important; font-size: 12px !important; 
+      font-family: 'Noto Sans' !important; text-align: center!important; transition: .5s !important;
+        &:hover{color: #fff !important;}
+      }
+      +.toolbar-item{margin-left: 5px;}
+      &.htmlStyle{
+        span{color: #fff; background-color: #ed5e26 !important;}
+      }
+      &.scssStyle{
+        span{color: #fff; background-color: #cf649a !important;}
+      }
+      &.cssStyle{
+        span{color: #fff; background-color: #2693cc !important;}
+      }
+      &.jsStyle{
+        span{color: #000 !important; background-color: #f7e018 !important;}
+      }
+    }
+  }
+}

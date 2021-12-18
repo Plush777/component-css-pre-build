@@ -1,5 +1,10 @@
 $(document).ready(function(){
+
+    if($('.tabList li').first().hasClass('active')){
+        $('.tabList li').parents('.tabNav').siblings('.tabCont').first().find('.toolbar').children('.toolbar-item').last().addClass('htmlStyle');
+    }
     
+    /* 공유 버튼 팝업 input에 현재 url 가져오기 */
     document.getElementById('subUrl').value = window.location.href;
 
     $('.btnShare').on({
@@ -16,6 +21,25 @@ $(document).ready(function(){
         }
     });
 
+    /* prism js 코드 하이라이트 툴팁에 클래스추가 */
+    $('.tabList li').on({
+        "click":function(){
+            if($(this).eq(1).click()){
+                $(this).parents('.tabNav').siblings('.tabCont').first().find('.toolbar').children('.toolbar-item').last().addClass('htmlStyle');
+            }
+            if($(this).eq(2).click()){
+                $(this).parents('.tabNav').siblings('.tabCont').eq(1).find('.toolbar').children('.toolbar-item').last().addClass('scssStyle');
+            }
+            if($(this).eq(3).click()){
+                $(this).parents('.tabNav').siblings('.tabCont').eq(2).find('.toolbar').children('.toolbar-item').last().addClass('cssStyle');
+            }
+            if($(this).eq(4).click()){
+                $(this).parents('.tabNav').siblings('.tabCont').eq(3).find('.toolbar').children('.toolbar-item').last().addClass('jsStyle');
+            }
+        }
+    });
+
+    /* lnb 슬라이드토글 */
     $('.leftArea .leftMenu > li > span').on({
         "click":function(){
             $(this).next('.leftSubMenu').slideToggle();
@@ -89,6 +113,7 @@ $(document).ready(function(){
 		}
 	})
 
+    /* 마우스 커스텀메뉴가 나온 상태에서 밖을 클릭하거나 우클릭 시 hide */
     $(document).on({
         "click":function(){
             $('.mouseMenu').hide();
@@ -119,4 +144,3 @@ $(document).ready(function(){
         alert('클립보드 복사에 실패하였습니다. 다시 시도해주세요.');
     });
 });
-

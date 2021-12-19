@@ -63,10 +63,10 @@
                 <span title="Footer">Footer</span>
                 <ul class="leftSubMenu block">
                   <li class="active">
-                    <a href="#" title="Footer basic">Footer basic</a>
+                    <a href="footer-footer-basic.html" title="Footer basic">Footer basic</a>
                   </li>
                   <li>
-                    <a href="#" title="Footer fixed">Footer fixed</a>
+                    <a href="footer-footer-fixed.html" title="Footer fixed">Footer fixed</a>
                   </li>
                 </ul>
               </li>
@@ -179,7 +179,20 @@
       </li>
       <li>
           <button type="button" class="btnMore">
-              <span class="hidden">더보기</span>
+            <span class="hidden">더보기</span>
+              <div class="moreSubMenu">
+                <ul>
+                    <li>
+                        <a href="https://github.com/Plush777" target="_blank">Github</a>
+                    </li>
+                    <li>
+                        <a href="https://velog.io/@sky" target="_blank">Velog</a>
+                    </li>
+                    <li>
+                        <a href="update-note.html" target="_blank">Update note</a>
+                    </li>
+                </ul>
+              </div>
               <div class="toolTip more">
                   <span>더보기</span>
               </div>
@@ -192,6 +205,9 @@
                 <div class="textBox">
                     <div class="titleH1">
                         <h1>Footer basic</h1>
+                    </div>
+                    <div class="mainTxt">
+                      <p>브라우저 크기를 줄였을 때 footer 크기를 그대로 유지할려면 #footer min-width 1920px 혹은 #wrap min-width 1920px 을 주면 됩니다.</p>
                     </div>
                     <div class="tabWrap type01">
                       <div class="tabNav">
@@ -206,16 +222,63 @@
                         <div class="highlightArea cScroll">
                           <pre>
                             <code class="language-html">
-&lt;div class="textBox"&gt;
-    &lt;div class="checkbox"&gt;
-        &lt;input type="checkbox" id="chk01"&gt;
-        &lt;label for="chk01"&gt;라벨&lt;/label&gt;
+  &lt;div id="wrap"&gt;
+    &lt;div class="container"&gt;
+        &lt;div class="contents"&gt;
+            &lt;div class="contBox"&gt;
+                &lt;span&gt;콘텐츠 박스&lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
     &lt;/div&gt;
-    &lt;div class="checkbox"&gt;
-        &lt;input type="checkbox" id="chk02" checked&gt;
-        &lt;label for="chk02"&gt;checked&lt;/label&gt;
+    &lt;div id="footer"&gt;
+        &lt;div class="inner"&gt;
+            &lt;div class="logoArea"&gt;
+                &lt;a href="#"&gt;
+                    &lt;img src="../" alt=""&gt;
+                &lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class="linkContainer"&gt;
+                &lt;div class="linkArea"&gt;
+                    &lt;ul&gt;
+                        &lt;li&gt;
+                            &lt;a href="#" title="link01"&gt;link01&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li&gt;
+                            &lt;a href="#" title="link02"&gt;link02&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li&gt;
+                            &lt;a href="#" title="link03"&gt;link03&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li&gt;
+                            &lt;a href="#" title="link04"&gt;link04&lt;/a&gt;
+                        &lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/div&gt;
+                &lt;div class="linkArea"&gt;
+                    &lt;ul&gt;
+                        &lt;li&gt;
+                            &lt;a href="#" title="link05"&gt;link05&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li&gt;
+                            &lt;a href="#" title="link06"&gt;link06&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li&gt;
+                            &lt;a href="#" title="link07"&gt;link07&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li&gt;
+                            &lt;a href="#" title="link08"&gt;link08&lt;/a&gt;
+                        &lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="bottomArea"&gt;
+                &lt;div class="inner"&gt;
+                    &lt;p class="copy"&gt;Copyright © 2021 Company. ALL RIGHTS RESERVED.&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;
+  &lt;/div&gt;
                             </code>
                           </pre>
                         </div>
@@ -225,19 +288,34 @@
                         <div class="highlightArea cScroll">
                           <pre>
                             <code class="language-scss">
-.checkbox{display: inline-block;
-    input[type="checkbox"]{display: none;
-        &:checked+label{
-            &:before{background-image: url("../images/ico/ico-checkbox-checked.svg");
-            background-repeat: no-repeat; background-position: center; background-size: 25px 25px;
-            border: 0;}
+.contents{width: 100%;}
+.contBox{position: relative; min-height: calc(100vh - 322px); text-align: center; font-size: 36px; color: #fff; font-family: 'Noto Sans';
+background-color: #444;
+  span{position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);}
+}
+#footer{width: 100%; background-color: #292a2d;
+  >.inner{padding-top: 40px; max-width: 1200px; margin: 0 auto;
+    .logoArea{margin-bottom: 20px;
+      a{display: inline-block;}
+      img{width: 200px;}
+    }
+    .linkContainer{display: flex; padding-bottom: 40px; border-bottom: 1px solid #fff;}
+    .linkArea{flex: 0.5; margin-left: auto;
+      ul{display: flex; flex-direction: column;
+        li{ 
+          a{font-size: 16px; font-family: 'Noto Sans'; color: #fff;
+            &:hover{text-decoration: underline;}
+          }
+          +li{margin-top: 10px;}
         }
+      }
     }
-    label{vertical-align: middle; font-size: 14px; color: #222; font-family: 'Noto Sans';cursor: pointer;
-        &:before{content: ''; display: inline-block; width: 20px; height: 20px; border-radius: 4px; box-sizing: border-box;
-        margin-right: 5px; vertical-align: sub; border: 1px solid #ddd; background-color: #fff;}
+    .bottomArea{
+      >.inner{height: 58px; line-height: 58px;
+        p.copy{font-size: 14px; color: #fff; font-family: '맑은 고딕'; text-align: center;}
+      }
     }
-    +.checkbox{margin-left: 10px;}
+  }
 }
                             </code>
                         </pre>
@@ -248,45 +326,93 @@
                         <div class="highlightArea cScroll">
                           <pre>
                             <code class="language-css">
-.checkbox {
-    display: inline-block;
+#wrap .contents {
+  width: 100%;
 }
 
-.checkbox input[type="checkbox"] {
-    display: none;
+#wrap .contBox {
+  position: relative;
+  min-height: calc(100vh - 322px);
+  text-align: center;
+  font-size: 36px;
+  color: #fff;
+  font-family: 'Noto Sans';
+  background-color: #444;
 }
 
-.checkbox input[type="checkbox"]:checked + label:before {
-    background-image: url("../images/ico/ico-checkbox-checked.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 25px 25px;
-    border: 0;
+#wrap .contBox span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
-.checkbox label {
-    vertical-align: middle;
-    font-size: 14px;
-    color: #222;
-    font-family: 'Noto Sans';
-    cursor: pointer;
+#wrap #footer {
+  width: 100%;
+  background-color: #292a2d;
 }
 
-.checkbox label:before {
-    content: '';
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-right: 5px;
-    vertical-align: sub;
-    border: 1px solid #ddd;
-    background-color: #fff;
+#wrap #footer > .inner {
+  padding-top: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.checkbox + .checkbox {
-    margin-left: 10px;
+#wrap #footer > .inner .logoArea {
+  margin-bottom: 20px;
+}
+
+#wrap #footer > .inner .logoArea a {
+  display: inline-block;
+}
+
+#wrap #footer > .inner .logoArea img {
+  width: 200px;
+}
+
+#wrap #footer > .inner .linkContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #fff;
+}
+
+#wrap #footer > .inner .linkArea {
+  -webkit-box-flex: 0.5;
+      -ms-flex: 0.5;
+          flex: 0.5;
+  margin-left: auto;
+}
+
+#wrap #footer > .inner .linkArea ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#wrap  #footer > .inner .linkArea ul li a {
+  font-size: 16px;
+  font-family: 'Noto Sans';
+  color: #fff;
+}
+
+#wrap #footer > .inner .linkArea ul li a:hover {
+  text-decoration: underline;
+}
+
+#wrap #footer > .inner .linkArea ul li + li {
+  margin-top: 10px;
+}
+
+#wrap #footer > .inner .bottomArea > .inner {
+  height: 58px;
+  line-height: 58px;
 }
                             </code>
                           </pre>
@@ -302,21 +428,20 @@
                 </div>
             </div>
         </div>
-
         <div class="popup share">
-          <div class="cont">
-            <div class="inner">
-              <p>아래 주소를 복사하여 다른 곳에 붙여넣으세요.</p>
-              <div class="inputArea flex">
-                <input type="text" id="subUrl" class="full">
-                <button type="button" data-clipboard-target="#subUrl" class="button Bgblue w75 btnClip">
-                  복사
-                </button>
-              </div>
-            </div>
-          </div>
+    <div class="cont">
+      <div class="inner">
+        <p>아래 주소를 복사하여 다른 곳에 붙여넣으세요.</p>
+        <div class="inputArea flex">
+          <input type="text" id="subUrl" class="full">
+          <button type="button" data-clipboard-target="#subUrl" class="button Bgblue w75 btnClip">
+            복사
+          </button>
         </div>
-        <div id="dimmed"></div>
+      </div>
+    </div>
+  </div>
+  <div id="dimmed"></div>
     </div>
 </body>
 </html>

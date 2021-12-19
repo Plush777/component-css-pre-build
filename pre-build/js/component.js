@@ -17,6 +17,21 @@ $(document).ready(function(){
         }
     });
 
+    /* 더보기 메뉴 토글 및 툴팁 제어 */
+    $('.utilArea li .btnMore').on({
+        "click":function(){
+            var moreSubMenu = $(this).find('.moreSubMenu');
+            var moreTooltip = $(this).find('.toolTip.more');
+
+            $(moreSubMenu).toggleClass('active');
+            if(moreSubMenu.hasClass('active')){
+                $(moreTooltip).hide();
+            }else{
+                $(moreTooltip).show();
+            }
+        }
+    });
+
     var tabList = $('.tabList li');
 
     $(tabList).on({
@@ -25,15 +40,6 @@ $(document).ready(function(){
 			$(this).closest('.tabNav').siblings('.tabCont').eq($(this).index()).addClass('active').siblings('.tabCont').removeClass('active');
 		}
 	})
-
-    // var toolBarActive = $('.tabWrap .tabCont');
-
-    // function tabListInit(){
-    //     $(toolBarActive).eq(0).find('.toolbar').addClass('sss');
-    // }
-
-    // tabListInit();
-
 
     /* prism js 코드 하이라이트 툴팁에 클래스추가 */
     $(tabList).on({
@@ -80,7 +86,6 @@ $(document).ready(function(){
 
     /* 뒤로가기 버튼 */
     backReferrer = document.referrer;
-    console.log(document.referrer);
 
     $('.backArea .btnBack').on({
         "click":function(){

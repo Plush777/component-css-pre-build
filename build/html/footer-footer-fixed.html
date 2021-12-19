@@ -59,13 +59,13 @@
                   </li>
                 </ul>
               </li>
-              <li>
+              <li class="active">
                 <span title="Footer">Footer</span>
-                <ul class="leftSubMenu">
+                <ul class="leftSubMenu block">
                   <li>
                     <a href="#" title="Footer basic">Footer basic</a>
                   </li>
-                  <li>
+                  <li class="active">
                     <a href="#" title="Footer fixed">Footer fixed</a>
                   </li>
                 </ul>
@@ -93,9 +93,9 @@
                   </li>
                 </ul>
               </li>
-              <li class="active">
+              <li>
                 <span title="Input">Input</span>
-                <ul class="leftSubMenu block">
+                <ul class="leftSubMenu">
                   <li>
                     <a href="input-inputStyle.html" title="Input">input</a>
                   </li>
@@ -105,7 +105,7 @@
                   <li>
                     <a href="input-selectStyle.html" title="Select">select</a>
                   </li>
-                  <li class="active">
+                  <li>
                     <a href="input-textareaStyle.html" title="textarea">textarea</a>
                   </li>
                   <li>
@@ -204,7 +204,10 @@
             <div class="rightArea">
                 <div class="textBox">
                     <div class="titleH1">
-                        <h1>textarea</h1>
+                        <h1>Footer fixed</h1>
+                    </div>
+                    <div class="mainTxt">
+                      <p>브라우저 크기를 줄였을 때 footer 크기를 그대로 유지할려면 #footer min-width 1920px 혹은 #wrap min-width 1920px 을 주면 됩니다.</p>
                     </div>
                     <div class="tabWrap type01">
                       <div class="tabNav">
@@ -219,29 +222,55 @@
                         <div class="highlightArea cScroll">
                           <pre>
                             <code class="language-html">
-&lt;div class="textBox"&gt;
-    &lt;div class="titleH3"&gt;
-        &lt;h3&gt;placeholder&lt;/h3&gt;
+&lt;div id="wrap"&gt;
+    &lt;div id="footer"&gt;
+        &lt;div class="inner"&gt;
+            &lt;div class="logoArea"&gt;
+                &lt;a href="#"&gt;
+                    &lt;img src="../" alt=""&gt;
+                &lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class="linkContainer"&gt;
+                &lt;div class="linkArea"&gt;
+                    &lt;ul&gt;
+                        &lt;li&gt;
+                            &lt;a href="#" title="link01"&gt;link01&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li&gt;
+                            &lt;a href="#" title="link02"&gt;link02&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li&gt;
+                            &lt;a href="#" title="link03"&gt;link03&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li&gt;
+                            &lt;a href="#" title="link04"&gt;link04&lt;/a&gt;
+                        &lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/div&gt;
+                &lt;div class="linkArea"&gt;
+                    &lt;ul&gt;
+                        &lt;li&gt;
+                            &lt;a href="#" title="link05"&gt;link05&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li&gt;
+                            &lt;a href="#" title="link06"&gt;link06&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li&gt;
+                            &lt;a href="#" title="link07"&gt;link07&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li&gt;
+                            &lt;a href="#" title="link08"&gt;link08&lt;/a&gt;
+                        &lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="bottomArea"&gt;
+                &lt;div class="inner"&gt;
+                    &lt;p class="copy"&gt;Copyright © 2021 Company. ALL RIGHTS RESERVED.&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
     &lt;/div&gt;
-    &lt;textarea class="full" placeholder="placeholder는 입력창에 대한 힌트를 제공합니다."&gt;&lt;/textarea&gt;
-&lt;/div&gt;
-&lt;div class="textBox"&gt;
-    &lt;div class="titleH3"&gt;
-        &lt;h3&gt;autocomplete&lt;/h3&gt;
-    &lt;/div&gt;
-    &lt;textarea class="full" autocomplete="off" placeholder="입력창 자동완성 기능을 키거나 끌 수 있습니다. (on/off)"&gt;&lt;/textarea&gt;
-&lt;/div&gt;
-&lt;div class="textBox"&gt;
-    &lt;div class="titleH3"&gt;
-        &lt;h3&gt;autofocus&lt;/h3&gt;
-    &lt;/div&gt;
-    &lt;textarea class="full" autofocus placeholder="페이지가 로드되면 autofocus 옵션을 가진 입력창이 제일 먼저 포커싱됩니다."&gt;&lt;/textarea&gt;
-&lt;/div&gt;
-&lt;div class="textBox"&gt;
-    &lt;div class="titleH3"&gt;
-        &lt;h3&gt;disabled&lt;/h3&gt;
-    &lt;/div&gt;
-    &lt;textarea class="full" disabled autofocus placeholder="입력창을 비활성화 시키며, 비활성화 상태의 스타일도 입힐 수 있습니다."&gt;&lt;/textarea&gt;
 &lt;/div&gt;
                             </code>
                           </pre>
@@ -252,12 +281,30 @@
                         <div class="highlightArea cScroll">
                           <pre>
                             <code class="language-scss">
-textarea{height: 150px; border: 1px solid #ddd; padding: 10px; box-sizing: border-box;
-font-family: 'Noto Sans'; border-radius: 4px; color: #222; font-size: 14px; resize: none; overflow-y: auto;
-background-color: #fff;
-    &::placeholder{color: #aaa;}
-    &:disabled{background-color: #f5f5f5;}
-    &.full{width: 100%;}
+#wrap{position: relative;}
+#footer{position: absolute; bottom: 0; width: 100%; background-color: #292a2d;
+    >.inner{padding-top: 40px; max-width: 1200px; margin: 0 auto;
+        .logoArea{margin-bottom: 20px;
+            a{display: inline-block;}
+            img{width: 200px;}
+        }
+        .linkContainer{display: flex; padding-bottom: 40px; border-bottom: 1px solid #fff;}
+        .linkArea{flex: 0.5; margin-left: auto;
+            ul{display: flex; flex-direction: column;
+                li{ 
+                    a{font-size: 16px; font-family: 'Noto Sans'; color: #fff;
+                        &:hover{text-decoration: underline;}
+                    }
+                    +li{margin-top: 10px;}
+                }
+            }
+        }
+        .bottomArea{
+            >.inner{height: 58px; line-height: 58px;
+                p.copy{font-size: 14px; color: #fff; font-family: '맑은 고딕'; text-align: center;}
+            }
+        }
+    }
 }
                             </code>
                         </pre>
@@ -268,74 +315,99 @@ background-color: #fff;
                         <div class="highlightArea cScroll">
                           <pre>
                             <code class="language-css">
-textarea {
-    height: 150px;
-    border: 1px solid #ddd;
-    padding: 10px;
-    box-sizing: border-box;
-    font-family: 'Noto Sans';
-    border-radius: 4px;
-    color: #222;
-    font-size: 14px;
-    resize: none;
-    overflow-y: auto;
-    background-color: #fff;
+#wrap{
+    position: relative;
 }
 
-textarea::placeholder {
-    color: #aaa;
-}
-
-textarea:disabled {
-    background-color: #f5f5f5;
-}
-
-textarea.full {
+#wrap #footer {
+    position: absolute;
+    bottom: 0;
     width: 100%;
+    background-color: #292a2d;
+}
+
+#wrap #footer > .inner {
+    padding-top: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#wrap #footer > .inner .logoArea {
+    margin-bottom: 20px;
+}
+
+#wrap #footer > .inner .logoArea a {
+    display: inline-block;
+}
+
+#wrap #footer > .inner .logoArea img {
+    width: 200px;
+}
+
+#wrap #footer > .inner .linkContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #fff;
+}
+
+#wrap #footer > .inner .linkArea {
+    -webkit-box-flex: 0.5;
+    -ms-flex: 0.5;
+        flex: 0.5;
+    margin-left: auto;
+}
+
+#wrap #footer > .inner .linkArea ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+        flex-direction: column;
+}
+
+#wrap #footer > .inner .linkArea ul li a {
+    font-size: 16px;
+    font-family: 'Noto Sans';
+    color: #fff;
+}
+
+#wrap #footer > .inner .linkArea ul li a:hover {
+    text-decoration: underline;
+}
+
+#wrap #footer > .inner .linkArea ul li + li {
+    margin-top: 10px;
+}
+
+#wrap #footer > .inner .bottomArea > .inner {
+    height: 58px;
+    line-height: 58px;
+}
+
+#wrap #footer > .inner .bottomArea > .inner p.copy {
+    font-size: 14px;
+    color: #fff;
+    font-family: '맑은 고딕';
+    text-align: center;
 }
                             </code>
                           </pre>
                         </div>
                       </div>
                     </div>
-                    
-
-                    <div class="titleH2">
-                        <h2>Result</h2>
-                    </div>
-                    <div class="resultArea">
-                        <div class="inner">
-                            <div class="textBox">
-                                <div class="titleH3">
-                                    <h3>placeholder</h3>
-                                </div>
-                                <textarea class="full" placeholder="placeholder는 입력창에 대한 힌트를 제공합니다."></textarea>
-                            </div>
-                            <div class="textBox">
-                                <div class="titleH3">
-                                    <h3>autocomplete</h3>
-                                </div>
-                                <textarea class="full" autocomplete="off" placeholder="입력창 자동완성 기능을 키거나 끌 수 있습니다. (on/off)"></textarea>
-                            </div>
-                            <div class="textBox">
-                                <div class="titleH3">
-                                    <h3>autofocus</h3>
-                                </div>
-                                <textarea class="full" autofocus placeholder="페이지가 로드되면 autofocus 옵션을 가진 입력창이 제일 먼저 포커싱됩니다."></textarea>
-                            </div>
-                            <div class="textBox">
-                                <div class="titleH3">
-                                    <h3>disabled</h3>
-                                </div>
-                                <textarea class="full" disabled autofocus placeholder="입력창을 비활성화 시키며, 비활성화 상태의 스타일도 입힐 수 있습니다."></textarea>
-                            </div>
-                        </div>
+                    <div class="btnArea end">
+                        <button type="button" class="button Bgblue" onclick="window.open('result-footer-fixed.html');">
+                          <span>결과보기</span>
+                          <i class="ico result"></i>
+                        </button>
                     </div>
                 </div>
-                
             </div>
         </div>
-
         <div class="popup share">
     <div class="cont">
       <div class="inner">

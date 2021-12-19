@@ -1,0 +1,61 @@
+
+#wrap.pre{
+    &.footerBasic{
+        .contents{width: 100%;}
+        .contBox{position: relative; min-height: calc(100vh - 322px); text-align: center; font-size: 36px; color: #fff; font-family: 'Noto Sans';
+        background-color: #444;
+          span{position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);}
+        }
+        #footer{width: 100%; background-color: #292a2d;
+          >.inner{padding-top: 40px; max-width: 1200px; margin: 0 auto;
+            .logoArea{margin-bottom: 20px;
+              a{display: inline-block;}
+              img{width: 200px;}
+            }
+            .linkContainer{display: flex; padding-bottom: 40px; border-bottom: 1px solid #fff;}
+            .linkArea{flex: 0.5; margin-left: auto;
+              ul{display: flex; flex-direction: column;
+                li{ 
+                  a{font-size: 16px; font-family: 'Noto Sans'; color: #fff;
+                    &:hover{text-decoration: underline;}
+                  }
+                  +li{margin-top: 10px;}
+                }
+              }
+            }
+            .bottomArea{
+              >.inner{height: 58px; line-height: 58px;
+                p.copy{font-size: 14px; color: #fff; font-family: '맑은 고딕'; text-align: center;}
+              }
+            }
+          }
+        }
+    }
+    
+    &.footerFixed{position: relative;
+        #footer{position: absolute; bottom: 0; width: 100%; background-color: #292a2d;
+            >.inner{padding-top: 40px; max-width: 1200px; margin: 0 auto;
+                .logoArea{margin-bottom: 20px;
+                    a{display: inline-block;}
+                    img{width: 200px;}
+                }
+                .linkContainer{display: flex; padding-bottom: 40px; border-bottom: 1px solid #fff;}
+                .linkArea{flex: 0.5; margin-left: auto;
+                    ul{display: flex; flex-direction: column;
+                        li{ 
+                            a{font-size: 16px; font-family: 'Noto Sans'; color: #fff;
+                            &:hover{text-decoration: underline;}
+                            }
+                            +li{margin-top: 10px;}
+                        }
+                    }
+                }
+                .bottomArea{
+                    >.inner{height: 58px; line-height: 58px;
+                        p.copy{font-size: 14px; color: #fff; font-family: '맑은 고딕'; text-align: center;}
+                    }
+                }
+            }
+        }
+    }
+}

@@ -418,6 +418,36 @@ body, html {
   margin-top: 75px;
 }
 
+#wrap.layoutSlide .resultCont {
+  position: relative;
+  padding: 50px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#wrap.layoutSlide .swiperItem {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 32px;
+  font-family: 'Noto Sans';
+}
+
+#wrap.layoutSlide .slideButtonArea .swiper-button-next {
+  right: 100px;
+}
+
+#wrap.layoutSlide .slideButtonArea .swiper-button-prev {
+  left: 100px;
+}
+
 #container {
   position: relative;
   display: -webkit-box;
@@ -1464,17 +1494,17 @@ i.ico.result {
 }
 
 /* import */
-#wrap.pre.gnbHover .container {
+#wrap.pre.gnbHover .container, #wrap.pre.gnb-li-hover .container, #wrap.pre.gnbFind .container {
   width: 1200px;
   margin: 0 auto;
   padding-top: 60px;
 }
 
-#wrap.pre.gnbHover #gnb {
+#wrap.pre.gnbHover #gnb, #wrap.pre.gnb-li-hover #gnb, #wrap.pre.gnbFind #gnb {
   width: 100%;
 }
 
-#wrap.pre.gnbHover #gnb #menuBg {
+#wrap.pre.gnbHover #gnb #menuBg, #wrap.pre.gnb-li-hover #gnb #menuBg, #wrap.pre.gnbFind #gnb #menuBg {
   display: none;
   position: absolute;
   left: 0;
@@ -1488,7 +1518,7 @@ i.ico.result {
   z-index: 1000;
 }
 
-#wrap.pre.gnbHover #gnb ul.menuList {
+#wrap.pre.gnbHover #gnb ul.menuList, #wrap.pre.gnb-li-hover #gnb ul.menuList, #wrap.pre.gnbFind #gnb ul.menuList {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1497,39 +1527,69 @@ i.ico.result {
           justify-content: space-between;
 }
 
-#wrap.pre.gnbHover #gnb ul.menuList a {
+#wrap.pre.gnbHover #gnb ul.menuList a, #wrap.pre.gnb-li-hover #gnb ul.menuList a, #wrap.pre.gnbFind #gnb ul.menuList a {
   display: block;
 }
 
-#wrap.pre.gnbHover #gnb ul.menuList > li {
+#wrap.pre.gnbHover #gnb ul.menuList > li, #wrap.pre.gnb-li-hover #gnb ul.menuList > li, #wrap.pre.gnbFind #gnb ul.menuList > li {
   position: relative;
   line-height: 50px;
   text-align: center;
 }
 
-#wrap.pre.gnbHover #gnb ul.menuList > li > a {
+#wrap.pre.gnbHover #gnb ul.menuList > li > a, #wrap.pre.gnb-li-hover #gnb ul.menuList > li > a, #wrap.pre.gnbFind #gnb ul.menuList > li > a {
   min-width: 80px;
   font-size: 24px;
   font-family: 'Noto Sans';
   color: #000;
 }
 
-#wrap.pre.gnbHover #gnb ul.menuList > li .depthTwo {
+#wrap.pre.gnbHover #gnb ul.menuList > li .depthTwo, #wrap.pre.gnb-li-hover #gnb ul.menuList > li .depthTwo, #wrap.pre.gnbFind #gnb ul.menuList > li .depthTwo {
   display: none;
   position: absolute;
   top: 80px;
   z-index: 1000;
 }
 
-#wrap.pre.gnbHover #gnb ul.menuList > li .depthTwo > li {
+#wrap.pre.gnbHover #gnb ul.menuList > li .depthTwo > li, #wrap.pre.gnb-li-hover #gnb ul.menuList > li .depthTwo > li, #wrap.pre.gnbFind #gnb ul.menuList > li .depthTwo > li {
   line-height: 50px;
 }
 
-#wrap.pre.gnbHover #gnb ul.menuList > li .depthTwo > li > a {
+#wrap.pre.gnbHover #gnb ul.menuList > li .depthTwo > li > a, #wrap.pre.gnb-li-hover #gnb ul.menuList > li .depthTwo > li > a, #wrap.pre.gnbFind #gnb ul.menuList > li .depthTwo > li > a {
   display: block;
   font-size: 16px;
   font-family: 'Noto Sans';
   color: #444;
+}
+
+#wrap.pre.gnbFind #gnb ul.menuList {
+  background-color: rgba(51, 51, 51, 0.5);
+}
+
+#wrap.pre.gnbFind #gnb ul.menuList li {
+  padding: 5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  min-width: 130px;
+}
+
+#wrap.pre.gnbFind #gnb ul.menuList li > a {
+  color: #fff;
+}
+
+#wrap.pre.gnbFind #gnb ul.menuList li .depthTwo {
+  top: 60px;
+  left: 0;
+}
+
+#wrap.pre.gnbFind #gnb ul.menuList li .depthTwo > li {
+  border: 1px solid #ddd;
+  border-top: 0;
+  background-color: rgba(51, 51, 51, 0.8);
+}
+
+#wrap.pre.gnbFind #gnb ul.menuList li .depthTwo > li > a {
+  color: #fff;
 }
 
 #wrap.pre.footerBasic .contents {

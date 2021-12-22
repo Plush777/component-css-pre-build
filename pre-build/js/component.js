@@ -32,6 +32,13 @@ $(document).ready(function(){
         }
     });
 
+    $(document).on({"mouseup":function(e){
+        if($('.moreSubMenu').has(e.target).length == 0){
+            $('.moreSubMenu').removeClass('active');
+        }
+        }
+    });
+
     var tabList = $('.tabList li');
 
     $(tabList).on({

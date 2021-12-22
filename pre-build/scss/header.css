@@ -1,1 +1,74 @@
-/* No CSS *//*# sourceMappingURL=header.css.map */
+#wrap.pre.headerFixed .container, #wrap.pre.headerScroll .container {
+  position: relative;
+}
+
+#wrap.pre.headerFixed #header, #wrap.pre.headerScroll #header {
+  position: fixed;
+  width: 100%;
+  height: 65px;
+  z-index: 1000;
+  background-color: #333;
+}
+
+#wrap.pre.headerFixed #header .inner, #wrap.pre.headerScroll #header .inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#wrap.pre.headerFixed #header .inner span, #wrap.pre.headerScroll #header .inner span {
+  display: inline-block;
+  line-height: 32px;
+  font-size: 20px;
+  font-family: 'Noto Sans';
+  color: #fff;
+}
+
+#wrap.pre.headerFixed .contents, #wrap.pre.headerScroll .contents {
+  position: absolute;
+  top: 65px;
+  width: 100%;
+  height: 2000px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #555;
+}
+
+#wrap.pre.headerFixed .contents span, #wrap.pre.headerScroll .contents span {
+  font-size: 30px;
+  font-family: 'Noto Sans';
+  color: #fff;
+}
+
+#wrap.pre.headerScroll #header {
+  position: static;
+}
+
+#wrap.pre.headerScroll #header.headFixed {
+  position: fixed;
+}
+
+#wrap.pre.headerScroll #header.headUp {
+  top: -65px;
+}
+
+#wrap.pre.headerScroll #header.headDown {
+  top: 65px;
+}
+/*# sourceMappingURL=header.css.map */

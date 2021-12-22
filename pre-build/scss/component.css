@@ -574,6 +574,7 @@ body, html {
   position: absolute;
   top: 22px;
   right: 30px;
+  z-index: 1000;
 }
 
 .utilArea ul {
@@ -1463,6 +1464,74 @@ i.ico.result {
 }
 
 /* import */
+#wrap.pre.gnbHover .container {
+  width: 1200px;
+  margin: 0 auto;
+  padding-top: 60px;
+}
+
+#wrap.pre.gnbHover #gnb {
+  width: 100%;
+}
+
+#wrap.pre.gnbHover #gnb #menuBg {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 120px;
+  width: 100%;
+  height: 365px;
+  border-top: 1px solid #ddd;
+  -webkit-box-shadow: -3px 3px 3px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: -3px 3px 3px 0 rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  z-index: 1000;
+}
+
+#wrap.pre.gnbHover #gnb ul.menuList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#wrap.pre.gnbHover #gnb ul.menuList a {
+  display: block;
+}
+
+#wrap.pre.gnbHover #gnb ul.menuList > li {
+  position: relative;
+  line-height: 50px;
+  text-align: center;
+}
+
+#wrap.pre.gnbHover #gnb ul.menuList > li > a {
+  min-width: 80px;
+  font-size: 24px;
+  font-family: 'Noto Sans';
+  color: #000;
+}
+
+#wrap.pre.gnbHover #gnb ul.menuList > li .depthTwo {
+  display: none;
+  position: absolute;
+  top: 80px;
+  z-index: 1000;
+}
+
+#wrap.pre.gnbHover #gnb ul.menuList > li .depthTwo > li {
+  line-height: 50px;
+}
+
+#wrap.pre.gnbHover #gnb ul.menuList > li .depthTwo > li > a {
+  display: block;
+  font-size: 16px;
+  font-family: 'Noto Sans';
+  color: #444;
+}
+
 #wrap.pre.footerBasic .contents {
   width: 100%;
 }

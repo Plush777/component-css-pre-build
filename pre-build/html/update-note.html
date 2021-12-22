@@ -4,8 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="../images/ico/ico-favi.png" sizes="16x16" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.1.4/pagination.css"/>
     <link rel="stylesheet" href="../css/component.css" type="text/css" />
     <script type="text/javascript" src="../lib/jquery-1.12.4.js"></script>
+    <script src="../js/pagination.js"></script>
+    <script src="../js/component.js"></script>
     <title>업데이트 노트</title>
 </head>
 <body>
@@ -20,7 +23,36 @@
                         <p>새로운 수정사항이나 추가된 것들을 기록하는 공간입니다.</p>
                     </div>
                 </div>
-                <div class="textBox">
+                <div class="table noticeBoard">
+                    <table>
+                        <colgroup>
+                            <col style="width: auto;">
+                            <col style="width: 25%;">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">제목</th>
+                                <th scope="col">작성일자</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="tgShowHideRow">
+                                <td>제목</td>
+                                <td>222</td>
+                            </tr>
+                            <tr class="tgContRow">
+                                <td colspan="2">
+                                    <div class="showHideBox">
+                                        <span>sss</span>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+                <!-- <div class="textBox">
                     <div class="titleH3">
                         <h3>2021-12-18</h3>
                     </div>
@@ -76,7 +108,7 @@
                             </li>
                         </ul>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>

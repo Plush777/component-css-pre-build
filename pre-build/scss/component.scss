@@ -301,6 +301,18 @@ width: 1200px; padding: 115px 0; z-index:950;
   table{width: 100%;}
   th,td{height: 30px; border: 1px solid #ddd; padding: 5px; box-sizing: border-box; font-family: 'Noto Sans';}
   th{font-size: 14px; color: #333; background-color: #f5f5f5;}
+
+  &.noticeBoard{border-top: 7px solid #222;
+    th,td{border: 1px solid #5f5f5f; font-family: 'Noto Sans';
+      &:last-child{border-right: 0;}
+      &:first-child{border-left: 0;}
+    }
+    th{height: 65px; font-size: 18px; color: #3b3b3b; background-color: #ddd;}
+    td{height: 40px; font-size: 16px; padding: 15px 25px 15px 25px; box-sizing: border-box; background-color: rgba($color: #f3f4f5, $alpha: 0.8);}
+    .tgContRow{display: none;
+      .showHideBox{display: none;}
+    }
+  }
 }
 
 .flex{display: flex;

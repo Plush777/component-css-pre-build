@@ -7,17 +7,17 @@
                 font-size: 20px; font-family: 'Noto Sans'; color: #fff;}
             }
         }
-        .contents{position: absolute; top: 65px; width: 100%; height: 2000px;
+        .contents{position: absolute; top: 0; width: 100%; height: 2000px;
         display: flex; align-items: center; justify-content: center; background-color: #555;
             span{font-size: 30px; font-family: 'Noto Sans'; color: #fff;}
         }
     }
 
     &.headerScroll{
-        #header{position: static;
+        #header{top: 0; transition: .2s ease;
             &.headFixed{position: fixed;}
             &.headUp{top: -65px;}
-            &.headDown{top: 65px;}
+            &.headDown{top: 0;}
         }
     }
 }

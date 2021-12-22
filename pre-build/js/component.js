@@ -1,7 +1,11 @@
 $(document).ready(function(){
 
-    /* 공유 버튼 팝업 input에 현재 url 가져오기 */
-    document.getElementById('subUrl').value = window.location.href;
+    // document.getElementById('subUrl').value = window.location.href;
+
+    if(document.getElementById('subUrl')){
+        document.getElementById('subUrl').value = window.location.href;
+    }
+
 
     $('.btnShare').on({
         "click":function(){
@@ -151,12 +155,43 @@ $(document).ready(function(){
         }
     })
 
-    // clipboard.js
-    var clipboard = new ClipboardJS('.btnClip');
-    clipboard.on( 'success', function() {
-        alert('클립보드에 복사되었습니다. 다른 곳에 이 링크를 붙여넣으세요.');
+    $('.table.noticeBoard .tgShowHideRow').on({
+        "click":function(){
+            $(this).next('.tgContRow').toggleClass('active').siblings('.tgContRow').removeClass('active');
+        }
     });
-    clipboard.on( 'error', function() {
-        alert('클립보드 복사에 실패하였습니다. 다시 시도해주세요.');
+
+    $('.table.noticeBoard .tgShowHideRow').on({
+        'click': function click() {
+            $(this).closest('.tgShowHideRow').toggleClass('active').siblings('.tgShowHideRow').removeClass('active');
+            
+            var tgTableRow = $(this).next('.tgContRow');
+            if(tgTableRow.css('display') == 'none'){
+                tgTableRow.toggle().find('.showHideBox').stop().slideDown();
+                tgTableRow.siblings('.tgContRow').css('display','none').find('.showHideBox').slideUp();
+            }else{
+                tgTableRow.find('.showHideBox').stop().slideUp(function(){
+                    if($(this).css('display') == 'none'){
+                        $(this).closest('.tgContRow').hide();
+                    }
+                });
+            }
+        }
     });
+
+    function clipBoard() {
+        var clipboard = new ClipboardJS('.btnClip');
+        clipboard.on( 'success', function() {
+            alert('클립보드에 복사되었습니다. 다른 곳에 이 링크를 붙여넣으세요.');
+        });
+        clipboard.on( 'error', function() {
+            alert('클립보드 복사에 실패하였습니다. 다시 시도해주세요.');
+        });
+    }
+
+    if(!document.querySelector('.btnClip')){
+        return;
+    }else{
+        clipBoard();
+    }
 });

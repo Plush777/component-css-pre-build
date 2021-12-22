@@ -151,7 +151,10 @@
             <div class="rightArea">
                 <div class="textBox">
                     <div class="titleH1">
-                        <h1>Header scroll</h1>
+                        <h1>Sticky header</h1>
+                    </div>
+                    <div class="mainTxt">
+                      <p>Sticky header 자바스크립트 코드는<a href="https://webclub.tistory.com/286" class="link" target="_blank">이 게시글</a>에서 가져왔습니다.</p>
                     </div>
                     <div class="tabWrap type01">
                       <div class="tabNav">
@@ -159,6 +162,7 @@
                           <li class="active orange">HTML</li>
                           <li class="pink">SCSS</li>
                           <li class="blue">CSS</li>
+                          <li class="yellow">JS</li>
                         </ul>
                       </div>
 
@@ -166,7 +170,18 @@
                         <div class="highlightArea cScroll">
                           <pre>
                             <code class="language-html">
-
+&lt;div id="wrap"&gt;
+    &lt;div class="container"&gt;
+        &lt;div id="header"&gt;
+            &lt;div class="inner"&gt;
+                &lt;span&gt;header&lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="contents"&gt;
+            &lt;span&gt;contents&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
                             </code>
                           </pre>
                         </div>
@@ -176,7 +191,18 @@
                         <div class="highlightArea cScroll">
                           <pre>
                             <code class="language-scss">
-
+.container{position: relative;}
+#header{position: fixed; top:0; transition: .2s ease; width: 100%; height: 65px; z-index: 1000; background-color: #333;
+  .inner{display: flex; align-items: center; justify-content: center; padding: 15px; box-sizing: border-box;
+      span{display: inline-block; line-height: 32px; font-size: 20px; font-family: 'Noto Sans'; color: #fff;}
+    }
+  &.headUp{top: -65px;}
+  &.headDown{top: 0;}
+}
+.contents{position: absolute; top: 65px; width: 100%; height: 2000px;
+display: flex; align-items: center; justify-content: center; background-color: #555;
+    span{font-size: 30px; font-family: 'Noto Sans'; color: #fff;}
+}
                             </code>
                         </pre>
                         </div>
@@ -186,7 +212,106 @@
                         <div class="highlightArea cScroll">
                           <pre>
                             <code class="language-css">
+#wrap .container {
+    position: relative;
+}
 
+#wrap #header {
+    position: fixed;
+    top: 0;
+    transition: .2s ease;
+    width: 100%;
+    height: 65px;
+    z-index: 1000;
+    background-color: #333;
+}
+
+#wrap #header .headUp {
+  top: -65px;
+}
+
+#wrap #header .headDown {
+  top: 0;
+}
+
+#wrap #header .inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 15px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+#wrap #header .inner span {
+    display: inline-block;
+    line-height: 32px;
+    font-size: 20px;
+    font-family: 'Noto Sans';
+    color: #fff;
+}
+
+#wrap .contents {
+    position: absolute;
+    top: 65px;
+    width: 100%;
+    height: 2000px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background-color: #555;
+}
+
+#wrap .contents span {
+    font-size: 30px;
+    font-family: 'Noto Sans';
+    color: #fff;
+}
+                            </code>
+                          </pre>
+                        </div>
+                      </div>
+
+                      <div class="tabCont">
+                        <div class="highlightArea cScroll">
+                          <pre>
+                            <code class="language-javascript">
+var lastScrollTop = 0; 
+var delta = 1;
+var navbarHeight = $('#header').outerHeight(); 
+
+setInterval(function() {
+    hasScrolled();
+}, 100);
+
+function hasScrolled() {
+    var st = $(this).scrollTop();
+    
+    if(Math.abs(lastScrollTop - st) <= delta)
+        return; 
+    
+    if (st > lastScrollTop && st > navbarHeight){ 
+        $('#header').removeClass('headDown').addClass('headUp'); } 
+    else { 
+        if(st + $(window).height() < $(document).height()){ 
+            $('#header').removeClass('headUp').addClass('headDown'); 
+        } 
+    }
+
+    lastScrollTop = st;
+};
                             </code>
                           </pre>
                         </div>

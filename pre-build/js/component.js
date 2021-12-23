@@ -1,11 +1,8 @@
 $(document).ready(function(){
 
-    // document.getElementById('subUrl').value = window.location.href;
-
     if(document.getElementById('subUrl')){
         document.getElementById('subUrl').value = window.location.href;
     }
-
 
     $('.btnShare').on({
         "click":function(){
@@ -161,6 +158,7 @@ $(document).ready(function(){
         }
     });
 
+    /* 테이블 아코디언 */
     $('.table.noticeBoard .tgShowHideRow').on({
         'click': function click() {
             $(this).closest('.tgShowHideRow').toggleClass('active').siblings('.tgShowHideRow').removeClass('active');

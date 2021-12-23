@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="../images/ico/ico-favi.png" sizes="16x16" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.1.4/pagination.css"/>
+    <link rel="stylesheet" href="../css/paginate.css" type="text/css"/>
     <link rel="stylesheet" href="../css/component.css" type="text/css" />
     <script type="text/javascript" src="../lib/jquery-1.12.4.js"></script>
-    <script src="../js/pagination.js"></script>
+    <script src="../js/paginate.min.js"></script>
     <script src="../js/component.js"></script>
     <title>업데이트 노트</title>
 </head>
@@ -23,27 +24,259 @@
                         <p>새로운 수정사항이나 추가된 것들을 기록하는 공간입니다.</p>
                     </div>
                 </div>
+                
                 <div class="table noticeBoard">
                     <table>
                         <colgroup>
+                            <col style="width: 8%;">
                             <col style="width: auto;">
-                            <col style="width: 25%;">
                         </colgroup>
                         <thead>
                             <tr>
+                                <th scope="col">번호</th>
                                 <th scope="col">제목</th>
-                                <th scope="col">작성일자</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr class="tgShowHideRow">
-                                <td>제목</td>
-                                <td>222</td>
+                                <td>1</td>
+                                <td>2021-11-30</td>
                             </tr>
                             <tr class="tgContRow">
                                 <td colspan="2">
                                     <div class="showHideBox">
-                                        <span>sss</span>
+                                        <div class="mainTxt">
+                                            <ul>
+                                                <li>
+                                                    <span>뒤로가기 버튼 업데이트</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr class="tgShowHideRow">
+                                <td>2</td>
+                                <td>2021-12-01</td>
+                            </tr>
+                            <tr class="tgContRow">
+                                <td colspan="2">
+                                    <div class="showHideBox">
+                                        <div class="mainTxt">
+                                            <ul>
+                                                <li>
+                                                    <span>overflow scroll 페이지 추가</span>
+                                                </li>
+                                                <li>
+                                                    <span>table 내부 스크롤 페이지 추가</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr class="tgShowHideRow">
+                                <td>3</td>
+                                <td>2021-12-02</td>
+                            </tr>
+                            <tr class="tgContRow">
+                                <td colspan="2">
+                                    <div class="showHideBox">
+                                        <div class="mainTxt">
+                                            <ul>
+                                                <li>
+                                                    <span>custom contextMenu 페이지 추가</span>
+                                                </li>
+                                                <li>
+                                                    <span>custom scroll 페이지 추가</span>
+                                                </li>
+                                                <li>
+                                                    <span>클립보드 추가</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr class="tgShowHideRow">
+                                <td>4</td>
+                                <td>2021-12-05</td>
+                            </tr>
+                            <tr class="tgContRow">
+                                <td colspan="2">
+                                    <div class="showHideBox">
+                                        <div class="mainTxt">
+                                            <ul>
+                                                <li>
+                                                    <span>input Select style 페이지 추가</span>
+                                                </li>
+                                                <li>
+                                                    <span>input style 페이지 추가</span>
+                                                </li>
+                                                <li>
+                                                    <span>input radio style 페이지 추가</span>
+                                                </li>
+                                                <li>
+                                                    <span>custom scroll 페이지 추가</span>
+                                                </li>
+                                                <li>
+                                                    <span>클립보드 추가</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr class="tgShowHideRow">
+                                <td>5</td>
+                                <td>2021-12-09</td>
+                            </tr>
+                            <tr class="tgContRow">
+                                <td colspan="2">
+                                    <div class="showHideBox">
+                                        <div class="mainTxt">
+                                            <ul>
+                                                <li>
+                                                    <span>input 카테고리 페이지 수정</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr class="tgShowHideRow">
+                                <td>6</td>
+                                <td>2021-12-12</td>
+                            </tr>
+                            <tr class="tgContRow">
+                                <td colspan="2">
+                                    <div class="showHideBox">
+                                        <div class="mainTxt">
+                                            <ul>
+                                                <li>
+                                                    <span>input checkbox 페이지 추가</span>
+                                                </li>
+                                                <li>
+                                                    <span>input textarea 페이지 추가</span>
+                                                </li>
+                                                <li>
+                                                    <span>input 카테고리 페이지 작업완료</span>
+                                                </li>
+                                                <li>
+                                                    <span>layout centerEle 페이지 추가</span>
+                                                </li>
+                                                <li>
+                                                    <span>layout tab 페이지 추가</span>
+                                                </li>
+                                                <li>
+                                                    <span>layout centerEle 결과 페이지 추가</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr class="tgShowHideRow">
+                                <td>7</td>
+                                <td>2021-12-15</td>
+                            </tr>
+                            <tr class="tgContRow">
+                                <td colspan="2">
+                                    <div class="showHideBox">
+                                        <div class="mainTxt">
+                                            <ul>
+                                                <li>
+                                                    <span>footer basic 페이지 추가</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr class="tgShowHideRow">
+                                <td>8</td>
+                                <td>2021-12-18</td>
+                            </tr>
+                            <tr class="tgContRow">
+                                <td colspan="2">
+                                    <div class="showHideBox">
+                                        <div class="mainTxt">
+                                            <ul>
+                                                <li>
+                                                    <span>prism js 커스텀 툴팁 작업중</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr class="tgShowHideRow">
+                                <td>9</td>
+                                <td>2021-12-19</td>
+                            </tr>
+                            <tr class="tgContRow">
+                                <td colspan="2">
+                                    <div class="showHideBox">
+                                        <div class="mainTxt">
+                                            <ul>
+                                                <li>
+                                                    <span>prism js 커스텀 툴팁 작업완료 및 수정</span>
+                                                </li>
+                                                <li>
+                                                    <span>우측 상단 더보기 버튼 클릭 시 나오는 서브메뉴 추가</span>
+                                                </li>
+                                                <li>
+                                                    <span>업데이트노트 페이지 추가</span>
+                                                </li>
+                                                <li>
+                                                    <span>footer basic 페이지 추가</span>
+                                                </li>
+                                                <li>
+                                                    <span>footer fixed 페이지 추가</span>
+                                                </li>
+                                                <li>
+                                                    <span>include 파일구조 변경</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr class="tgShowHideRow">
+                                <td>10</td>
+                                <td>2021-12-22</td>
+                            </tr>
+                            <tr class="tgContRow">
+                                <td colspan="2">
+                                    <div class="showHideBox">
+                                        <div class="mainTxt">
+                                            <ul>
+                                                <li>
+                                                    <span>gnb hover 페이지 추가</span>
+                                                </li>
+                                                <li>
+                                                    <span>gnb li hover 페이지 추가</span>
+                                                </li>
+                                                <li>
+                                                    <span>gnb find 페이지 추가</span>
+                                                </li>
+                                                <li>
+                                                    <span>header fixed 페이지 추가</span>
+                                                </li>
+                                                <li>
+                                                    <span>sticky header 페이지 추가</span>
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </td>
                             </tr>
@@ -51,66 +284,28 @@
                     </table>
                 </div>
 
-
-                <!-- <div class="textBox">
-                    <div class="titleH3">
-                        <h3>2021-12-18</h3>
-                    </div>
-                    <div class="mainTxt">
-                        <ul>
-                            <li>
-                                <span>prism js 커스텀 툴팁 작업중</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="textBox">
-                    <div class="titleH3">
-                        <h3>2021-12-19</h3>
-                    </div>
-                    <div class="mainTxt">
-                        <ul>
-                            <li>
-                                <span>prism js 커스텀 툴팁 작업완료 및 수정</span>
-                            </li>
-                            <li>
-                                <span>우측 상단 더보기 버튼 클릭 시 나오는 서브메뉴 추가</span>
-                            </li>
-                            <li>
-                                <span>업데이트노트 페이지 추가</span>
-                            </li>
-                            <li>
-                                <span>footer basic 페이지 추가</span>
-                            </li>
-                            <li>
-                                <span>footer fixed 페이지 추가</span>
-                            </li>
-                            <li>
-                                <span>include 파일구조 변경</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="textBox">
-                    <div class="titleH3">
-                        <h3>2021-12-22</h3>
-                    </div>
-                    <div class="mainTxt">
-                        <ul>
-                            <li>
-                                <span>gnb hover 페이지 추가</span>
-                            </li>
-                            <li>
-                                <span>gnb li hover 페이지 추가</span>
-                            </li>
-                            <li>
-                                <span>gnb find 페이지 추가</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div> -->
+                <input type="text" id="searchBox">
             </div>
         </div>
     </div>
+    <script>
+
+
+    let options = {
+        numberPerPage:10, 
+        constNumberPerPage:10, 
+        numberOfPages:0, 
+        goBar:false, 
+        pageCounter:true, 
+        hasPagination:true, 
+    };
+
+    let filterOptions = {
+        el:'#searchBox' 
+    };
+
+    paginate.init('.table.noticeBoard');
+
+    </script>
 </body>
 </html>

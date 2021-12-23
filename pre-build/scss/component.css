@@ -385,10 +385,6 @@ body, html {
   margin-top: 50px;
 }
 
-#wrap.update li {
-  list-style: inside !important;
-}
-
 #wrap.update #contents {
   padding: 50px 0;
   min-width: 1200px;
@@ -416,6 +412,10 @@ body, html {
 
 #wrap.update .textBox + .textBox {
   margin-top: 75px;
+}
+
+#wrap.update .textBox + .table {
+  margin-top: 40px;
 }
 
 #wrap.layoutSlide .resultCont {
@@ -877,6 +877,60 @@ body, html {
   font-size: 14px;
   color: #333;
   background-color: #f5f5f5;
+}
+
+.table.noticeBoard {
+  border-top: 7px solid #222;
+}
+
+.table.noticeBoard th, .table.noticeBoard td {
+  border: 1px solid #5f5f5f;
+  font-family: 'Noto Sans';
+  text-align: center;
+}
+
+.table.noticeBoard th {
+  height: 65px;
+  border-left: 0;
+  border-right: 0;
+  font-size: 18px;
+  color: #3b3b3b;
+  background-color: #ddd;
+}
+
+.table.noticeBoard td {
+  height: 40px;
+  border-left: 0;
+  border-right: 0;
+  font-size: 16px;
+  padding: 15px 25px 15px 25px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: rgba(243, 244, 245, 0.8);
+}
+
+.table.noticeBoard td:hover:not(:first-child) {
+  text-decoration: underline;
+}
+
+.table.noticeBoard .tgShowHideRow {
+  cursor: pointer;
+}
+
+.table.noticeBoard .tgContRow {
+  display: none;
+}
+
+.table.noticeBoard .tgContRow li {
+  list-style: inside !important;
+}
+
+.table.noticeBoard .tgContRow .showHideBox {
+  display: none;
+}
+
+.table.noticeBoard .tgContRow .mainTxt {
+  text-align: left;
 }
 
 .flex {
@@ -1494,6 +1548,82 @@ i.ico.result {
 }
 
 /* import */
+#wrap.pre.headerFixed .container, #wrap.pre.headerScroll .container {
+  position: relative;
+}
+
+#wrap.pre.headerFixed #header, #wrap.pre.headerScroll #header {
+  position: fixed;
+  width: 100%;
+  height: 65px;
+  z-index: 1000;
+  background-color: #333;
+}
+
+#wrap.pre.headerFixed #header .inner, #wrap.pre.headerScroll #header .inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#wrap.pre.headerFixed #header .inner span, #wrap.pre.headerScroll #header .inner span {
+  display: inline-block;
+  line-height: 32px;
+  font-size: 20px;
+  font-family: 'Noto Sans';
+  color: #fff;
+}
+
+#wrap.pre.headerFixed .contents, #wrap.pre.headerScroll .contents {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 2000px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #555;
+}
+
+#wrap.pre.headerFixed .contents span, #wrap.pre.headerScroll .contents span {
+  font-size: 30px;
+  font-family: 'Noto Sans';
+  color: #fff;
+}
+
+#wrap.pre.headerScroll #header {
+  top: 0;
+  -webkit-transition: .2s ease;
+  transition: .2s ease;
+}
+
+#wrap.pre.headerScroll #header.headFixed {
+  position: fixed;
+}
+
+#wrap.pre.headerScroll #header.headUp {
+  top: -65px;
+}
+
+#wrap.pre.headerScroll #header.headDown {
+  top: 0;
+}
+
 #wrap.pre.gnbHover .container, #wrap.pre.gnb-li-hover .container, #wrap.pre.gnbFind .container {
   width: 1200px;
   margin: 0 auto;

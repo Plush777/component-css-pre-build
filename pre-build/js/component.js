@@ -177,6 +177,20 @@ $(document).ready(function(){
         }
     });
 
+    /* update-note.html row */
+    $('.boardList .cont.items .li').on({
+        "click":function(){
+            var liShowHideBox = $(this).next('.listShowHideBox');
+
+            liShowHideBox.toggleClass('on').stop().slideToggle().siblings('.listShowHideBox').slideUp().removeClass('on');
+            if(liShowHideBox.hasClass('on')){
+                $(this).closest('.li').find('.boardItem').removeClass('underLine');
+            }else if(!liShowHideBox.hasClass('on')){
+                $(this).closest('.li').find('.boardItem').addClass('underLine');
+            }
+        }
+    });
+
     function clipBoard() {
         var clipboard = new ClipboardJS('.btnClip');
         clipboard.on( 'success', function() {

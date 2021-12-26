@@ -8,6 +8,7 @@ $(document).ready(function(){
         "click":function(){
             $('#dimmed').fadeIn();
             $('.popup').fadeIn();
+            popupEscEvent();
         }
     });
 
@@ -27,7 +28,7 @@ $(document).ready(function(){
             $(moreSubMenu).toggleClass('active');
             if(moreSubMenu.hasClass('active')){
                 $(moreTooltip).hide();
-            }else{
+            }else if(!moreSubMenu.hasClass('active')){
                 $(moreTooltip).show();
             }
         }
@@ -186,10 +187,21 @@ $(document).ready(function(){
             if(liShowHideBox.hasClass('on')){
                 $(this).closest('.li').find('.boardItem').removeClass('underLine');
             }else if(!liShowHideBox.hasClass('on')){
-                $(this).closest('.li').find('.boardItem').addClass('underLine');
+                $(this).closest('.li').find('.boardItem').last().addClass('underLine');
             }
         }
     });
+
+    function liShowHideBoxClose(){
+        $('.boardBox .boardItem:last-child').addClass('underLine');
+    }
+
+    if(!document.querySelector('.listShowHideBox')){
+        return;
+    }else{
+        liShowHideBoxClose();
+    }
+
 
     function clipBoard() {
         var clipboard = new ClipboardJS('.btnClip');
@@ -206,4 +218,14 @@ $(document).ready(function(){
     }else{
         clipBoard();
     }
+
+    function popupEscEvent() {
+        $(document).on('keyup',function(e) {
+            if (e.keyCode == 27) {
+                $('.popup.share,#dimmed').fadeOut();
+                console.log('esc가 감지되어 공유하기 팝업을 닫습니다.');
+            }
+        });
+    }
+
 });

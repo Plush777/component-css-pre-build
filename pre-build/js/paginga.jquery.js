@@ -24,12 +24,12 @@
                 maxPageNumbers: false,
                 currentPageClass: "active",
                 pager: ".pager",
-                autoHidePager: true,
+                autoHidePager: false,
                 scrollToTop: {
                     offset: 15,
                     speed: 100,
                 },
-                history: false,
+                history: true,
                 historyHashPrefix: "page-"
             };
 

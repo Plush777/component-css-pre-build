@@ -197,6 +197,11 @@ overflow-y: auto; background-color: #f5f5f5; z-index: 1000;
             a{color: #266bf7;}
           }
           +li{margin-top: 17px;}
+
+          //비공개일때
+          &.disabled{
+            >a{color: #ccc;}
+          }
         }
       }
     }
@@ -296,6 +301,11 @@ width: 1200px; padding: 115px 0; z-index:950;
 .titleH2{font-size: 24px;}
 .titleH3{font-size: 20px;}
 
+.innerTxt{
+  >strong{display: block; margin-bottom: 5px; font-size: 20px;}
+  +.innerTxt{margin-top: 35px;}
+}
+
 .table{
   table{width: 100%;}
   th,td{height: 30px; border: 1px solid #ddd; padding: 5px; box-sizing: border-box; font-family: 'Noto Sans';}
@@ -385,8 +395,13 @@ font-family: 'Noto Sans'; border-radius: 2px; color: #222; vertical-align: middl
   +.customSelect{margin-left: 10px;}
 }
 
-a.link{margin: 0px 5px 0 3px; color: #266bf7; font-family: 'Noto Sans Medium';
-  &:hover{text-decoration: underline;}
+a{
+  &.link{margin: 0px 5px 0 3px; color: #266bf7; font-family: 'Noto Sans Medium';
+    &:hover{text-decoration: underline;}
+  }
+  &.mail{margin: 0px 5px 0 3px; color: #1694d2; font-family: 'Noto Sans Medium';
+    &:hover{text-decoration: underline;}
+  }
 }
 
 .checkbox{display: inline-block;

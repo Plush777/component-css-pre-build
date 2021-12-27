@@ -34,12 +34,14 @@ $(document).ready(function(){
         }
     });
 
-    $(document).on({"mouseup":function(e){
-        if($('.moreSubMenu').has(e.target).length == 0){
-            $('.moreSubMenu').removeClass('active');
-        }
-        }
-    });
+    
+    // $(document).on({"mouseup":function(e){
+    //     if($('.moreSubMenu').has(e.target).length == 0){
+    //         $('.moreSubMenu').removeClass('active');
+    //     }
+    // }
+    // });
+   
 
     var tabList = $('.tabList li');
 
@@ -109,7 +111,7 @@ $(document).ready(function(){
 
     /* 히스토리 개수 */
     historyCount = history.length;
-    console.log(historyCount);
+    console.log("히스토리 개수는 " + historyCount + "개 입니다.");
 
     if(historyCount <= 1){
         $('.backArea').hide();
@@ -191,6 +193,12 @@ $(document).ready(function(){
             }
         }
     });
+
+    $('.leftMenu li.disabled').on({
+		"click":function(){
+			alert('준비중인 페이지입니다. 조금만 기다려주세요!');
+		}
+	})
 
     function liShowHideBoxClose(){
         $('.boardBox .boardItem:last-child').addClass('underLine');

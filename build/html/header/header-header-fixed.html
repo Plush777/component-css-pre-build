@@ -11,7 +11,7 @@
 <script type="text/javascript" src="../../lib/swiper/js/swiper.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
 <script src="../../js/prism.js"></script>
-<script src="../../js/component.js"></script>
+<script type="module" src="../../js/component.js"></script>
 <title>Component css</title>
 
 </head>
@@ -323,13 +323,32 @@ display: flex; align-items: center; justify-content: center; background-color: #
                       </div>
                     </div>
                     <div class="btnArea end">
-                        <button type="button" class="button Bgblue" onclick="window.open('../result/result-header-fixed.html');">
+                        <button type="button" class="button Bgblue btnResult">
                           <span>결과보기</span>
                           <i class="ico result"></i>
                         </button>
                     </div>
                 </div>
             </div>
+        </div>
+        <div id="frameBody">
+          <div class="btnArea">
+            <button type="button" class="frameClose">
+              <span class="hidden">프레임 창닫기</span>
+            </button>
+          </div>
+          <div class="wrap pre headerFixed">
+            <div class="container">
+                <div id="header">
+                    <div class="inner">
+                        <span>header</span>
+                    </div>
+                </div>
+                <div class="contents">
+                    <span>contents</span>
+                </div>
+            </div>
+          </div>
         </div>
         <div class="popup share">
     <div class="cont">

@@ -1,4 +1,4 @@
-#wrap.pre{
+.wrap.pre{
     &.headerFixed,&.headerScroll{
         .container{position: relative;}
         #header{position: fixed; width: 100%; height: 65px; z-index: 1000; background-color: #333;

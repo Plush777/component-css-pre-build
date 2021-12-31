@@ -19,6 +19,28 @@ $(document).ready(function(){
         }
     });
 
+    $('.btnResult').on({
+        "click":function(){
+            $('#frameBody').show();
+            if($('#frameBody').css('display') == 'block'){
+                $('body').css('overflow','hidden');
+                $('#toast').fadeIn();
+                setTimeout(function(){
+                    $('#toast').fadeOut();
+                },4000);
+            }
+        }
+    });
+
+    $('.frameClose').on({
+        "click":function(){
+            $('#frameBody').hide();
+            if($('#frameBody').css('display') == 'none'){
+                $('body').css('overflow','visible');
+            }
+        }
+    });
+
     /* 더보기 메뉴 토글 및 툴팁 제어 */
     $('.utilArea li .btnMore').on({
         "click":function(){
@@ -96,28 +118,28 @@ $(document).ready(function(){
     });
 
     /* 뒤로가기 버튼 */
-    backReferrer = document.referrer;
+    // backReferrer = document.referrer;
 
-    $('.backArea .btnBack').on({
-        "click":function(){
-            if (backReferrer.indexOf('sub_first.html') != -1) { 
-                history.back();
-            }
-            else { 
-                location.href = "main.html";
-            }
-        }
-    })
+    // $('.backArea .btnBack').on({
+    //     "click":function(){
+    //         if (backReferrer.indexOf('sub_first.html') != -1) { 
+    //             history.back();
+    //         }
+    //         else { 
+    //             location.href = "main.html";
+    //         }
+    //     }
+    // })
 
     /* 히스토리 개수 */
-    historyCount = history.length;
-    console.log("히스토리 개수는 " + historyCount + "개 입니다.");
+    // historyCount = history.length;
+    // console.log("히스토리 개수는 " + historyCount + "개 입니다.");
 
-    if(historyCount <= 1){
-        $('.backArea').hide();
-    }else{
-        $('.backArea').show();
-    }
+    // if(historyCount <= 1){
+    //     $('.backArea').hide();
+    // }else{
+    //     $('.backArea').show();
+    // }
 
     $('#context').on({
         'contextmenu': function (e){
@@ -235,5 +257,4 @@ $(document).ready(function(){
             }
         });
     }
-
 });

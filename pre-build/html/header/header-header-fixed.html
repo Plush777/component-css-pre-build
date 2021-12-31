@@ -270,13 +270,32 @@ display: flex; align-items: center; justify-content: center; background-color: #
                       </div>
                     </div>
                     <div class="btnArea end">
-                        <button type="button" class="button Bgblue" onclick="window.open('../result/result-header-fixed.html');">
+                        <button type="button" class="button Bgblue btnResult">
                           <span>결과보기</span>
                           <i class="ico result"></i>
                         </button>
                     </div>
                 </div>
             </div>
+        </div>
+        <div id="frameBody">
+          <div class="btnArea">
+            <button type="button" class="frameClose">
+              <span class="hidden">프레임 창닫기</span>
+            </button>
+          </div>
+          <div class="wrap pre headerFixed">
+            <div class="container">
+                <div id="header">
+                    <div class="inner">
+                        <span>header</span>
+                    </div>
+                </div>
+                <div class="contents">
+                    <span>contents</span>
+                </div>
+            </div>
+          </div>
         </div>
         @@include('include/popup-share.html')
     </div>

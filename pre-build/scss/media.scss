@@ -1,0 +1,23 @@
+@media screen and (max-width:768px){
+    .leftArea{left: -300px; transition: .3s;
+        &.active{left: 0;}
+    }
+    .utilArea{transition: .3s;
+        li{
+            a.btnMail{width: 22px; height: 22px; background-size: 22px 22px;}
+            button{
+                &.btnShare{width: 22px; height: 22px; background-size: 22px 22px;}
+                &.btnMore{width: 22px; height: 22px; background-size: 22px 22px;}
+            }
+            &:before{width: 34px; height: 34px;}
+        }
+        &.move{transform: translate(calc(100% - -28px),0);}
+    }
+    .moreArea{
+        &.active{left: 320px;}
+    }
+    .backArea{display: none !important;}
+    .rightArea{left: 0; width: auto; transition: .3s;
+        &.move{transform: translate(calc(100% - 70px),0);}
+    }
+}

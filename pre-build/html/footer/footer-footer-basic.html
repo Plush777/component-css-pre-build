@@ -2,6 +2,7 @@
 <html lang="ko">
 <head>
     @@include('include/head.html')
+    <script src="../../js/result.js"></script>
 </head>
 <body>
     <div id="wrap">
@@ -169,7 +170,7 @@
                         <div class="highlightArea cScroll">
                           <pre>
                             <code class="language-html">
-  &lt;div id="wrap"&gt;
+  &lt;div class="wrap"&gt;
     &lt;div class="container"&gt;
         &lt;div class="contents"&gt;
             &lt;div class="contBox"&gt;
@@ -273,11 +274,11 @@ background-color: #444;
                         <div class="highlightArea cScroll">
                           <pre>
                             <code class="language-css">
-#wrap .contents {
+.wrap .contents {
   width: 100%;
 }
 
-#wrap .contBox {
+.wrap .contBox {
   position: relative;
   min-height: calc(100vh - 322px);
   text-align: center;
@@ -287,7 +288,7 @@ background-color: #444;
   background-color: #444;
 }
 
-#wrap .contBox span {
+.wrap .contBox span {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -295,30 +296,30 @@ background-color: #444;
           transform: translate(-50%, -50%);
 }
 
-#wrap #footer {
+.wrap #footer {
   width: 100%;
   background-color: #292a2d;
 }
 
-#wrap #footer > .inner {
+.wrap #footer > .inner {
   padding-top: 40px;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-#wrap #footer > .inner .logoArea {
+.wrap #footer > .inner .logoArea {
   margin-bottom: 20px;
 }
 
-#wrap #footer > .inner .logoArea a {
+.wrap #footer > .inner .logoArea a {
   display: inline-block;
 }
 
-#wrap #footer > .inner .logoArea img {
+.wrap #footer > .inner .logoArea img {
   width: 200px;
 }
 
-#wrap #footer > .inner .linkContainer {
+.wrap #footer > .inner .linkContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -326,14 +327,14 @@ background-color: #444;
   border-bottom: 1px solid #fff;
 }
 
-#wrap #footer > .inner .linkArea {
+.wrap #footer > .inner .linkArea {
   -webkit-box-flex: 0.5;
       -ms-flex: 0.5;
           flex: 0.5;
   margin-left: auto;
 }
 
-#wrap #footer > .inner .linkArea ul {
+.wrap #footer > .inner .linkArea ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -343,21 +344,21 @@ background-color: #444;
           flex-direction: column;
 }
 
-#wrap  #footer > .inner .linkArea ul li a {
+.wrap  #footer > .inner .linkArea ul li a {
   font-size: 16px;
   font-family: 'Noto Sans';
   color: #fff;
 }
 
-#wrap #footer > .inner .linkArea ul li a:hover {
+.wrap #footer > .inner .linkArea ul li a:hover {
   text-decoration: underline;
 }
 
-#wrap #footer > .inner .linkArea ul li + li {
+.wrap #footer > .inner .linkArea ul li + li {
   margin-top: 10px;
 }
 
-#wrap #footer > .inner .bottomArea > .inner {
+.wrap #footer > .inner .bottomArea > .inner {
   height: 58px;
   line-height: 58px;
 }
@@ -367,13 +368,80 @@ background-color: #444;
                       </div>
                     </div>
                     <div class="btnArea end">
-                        <button type="button" class="button Bgblue" onclick="window.open('../result/result-footer-basic.html');">
+                        <button type="button" class="button Bgblue btnResult">
                           <span>결과보기</span>
                           <i class="ico result"></i>
                         </button>
                     </div>
                 </div>
             </div>
+        </div>
+        <div id="frameBody">
+          <div id="toast">
+            <span>Esc 혹은 우측 상단 X 버튼을 눌러 결과창을 닫을 수 있습니다. </span>
+          </div>
+          <div class="btnArea">
+            <button type="button" class="frameClose">
+              <span class="hidden">프레임 창닫기</span>
+            </button>
+          </div>
+          <div class="wrap pre footerBasic">
+            <div class="container">
+                <div class="contents">
+                    <div class="contBox">
+                        <span>콘텐츠 박스</span>
+                    </div>
+                </div>
+            </div>
+            <div id="footer">
+                <div class="inner">
+                    <div class="logoArea">
+                        <a href="#">
+                            <img src="../../images/common/main-logo-w.png" alt="푸터 로고">
+                        </a>
+                    </div>
+                    <div class="linkContainer">
+                        <div class="linkArea">
+                            <ul>
+                                <li>
+                                    <a href="#" title="link01">link01</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="link02">link02</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="link03">link03</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="link04">link04</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="linkArea">
+                            <ul>
+                                <li>
+                                    <a href="#" title="link05">link05</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="link06">link06</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="link07">link07</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="link08">link08</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="bottomArea">
+                        <div class="inner">
+                            <p class="copy">Copyright © 2021 Company. ALL RIGHTS RESERVED.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         </div>
         @@include('include/popup-share.html')
     </div>

@@ -14,7 +14,7 @@
 <script src="../../js/component.js"></script>
 <title>Component css</title>
 
-    <script src="../../js/result.js"></script>
+    <script type="text/javascript" src="../../js/result.js"></script>
 </head>
 <body>
     <div id="wrap">
@@ -46,10 +46,10 @@
                   </li>
                 </ul>
               </li>
-              <li>
+              <li class="active">
                 <span title="GNB">GNB</span>
-                <ul class="leftSubMenu">
-                  <li>
+                <ul class="leftSubMenu block">
+                  <li class="active">
                     <a href="#" title="GNB Hover">GNB Hover</a>
                   </li>
                   <li>
@@ -60,10 +60,10 @@
                   </li>
                 </ul>
               </li>
-              <li class="active">
+              <li>
                 <span title="Footer">Footer</span>
-                <ul class="leftSubMenu block">
-                  <li class="active">
+                <ul class="leftSubMenu">
+                  <li>
                     <a href="footer-footer-basic.html" title="Footer basic">Footer basic</a>
                   </li>
                   <li>
@@ -205,10 +205,7 @@
             <div class="rightArea">
                 <div class="textBox">
                     <div class="titleH1">
-                        <h1>Footer basic</h1>
-                    </div>
-                    <div class="mainTxt">
-                      <p>브라우저 크기를 줄였을 때 footer 크기를 그대로 유지할려면 #footer min-width 1920px 혹은 #wrap min-width 1920px 을 주면 됩니다.</p>
+                        <h1>GNB Hover</h1>
                     </div>
                     <div class="tabWrap type01">
                       <div class="tabNav">
@@ -216,6 +213,7 @@
                           <li class="active orange">HTML</li>
                           <li class="pink">SCSS</li>
                           <li class="blue">CSS</li>
+                          <li class="yellow">JS</li>
                         </ul>
                       </div>
 
@@ -223,63 +221,96 @@
                         <div class="highlightArea cScroll">
                           <pre>
                             <code class="language-html">
-  &lt;div class="wrap"&gt;
-    &lt;div class="container"&gt;
-        &lt;div class="contents"&gt;
-            &lt;div class="contBox"&gt;
-                &lt;span&gt;콘텐츠 박스&lt;/span&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div id="footer"&gt;
-        &lt;div class="inner"&gt;
-            &lt;div class="logoArea"&gt;
-                &lt;a href="#"&gt;
-                    &lt;img src="../" alt=""&gt;
-                &lt;/a&gt;
-            &lt;/div&gt;
-            &lt;div class="linkContainer"&gt;
-                &lt;div class="linkArea"&gt;
-                    &lt;ul&gt;
-                        &lt;li&gt;
-                            &lt;a href="#" title="link01"&gt;link01&lt;/a&gt;
-                        &lt;/li&gt;
-                        &lt;li&gt;
-                            &lt;a href="#" title="link02"&gt;link02&lt;/a&gt;
-                        &lt;/li&gt;
-                        &lt;li&gt;
-                            &lt;a href="#" title="link03"&gt;link03&lt;/a&gt;
-                        &lt;/li&gt;
-                        &lt;li&gt;
-                            &lt;a href="#" title="link04"&gt;link04&lt;/a&gt;
-                        &lt;/li&gt;
-                    &lt;/ul&gt;
-                &lt;/div&gt;
-                &lt;div class="linkArea"&gt;
-                    &lt;ul&gt;
-                        &lt;li&gt;
-                            &lt;a href="#" title="link05"&gt;link05&lt;/a&gt;
-                        &lt;/li&gt;
-                        &lt;li&gt;
-                            &lt;a href="#" title="link06"&gt;link06&lt;/a&gt;
-                        &lt;/li&gt;
-                        &lt;li&gt;
-                            &lt;a href="#" title="link07"&gt;link07&lt;/a&gt;
-                        &lt;/li&gt;
-                        &lt;li&gt;
-                            &lt;a href="#" title="link08"&gt;link08&lt;/a&gt;
-                        &lt;/li&gt;
-                    &lt;/ul&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-            &lt;div class="bottomArea"&gt;
-                &lt;div class="inner"&gt;
-                    &lt;p class="copy"&gt;Copyright © 2021 Company. ALL RIGHTS RESERVED.&lt;/p&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
+&lt;div id="gnb"&gt;
+    &lt;div id="menuBg"&gt;&lt;/div&gt;
+    &lt;ul class="menuList"&gt;
+        &lt;li&gt;
+            &lt;a href="#none" title="메뉴01"&gt;메뉴 01&lt;/a&gt;
+            &lt;ul class="depthTwo"&gt;
+                &lt;li&gt;
+                    &lt;a href="#" title="서브메뉴 01"&gt;서브메뉴 01&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;a href="#" title="서브메뉴 02"&gt;서브메뉴 02&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;a href="#" title="서브메뉴 03"&gt;서브메뉴 03&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;a href="#" title="서브메뉴 04"&gt;서브메뉴 04&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;a href="#" title="서브메뉴 05"&gt;서브메뉴 05&lt;/a&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#none" title="메뉴02"&gt;메뉴 02&lt;/a&gt;
+            &lt;ul class="depthTwo"&gt;
+                &lt;li&gt;
+                    &lt;a href="#" title="서브메뉴 01"&gt;서브메뉴 01&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;a href="#" title="서브메뉴 02"&gt;서브메뉴 02&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;a href="#" title="서브메뉴 03"&gt;서브메뉴 03&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;a href="#" title="서브메뉴 04"&gt;서브메뉴 04&lt;/a&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#none" title="메뉴03"&gt;메뉴 03&lt;/a&gt;
+            &lt;ul class="depthTwo"&gt;
+                &lt;li&gt;
+                    &lt;a href="#" title="서브메뉴 01"&gt;서브메뉴 01&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;a href="#" title="서브메뉴 02"&gt;서브메뉴 02&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;a href="#" title="서브메뉴 03"&gt;서브메뉴 03&lt;/a&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#none" title="메뉴04"&gt;메뉴 04&lt;/a&gt;
+            &lt;ul class="depthTwo"&gt;
+                &lt;li&gt;
+                    &lt;a href="#" title="서브메뉴 01"&gt;서브메뉴 01&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;a href="#" title="서브메뉴 02"&gt;서브메뉴 02&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;a href="#" title="서브메뉴 03"&gt;서브메뉴 03&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;a href="#" title="서브메뉴 04"&gt;서브메뉴 04&lt;/a&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#none" title="메뉴05"&gt;메뉴 05&lt;/a&gt;
+            &lt;ul class="depthTwo"&gt;
+                &lt;li&gt;
+                    &lt;a href="#" title="서브메뉴 01"&gt;서브메뉴 01&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;a href="#" title="서브메뉴 02"&gt;서브메뉴 02&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;a href="#" title="서브메뉴 03"&gt;서브메뉴 03&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;a href="#" title="서브메뉴 04"&gt;서브메뉴 04&lt;/a&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
                             </code>
                           </pre>
                         </div>
@@ -289,33 +320,19 @@
                         <div class="highlightArea cScroll">
                           <pre>
                             <code class="language-scss">
-.contents{width: 100%;}
-.contBox{position: relative; min-height: calc(100vh - 322px); text-align: center; font-size: 36px; color: #fff; font-family: 'Noto Sans';
-background-color: #444;
-  span{position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);}
-}
-#footer{width: 100%; background-color: #292a2d;
-  >.inner{padding-top: 40px; max-width: 1200px; margin: 0 auto;
-    .logoArea{margin-bottom: 20px;
-      a{display: inline-block;}
-      img{width: 200px;}
-    }
-    .linkContainer{display: flex; padding-bottom: 40px; border-bottom: 1px solid #fff;}
-    .linkArea{flex: 0.5; margin-left: auto;
-      ul{display: flex; flex-direction: column;
-        li{ 
-          a{font-size: 16px; font-family: 'Noto Sans'; color: #fff;
-            &:hover{text-decoration: underline;}
+#gnb{width: 100%;
+  #menuBg{display: none; position: absolute; left: 0; top: 120px; width: 100%; height:365px; border-top: 1px solid #ddd;
+  box-shadow:-3px 3px 3px 0 rgba(0, 0, 0, 0.2); background-color: #fff; z-index: 1000;}
+  ul.menuList{display: flex; justify-content: space-between;
+    a{display: block;}
+    >li{position: relative; line-height: 50px; text-align: center;
+      >a{min-width: 80px; font-size: 24px; font-family: 'Noto Sans'; color: #000;}
+        .depthTwo{display: none; position: absolute; top: 80px; z-index: 1000; 
+          >li{line-height: 50px;
+            >a{display: block; font-size: 16px; font-family: 'Noto Sans'; color: #444;}
           }
-          +li{margin-top: 10px;}
         }
       }
-    }
-    .bottomArea{
-      >.inner{height: 58px; line-height: 58px;
-        p.copy{font-size: 14px; color: #fff; font-family: '맑은 고딕'; text-align: center;}
-      }
-    }
   }
 }
                             </code>
@@ -327,94 +344,83 @@ background-color: #444;
                         <div class="highlightArea cScroll">
                           <pre>
                             <code class="language-css">
-.wrap .contents {
+#gnb {
   width: 100%;
 }
 
-.wrap .contBox {
-  position: relative;
-  min-height: calc(100vh - 322px);
-  text-align: center;
-  font-size: 36px;
-  color: #fff;
-  font-family: 'Noto Sans';
-  background-color: #444;
-}
-
-.wrap .contBox span {
+#gnb #menuBg {
+  display: none;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-
-.wrap #footer {
+  left: 0;
+  top: 120px;
   width: 100%;
-  background-color: #292a2d;
+  height: 365px;
+  border-top: 1px solid #ddd;
+  -webkit-box-shadow: -3px 3px 3px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: -3px 3px 3px 0 rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  z-index: 1000;
 }
 
-.wrap #footer > .inner {
-  padding-top: 40px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.wrap #footer > .inner .logoArea {
-  margin-bottom: 20px;
-}
-
-.wrap #footer > .inner .logoArea a {
-  display: inline-block;
-}
-
-.wrap #footer > .inner .logoArea img {
-  width: 200px;
-}
-
-.wrap #footer > .inner .linkContainer {
+#gnb ul.menuList {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-bottom: 40px;
-  border-bottom: 1px solid #fff;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.wrap #footer > .inner .linkArea {
-  -webkit-box-flex: 0.5;
-      -ms-flex: 0.5;
-          flex: 0.5;
-  margin-left: auto;
+#gnb ul.menuList a {
+  display: block;
 }
 
-.wrap #footer > .inner .linkArea ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+#gnb ul.menuList > li {
+  position: relative;
+  line-height: 50px;
+  text-align: center;
 }
 
-.wrap  #footer > .inner .linkArea ul li a {
+#gnb ul.menuList > li > a {
+  min-width: 80px;
+  font-size: 24px;
+  font-family: 'Noto Sans';
+  color: #000;
+}
+
+#gnb ul.menuList > li .depthTwo {
+  display: none;
+  position: absolute;
+  top: 80px;
+  z-index: 1000;
+}
+
+#gnb ul.menuList > li .depthTwo > li {
+  line-height: 50px;
+}
+
+#gnb ul.menuList > li .depthTwo > li > a {
+  display: block;
   font-size: 16px;
   font-family: 'Noto Sans';
-  color: #fff;
+  color: #444;
 }
+                            </code>
+                          </pre>
+                        </div>
+                      </div>
 
-.wrap #footer > .inner .linkArea ul li a:hover {
-  text-decoration: underline;
-}
-
-.wrap #footer > .inner .linkArea ul li + li {
-  margin-top: 10px;
-}
-
-.wrap #footer > .inner .bottomArea > .inner {
-  height: 58px;
-  line-height: 58px;
-}
+                      <div class="tabCont">
+                        <div class="highlightArea cScroll">
+                          <pre>
+                            <code class="language-javascript">
+$(document).ready(function(){
+  $('#gnb').hover(function(){
+    $('#menuBg,.depthTwo').stop().slideDown();
+  },function(){
+    $('#menuBg,.depthTwo').stop().slideUp();
+  });
+});
                             </code>
                           </pre>
                         </div>
@@ -429,7 +435,8 @@ background-color: #444;
                 </div>
             </div>
         </div>
-        <div id="frameBody">
+
+        <div id="frameBody" class="fixed">
           <div id="toast">
             <span>Esc 혹은 우측 상단 X 버튼을 눌러 결과창을 닫을 수 있습니다. </span>
           </div>
@@ -438,64 +445,102 @@ background-color: #444;
               <span class="hidden">프레임 창닫기</span>
             </button>
           </div>
-          <div class="wrap pre footerBasic">
+          <div class="wrap pre gnbHover">
             <div class="container">
-                <div class="contents">
-                    <div class="contBox">
-                        <span>콘텐츠 박스</span>
-                    </div>
-                </div>
-            </div>
-            <div id="footer">
-                <div class="inner">
-                    <div class="logoArea">
-                        <a href="#">
-                            <img src="../../images/common/main-logo-w.png" alt="푸터 로고">
-                        </a>
-                    </div>
-                    <div class="linkContainer">
-                        <div class="linkArea">
-                            <ul>
+                <div id="gnb">
+                    <div id="menuBg"></div>
+                    <ul class="menuList">
+                        <li>
+                            <a href="#none" title="메뉴01">메뉴 01</a>
+                            <ul class="depthTwo">
                                 <li>
-                                    <a href="#" title="link01">link01</a>
+                                    <a href="#" title="서브메뉴 01">서브메뉴 01</a>
                                 </li>
                                 <li>
-                                    <a href="#" title="link02">link02</a>
+                                    <a href="#" title="서브메뉴 02">서브메뉴 02</a>
                                 </li>
                                 <li>
-                                    <a href="#" title="link03">link03</a>
+                                    <a href="#" title="서브메뉴 03">서브메뉴 03</a>
                                 </li>
                                 <li>
-                                    <a href="#" title="link04">link04</a>
+                                    <a href="#" title="서브메뉴 04">서브메뉴 04</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="서브메뉴 05">서브메뉴 05</a>
                                 </li>
                             </ul>
-                        </div>
-                        <div class="linkArea">
-                            <ul>
+                        </li>
+                        <li>
+                            <a href="#none" title="메뉴02">메뉴 02</a>
+                            <ul class="depthTwo">
                                 <li>
-                                    <a href="#" title="link05">link05</a>
+                                    <a href="#" title="서브메뉴 01">서브메뉴 01</a>
                                 </li>
                                 <li>
-                                    <a href="#" title="link06">link06</a>
+                                    <a href="#" title="서브메뉴 02">서브메뉴 02</a>
                                 </li>
                                 <li>
-                                    <a href="#" title="link07">link07</a>
+                                    <a href="#" title="서브메뉴 03">서브메뉴 03</a>
                                 </li>
                                 <li>
-                                    <a href="#" title="link08">link08</a>
+                                    <a href="#" title="서브메뉴 04">서브메뉴 04</a>
                                 </li>
                             </ul>
-                        </div>
-                    </div>
-                    <div class="bottomArea">
-                        <div class="inner">
-                            <p class="copy">Copyright © 2021 Company. ALL RIGHTS RESERVED.</p>
-                        </div>
-                    </div>
+                        </li>
+                        <li>    
+                            <a href="#none" title="메뉴03">메뉴 03</a>
+                            <ul class="depthTwo">
+                                <li>
+                                    <a href="#" title="서브메뉴 01">서브메뉴 01</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="서브메뉴 02">서브메뉴 02</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="서브메뉴 03">서브메뉴 03</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#none" title="메뉴04">메뉴 04</a>
+                            <ul class="depthTwo">
+                                <li>
+                                    <a href="#" title="서브메뉴 01">서브메뉴 01</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="서브메뉴 02">서브메뉴 02</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="서브메뉴 03">서브메뉴 03</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="서브메뉴 04">서브메뉴 04</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#none" title="메뉴05">메뉴 05</a>
+                            <ul class="depthTwo">
+                                <li>
+                                    <a href="#" title="서브메뉴 01">서브메뉴 01</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="서브메뉴 02">서브메뉴 02</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="서브메뉴 03">서브메뉴 03</a>
+                                </li>
+                                <li>
+                                    <a href="#" title="서브메뉴 04">서브메뉴 04</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
         </div>
+
         <div class="popup share">
     <div class="cont">
       <div class="inner">

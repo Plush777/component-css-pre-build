@@ -1,4 +1,10 @@
 $(document).ready(function(){
+    if(window.matchMedia("screen and (max-width: 1280px)").matches) {
+        console.log("해상도가 1280px 이하입니다");
+        $('body').addClass('mobileType');
+    }else{
+        $('body').removeClass('mobileType');
+    }
 
     if(document.getElementById('subUrl')){
         document.getElementById('subUrl').value = window.location.href;
@@ -118,28 +124,34 @@ $(document).ready(function(){
     });
 
     /* 뒤로가기 버튼 */
-    // backReferrer = document.referrer;
-
-    // $('.backArea .btnBack').on({
-    //     "click":function(){
-    //         if (backReferrer.indexOf('sub_first.html') != -1) { 
-    //             history.back();
-    //         }
-    //         else { 
-    //             location.href = "main.html";
-    //         }
-    //     }
-    // })
+    backReferrer = document.referrer;
+   
+    $('.backArea .btnBack').on({
+        "click":function(){
+            if (backReferrer.indexOf('sub_first.html') != -1) { 
+                history.back();
+            }
+            else { 
+                location.href = "main.html";
+            }
+        }
+    })
 
     /* 히스토리 개수 */
-    // historyCount = history.length;
-    // console.log("히스토리 개수는 " + historyCount + "개 입니다.");
+    historyCount = history.length;
+    console.log("히스토리 개수는 " + historyCount + "개 입니다.");
 
-    // if(historyCount <= 1){
-    //     $('.backArea').hide();
-    // }else{
-    //     $('.backArea').show();
-    // }
+    function historyCountCheck(){
+        if(historyCount == 1){
+            $('.backArea').hide();
+        }else if(historyCount > 1){
+            $('.backArea').show();
+        }
+    }
+
+    if(!$('body').hasClass('mobileType')){
+        historyCountCheck();
+    }
 
     $('#context').on({
         'contextmenu': function (e){
@@ -219,6 +231,21 @@ $(document).ready(function(){
     $('.leftMenu li.disabled').on({
 		"click":function(){
 			alert('준비중인 페이지입니다. 조금만 기다려주세요!');
+		}
+	})
+
+    $('.moreArea').on({
+		"click":function(){
+            var moveElement = $(this).siblings('.rightArea,.utilArea');
+            var prevElement = $(this).prev('.leftArea');
+
+            $(this).toggleClass('active');
+            prevElement.toggleClass('active').siblings('.leftArea').removeClass('active');
+            if(prevElement.hasClass('active')){
+                moveElement.addClass('move');
+            }else if(!prevElement.hasClass('active')){
+                moveElement.removeClass('move');
+            }
 		}
 	})
 

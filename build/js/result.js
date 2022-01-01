@@ -105,4 +105,15 @@ $(document).ready(function(){
           prevEl: '.swiper-button-prev',
         },
     });
+
+    $('.btnHeadToggle').on({
+		"click":function (){
+            $(this).toggleClass('active').siblings('.btnHeadToggle').removeClass('active');
+            if(!$(this).hasClass('active')){
+                $('#header').removeClass('active');
+            }else if($(this).hasClass('active')){
+                $('#header').addClass('active');
+            }
+		}
+	});
 });

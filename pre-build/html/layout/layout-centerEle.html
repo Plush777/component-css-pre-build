@@ -2,6 +2,7 @@
 <html lang="ko">
 <head>
     @@include('include/head.html')
+    <script src="../../js/result.js"></script>
 </head>
 <body>
     <div id="wrap">
@@ -232,47 +233,47 @@
                         <div class="highlightArea cScroll">
                           <pre>
                             <code class="language-css">
-#wrap.pre.centerEle .resultCont {
+.resultCont {
     position: relative;
     padding: 50px;
     box-sizing: border-box;
 }
 
-#wrap.pre.centerEle .resultCont.type01 {
+.resultCont.type01 {
     height: 100%;
 }
 
-#wrap.pre.centerEle .resultCont.type01 .container {
+.resultCont.type01 .container {
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-#wrap.pre.centerEle .resultCont.type02 .innerBox {
+.resultCont.type02 .innerBox {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
 }
 
-#wrap.pre.centerEle .resultCont.type03 {
+.resultCont.type03 {
     height: 100%;
 }
 
-#wrap.pre.centerEle .resultCont.type03 .container {
+.resultCont.type03 .container {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-#wrap.pre.centerEle .titleH3 {
+.titleH3 {
     margin-bottom: 0;
     padding-bottom: 10px;
 }
 
-#wrap.pre.centerEle .centerBox {
+.centerBox {
     padding: 50px;
     border: 2px solid #000;
     font-size: 22px;
@@ -284,16 +285,60 @@
                       </div>
                     </div>
                     <div class="btnArea end">
-                        <button type="button" class="button Bgblue" onclick="window.open('../result/result-centerEle.html');">
+                        <button type="button" class="button Bgblue btnResult">
                           <span>결과보기</span>
                           <i class="ico result"></i>
                         </button>
                     </div>
                 </div>
-                
             </div>
         </div>
-
+        <div id="frameBody" class="overflow-y">
+          <div id="toast">
+            <span>Esc 혹은 우측 상단 X 버튼을 눌러 결과창을 닫을 수 있습니다. </span>
+          </div>
+          <div class="btnArea">
+            <button type="button" class="frameClose">
+              <span class="hidden">프레임 창닫기</span>
+            </button>
+          </div>
+          <div class="wrap pre centerEle">
+            <div class="resultCont type01">
+                <div class="titleH3">
+                    <h3>Flex를 이용한 가운데 정렬</h3>
+                </div>
+                <div class="container">
+                    <div class="centerBox">
+                        <span>가운데 정렬</span>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="resultCont type02">
+                <div class="titleH3">
+                    <h3>Flex + vh를 이용한 가운데 정렬</h3>
+                </div>
+                <div class="container">
+                    <div class="innerBox">
+                        <div class="centerBox">
+                            <span>가운데 정렬</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="resultCont type03">
+                <div class="titleH3">
+                    <h3>position을 이용한 가운데 정렬</h3>
+                </div>
+                <div class="container">
+                    <div class="centerBox">
+                        <span>가운데 정렬</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
         @@include('include/popup-share.html')
     </div>
 </body>

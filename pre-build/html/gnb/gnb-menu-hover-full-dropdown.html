@@ -1,20 +1,7 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link rel="icon" href="../../images/ico/ico-favi.png" sizes="16x16" />
-<link rel="stylesheet" href="../../css/component.css" type="text/css" />
-<link rel="stylesheet" href="../../lib/swiper/css/swiper.css" />
-<link rel="stylesheet" href="../../css/prism.css" />
-<script type="text/javascript" src="../../lib/jquery-1.12.4.js"></script>
-<script type="text/javascript" src="../../lib/swiper/js/swiper.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
-<script src="../../js/prism.js"></script>
-<script src="../../js/component.js"></script>
-<title>Component css</title>
-
-    <script src="../../js/result.js"></script>
+    @@include('include/head.html')
 </head>
 <body>
     <div id="wrap">
@@ -23,7 +10,7 @@
             <ul class="leftMenu">
               <li>
                 <a href="main.html" title="메인으로">
-                  <img src="../../images/common/logo.svg" alt="서브 메인로고" />
+                  @@include('include/logo.html')
                   <span class="hidden">메인으로</span>
                 </a>
               </li>
@@ -52,11 +39,11 @@
                   <li>
                     <a href="#" title="GNB Hover">GNB Hover</a>
                   </li>
-                  <li>
+                  <li class="active">
                     <a href="#" title="GNB li Hover">GNB li Hover</a>
                   </li>
-                  <li class="active">
-                    <a href="#" title="GNB li find">GNB li find</a>
+                  <li>
+                    <a href="#" title="GNB li find Hover">GNB li find Hover</a>
                   </li>
                 </ul>
               </li>
@@ -159,53 +146,12 @@
                 </button>
             </div>
 
-            <div class="utilArea">
-  <ul>
-      <li>
-          <a href="mailto:sky11916@naver.com" class="btnMail">
-              <span class="hidden">문의</span>
-              <div class="toolTip mail">
-                  <span>메일 문의</span>
-              </div>
-          </a>
-      </li>
-      <li>
-          <button type="button" class="btnShare">
-              <span class="hidden">공유</span>
-              <div class="toolTip share">
-                  <span>공유하기</span>
-              </div>
-          </button>
-          
-      </li>
-      <li>
-          <button type="button" class="btnMore">
-            <span class="hidden">더보기</span>
-              <div class="moreSubMenu">
-                <ul>
-                    <li>
-                        <a href="https://github.com/Plush777" target="_blank">Github</a>
-                    </li>
-                    <li>
-                        <a href="https://velog.io/@sky" target="_blank">Velog</a>
-                    </li>
-                    <li>
-                        <a href="update-note.html" target="_blank">Update note</a>
-                    </li>
-                </ul>
-              </div>
-              <div class="toolTip more">
-                  <span>더보기</span>
-              </div>
-          </button>
-      </li>
-  </ul>
-</div>
+            @@include('include/util.html')
             
             <div class="rightArea">
                 <div class="textBox">
                     <div class="titleH1">
-                        <h1>GNB li find</h1>
+                        <h1>GNB li Hover</h1>
                     </div>
                     <div class="tabWrap type01">
                       <div class="tabNav">
@@ -321,13 +267,15 @@
                           <pre>
                             <code class="language-scss">
 #gnb{width: 100%;
-  ul.menuList{display: flex; justify-content: space-between; background-color: rgba($color: #333, $alpha: 0.5);
+  #menuBg{display: none; position: absolute; left: 0; top: 120px; width: 100%; height:365px; border-top: 1px solid #ddd;
+  box-shadow:-3px 3px 3px 0 rgba(0, 0, 0, 0.2); background-color: #fff; z-index: 1000;}
+  ul.menuList{display: flex; justify-content: space-between;
     a{display: block;}
-    >li{position: relative; line-height: 50px; text-align: center; padding: 5px; box-sizing: border-box; min-width: 130px;
-      >a{font-size: 24px; font-family: 'Noto Sans'; color: #fff;}
-        .depthTwo{display: none; position: absolute; top: 60px; left: 0; z-index: 1000; 
-          >li{line-height: 50px; border: 1px solid #ddd; border-top: 0; background-color: rgba($color: #333, $alpha: 0.8);
-            >a{display: block; font-size: 16px; font-family: 'Noto Sans'; color: #fff;}
+    >li{position: relative; line-height: 50px; text-align: center;
+      >a{min-width: 80px; font-size: 24px; font-family: 'Noto Sans'; color: #000;}
+        .depthTwo{display: none; position: absolute; top: 80px; z-index: 1000; 
+          >li{line-height: 50px;
+            >a{display: block; font-size: 16px; font-family: 'Noto Sans'; color: #444;}
           }
         }
       }
@@ -346,14 +294,27 @@
   width: 100%;
 }
 
+#gnb #menuBg {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 120px;
+  width: 100%;
+  height: 365px;
+  border-top: 1px solid #ddd;
+  -webkit-box-shadow: -3px 3px 3px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: -3px 3px 3px 0 rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  z-index: 1000;
+}
+
 #gnb ul.menuList {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    background-color: rgba(51, 51, 51, 0.5);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 #gnb ul.menuList a {
@@ -364,38 +325,31 @@
   position: relative;
   line-height: 50px;
   text-align: center;
-  padding: 5px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  min-width: 130px;
 }
 
 #gnb ul.menuList > li > a {
+  min-width: 80px;
   font-size: 24px;
   font-family: 'Noto Sans';
-  color: #fff;
+  color: #000;
 }
 
 #gnb ul.menuList > li .depthTwo {
   display: none;
   position: absolute;
-  top: 60px;
-  left: 0;
+  top: 80px;
   z-index: 1000;
 }
 
 #gnb ul.menuList > li .depthTwo > li {
   line-height: 50px;
-  border: 1px solid #ddd;
-  border-top: 0;
-  background-color: rgba(51, 51, 51, 0.8);
 }
 
 #gnb ul.menuList > li .depthTwo > li > a {
   display: block;
   font-size: 16px;
   font-family: 'Noto Sans';
-  color: #fff;
+  color: #444;
 }
                             </code>
                           </pre>
@@ -407,11 +361,11 @@
                           <pre>
                             <code class="language-javascript">
 $(document).ready(function(){
-    $('#gnb>ul>li').hover(function(){
-        $(this).find('.depthTwo').stop().slideDown();
-    },function(){
-        $(this).find('.depthTwo').stop().slideUp();
-    });
+  $('.gnb-li-hover #gnb').on({
+		"mouseleave":function (){
+			$('#menuBg,.depthTwo').stop().slideUp();
+		}
+	});
 });
                             </code>
                           </pre>
@@ -436,9 +390,11 @@ $(document).ready(function(){
               <span class="hidden">프레임 창닫기</span>
             </button>
           </div>
-          <div class="wrap pre gnbFind">
+
+          <div class="wrap pre gnb-li-hover">
             <div class="container">
                 <div id="gnb">
+                    <div id="menuBg"></div>
                     <ul class="menuList">
                         <li>
                             <a href="#none" title="메뉴01">메뉴 01</a>
@@ -530,20 +486,7 @@ $(document).ready(function(){
             </div>
         </div>
         </div>
-        <div class="popup share">
-    <div class="cont">
-      <div class="inner">
-        <p>아래 주소를 복사하여 다른 곳에 붙여넣으세요.</p>
-        <div class="inputArea flex">
-          <input type="text" id="subUrl" class="full">
-          <button type="button" data-clipboard-target="#subUrl" class="button Bgblue w75 btnClip">
-            복사
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div id="dimmed"></div>
+        @@include('include/popup-share.html')
     </div>
 </body>
 </html>

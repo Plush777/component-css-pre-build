@@ -13,11 +13,18 @@
         }
         &.move{transform: translate(calc(100% - -28px),0);}
     }
-    .moreArea{
+    .moreArea{display: block;
         &.active{left: 320px;}
     }
     .backArea{display: none !important;}
-    .rightArea{left: 0; width: auto; transition: .3s;
+    .rightArea{left: 0; width: auto; transition: .3s; padding: 85px 0 20px 0; margin: 0 30px;
+        .mainTxt{font-size: 14px;}
         &.move{transform: translate(calc(100% - 70px),0);}
     }
+
+    .innerTxt > strong{font-size: 18px;}
+
+    .titleH1{font-size: 30px;}
+    .titleH2{font-size: 22px;}
+    .titleH3{font-size: 18px;}
 }

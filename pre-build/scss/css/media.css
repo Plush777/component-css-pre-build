@@ -34,6 +34,9 @@
     -webkit-transform: translate(calc(100% - -28px), 0);
             transform: translate(calc(100% - -28px), 0);
   }
+  .moreArea {
+    display: block;
+  }
   .moreArea.active {
     left: 320px;
   }
@@ -45,10 +48,27 @@
     width: auto;
     -webkit-transition: .3s;
     transition: .3s;
+    padding: 85px 0 20px 0;
+    margin: 0 30px;
+  }
+  .rightArea .mainTxt {
+    font-size: 14px;
   }
   .rightArea.move {
     -webkit-transform: translate(calc(100% - 70px), 0);
             transform: translate(calc(100% - 70px), 0);
+  }
+  .innerTxt > strong {
+    font-size: 18px;
+  }
+  .titleH1 {
+    font-size: 30px;
+  }
+  .titleH2 {
+    font-size: 22px;
+  }
+  .titleH3 {
+    font-size: 18px;
   }
 }
 /*# sourceMappingURL=media.css.map */

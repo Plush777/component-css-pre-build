@@ -574,7 +574,10 @@ body, html {
   display: block;
   width: 30px;
   height: 30px;
-  background: url("../images/ico/ico-back.svg") no-repeat center;
+  background-image: url("../images/ico/ico-home.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 30px 30px;
 }
 
 .backArea .btnBack:before {
@@ -800,7 +803,6 @@ body, html {
   position: absolute;
   right: 0;
   top: 0;
-  /*left: 500px;*/
   left: calc(50% - 402px);
   width: 1200px;
   padding: 115px 0;
@@ -1836,7 +1838,7 @@ i.ico.result {
 
 #toast {
   display: none;
-  position: absolute;
+  position: fixed;
   top: 120px;
   left: 50%;
   -webkit-transform: translateX(-50%);
@@ -1860,6 +1862,7 @@ i.ico.result {
 
 /* 모바일 */
 .moreArea {
+  display: none;
   position: absolute;
   top: 20px;
   left: 20px;
@@ -2310,11 +2313,13 @@ i.ico.result {
   .utilArea li:before {
     width: 34px;
     height: 34px;
-    left: -6px;
   }
   .utilArea.move {
     -webkit-transform: translate(calc(100% - -28px), 0);
             transform: translate(calc(100% - -28px), 0);
+  }
+  .moreArea {
+    display: block;
   }
   .moreArea.active {
     left: 320px;
@@ -2327,10 +2332,27 @@ i.ico.result {
     width: auto;
     -webkit-transition: .3s;
     transition: .3s;
+    padding: 85px 0 20px 0;
+    margin: 0 30px;
+  }
+  .rightArea .mainTxt {
+    font-size: 14px;
   }
   .rightArea.move {
     -webkit-transform: translate(calc(100% - 70px), 0);
             transform: translate(calc(100% - 70px), 0);
+  }
+  .innerTxt > strong {
+    font-size: 18px;
+  }
+  .titleH1 {
+    font-size: 30px;
+  }
+  .titleH2 {
+    font-size: 22px;
+  }
+  .titleH3 {
+    font-size: 18px;
   }
 }
 /*# sourceMappingURL=component.css.map */

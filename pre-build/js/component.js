@@ -123,17 +123,13 @@ $(document).ready(function(){
         }
     });
 
-    /* 뒤로가기 버튼 */
-    backReferrer = document.referrer;
-   
-    $('.backArea .btnBack').on({
+    var urlState = window.location.pathname;
+    var urlArr = urlState.split('/header');
+
+    /* 서브 홈버튼 */
+    $('.btnBack').on({
         "click":function(){
-            if (backReferrer.indexOf('sub_first.html') != -1) { 
-                history.back();
-            }
-            else { 
-                location.href = "main.html";
-            }
+            location.href = urlArr[0] + '/' + 'sub_first.html';
         }
     })
 
@@ -243,8 +239,10 @@ $(document).ready(function(){
             prevElement.toggleClass('active').siblings('.leftArea').removeClass('active');
             if(prevElement.hasClass('active')){
                 moveElement.addClass('move');
+                $('body').css('overflow','hidden');
             }else if(!prevElement.hasClass('active')){
                 moveElement.removeClass('move');
+                $('body').css('overflow','auto');
             }
 		}
 	})

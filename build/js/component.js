@@ -103,26 +103,6 @@ $(document).ready(function(){
         }
     });
 
-    $('.customSelect').on({
-        "click":function(){
-            $(this).toggleClass('active').siblings('.customSelect').removeClass('active');
-        }
-    });
-
-    /* 요소 밖에 클릭 시 셀렉트 닫힘 */
-    $(document).on({"click":function(e){
-        if($('.customSelect').has(e.target).length == 0){
-            $('.customSelect').removeClass('active');
-        }
-        }
-    });
-
-    $('.customSelect > ul > li > .selList > li').on({
-        "click":function(){
-            $(this).parents('ul').prev('span').text($(this).text());
-        }
-    });
-
     var urlState = window.location.pathname;
     var urlArr = urlState.split('/header');
 
@@ -148,42 +128,6 @@ $(document).ready(function(){
     if(!$('body').hasClass('mobileType')){
         historyCountCheck();
     }
-
-    $('#context').on({
-        'contextmenu': function (e){
-            if(e.pageX > $(window).width()-$('.mouseMenu').outerWidth() && e.pageY > $(window).height()-$('.mouseMenu').outerHeight()){
-                $('.mouseMenu').css({left:e.pageX-$('.mouseMenu').outerWidth(),top:e.pageY-$('.mouseMenu').outerHeight()}).show();
-            }else if(e.pageX <= $(window).width()-$('.mouseMenu').outerWidth() && e.pageY > $(window).height()-$('.mouseMenu').outerHeight()){
-                $('.mouseMenu').css({left:e.pageX,top:e.pageY-$('.mouseMenu').outerHeight()}).show();
-            }else if(e.pageX > $(window).width()-$('.mouseMenu').outerWidth() && e.pageY <= $(window).height()-$('.mouseMenu').outerHeight()){
-                $('.mouseMenu').css({left:e.pageX-$('.mouseMenu').outerWidth(),top:e.pageY}).show();
-            }else{
-                $('.mouseMenu').css({left:e.pageX,top:e.pageY}).show();
-            }
-        }
-    });
-
-    /* 마우스 커스텀메뉴가 나온 상태에서 밖을 클릭하거나 우클릭 시 hide */
-    $(document).on({
-        "click":function(){
-            $('.mouseMenu').hide();
-        },
-        /* 1 = left , 2 = center , 3 = right */
-        "mousedown":function(e){
-            if(e.which === 3){
-                $('.mouseMenu').hide();
-            }
-        }
-    })
-
-    $('#context').on({
-        "click":function(){
-            $('.mouseMenu').show();
-        },
-        "contextmenu": function (){
-            return false;
-        }
-    })
 
     $('.table.noticeBoard .tgShowHideRow').on({
         "click":function(){
@@ -281,5 +225,59 @@ $(document).ready(function(){
                 console.log('esc가 감지되어 공유하기 팝업을 닫습니다.');
             }
         });
+    }
+
+
+    //darkMode
+    const storedTheme = localStorage.getItem("darkTheme");
+	const storedThemeLight = localStorage.getItem("lightTheme");
+
+    /* dark 클래스 */
+	var darkEvent = document.getElementsByClassName('darkToggle');
+	function localSetDark() {
+		const html = document.documentElement;
+        if (html.classList.contains("dark")) {
+            html.classList.remove("dark");
+            localStorage.setItem("darkTheme", "false");
+        } else {
+            html.classList.add("dark");
+            localStorage.setItem("darkTheme", "true");
+        }
+	}
+	for (var i = 0; i < darkEvent.length; i++) {
+		darkEvent[i].addEventListener('click', localSetDark);
+	}
+
+	if (storedTheme !== null) {
+        if (storedTheme === "true") {
+            document.documentElement.classList.add("dark");
+        }
+    } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        document.documentElement.classList.add("dark");
+    }
+
+
+	/* light 클래스*/
+	var lightEvent = document.getElementsByClassName('darkToggle');
+	function localSetLight() {
+		const html = document.documentElement;
+        if (html.classList.contains("light")) {
+            html.classList.remove("light");
+            localStorage.setItem("lightTheme", "false");
+        } else {
+            html.classList.add("light");
+            localStorage.setItem("lightTheme", "true");
+        }
+	}
+	for (var i = 0; i < lightEvent.length; i++) {
+		lightEvent[i].addEventListener('click', localSetLight);
+	}
+
+	if (storedThemeLight !== null) {
+        if (storedThemeLight === "true") {
+            document.documentElement.classList.add("light");
+        }
+    } else if (window.matchMedia("(prefers-color-scheme: light)").matches) {
+        document.documentElement.classList.add("light");
     }
 });

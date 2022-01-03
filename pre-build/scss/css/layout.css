@@ -1,0 +1,197 @@
+.wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.wrap.pre.centerEle .resultCont {
+  position: relative;
+  padding: 50px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.wrap.pre.centerEle .resultCont.type01 {
+  height: 100%;
+}
+
+.wrap.pre.centerEle .resultCont.type01 .container {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.wrap.pre.centerEle .resultCont.type02 .innerBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+}
+
+.wrap.pre.centerEle .resultCont.type03 {
+  height: 100%;
+}
+
+.wrap.pre.centerEle .resultCont.type03 .container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.wrap.pre.centerEle .titleH3 {
+  margin-bottom: 0;
+  padding-bottom: 10px;
+}
+
+.wrap.pre.centerEle .centerBox {
+  padding: 50px;
+  border: 2px solid #000;
+  font-size: 22px;
+  font-family: 'Noto Sans';
+}
+
+.wrap.pre.bgImage .resultCont {
+  position: relative;
+}
+
+.wrap.pre.bgImage .resultCont .imgDiv {
+  height: 600px;
+  background-image: url("../images/common/1903x600.png");
+  background-repeat: no-repeat;
+}
+
+.wrap.pre.bgImage .resultCont.type01 .imgDiv {
+  background-size: cover;
+}
+
+.wrap.pre.bgImage .resultCont.type02 .imgDiv {
+  background-size: 100% 100%;
+}
+
+.wrap.pre.bgImage .resultCont + .resultCont {
+  margin-top: 50px;
+}
+
+.tabWrap .tabCont {
+  display: none;
+}
+
+.tabWrap .tabCont.active {
+  display: block;
+}
+
+.tabWrap .tabNav .tabList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.tabWrap.type01 {
+  margin-bottom: 30px;
+}
+
+.tabWrap.type01 > .tabNav {
+  margin-bottom: 15px;
+}
+
+.tabWrap.type01 > .tabNav > .tabList {
+  border-bottom: 2px solid #ddd;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+.tabWrap.type01 > .tabNav > .tabList > li {
+  position: relative;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 35px;
+  line-height: 35px;
+  font-size: 18px;
+  cursor: pointer;
+  text-align: center;
+  color: #000;
+  font-family: 'Noto Sans';
+}
+
+.tabWrap.type01 > .tabNav > .tabList > li.orange.active:before {
+  background-color: #ed5e26;
+}
+
+.tabWrap.type01 > .tabNav > .tabList > li.pink.active:before {
+  background-color: #cf649a;
+}
+
+.tabWrap.type01 > .tabNav > .tabList > li.blue.active:before {
+  background-color: #2693cc;
+}
+
+.tabWrap.type01 > .tabNav > .tabList > li.yellow.active:before {
+  background-color: #f7e018;
+}
+
+.tabWrap.type01 > .tabNav > .tabList > li.active {
+  font-weight: bold;
+}
+
+.tabWrap.type01 > .tabNav > .tabList > li.active:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  bottom: -1px;
+  left: 0;
+}
+
+.tabWrap.typeEx > .tabNav > .tabList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #222;
+}
+
+.tabWrap.typeEx > .tabNav > .tabList > li {
+  position: relative;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 10px;
+  cursor: pointer;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align: center;
+  background-color: #fff;
+  font-family: 'Noto sans';
+}
+
+.tabWrap.typeEx > .tabNav > .tabList > li.active {
+  border-radius: 4px 0 0 4px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #266bf7;
+}
+
+.tabWrap.typeEx > .tabNav > .tabList > li.active:last-child {
+  border-radius: 0 4px 4px 0;
+}
+/*# sourceMappingURL=layout.css.map */

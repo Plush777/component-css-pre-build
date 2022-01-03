@@ -1,0 +1,71 @@
+.wrap{position: relative; width: 100%; height: 100%;
+    &.pre{
+      &.centerEle{
+        .resultCont{position: relative; padding: 50px; box-sizing: border-box;
+          &.type01{height: 100%; 
+            .container{height: 100%; display: flex; align-items: center; justify-content: center;}
+          }
+          &.type02{
+            .innerBox{display: flex; align-items: center; justify-content: center; height: 100vh;
+          }
+          }
+          &.type03{height: 100%;
+            .container{position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);}
+          }
+        }
+        .titleH3{margin-bottom: 0; padding-bottom: 10px;}
+        .centerBox{padding: 50px; border: 2px solid #000; font-size: 22px; font-family: 'Noto Sans';}
+      }
+  
+      &.bgImage{
+        .resultCont{position: relative;
+          .imgDiv{height: 600px; background-image: url("../images/common/1903x600.png"); background-repeat: no-repeat;}
+          &.type01{
+            .imgDiv{background-size: cover;}
+          }
+          &.type02{
+            .imgDiv{background-size: 100% 100%;}
+          }
+          +.resultCont{margin-top: 50px;} 
+        }
+      }
+    }
+}
+
+// tab
+.tabWrap{
+    .tabCont{display: none;
+      &.active{display: block;}
+    }
+    .tabNav .tabList{display: flex;}
+  
+    &.type01{margin-bottom: 30px;
+      >.tabNav{margin-bottom: 15px;
+        >.tabList{border-bottom: 2px solid #ddd; border-radius: 4px; background-color: #fff;
+          >li{position: relative; flex: 1; height: 35px; line-height: 35px;font-size: 18px;
+          cursor: pointer; text-align: center; color: #000; font-family: 'Noto Sans';
+            &.orange.active:before{background-color: #ed5e26;}
+            &.pink.active:before{background-color: #cf649a;}
+            &.blue.active:before{background-color: #2693cc;}
+            &.yellow.active:before{background-color: #f7e018;}
+            &.active{font-weight: bold;
+              &:before{content: ''; position: absolute; width: 100%; height: 3px; bottom: -1px; left: 0;}
+            }
+          }
+        }
+      }
+    }
+  
+    &.typeEx{
+      >.tabNav{
+        >.tabList{display: flex;border: 1px solid #ddd; border-radius: 4px; font-size: 16px; color: #222;
+          >li{position: relative; flex: 1; height: 50px; line-height: 50px; padding: 0 10px; cursor: pointer; 
+          box-sizing: border-box; text-align: center; background-color: #fff; font-family: 'Noto sans';
+            &.active{border-radius: 4px 0 0 4px; font-weight: bold;color: #fff;background-color: #266bf7;
+              &:last-child{border-radius: 0 4px 4px 0;}
+            }
+          }
+        }
+      }
+    }
+  }

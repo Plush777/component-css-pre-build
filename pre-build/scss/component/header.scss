@@ -15,7 +15,6 @@
 
     &.headerScroll{
         #header{top: 0; transition: .2s ease;
-            &.headFixed{position: fixed;}
             &.headUp{top: -65px;}
             &.headDown{top: 0;}
         }

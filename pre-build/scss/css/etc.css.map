@@ -2,7 +2,7 @@
     "version": 3,
     "mappings": "",
     "sources": [
-        "../etc.scss"
+        "../component/etc.scss"
     ],
     "names": [],
     "file": "etc.css"

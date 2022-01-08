@@ -1,5 +1,16 @@
 @media screen and (max-width:768px){
     .leftArea{left: -300px; transition: .3s;
+        .leftMenu li{
+            span{font-size: 18px;
+                &:after{background-size: 12px 7px;}
+            }
+            &.active{
+                span:after{background-size: 12px 7px;}
+            }
+            ul.leftSubMenu{
+                li a{font-size: 16px;}
+            }
+        }
         &.active{left: 0;}
     }
     .utilArea{transition: .3s;
@@ -17,14 +28,64 @@
         &.active{left: 320px;}
     }
     .backArea{display: none !important;}
-    .rightArea{left: 0; width: auto; transition: .3s; padding: 85px 0 20px 0; margin: 0 30px;
+    .rightArea{left: 0; width: auto; transition: .3s; padding: 85px 0 20px 0; margin: 0 15px;
         .mainTxt{font-size: 14px;}
         &.move{transform: translate(calc(100% - 70px),0);}
     }
 
     .innerTxt > strong{font-size: 18px;}
 
-    .titleH1{font-size: 30px;}
-    .titleH2{font-size: 22px;}
-    .titleH3{font-size: 18px;}
+    .titleH1{font-size: 26px; padding-bottom: 10px; margin-bottom: 15px;}
+    .titleH2{font-size: 18px;}
+    .titleH3{font-size: 14px;}
+
+    .popup{
+        &.share{width: 300px;
+            .cont .inner{padding: 15px;
+                p{font-size: 12px;
+                    +.inputArea{margin-top: 15px;}
+                }
+                .inputArea{
+                    input{margin-right: 10px;}
+                    button{font-size: 12px; min-width: 65px;}
+                }
+            }
+        }
+    }
+
+    .tabWrap.type01{margin-bottom: 20px;
+        >.tabNav{margin-bottom: 10px;
+            >.tabList{border-width: 1px;
+                >li{height: 30px; line-height: 30px; font-size: 16px;
+                    &.active{
+                        &:before{height: 2px;}
+                    }
+                }
+            }
+        }
+    }
+
+    .btnArea{
+        .button{align-items: baseline; height: 30px; line-height: 30px; font-size: 12px;}
+    }
+
+    i.ico{
+        &.result{width: 5px; height: 9px; margin-left: 5px; background-size: 5px 9px;}
+    }
+
+    .highlightArea .code-toolbar .toolbar-item span{padding: 0 5px !important; font-size: 11px !important;}
+
+    .wrap.pre{
+        &.gnbHover,&.gnb-li-hover,&.gnbFind{
+            .container{width: auto; padding: 60px 20px 0 20px;
+                #gnb ul.menuList>li{
+                    >a{font-size: 18px;}
+                    .depthTwo>li>a{font-size: 14px;}
+                }
+            }
+        }
+        &.gnbFind{
+            #gnb ul.menuList li{min-width: auto;}
+        }
+    }
 }

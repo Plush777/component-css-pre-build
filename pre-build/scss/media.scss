@@ -28,7 +28,7 @@
         &.active{left: 320px;}
     }
     .backArea{display: none !important;}
-    .rightArea{left: 0; width: auto; transition: .3s; padding: 85px 0 20px 0; margin: 0 15px;
+    .rightArea{left: 0; width: auto; transition: .3s; padding: 85px 0 20px 0; margin: 0 20px;
         .mainTxt{font-size: 14px;}
         &.move{transform: translate(calc(100% - 70px),0);}
     }

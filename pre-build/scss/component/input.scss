@@ -1,7 +1,7 @@
-.customSelect{display: flex;
-    >ul{
-      >li{position: relative; border: 1px solid #ddd;
-      width: 210px; height: 30px; text-indent: 5px; box-sizing: border-box; background: url("../images/ico/ico-select-down.svg")no-repeat center right 10px;
+.customSelect{display: flex; flex: 1;
+    >ul{flex: 1;
+      >li{flex: 1; height: 30px; position: relative; border: 1px solid #ddd;
+      text-indent: 5px; box-sizing: border-box; background: url("../images/ico/ico-select-down.svg")no-repeat center right 10px;
         span{display: block; line-height: 28px; color: #222; font-family: 'Noto Sans'; cursor: pointer;}
         .selList{display: none; position: absolute; top: 29px; left: -1px; width: 100%; z-index: 200; 
         border: 1px solid #ddd; border-top: 0; border-radius: 0 0 4px 4px; background-color: #fff;

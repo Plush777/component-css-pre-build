@@ -2,13 +2,24 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.customSelect > ul {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 .customSelect > ul > li {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 30px;
   position: relative;
   border: 1px solid #ddd;
-  width: 210px;
-  height: 30px;
   text-indent: 5px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;

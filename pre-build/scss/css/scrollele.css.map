@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../component/scrollele.scss"
+    ],
+    "names": [],
+    "file": "scrollele.css"
+}

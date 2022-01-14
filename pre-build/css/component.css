@@ -297,6 +297,34 @@ body, html {
   margin-top: 75px;
 }
 
+#wrap.license #contents {
+  padding: 50px 0;
+  min-width: 1200px;
+  margin: 0 auto;
+}
+
+#wrap.license .textBox .titleH3 + .mainTxt p {
+  font-size: 14px;
+}
+
+#wrap.license .textBox + .textBox {
+  margin-top: 75px;
+}
+
+#wrap.license .indentTxtArea {
+  padding: 30px 0 0 20px;
+}
+
+#wrap.license .indentTxtArea ul li {
+  list-style: inside;
+  font-family: '맑은 고딕';
+  font-size: 14px;
+}
+
+#wrap.license .indentTxtArea ul li + li {
+  padding-top: 5px;
+}
+
 #container {
   position: relative;
   display: -webkit-box;

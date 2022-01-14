@@ -103,6 +103,21 @@ body,html{font-family:'Noto Sans DemLight', "맑은 고딕", "Malgun Gothic", Do
     }
   }
 
+  &.license{
+    #contents{padding: 50px 0; min-width: 1200px; margin: 0 auto;}
+    .textBox{
+      .titleH3+.mainTxt p{font-size: 14px;}
+      +.textBox{margin-top: 75px;}
+    }
+    .indentTxtArea{padding: 30px 0 0 20px;
+      ul{
+        li{list-style: inside; font-family: '맑은 고딕'; font-size: 14px;
+          +li{padding-top: 5px;}
+        }
+      }
+    }
+  }
+
   // &.layoutSlide{
   //   .resultCont{position: relative; padding: 50px; box-sizing: border-box;}
   //   .customSlideWrap{position: relative; overflow: hidden;

@@ -176,9 +176,9 @@
 }
 
 .wrap.pre.leftMenu .leftAreaType02 > .leftMenu > li.active span:after {
-  -webkit-transform: translateY(-50%) rotate(180deg);
-          transform: translateY(-50%) rotate(180deg);
-  background: url("../images/ico/ico-down-active.svg") no-repeat;
+  -webkit-transform: translateY(-50%) rotate(-180deg);
+          transform: translateY(-50%) rotate(-180deg);
+  background: url("../../images/ico/ico-down-w.svg") no-repeat;
 }
 
 .wrap.pre.floating.h2000 {
@@ -197,10 +197,10 @@
   border-radius: 50px;
   -webkit-box-shadow: 0px 0px 8px 4px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 0px 8px 4px rgba(0, 0, 0, 0.25);
-  background-color: #333;
+  background: #333 url("../../images/ico/ico-plus-w.png") no-repeat center;
 }
 
-.wrap.pre.floating #floatingMenu .menuArea .btnMenuList:hover ~ ul.menuList li {
+.wrap.pre.floating #floatingMenu .menuArea .btnMenuList:hover ul.menuList li {
   visibility: visible;
   -webkit-transform: translateY(0) scale(1);
           transform: translateY(0) scale(1);

@@ -485,6 +485,19 @@ background-color: rgba($color: #000, $alpha: 0.65);
   background-image: url("../images/mobile/ico-mobile-more.png");}
 }
 
+/* icon */
+i.ico{display: inline-block; background-repeat: no-repeat; background-position: center;
+  /* White type */
+  &.plus-w{width: 32px; height: 32px; background-image: url("../images/ico/ico-plus-w.png");}
+  &.download-w{width: 48px; height: 48px; background-image: url("../images/ico/ico-download-w.png");}
+  &.bookMark-w{width: 48px; height: 48px; background-image: url("../images/ico/ico-bookMark-w.png");}
+  &.github-w{width: 48px; height: 48px; background-image: url("../images/ico/ico-github-w.png");}
+
+  &.wide40{background-size: 40px 40px; background-position: center 8px;}
+  &.wide32{background-size: 32px 32px; background-position: center 11px;}
+  &.center{display: block; margin: 0 auto;}
+} 
+
 /* import */
 @import '~/../component/header.scss';
 @import '~/../component/gnb.scss';

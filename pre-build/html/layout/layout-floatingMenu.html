@@ -196,7 +196,30 @@
                         <div class="highlightArea cScroll">
                           <pre>
                             <code class="language-html">
-
+&lt;div id="floatingMenu"&gt;
+    &lt;div class="menuArea"&gt;
+        &lt;button type="button" class="btnMenuList"&gt;
+            &lt;span class="hidden"&gt;마우스 오버 시 메뉴 더보기&lt;/span&gt;
+            &lt;ul class="menuList"&gt;
+                &lt;li&gt;
+                    &lt;a href="#"&gt;
+                        &lt;i class="ico github-w wide40 center"&gt;&lt;/i&gt;
+                    &lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;a href="#"&gt;
+                        &lt;i class="ico bookMark-w wide32 center"&gt;&lt;/i&gt;
+                    &lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;a href="#"&gt;
+                        &lt;i class="ico download-w wide32 center"&gt;&lt;/i&gt;
+                    &lt;/a&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
                             </code>
                           </pre>
                         </div>
@@ -206,7 +229,21 @@
                         <div class="highlightArea cScroll">
                           <pre>
                             <code class="language-scss">
-
+#floatingMenu{position: fixed; right: 20px; bottom: 20px;
+  .menuArea{
+    .btnMenuList{width: 56px; height: 56px; border-radius: 50px; box-shadow: 0px 0px 8px 4px rgba($color: #000000, $alpha: 0.25); 
+    background: $c333 url("../../images/ico/ico-plus-w.png")no-repeat center;
+      &:hover ul.menuList li{visibility: visible; transform: translateY(0) scale(1);}
+    }
+    ul.menuList{position: absolute; top: -211px; display: flex; flex-direction: column; 
+      li{visibility: hidden; transform: translateY(0) scale(0); transition: .5s; transition-delay: 0.03s; margin: 0 auto;
+      width: 56px; height: 56px; border-radius: 50px; box-shadow: 0px 0px 8px 4px rgba($color: #000000, $alpha: 0.25); background-color: $c333;
+        a{display: block; width: inherit; height: inherit;}
+        +li{margin-top: 15px;}
+      }
+    }
+  }
+}
                             </code>
                         </pre>
                         </div>
@@ -216,7 +253,65 @@
                         <div class="highlightArea cScroll">
                           <pre>
                             <code class="language-css">
+.wrap #floatingMenu {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+}
 
+.wrap #floatingMenu .menuArea .btnMenuList {
+  width: 56px;
+  height: 56px;
+  border-radius: 50px;
+  -webkit-box-shadow: 0px 0px 8px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 0px 8px 4px rgba(0, 0, 0, 0.25);
+  background: #333 url("../../images/ico/ico-plus-w.png") no-repeat center;
+}
+
+.wrap #floatingMenu .menuArea .btnMenuList:hover ul.menuList li {
+  visibility: visible;
+  -webkit-transform: translateY(0) scale(1);
+          transform: translateY(0) scale(1);
+}
+
+.wrap #floatingMenu .menuArea ul.menuList {
+  position: absolute;
+  top: -211px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.wrap #floatingMenu .menuArea ul.menuList li {
+  visibility: hidden;
+  -webkit-transform: translateY(0) scale(0);
+          transform: translateY(0) scale(0);
+  -webkit-transition: .5s;
+  transition: .5s;
+  -webkit-transition-delay: 0.03s;
+          transition-delay: 0.03s;
+  margin: 0 auto;
+  width: 56px;
+  height: 56px;
+  border-radius: 50px;
+  -webkit-box-shadow: 0px 0px 8px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 0px 8px 4px rgba(0, 0, 0, 0.25);
+  background-color: #333;
+}
+
+.wrap #floatingMenu .menuArea ul.menuList li a {
+  display: block;
+  width: inherit;
+  height: inherit;
+}
+
+.wrap #floatingMenu .menuArea ul.menuList li + li {
+  margin-top: 15px;
+}
                             </code>
                           </pre>
                         </div>
@@ -246,24 +341,25 @@
                 <div class="menuArea">
                   <button type="button" class="btnMenuList">
                     <span class="hidden">마우스 오버 시 메뉴 더보기</span>
+                    <ul class="menuList">
+                      <li>
+                        <a href="#">
+                          <i class="ico github-w wide40 center"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <i class="ico bookMark-w wide32 center"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <i class="ico download-w wide32 center"></i>
+                        </a>
+                      </li>
+                    </ul>
                   </button>
-                  <ul class="menuList">
-                    <li>
-                      <a href="#">
-                        <i></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <i></i>
-                      </a>
-                    </li>
-                  </ul>
+                  
                 </div>
               </div>
             </div>

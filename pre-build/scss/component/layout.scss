@@ -1,3 +1,5 @@
+@import '../variable.scss';
+
 .wrap{position: relative; width: 100%; height: 100%;
     &.pre{
       &.centerEle{
@@ -27,6 +29,60 @@
             .imgDiv{background-size: 100% 100%;}
           }
           +.resultCont{margin-top: 50px;} 
+        }
+      }
+      
+      &.leftMenu{
+        .leftAreaType02{position: fixed; left: 0; width: 300px; height: 100%;
+          overflow-y: auto; z-index: 1100;background-color: #1C253D;box-shadow: 0px 0px 3px 2px rgba($color: #fff, $alpha: 0.5);
+          >.leftMenu{
+            >li{position: relative; cursor: pointer;
+              &.noDepth{
+                span:after{display: none;}
+              }
+              span{position: relative; display: block; padding: 16px 0; text-indent: 28px;
+              font-family: 'Noto Sans Light'; font-size: 22px; color: $cfff; transition: .5s;
+                &:after{content: ''; width: 15px;height: 9px; position: absolute; top: 50%; right: 28px; transition: .5s;
+                transform: translateY(-50%);background: url("../images/ico/ico-down.svg") no-repeat;}
+              }
+              a{display: block;}
+              >a{display: block;}
+              >ul.leftSubMenu{display: none; background-color: #273147; 
+                li{height: 55px; line-height: 57px;
+                  a{display: block; font-family: 'Noto Sans'; font-size: 18px; color: rgba($color: #fff, $alpha: 0.8);
+                  text-indent: 50px; font-family: 'Noto Sans Light';
+                    &:hover{background-color: #485162;}
+                  }
+                  &.active{
+                    a{color: $emphasisType01;}
+                  }
+                }
+              }
+              &.active{
+                span{background-color: #5869F0;
+                  &:after{transform: translateY(-50%) rotate(180deg); background: url("../images/ico/ico-down-active.svg") no-repeat;}
+                }
+              }
+            }
+          }
+        }
+      }
+
+      &.floating{
+        &.h2000{height: 2000px;}
+        #floatingMenu{position: fixed; right: 20px; bottom: 20px;
+          .menuArea{
+            .btnMenuList{width: 56px; height: 56px; border-radius: 50px; box-shadow: 0px 0px 8px 4px rgba($color: #000000, $alpha: 0.25); background-color: $c333;
+              &:hover ~ul.menuList li{visibility: visible; transform: translateY(0) scale(1);}
+            }
+            ul.menuList{position: absolute; top: -211px; display: flex; flex-direction: column; 
+              li{visibility: hidden; transform: translateY(0) scale(0); transition: .5s; transition-delay: 0.03s; margin: 0 auto;
+              width: 56px; height: 56px; border-radius: 50px; box-shadow: 0px 0px 8px 4px rgba($color: #000000, $alpha: 0.25); background-color: $c333;
+                a{display: block; width: inherit; height: inherit;}
+                +li{margin-top: 15px;}
+              }
+            }
+          }
         }
       }
     }

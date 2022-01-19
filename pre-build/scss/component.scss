@@ -42,6 +42,7 @@ button:focus{outline:none;}
 caption,hr{display:none;}
 pre{word-break:break-all;white-space:pre-line;margin: 0 !important;}
 li{list-style: none;}
+summary::marker{display: none !important;}
 
 @import 'variable.scss';
 
@@ -467,6 +468,7 @@ i.ico{display: inline-block; background-repeat: repeat; background-position: cen
     .frameClose{width: 24px; height: 24px; padding: 18px; box-sizing: border-box;
     border-radius: 0 0 0 5px; background-size: 24px 24px; background-image: url("../images/ico/ico-result-close.png");
     background-repeat: no-repeat; background-position: center center; background-color: #fff;}
+    &.r20{right: 20px;}
   }
   &.fixed{position: fixed;}
 }

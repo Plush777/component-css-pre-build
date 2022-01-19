@@ -190,6 +190,16 @@ $(document).ready(function(){
             }
 		}
 	})
+    
+    const hCalcBody = $('#frameBody').height();
+    const hCalcWrap = $('#frameBody .wrap').height();
+    console.log(hCalcBody , hCalcWrap);
+
+    if(hCalcWrap > hCalcBody){
+       $('#frameBody .btnArea').addClass('r20');
+    }else{
+        $('#frameBody .btnArea').removeClass('r20');
+    }
 
     function liShowHideBoxClose(){
         $('.boardBox .boardItem:last-child').addClass('underLine');

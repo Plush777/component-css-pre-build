@@ -149,113 +149,114 @@
             @@include('./include/util.html')
             
             <div class="rightArea">
-                <div class="textBox">
-                    <div class="titleH1">
-                        <h1>textarea</h1>
-                    </div>
-                    <div class="tabWrap type01">
-                      <div class="tabNav">
-                        <ul class="tabList">
-                          <li class="active orange">HTML</li>
-                          <li class="pink">SCSS</li>
-                          <li class="blue">CSS</li>
-                        </ul>
+                <div class="inner">
+                    <div class="textBox">
+                      <div class="titleH1">
+                          <h1>textarea</h1>
                       </div>
+                      <div class="tabWrap type01">
+                        <div class="tabNav">
+                          <ul class="tabList">
+                            <li class="active orange">HTML</li>
+                            <li class="pink">SCSS</li>
+                            <li class="blue">CSS</li>
+                          </ul>
+                        </div>
 
-                      <div class="tabCont active">
-                        <div class="highlightArea cScroll">
-                          <pre>
-                            <code class="language-html">
-&lt;div class="textBox"&gt;
-    &lt;div class="titleH3"&gt;
-        &lt;h3&gt;placeholder&lt;/h3&gt;
-    &lt;/div&gt;
-    &lt;textarea class="full" placeholder="placeholder는 입력창에 대한 힌트를 제공합니다."&gt;&lt;/textarea&gt;
-&lt;/div&gt;
-&lt;div class="textBox"&gt;
-    &lt;div class="titleH3"&gt;
-        &lt;h3&gt;disabled&lt;/h3&gt;
-    &lt;/div&gt;
-    &lt;textarea class="full" disabled autofocus placeholder="입력창을 비활성화 시키며, 비활성화 상태의 스타일도 입힐 수 있습니다."&gt;&lt;/textarea&gt;
-&lt;/div&gt;
-                            </code>
+                        <div class="tabCont active">
+                          <div class="highlightArea cScroll">
+                            <pre>
+                              <code class="language-html">
+  &lt;div class="textBox"&gt;
+      &lt;div class="titleH3"&gt;
+          &lt;h3&gt;placeholder&lt;/h3&gt;
+      &lt;/div&gt;
+      &lt;textarea class="full" placeholder="placeholder는 입력창에 대한 힌트를 제공합니다."&gt;&lt;/textarea&gt;
+  &lt;/div&gt;
+  &lt;div class="textBox"&gt;
+      &lt;div class="titleH3"&gt;
+          &lt;h3&gt;disabled&lt;/h3&gt;
+      &lt;/div&gt;
+      &lt;textarea class="full" disabled autofocus placeholder="입력창을 비활성화 시키며, 비활성화 상태의 스타일도 입힐 수 있습니다."&gt;&lt;/textarea&gt;
+  &lt;/div&gt;
+                              </code>
+                            </pre>
+                          </div>
+                        </div>
+
+                        <div class="tabCont">
+                          <div class="highlightArea cScroll">
+                            <pre>
+                              <code class="language-scss">
+  textarea{height: 150px; border: 1px solid #ddd; padding: 10px; box-sizing: border-box;
+  font-family: 'Noto Sans'; border-radius: 4px; color: #222; font-size: 14px; resize: none; overflow-y: auto;
+  background-color: #fff;
+      &::placeholder{color: #aaa;}
+      &:disabled{background-color: #f5f5f5;}
+      &.full{width: 100%;}
+  }
+                              </code>
                           </pre>
+                          </div>
+                        </div>
+
+                        <div class="tabCont">
+                          <div class="highlightArea cScroll">
+                            <pre>
+                              <code class="language-css">
+  textarea {
+      height: 150px;
+      border: 1px solid #ddd;
+      padding: 10px;
+      box-sizing: border-box;
+      font-family: 'Noto Sans';
+      border-radius: 4px;
+      color: #222;
+      font-size: 14px;
+      resize: none;
+      overflow-y: auto;
+      background-color: #fff;
+  }
+
+  textarea::placeholder {
+      color: #aaa;
+  }
+
+  textarea:disabled {
+      background-color: #f5f5f5;
+  }
+
+  textarea.full {
+      width: 100%;
+  }
+                              </code>
+                            </pre>
+                          </div>
                         </div>
                       </div>
+                      
 
-                      <div class="tabCont">
-                        <div class="highlightArea cScroll">
-                          <pre>
-                            <code class="language-scss">
-textarea{height: 150px; border: 1px solid #ddd; padding: 10px; box-sizing: border-box;
-font-family: 'Noto Sans'; border-radius: 4px; color: #222; font-size: 14px; resize: none; overflow-y: auto;
-background-color: #fff;
-    &::placeholder{color: #aaa;}
-    &:disabled{background-color: #f5f5f5;}
-    &.full{width: 100%;}
-}
-                            </code>
-                        </pre>
-                        </div>
+                      <div class="titleH2">
+                          <h2>Result</h2>
                       </div>
-
-                      <div class="tabCont">
-                        <div class="highlightArea cScroll">
-                          <pre>
-                            <code class="language-css">
-textarea {
-    height: 150px;
-    border: 1px solid #ddd;
-    padding: 10px;
-    box-sizing: border-box;
-    font-family: 'Noto Sans';
-    border-radius: 4px;
-    color: #222;
-    font-size: 14px;
-    resize: none;
-    overflow-y: auto;
-    background-color: #fff;
-}
-
-textarea::placeholder {
-    color: #aaa;
-}
-
-textarea:disabled {
-    background-color: #f5f5f5;
-}
-
-textarea.full {
-    width: 100%;
-}
-                            </code>
-                          </pre>
-                        </div>
+                      <div class="resultArea">
+                          <div class="inner">
+                              <div class="textBox">
+                                  <div class="titleH3">
+                                      <h3>placeholder</h3>
+                                  </div>
+                                  <textarea class="full" placeholder="placeholder는 입력창에 대한 힌트를 제공합니다."></textarea>
+                              </div>
+                              <div class="textBox">
+                                  <div class="titleH3">
+                                      <h3>disabled</h3>
+                                  </div>
+                                  <textarea class="full" disabled autofocus placeholder="입력창을 비활성화 시키며, 비활성화 상태의 스타일도 입힐 수 있습니다."></textarea>
+                              </div>
+                          </div>
                       </div>
-                    </div>
-                    
-
-                    <div class="titleH2">
-                        <h2>Result</h2>
-                    </div>
-                    <div class="resultArea">
-                        <div class="inner">
-                            <div class="textBox">
-                                <div class="titleH3">
-                                    <h3>placeholder</h3>
-                                </div>
-                                <textarea class="full" placeholder="placeholder는 입력창에 대한 힌트를 제공합니다."></textarea>
-                            </div>
-                            <div class="textBox">
-                                <div class="titleH3">
-                                    <h3>disabled</h3>
-                                </div>
-                                <textarea class="full" disabled autofocus placeholder="입력창을 비활성화 시키며, 비활성화 상태의 스타일도 입힐 수 있습니다."></textarea>
-                            </div>
-                        </div>
                     </div>
                 </div>
-                
             </div>
         </div>
 

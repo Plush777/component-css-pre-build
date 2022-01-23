@@ -150,111 +150,114 @@
             @@include('include/util.html')
             
             <div class="rightArea">
-                <div class="textBox">
-                    <div class="titleH1">
-                        <h1>Toast popup</h1>
-                    </div>
-                    <div class="tabWrap type01">
-                      <div class="tabNav">
-                        <ul class="tabList">
-                          <li class="active orange">HTML</li>
-                          <li class="pink">SCSS</li>
-                          <li class="blue">CSS</li>
-                          <li class="yellow">JS</li>
-                        </ul>
+                <div class="inner">
+                    <div class="textBox">
+                      <div class="titleH1">
+                          <h1>Toast popup</h1>
                       </div>
+                      <div class="tabWrap type01">
+                        <div class="tabNav">
+                          <ul class="tabList">
+                            <li class="active orange">HTML</li>
+                            <li class="pink">SCSS</li>
+                            <li class="blue">CSS</li>
+                            <li class="yellow">JS</li>
+                          </ul>
+                        </div>
 
-                      <div class="tabCont active">
-                        <div class="highlightArea cScroll">
-                          <pre>
-                            <code class="language-html">
-&lt;div id="exToast"&gt;
-    &lt;span&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit.&lt;/span&gt;
-&lt;/div&gt;
-                            </code>
+                        <div class="tabCont active">
+                          <div class="highlightArea cScroll">
+                            <pre>
+                              <code class="language-html">
+  &lt;div id="exToast"&gt;
+      &lt;span&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit.&lt;/span&gt;
+  &lt;/div&gt;
+                              </code>
+                            </pre>
+                          </div>
+                        </div>
+
+                        <div class="tabCont">
+                          <div class="highlightArea cScroll">
+                            <pre>
+                              <code class="language-scss">
+  $cfff : #fff !default;
+
+  .toastPop{
+      #exToast{display: none; position: fixed; top: 50px; left: 50%; transform: translateX(-50%); 
+      width: 290px; padding: 12px; box-sizing: border-box; border-radius: 4px; z-index: 9999;
+      background-color: rgba($color: #000, $alpha: 0.65);
+          span{display: block; text-align: center; font-size: 14px; color: $cfff; font-family: '맑은 고딕';}
+      }
+  }
+                              </code>
                           </pre>
+                          </div>
                         </div>
-                      </div>
 
-                      <div class="tabCont">
-                        <div class="highlightArea cScroll">
-                          <pre>
-                            <code class="language-scss">
-$cfff : #fff !default;
-
-.toastPop{
-    #exToast{display: none; position: fixed; top: 50px; left: 50%; transform: translateX(-50%); 
-    width: 290px; padding: 12px; box-sizing: border-box; border-radius: 4px; z-index: 9999;
-    background-color: rgba($color: #000, $alpha: 0.65);
-        span{display: block; text-align: center; font-size: 14px; color: $cfff; font-family: '맑은 고딕';}
-    }
-}
-                            </code>
-                        </pre>
+                        <div class="tabCont">
+                          <div class="highlightArea cScroll">
+                            <pre>
+                              <code class="language-css">
+  .wrap #exToast {
+      display: none;
+      position: fixed;
+      top: 50px;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+              transform: translateX(-50%);
+      width: 290px;
+      padding: 12px;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      border-radius: 4px;
+      z-index: 9999;
+      background-color: rgba(0, 0, 0, 0.65);
+      }
+      
+  .wrap #exToast span {
+      display: block;
+      text-align: center;
+      font-size: 14px;
+      color: #fff;
+      font-family: '맑은 고딕';
+  }
+                              </code>
+                            </pre>
+                          </div>
                         </div>
-                      </div>
 
-                      <div class="tabCont">
-                        <div class="highlightArea cScroll">
-                          <pre>
-                            <code class="language-css">
-.wrap #exToast {
-    display: none;
-    position: fixed;
-    top: 50px;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
-    width: 290px;
-    padding: 12px;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    border-radius: 4px;
-    z-index: 9999;
-    background-color: rgba(0, 0, 0, 0.65);
-    }
+                        <div class="tabCont">
+                          <div class="highlightArea cScroll">
+                            <pre>
+                              <code class="language-javascript">
+  $(document).ready(function(){
+
+      /* 클릭했을 때 토스트 팝업이 뜰 경우 
+      $('').on({
+          "click":function(){
+              $('#exToast').fadeIn();
+              setTimeout(function(){
+                  $('#exToast').fadeOut();
+              },4000);
+          }
+      });
+      */
+
+      $('#exToast').fadeIn();
+      setTimeout(function(){
+          $('#exToast').fadeOut();
+      },4000);
     
-.wrap #exToast span {
-    display: block;
-    text-align: center;
-    font-size: 14px;
-    color: #fff;
-    font-family: '맑은 고딕';
-}
-                            </code>
-                          </pre>
-                        </div>
-                      </div>
-
-                      <div class="tabCont">
-                        <div class="highlightArea cScroll">
-                          <pre>
-                            <code class="language-javascript">
-$(document).ready(function(){
-
-    /* 클릭했을 때 토스트 팝업이 뜰 경우 
-    $('').on({
-        "click":function(){
-            $('#exToast').fadeIn();
-            setTimeout(function(){
-                $('#exToast').fadeOut();
-            },4000);
-        }
-    });
-    */
-
-    $('#exToast').fadeIn();
-    setTimeout(function(){
-        $('#exToast').fadeOut();
-    },4000);
-   
-});
-                            </code>
-                          </pre>
+  });
+                              </code>
+                            </pre>
+                          </div>
                         </div>
                       </div>
                     </div>
                 </div>
+                
                 <div class="btnArea end">
                     <button type="button" class="button Bgblue btnResult">
                       <span>결과보기</span>

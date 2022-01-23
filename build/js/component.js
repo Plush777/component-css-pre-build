@@ -1,11 +1,5 @@
 $(document).ready(function () {
 
-    var agent = navigator.userAgent.toLowerCase();
-
-    if ((navigator.appName == 'Netscape' && navigator.userAgent.search('Trident') != -1) || (agent.indexOf("msie") != -1)) {
-        location.href = "license.html"
-    }
-
     if (window.matchMedia("screen and (max-width: 1280px)").matches) {
         console.log("해상도가 1280px 이하입니다");
         $('body').addClass('mobileType');
@@ -16,6 +10,12 @@ $(document).ready(function () {
     if (document.getElementById('subUrl')) {
         document.getElementById('subUrl').value = window.location.href;
     }
+
+    $('.topArea').on({
+        "click": function () {
+            $('html').animate({scrollTop : 0}, 600);
+        }
+    });
 
     $('.btnShare').on({
         "click": function () {
@@ -111,15 +111,17 @@ $(document).ready(function () {
     });
 
     var urlState = window.location.pathname;
-    var urlArr = urlState.split('/header');
+    console.log(urlState);
+    var urlArr = urlState.split('/');
+    console.log(urlArr);
 
     /* 서브 홈버튼 */
     $('.btnBack').on({
         "click": function () {
-            location.href = urlArr[0] + '/' + 'sub_first.html';
+            location.href = urlArr[0] + '/' + 'html/sub_first.html';
         }
     })
-
+    
     /* 히스토리 개수 */
     historyCount = history.length;
     console.log("히스토리 개수는 " + historyCount + "개 입니다.");

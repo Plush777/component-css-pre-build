@@ -150,145 +150,147 @@
             @@include('include/util.html')
             
             <div class="rightArea">
-                <div class="textBox">
-                    <div class="titleH1">
-                        <h1>Center element</h1>
-                    </div>
-                    <div class="tabWrap type01">
-                      <div class="tabNav">
-                        <ul class="tabList">
-                          <li class="active orange">HTML</li>
-                          <li class="pink">SCSS</li>
-                          <li class="blue">CSS</li>
-                        </ul>
+                <div class="inner">
+                    <div class="textBox">
+                      <div class="titleH1">
+                          <h1>Center element</h1>
                       </div>
+                      <div class="tabWrap type01">
+                        <div class="tabNav">
+                          <ul class="tabList">
+                            <li class="active orange">HTML</li>
+                            <li class="pink">SCSS</li>
+                            <li class="blue">CSS</li>
+                          </ul>
+                        </div>
 
-                      <div class="tabCont active">
-                        <div class="highlightArea cScroll">
-                          <pre>
-                            <code class="language-html">
-&lt;div class="resultCont type01"&gt;
-    &lt;div class="titleH3"&gt;
-        &lt;h3&gt;Flex를 이용한 가운데 정렬&lt;/h3&gt;
-    &lt;/div&gt;
-    &lt;div class="container"&gt;
-        &lt;div class="centerBox"&gt;
-            &lt;span&gt;가운데 정렬&lt;/span&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
+                        <div class="tabCont active">
+                          <div class="highlightArea cScroll">
+                            <pre>
+                              <code class="language-html">
+  &lt;div class="resultCont type01"&gt;
+      &lt;div class="titleH3"&gt;
+          &lt;h3&gt;Flex를 이용한 가운데 정렬&lt;/h3&gt;
+      &lt;/div&gt;
+      &lt;div class="container"&gt;
+          &lt;div class="centerBox"&gt;
+              &lt;span&gt;가운데 정렬&lt;/span&gt;
+          &lt;/div&gt;
+      &lt;/div&gt;
+  &lt;/div&gt;
 
-&lt;div class="resultCont type02"&gt;
-    &lt;div class="titleH3"&gt;
-        &lt;h3&gt;Flex + vh를 이용한 가운데 정렬&lt;/h3&gt;
-    &lt;/div&gt;
-    &lt;div class="container"&gt;
-        &lt;div class="innerBox"&gt;
-            &lt;div class="centerBox"&gt;
-                &lt;span&gt;가운데 정렬&lt;/span&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
+  &lt;div class="resultCont type02"&gt;
+      &lt;div class="titleH3"&gt;
+          &lt;h3&gt;Flex + vh를 이용한 가운데 정렬&lt;/h3&gt;
+      &lt;/div&gt;
+      &lt;div class="container"&gt;
+          &lt;div class="innerBox"&gt;
+              &lt;div class="centerBox"&gt;
+                  &lt;span&gt;가운데 정렬&lt;/span&gt;
+              &lt;/div&gt;
+          &lt;/div&gt;
+      &lt;/div&gt;
+  &lt;/div&gt;
 
-&lt;div class="resultCont type03"&gt;
-    &lt;div class="titleH3"&gt;
-        &lt;h3&gt;position을 이용한 가운데 정렬&lt;/h3&gt;
-    &lt;/div&gt;
-    &lt;div class="container"&gt;
-        &lt;div class="centerBox"&gt;
-            &lt;span&gt;가운데 정렬&lt;/span&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-                            </code>
+  &lt;div class="resultCont type03"&gt;
+      &lt;div class="titleH3"&gt;
+          &lt;h3&gt;position을 이용한 가운데 정렬&lt;/h3&gt;
+      &lt;/div&gt;
+      &lt;div class="container"&gt;
+          &lt;div class="centerBox"&gt;
+              &lt;span&gt;가운데 정렬&lt;/span&gt;
+          &lt;/div&gt;
+      &lt;/div&gt;
+  &lt;/div&gt;
+                              </code>
+                            </pre>
+                          </div>
+                        </div>
+
+                        <div class="tabCont">
+                          <div class="highlightArea cScroll">
+                            <pre>
+                              <code class="language-scss">
+  .resultCont{position: relative; padding: 50px; box-sizing: border-box;
+      &.type01{height: 100%; 
+          .container{height: 100%; display: flex; align-items: center; justify-content: center;}
+      }
+      &.type02{
+          .innerBox{display: flex; align-items: center; justify-content: center; height: 100vh;
+      }
+      }
+      &.type03{height: 100%;
+          .container{position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);}
+      }
+  }
+  .titleH3{margin-bottom: 0; padding-bottom: 10px;}
+  .centerBox{padding: 50px; border: 2px solid #000; font-size: 22px; font-family: 'Noto Sans';}
+                              </code>
                           </pre>
+                          </div>
+                        </div>
+
+                        <div class="tabCont">
+                          <div class="highlightArea cScroll">
+                            <pre>
+                              <code class="language-css">
+  .resultCont {
+      position: relative;
+      padding: 50px;
+      box-sizing: border-box;
+  }
+
+  .resultCont.type01 {
+      height: 100%;
+  }
+
+  .resultCont.type01 .container {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+
+  .resultCont.type02 .innerBox {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+  }
+
+  .resultCont.type03 {
+      height: 100%;
+  }
+
+  .resultCont.type03 .container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+  }
+
+  .titleH3 {
+      margin-bottom: 0;
+      padding-bottom: 10px;
+  }
+
+  .centerBox {
+      padding: 50px;
+      border: 2px solid #000;
+      font-size: 22px;
+      font-family: 'Noto Sans';
+  }
+                              </code>
+                            </pre>
+                          </div>
                         </div>
                       </div>
-
-                      <div class="tabCont">
-                        <div class="highlightArea cScroll">
-                          <pre>
-                            <code class="language-scss">
-.resultCont{position: relative; padding: 50px; box-sizing: border-box;
-    &.type01{height: 100%; 
-        .container{height: 100%; display: flex; align-items: center; justify-content: center;}
-    }
-    &.type02{
-        .innerBox{display: flex; align-items: center; justify-content: center; height: 100vh;
-    }
-    }
-    &.type03{height: 100%;
-        .container{position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);}
-    }
-}
-.titleH3{margin-bottom: 0; padding-bottom: 10px;}
-.centerBox{padding: 50px; border: 2px solid #000; font-size: 22px; font-family: 'Noto Sans';}
-                            </code>
-                        </pre>
-                        </div>
+                      <div class="btnArea end">
+                          <button type="button" class="button Bgblue btnResult">
+                            <span>결과보기</span>
+                            <i class="ico result"></i>
+                          </button>
                       </div>
-
-                      <div class="tabCont">
-                        <div class="highlightArea cScroll">
-                          <pre>
-                            <code class="language-css">
-.resultCont {
-    position: relative;
-    padding: 50px;
-    box-sizing: border-box;
-}
-
-.resultCont.type01 {
-    height: 100%;
-}
-
-.resultCont.type01 .container {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.resultCont.type02 .innerBox {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-}
-
-.resultCont.type03 {
-    height: 100%;
-}
-
-.resultCont.type03 .container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.titleH3 {
-    margin-bottom: 0;
-    padding-bottom: 10px;
-}
-
-.centerBox {
-    padding: 50px;
-    border: 2px solid #000;
-    font-size: 22px;
-    font-family: 'Noto Sans';
-}
-                            </code>
-                          </pre>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="btnArea end">
-                        <button type="button" class="button Bgblue btnResult">
-                          <span>결과보기</span>
-                          <i class="ico result"></i>
-                        </button>
                     </div>
                 </div>
             </div>

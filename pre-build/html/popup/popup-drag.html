@@ -152,159 +152,162 @@
             @@include('include/util.html')
             
             <div class="rightArea">
-                <div class="textBox">
-                    <div class="titleH1">
-                        <h1>Drag popup</h1>
-                    </div>
-                    <div class="mainTxt">
-                        <p>해당 드래그 팝업 예제는 <a href="https://jqueryui.com/draggable/" class="link" target="_blank">Jquery ui draggable</a>
-                        라이브러리를 사용하였습니다.
-                        </p>
-                    </div>
-                    <div class="tabWrap type01">
-                      <div class="tabNav">
-                        <ul class="tabList">
-                          <li class="active orange">HTML</li>
-                          <li class="pink">SCSS</li>
-                          <li class="blue">CSS</li>
-                          <li class="yellow">JS</li>
-                        </ul>
+                <div class="inner">
+                    <div class="textBox">
+                      <div class="titleH1">
+                          <h1>Drag popup</h1>
                       </div>
-
-                      <div class="tabCont active">
-                        <div class="highlightArea cScroll">
-                          <pre>
-                            <code class="language-html">
-&lt;div class="wrap"&gt;
-    &lt;div class="popup" id="drag"&gt;
-        &lt;div class="head"&gt;
-            &lt;p&gt;Title&lt;/p&gt;
-            &lt;button type="button" class="btnClose"&gt;
-                &lt;span class="hidden"&gt;팝업 닫기&lt;/span&gt;
-            &lt;/button&gt;
-        &lt;/div&gt;
-        &lt;div class="cont"&gt;
-            &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur molestias perferendis dolore sapiente? Voluptas eum temporibus dolorem eius, sapiente maxime, fuga minus repellendus eveniet unde quia quis officiis fugiat dicta.&lt;/p&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class="exDimmed"&gt;&lt;/div&gt;
-&lt;/div&gt;
-                            </code>
-                          </pre>
+                      <div class="mainTxt">
+                          <p>해당 드래그 팝업 예제는 <a href="https://jqueryui.com/draggable/" class="link" target="_blank">Jquery ui draggable</a>
+                          라이브러리를 사용하였습니다.
+                          </p>
+                      </div>
+                      <div class="tabWrap type01">
+                        <div class="tabNav">
+                          <ul class="tabList">
+                            <li class="active orange">HTML</li>
+                            <li class="pink">SCSS</li>
+                            <li class="blue">CSS</li>
+                            <li class="yellow">JS</li>
+                          </ul>
                         </div>
-                      </div>
 
-                      <div class="tabCont">
-                        <div class="highlightArea cScroll">
-                          <pre>
-                            <code class="language-scss">    
-$c333 : #333 !default;
-$cfff : #fff !default;
-$d-fz : 'Noto Sans';
-$whiteBg : $cfff;
-
-.wrap{position: relative;
-    .popup{position: fixed; top: 40%; left: calc(50% - 150px); transform: inherit; z-index: 10000; box-shadow: 0px 0px 8px rgba($color: 
-        #000, $alpha: 0.35); width: 300px; border-radius: 4px;
-        .head{height: 50px; line-height: 50px; padding: 0 15px; box-sizing: border-box; border-radius: 4px 4px 0 0;
-        color: $cfff; font-family: $d-fz; font-size: 16px; background-color: $blueBg;
-            .btnClose{position: absolute; top: 17px; right: 15px; width: 21px; height: 21px; background: url("../../images/ico/ico-pop-close.png") no-repeat center;}
-        }
-        .cont{padding: 20px; box-sizing: border-box; border-radius: 0 0 4px 4px; 
-        font-family: $d-fz; font-size: 14px; background-color: $whiteBg;}
-    }
-
-    .exDimmed{position: fixed; z-index: 9999; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0, 0, 0,0.6);}
-}
-                            </code>
-                        </pre>
+                        <div class="tabCont active">
+                          <div class="highlightArea cScroll">
+                            <pre>
+                              <code class="language-html">
+  &lt;div class="wrap"&gt;
+      &lt;div class="popup" id="drag"&gt;
+          &lt;div class="head"&gt;
+              &lt;p&gt;Title&lt;/p&gt;
+              &lt;button type="button" class="btnClose"&gt;
+                  &lt;span class="hidden"&gt;팝업 닫기&lt;/span&gt;
+              &lt;/button&gt;
+          &lt;/div&gt;
+          &lt;div class="cont"&gt;
+              &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur molestias perferendis dolore sapiente? Voluptas eum temporibus dolorem eius, sapiente maxime, fuga minus repellendus eveniet unde quia quis officiis fugiat dicta.&lt;/p&gt;
+          &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="exDimmed"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+                              </code>
+                            </pre>
+                          </div>
                         </div>
-                      </div>
 
-                      <div class="tabCont">
-                        <div class="highlightArea cScroll">
-                          <pre>
-                            <code class="language-css">
-.wrap {
-    position: relative;
-}
+                        <div class="tabCont">
+                          <div class="highlightArea cScroll">
+                            <pre>
+                              <code class="language-scss">    
+  $c333 : #333 !default;
+  $cfff : #fff !default;
+  $d-fz : 'Noto Sans';
+  $whiteBg : $cfff;
 
-.wrap .popup {
-    position: fixed; 
-    top: 40%;
-    left: calc(50% - 150px);
-    -webkit-transform: inherit;
-            transform: inherit;
-    -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.35);
-            box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.35);
-    width: 300px;
-    border-radius: 4px;
-    z-index: 10000;
-}
+  .wrap{position: relative;
+      .popup{position: fixed; top: 40%; left: calc(50% - 150px); transform: inherit; z-index: 10000; box-shadow: 0px 0px 8px rgba($color: 
+          #000, $alpha: 0.35); width: 300px; border-radius: 4px;
+          .head{height: 50px; line-height: 50px; padding: 0 15px; box-sizing: border-box; border-radius: 4px 4px 0 0;
+          color: $cfff; font-family: $d-fz; font-size: 16px; background-color: $blueBg;
+              .btnClose{position: absolute; top: 17px; right: 15px; width: 21px; height: 21px; background: url("../../images/ico/ico-pop-close.png") no-repeat center;}
+          }
+          .cont{padding: 20px; box-sizing: border-box; border-radius: 0 0 4px 4px; 
+          font-family: $d-fz; font-size: 14px; background-color: $whiteBg;}
+      }
 
-.wrap .popup .head {
-    height: 50px;
-    line-height: 50px;
-    padding: 0 15px;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    border-radius: 4px 4px 0 0;
-    color: #fff;
-    font-family: "Noto Sans";
-    font-size: 16px;
-    background-color: #266bf7;
-}
-
-.wrap .popup .head .btnClose {
-    position: absolute;
-    top: 17px;
-    right: 15px;
-    width: 21px;
-    height: 21px;
-    background: url("../../images/ico/ico-pop-close.png") no-repeat center;
-}
-
-.wrap .popup .cont {
-    padding: 20px;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    border-radius: 0 0 4px 4px;
-    font-family: "Noto Sans";
-    font-size: 14px;
-    background-color: #fff;
-}
-
-.wrap .exDimmed {
-    position: fixed;
-    z-index: 9999;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-}
-                            </code>
+      .exDimmed{position: fixed; z-index: 9999; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0, 0, 0,0.6);}
+  }
+                              </code>
                           </pre>
+                          </div>
                         </div>
-                      </div>
 
-                      <div class="tabCont">
-                        <div class="highlightArea cScroll">
-                          <pre>
-                            <code class="language-javascript">
-$(document).ready(function(){
-    /* Jquery ui draggable */
-    $('#drag').draggable({
-        cancel:'.cont',
-        containment: "window"
-    });
-});
-                            </code>
-                          </pre>
+                        <div class="tabCont">
+                          <div class="highlightArea cScroll">
+                            <pre>
+                              <code class="language-css">
+  .wrap {
+      position: relative;
+  }
+
+  .wrap .popup {
+      position: fixed; 
+      top: 40%;
+      left: calc(50% - 150px);
+      -webkit-transform: inherit;
+              transform: inherit;
+      -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.35);
+              box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.35);
+      width: 300px;
+      border-radius: 4px;
+      z-index: 10000;
+  }
+
+  .wrap .popup .head {
+      height: 50px;
+      line-height: 50px;
+      padding: 0 15px;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      border-radius: 4px 4px 0 0;
+      color: #fff;
+      font-family: "Noto Sans";
+      font-size: 16px;
+      background-color: #266bf7;
+  }
+
+  .wrap .popup .head .btnClose {
+      position: absolute;
+      top: 17px;
+      right: 15px;
+      width: 21px;
+      height: 21px;
+      background: url("../../images/ico/ico-pop-close.png") no-repeat center;
+  }
+
+  .wrap .popup .cont {
+      padding: 20px;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      border-radius: 0 0 4px 4px;
+      font-family: "Noto Sans";
+      font-size: 14px;
+      background-color: #fff;
+  }
+
+  .wrap .exDimmed {
+      position: fixed;
+      z-index: 9999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+  }
+                              </code>
+                            </pre>
+                          </div>
+                        </div>
+
+                        <div class="tabCont">
+                          <div class="highlightArea cScroll">
+                            <pre>
+                              <code class="language-javascript">
+  $(document).ready(function(){
+      /* Jquery ui draggable */
+      $('#drag').draggable({
+          cancel:'.cont',
+          containment: "window"
+      });
+  });
+                              </code>
+                            </pre>
+                          </div>
                         </div>
                       </div>
                     </div>
                 </div>
+                
                 <div class="btnArea end">
                     <button type="button" class="button Bgblue btnResult">
                       <span>결과보기</span>

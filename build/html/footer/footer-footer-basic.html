@@ -201,228 +201,230 @@
 </div>
             
             <div class="rightArea">
-                <div class="textBox">
-                    <div class="titleH1">
-                        <h1>Footer basic</h1>
-                    </div>
-                    <div class="mainTxt">
-                      <p>브라우저 크기를 줄였을 때 footer 크기를 그대로 유지할려면 #footer min-width 1920px 혹은 #wrap min-width 1920px 을 주면 됩니다.</p>
-                    </div>
-                    <div class="tabWrap type01">
-                      <div class="tabNav">
-                        <ul class="tabList">
-                          <li class="active orange">HTML</li>
-                          <li class="pink">SCSS</li>
-                          <li class="blue">CSS</li>
-                        </ul>
+                <div class="inner">
+                    <div class="textBox">
+                      <div class="titleH1">
+                          <h1>Footer basic</h1>
                       </div>
-
-                      <div class="tabCont active">
-                        <div class="highlightArea cScroll">
-                          <pre>
-                            <code class="language-html">
-  &lt;div class="wrap"&gt;
-    &lt;div class="container"&gt;
-        &lt;div class="contents"&gt;
-            &lt;div class="contBox"&gt;
-                &lt;span&gt;콘텐츠 박스&lt;/span&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div id="footer"&gt;
-        &lt;div class="inner"&gt;
-            &lt;div class="logoArea"&gt;
-                &lt;a href="#"&gt;
-                    &lt;img src="../" alt=""&gt;
-                &lt;/a&gt;
-            &lt;/div&gt;
-            &lt;div class="linkContainer"&gt;
-                &lt;div class="linkArea"&gt;
-                    &lt;ul&gt;
-                        &lt;li&gt;
-                            &lt;a href="#" title="link01"&gt;link01&lt;/a&gt;
-                        &lt;/li&gt;
-                        &lt;li&gt;
-                            &lt;a href="#" title="link02"&gt;link02&lt;/a&gt;
-                        &lt;/li&gt;
-                        &lt;li&gt;
-                            &lt;a href="#" title="link03"&gt;link03&lt;/a&gt;
-                        &lt;/li&gt;
-                        &lt;li&gt;
-                            &lt;a href="#" title="link04"&gt;link04&lt;/a&gt;
-                        &lt;/li&gt;
-                    &lt;/ul&gt;
-                &lt;/div&gt;
-                &lt;div class="linkArea"&gt;
-                    &lt;ul&gt;
-                        &lt;li&gt;
-                            &lt;a href="#" title="link05"&gt;link05&lt;/a&gt;
-                        &lt;/li&gt;
-                        &lt;li&gt;
-                            &lt;a href="#" title="link06"&gt;link06&lt;/a&gt;
-                        &lt;/li&gt;
-                        &lt;li&gt;
-                            &lt;a href="#" title="link07"&gt;link07&lt;/a&gt;
-                        &lt;/li&gt;
-                        &lt;li&gt;
-                            &lt;a href="#" title="link08"&gt;link08&lt;/a&gt;
-                        &lt;/li&gt;
-                    &lt;/ul&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-            &lt;div class="bottomArea"&gt;
-                &lt;div class="inner"&gt;
-                    &lt;p class="copy"&gt;Copyright © 2021 Company. ALL RIGHTS RESERVED.&lt;/p&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-                            </code>
-                          </pre>
+                      <div class="mainTxt">
+                        <p>브라우저 크기를 줄였을 때 footer 크기를 그대로 유지할려면 #footer min-width 1920px 혹은 #wrap min-width 1920px 을 주면 됩니다.</p>
+                      </div>
+                      <div class="tabWrap type01">
+                        <div class="tabNav">
+                          <ul class="tabList">
+                            <li class="active orange">HTML</li>
+                            <li class="pink">SCSS</li>
+                            <li class="blue">CSS</li>
+                          </ul>
                         </div>
-                      </div>
 
-                      <div class="tabCont">
-                        <div class="highlightArea cScroll">
-                          <pre>
-                            <code class="language-scss">
-.contents{width: 100%;}
-.contBox{position: relative; min-height: calc(100vh - 322px); text-align: center; font-size: 36px; color: #fff; font-family: 'Noto Sans';
-background-color: #444;
-  span{position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);}
-}
-#footer{width: 100%; background-color: #292a2d;
-  >.inner{padding-top: 40px; max-width: 1200px; margin: 0 auto;
-    .logoArea{margin-bottom: 20px;
-      a{display: inline-block;}
-      img{width: 200px;}
-    }
-    .linkContainer{display: flex; padding-bottom: 40px; border-bottom: 1px solid #fff;}
-    .linkArea{flex: 0.5; margin-left: auto;
-      ul{display: flex; flex-direction: column;
-        li{ 
-          a{font-size: 16px; font-family: 'Noto Sans'; color: #fff;
-            &:hover{text-decoration: underline;}
+                        <div class="tabCont active">
+                          <div class="highlightArea cScroll">
+                            <pre>
+                              <code class="language-html">
+    &lt;div class="wrap"&gt;
+      &lt;div class="container"&gt;
+          &lt;div class="contents"&gt;
+              &lt;div class="contBox"&gt;
+                  &lt;span&gt;콘텐츠 박스&lt;/span&gt;
+              &lt;/div&gt;
+          &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div id="footer"&gt;
+          &lt;div class="inner"&gt;
+              &lt;div class="logoArea"&gt;
+                  &lt;a href="#"&gt;
+                      &lt;img src="../" alt=""&gt;
+                  &lt;/a&gt;
+              &lt;/div&gt;
+              &lt;div class="linkContainer"&gt;
+                  &lt;div class="linkArea"&gt;
+                      &lt;ul&gt;
+                          &lt;li&gt;
+                              &lt;a href="#" title="link01"&gt;link01&lt;/a&gt;
+                          &lt;/li&gt;
+                          &lt;li&gt;
+                              &lt;a href="#" title="link02"&gt;link02&lt;/a&gt;
+                          &lt;/li&gt;
+                          &lt;li&gt;
+                              &lt;a href="#" title="link03"&gt;link03&lt;/a&gt;
+                          &lt;/li&gt;
+                          &lt;li&gt;
+                              &lt;a href="#" title="link04"&gt;link04&lt;/a&gt;
+                          &lt;/li&gt;
+                      &lt;/ul&gt;
+                  &lt;/div&gt;
+                  &lt;div class="linkArea"&gt;
+                      &lt;ul&gt;
+                          &lt;li&gt;
+                              &lt;a href="#" title="link05"&gt;link05&lt;/a&gt;
+                          &lt;/li&gt;
+                          &lt;li&gt;
+                              &lt;a href="#" title="link06"&gt;link06&lt;/a&gt;
+                          &lt;/li&gt;
+                          &lt;li&gt;
+                              &lt;a href="#" title="link07"&gt;link07&lt;/a&gt;
+                          &lt;/li&gt;
+                          &lt;li&gt;
+                              &lt;a href="#" title="link08"&gt;link08&lt;/a&gt;
+                          &lt;/li&gt;
+                      &lt;/ul&gt;
+                  &lt;/div&gt;
+              &lt;/div&gt;
+              &lt;div class="bottomArea"&gt;
+                  &lt;div class="inner"&gt;
+                      &lt;p class="copy"&gt;Copyright © 2021 Company. ALL RIGHTS RESERVED.&lt;/p&gt;
+                  &lt;/div&gt;
+              &lt;/div&gt;
+          &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+                              </code>
+                            </pre>
+                          </div>
+                        </div>
+
+                        <div class="tabCont">
+                          <div class="highlightArea cScroll">
+                            <pre>
+                              <code class="language-scss">
+  .contents{width: 100%;}
+  .contBox{position: relative; min-height: calc(100vh - 322px); text-align: center; font-size: 36px; color: #fff; font-family: 'Noto Sans';
+  background-color: #444;
+    span{position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);}
+  }
+  #footer{width: 100%; background-color: #292a2d;
+    >.inner{padding-top: 40px; max-width: 1200px; margin: 0 auto;
+      .logoArea{margin-bottom: 20px;
+        a{display: inline-block;}
+        img{width: 200px;}
+      }
+      .linkContainer{display: flex; padding-bottom: 40px; border-bottom: 1px solid #fff;}
+      .linkArea{flex: 0.5; margin-left: auto;
+        ul{display: flex; flex-direction: column;
+          li{ 
+            a{font-size: 16px; font-family: 'Noto Sans'; color: #fff;
+              &:hover{text-decoration: underline;}
+            }
+            +li{margin-top: 10px;}
           }
-          +li{margin-top: 10px;}
+        }
+      }
+      .bottomArea{
+        >.inner{height: 58px; line-height: 58px;
+          p.copy{font-size: 14px; color: #fff; font-family: '맑은 고딕'; text-align: center;}
         }
       }
     }
-    .bottomArea{
-      >.inner{height: 58px; line-height: 58px;
-        p.copy{font-size: 14px; color: #fff; font-family: '맑은 고딕'; text-align: center;}
-      }
-    }
   }
-}
-                            </code>
-                        </pre>
-                        </div>
-                      </div>
-
-                      <div class="tabCont">
-                        <div class="highlightArea cScroll">
-                          <pre>
-                            <code class="language-css">
-.wrap .contents {
-  width: 100%;
-}
-
-.wrap .contBox {
-  position: relative;
-  min-height: calc(100vh - 322px);
-  text-align: center;
-  font-size: 36px;
-  color: #fff;
-  font-family: 'Noto Sans';
-  background-color: #444;
-}
-
-.wrap .contBox span {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-
-.wrap #footer {
-  width: 100%;
-  background-color: #292a2d;
-}
-
-.wrap #footer > .inner {
-  padding-top: 40px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.wrap #footer > .inner .logoArea {
-  margin-bottom: 20px;
-}
-
-.wrap #footer > .inner .logoArea a {
-  display: inline-block;
-}
-
-.wrap #footer > .inner .logoArea img {
-  width: 200px;
-}
-
-.wrap #footer > .inner .linkContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding-bottom: 40px;
-  border-bottom: 1px solid #fff;
-}
-
-.wrap #footer > .inner .linkArea {
-  -webkit-box-flex: 0.5;
-      -ms-flex: 0.5;
-          flex: 0.5;
-  margin-left: auto;
-}
-
-.wrap #footer > .inner .linkArea ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.wrap  #footer > .inner .linkArea ul li a {
-  font-size: 16px;
-  font-family: 'Noto Sans';
-  color: #fff;
-}
-
-.wrap #footer > .inner .linkArea ul li a:hover {
-  text-decoration: underline;
-}
-
-.wrap #footer > .inner .linkArea ul li + li {
-  margin-top: 10px;
-}
-
-.wrap #footer > .inner .bottomArea > .inner {
-  height: 58px;
-  line-height: 58px;
-}
-                            </code>
+                              </code>
                           </pre>
+                          </div>
+                        </div>
+
+                        <div class="tabCont">
+                          <div class="highlightArea cScroll">
+                            <pre>
+                              <code class="language-css">
+  .wrap .contents {
+    width: 100%;
+  }
+
+  .wrap .contBox {
+    position: relative;
+    min-height: calc(100vh - 322px);
+    text-align: center;
+    font-size: 36px;
+    color: #fff;
+    font-family: 'Noto Sans';
+    background-color: #444;
+  }
+
+  .wrap .contBox span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+
+  .wrap #footer {
+    width: 100%;
+    background-color: #292a2d;
+  }
+
+  .wrap #footer > .inner {
+    padding-top: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .wrap #footer > .inner .logoArea {
+    margin-bottom: 20px;
+  }
+
+  .wrap #footer > .inner .logoArea a {
+    display: inline-block;
+  }
+
+  .wrap #footer > .inner .logoArea img {
+    width: 200px;
+  }
+
+  .wrap #footer > .inner .linkContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #fff;
+  }
+
+  .wrap #footer > .inner .linkArea {
+    -webkit-box-flex: 0.5;
+        -ms-flex: 0.5;
+            flex: 0.5;
+    margin-left: auto;
+  }
+
+  .wrap #footer > .inner .linkArea ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .wrap  #footer > .inner .linkArea ul li a {
+    font-size: 16px;
+    font-family: 'Noto Sans';
+    color: #fff;
+  }
+
+  .wrap #footer > .inner .linkArea ul li a:hover {
+    text-decoration: underline;
+  }
+
+  .wrap #footer > .inner .linkArea ul li + li {
+    margin-top: 10px;
+  }
+
+  .wrap #footer > .inner .bottomArea > .inner {
+    height: 58px;
+    line-height: 58px;
+  }
+                              </code>
+                            </pre>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <div class="btnArea end">
-                        <button type="button" class="button Bgblue btnResult">
-                          <span>결과보기</span>
-                          <i class="ico result"></i>
-                        </button>
+                      <div class="btnArea end">
+                          <button type="button" class="button Bgblue btnResult">
+                            <span>결과보기</span>
+                            <i class="ico result"></i>
+                          </button>
+                      </div>
                     </div>
                 </div>
             </div>

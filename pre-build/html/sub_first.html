@@ -12,6 +12,7 @@
   <script src="../js/library/prism.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
   <script type="text/javascript" src="../js/component.js"></script>
+  <script type="text/javascript" src="../js/error.js"></script>
   <title>Component css</title>
 </head>
 
@@ -190,257 +191,269 @@
       @@include('include/util.html')
 
       <div class="rightArea">
-        <div class="textBox">
-          <div class="titleH1">
-            <h1>component css 가 뭔가요?</h1>
-          </div>
-          <div class="mainTxt">
-            <p>component css는 웹 퍼블리싱 작업에 자주 사용되는 요소들의 스타일에 대한
-              가이드 라인을 제공합니다!
-            </p>
-            <p>페이지마다 재사용될만한 구성요소들의 마크업 (html) 과 스타일 (css) 또는 js 코드들을 기록하여
-              번거롭게 직접 코딩하지 않고 <br> 필요한 코드만 긁어서 바로 사용할 수 있다는게 장점입니다.
-            </p>
-            <br>
-            <p>물론 코딩을 직접안하고 복사 붙여넣기로 단순하게 코드를 가져간다는게 좋은 방법은 아니지만
-              매 프로젝트 세팅할 때마다 비슷한 스타일의 코드를<br>
-              일일이 치는게 지겨운 분들 혹은 html & css를 배우고 있으신 분들에게 포커스를 맞춘 사이트라고 생각 해주시면 되겠습니다.
-            </p>
-            <br><br>
-            <div class="innerTxt">
-              <strong>라이센스</strong>
-              <p>해당 프로젝트에 사용 된 라이브러리 및 플러그인들은 <a href="../html/license.html" class="link" target="_blank">여기서</a>
-
+        <div class="inner">
+          <div class="textBox">
+            <div class="titleH1">
+              <h1>component css 가 뭔가요?</h1>
+            </div>
+            <div class="mainTxt">
+              <p>component css는 웹 퍼블리싱 작업에 자주 사용되는 요소들의 스타일에 대한
+                가이드 라인을 제공합니다!
               </p>
-            </div>
-            <div class="innerTxt">
-              <strong>더 많은 컴포넌트들</strong>
-              <p>꾸준한 업데이트를 통해 현재보다 더 많은 컴포넌트들을 기록할 예정입니다. 조금만 기다려주세요!</p>
-            </div>
-            <div class="innerTxt">
-              <strong>업데이트 소식</strong>
-              <p>특별한건 아니지만, <a class="link" href="update-note.html" target="_blank">여기서</a>
-                업데이트 로그를 작성하고 있습니다. 궁금하시다면 참고해보세요!</p>
-            </div>
-            <div class="innerTxt">
-              <strong>피드백</strong>
-              <p>코드의 문제점 , 건의사항 등등 component css에 대한 피드백은 <a class="mail"
-                  href="mailto:sky11916@naver.com">sky11916@naver.com</a> 으로 부탁해요!</p>
+              <p>페이지마다 재사용될만한 구성요소들의 마크업 (html) 과 스타일 (css) 또는 js 코드들을 기록하여
+                번거롭게 직접 코딩하지 않고 <br> 필요한 코드만 긁어서 바로 사용할 수 있다는게 장점입니다.
+              </p>
+              <br>
+              <p>물론 코딩을 직접안하고 복사 붙여넣기로 단순하게 코드를 가져간다는게 좋은 방법은 아니지만
+                매 프로젝트 세팅할 때마다 비슷한 스타일의 코드를<br>
+                일일이 치는게 지겨운 분들 혹은 html & css를 배우고 있으신 분들에게 포커스를 맞춘 사이트라고 생각 해주시면 되겠습니다.
+              </p>
+              <br><br>
+              <div class="innerTxt">
+                <strong>라이센스</strong>
+                <p>해당 프로젝트에 사용 된 라이브러리 및 플러그인들은 <a href="../html/license.html" class="link" target="_blank">여기서</a>
+                확인하세요.
+                </p>
+              </div>
+              <div class="innerTxt">
+                <strong>더 많은 컴포넌트들</strong>
+                <p>꾸준한 업데이트를 통해 현재보다 더 많은 컴포넌트들을 기록할 예정입니다. 조금만 기다려주세요!</p>
+              </div>
+              <div class="innerTxt">
+                <strong>업데이트 소식</strong>
+                <p>특별한건 아니지만, <a class="link" href="update-note.html" target="_blank">여기서</a>
+                  업데이트 로그를 작성하고 있습니다. 궁금하시다면 참고해보세요!</p>
+              </div>
+              <div class="innerTxt">
+                <strong>피드백</strong>
+                <p>코드의 문제점 , 건의사항 등등 component css에 대한 피드백은 <a class="mail"
+                    href="mailto:sky11916@naver.com">sky11916@naver.com</a> 으로 부탁해요!</p>
+              </div>
             </div>
           </div>
-        </div>
-
-        <div class="textBox">
-          <div class="titleH2">
-            <h2>기본 세팅 가이드</h2>
-          </div>
-          <div class="mainTxt">
-            <p>해당 프로젝트에서 쓰인 HTML/SCSS/CSS 기본 세팅 구조입니다.</p>
-          </div>
-          <div class="tabWrap type01">
-            <div class="tabNav">
-              <ul class="tabList">
-                <li class="active orange">HTML</li>
-                <li class="pink">SCSS</li>
-                <li class="blue">CSS</li>
-              </ul>
+  
+          <div class="textBox">
+            <div class="titleH2">
+              <h2>기본 세팅 가이드</h2>
             </div>
-
-            <div class="tabCont active">
-              <div class="highlightArea cScroll">
-                <pre>
-                    <code class="language-html">
-&lt;!DOCTYPE html&gt;
-&lt;html lang="ko"&gt;
-&lt;head&gt;
-    &lt;meta charset="UTF-8" /&gt;
-    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
-    &lt;link rel="stylesheet" href="" type="text/css" /&gt;
-    &lt;script type="text/javascript" src=""&gt;&lt;/script&gt;
-    &lt;title&gt;&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;div id="wrap"&gt;
-        
-    &lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
+            <div class="mainTxt">
+              <p>해당 프로젝트에서 쓰인 HTML/SCSS/CSS 기본 세팅 구조입니다.</p>
+            </div>
+            <div class="tabWrap type01">
+              <div class="tabNav">
+                <ul class="tabList">
+                  <li class="active orange">HTML</li>
+                  <li class="pink">SCSS</li>
+                  <li class="blue">CSS</li>
+                </ul>
+              </div>
+  
+              <div class="tabCont active">
+                <div class="highlightArea cScroll">
+                  <pre>
+                      <code class="language-html">
+  &lt;!DOCTYPE html&gt;
+  &lt;html lang="ko"&gt;
+  &lt;head&gt;
+      &lt;meta charset="UTF-8" /&gt;
+      &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+      &lt;link rel="stylesheet" href="" type="text/css" /&gt;
+      &lt;script type="text/javascript" src=""&gt;&lt;/script&gt;
+      &lt;title&gt;&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+      &lt;div id="wrap"&gt;
+          
+      &lt;/div&gt;
+  &lt;/body&gt;
+  &lt;/html&gt;
+                        </code>
+                    </pre>
+                </div>
+              </div>
+  
+              <div class="tabCont">
+                <div class="highlightArea cScroll">
+                  <pre>
+                      <code class="language-scss">
+  $c20 : #202020 !default;
+  $c333 : #333 !default;
+  $c70 : #707070 !default;
+  $cddd : #ddd !default;
+  $cfff : #fff !default;
+  $d-fz : 'Noto Sans';
+  $emphasisType01 : #266bf7 !default;
+  $emphasisType02: #1694d2 !default;
+    
+  /* background */
+  $blueBg : $emphasisType01;
+  $whiteBg : $cfff;
+  
+  @font-face {
+    font-family: 'Noto Sans Light';
+    font-style: normal;
+    font-weight: 400;
+    src: url(./font/notoSans/eot/NotoSansKR-Light-Hestia.eot);
+    src: url(./font/notoSans/eot/NotoSansKR-Light-Hestia.eot?#iefix) format("embedded-opentype"), url(./font/notoSans/woff/NotoSansKR-Light-Hestia.woff) format("woff");
+  }
+  
+  @font-face {
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url(./font/notoSans/eot/NotoSansKR-Regular-Hestia.eot);
+    src: url(./font/notoSans/eot/NotoSansKR-Regular-Hestia.eot?#iefix) format("embedded-opentype"), url(./font/notoSans/woff/NotoSansKR-Regular-Hestia.woff) format("woff");
+  }
+  
+  @font-face {
+    font-family: 'Noto Sans Medium';
+    font-style: normal;
+    font-weight: 400;
+    src: url(./font/notoSans/eot/NotoSansKR-Medium-Hestia.eot);
+    src: url(./font/notoSans/eot/NotoSansKR-Medium-Hestia.eot?#iefix) format("embedded-opentype"), url(./font/notoSans/woff/NotoSansKR-Medium-Hestia.woff) format("woff");
+  }
+  
+  /* reset */
+  :root{overflow-wrap: break-word;}
+  body,html{width: 100%;height: 100%;margin: 0;padding: 0; font-family:'Noto Sans DemLight', "맑은 고딕", "Malgun Gothic", Dotum, sans-serif;
+  font-size:13px;color: $c333;letter-spacing:-0.045em !important;}
+  :where(html, body, div, span, object,h1, h2, h3, h4, h5, h6, p, blockquote, a, button, abbr, address, 
+  img, q,dl, dt, dd, ol, ul, li,fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr,
+  th, td,article, aside, footer, header, section, summary){
+    margin:0;padding:0;border:0;font:inherit;
+  }
+  :where(article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section){display: block;}
+  ol,ul,li{list-style: none;}
+  table{border-collapse: collapse;border-spacing: 0;}
+  a{text-decoration: none;color: inherit;}
+  address{font-style: normal;}
+  button{display: inline-block;border: none;background-color: transparent;cursor: pointer;}
+  input,button,a,select,option{font-family:inherit;font-size:inherit;}
+  button:focus{outline:none;}
+  caption,hr{display:none;}
+  pre{word-break:break-all;white-space:pre-line;margin: 0 !important;}
                       </code>
                   </pre>
+                </div>
               </div>
-            </div>
-
-            <div class="tabCont">
-              <div class="highlightArea cScroll">
-                <pre>
-                    <code class="language-scss">
-$c20 : #202020 !default;
-$c333 : #333 !default;
-$c70 : #707070 !default;
-$cddd : #ddd !default;
-$cfff : #fff !default;
-$d-fz : 'Noto Sans';
-$emphasisType01 : #266bf7 !default;
-$emphasisType02: #1694d2 !default;
   
-/* background */
-$blueBg : $emphasisType01;
-$whiteBg : $cfff;
-
-@font-face {
-  font-family: 'Noto Sans Light';
-  font-style: normal;
-  font-weight: 400;
-  src: url(./font/notoSans/eot/NotoSansKR-Light-Hestia.eot);
-  src: url(./font/notoSans/eot/NotoSansKR-Light-Hestia.eot?#iefix) format("embedded-opentype"), url(./font/notoSans/woff/NotoSansKR-Light-Hestia.woff) format("woff");
-}
-
-@font-face {
-  font-family: 'Noto Sans';
-  font-style: normal;
-  font-weight: 400;
-  src: url(./font/notoSans/eot/NotoSansKR-Regular-Hestia.eot);
-  src: url(./font/notoSans/eot/NotoSansKR-Regular-Hestia.eot?#iefix) format("embedded-opentype"), url(./font/notoSans/woff/NotoSansKR-Regular-Hestia.woff) format("woff");
-}
-
-@font-face {
-  font-family: 'Noto Sans Medium';
-  font-style: normal;
-  font-weight: 400;
-  src: url(./font/notoSans/eot/NotoSansKR-Medium-Hestia.eot);
-  src: url(./font/notoSans/eot/NotoSansKR-Medium-Hestia.eot?#iefix) format("embedded-opentype"), url(./font/notoSans/woff/NotoSansKR-Medium-Hestia.woff) format("woff");
-}
-
-/* reset */
-:root{overflow-wrap: break-word;}
-body,html{width: 100%;height: 100%;margin: 0;padding: 0; font-family:'Noto Sans DemLight', "맑은 고딕", "Malgun Gothic", Dotum, sans-serif;
-font-size:13px;color: $c333;letter-spacing:-0.045em !important;}
-:where(html, body, div, span, object,h1, h2, h3, h4, h5, h6, p, blockquote, a, button, abbr, address, 
-img, q,dl, dt, dd, ol, ul, li,fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr,
-th, td,article, aside, footer, header, section, summary){
-  margin:0;padding:0;border:0;font:inherit;
-}
-:where(article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section){display: block;}
-ol,ul,li{list-style: none;}
-table{border-collapse: collapse;border-spacing: 0;}
-a{text-decoration: none;color: inherit;}
-address{font-style: normal;}
-button{display: inline-block;border: none;background-color: transparent;cursor: pointer;}
-input,button,a,select,option{font-family:inherit;font-size:inherit;}
-button:focus{outline:none;}
-caption,hr{display:none;}
-pre{word-break:break-all;white-space:pre-line;margin: 0 !important;}
-                    </code>
-                </pre>
-              </div>
-            </div>
-
-            <div class="tabCont">
-              <div class="highlightArea cScroll">
-                <pre>
-                    <code class="language-css">
-@font-face {
-  font-family: 'Noto Sans Light';
-  font-style: normal;
-  font-weight: 400;
-  src: url(./font/notoSans/eot/NotoSansKR-Light-Hestia.eot);
-  src: url(./font/notoSans/eot/NotoSansKR-Light-Hestia.eot?#iefix) format("embedded-opentype"), url(./font/notoSans/woff/NotoSansKR-Light-Hestia.woff) format("woff");
-}
-
-@font-face {
-  font-family: 'Noto Sans';
-  font-style: normal;
-  font-weight: 400;
-  src: url(./font/notoSans/eot/NotoSansKR-Regular-Hestia.eot);
-  src: url(./font/notoSans/eot/NotoSansKR-Regular-Hestia.eot?#iefix) format("embedded-opentype"), url(./font/notoSans/woff/NotoSansKR-Regular-Hestia.woff) format("woff");
-}
-
-@font-face {
-  font-family: 'Noto Sans Medium';
-  font-style: normal;
-  font-weight: 400;
-  src: url(./font/notoSans/eot/NotoSansKR-Medium-Hestia.eot);
-  src: url(./font/notoSans/eot/NotoSansKR-Medium-Hestia.eot?#iefix) format("embedded-opentype"), url(./font/notoSans/woff/NotoSansKR-Medium-Hestia.woff) format("woff");
-}
-
-:root {
-  overflow-wrap: break-word;
-}
-
-body, html {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  font-family: 'Noto Sans DemLight', "맑은 고딕", "Malgun Gothic", Dotum, sans-serif;
-  font-size: 13px;
-  color: #333;
-  letter-spacing: -0.045em !important;
-}
-
-:where(html, body, div, span, object, h1, h2, h3, h4, h5, h6, p, blockquote, a, button, abbr, address, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, footer, header, section, summary) {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font: inherit;
-}
-
-:where(article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section) {
-  display: block;
-}
-
-ol, ul, li {
-  list-style: none;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-address {
-  font-style: normal;
-}
-
-button {
-  display: inline-block;
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-}
-
-input, button, a, select, option {
-  font-family: inherit;
-  font-size: inherit;
-}
-
-button:focus {
-  outline: none;
-}
-
-caption, hr {
-  display: none;
-}
-
-pre {
-  word-break: break-all;
-  white-space: pre-line;
-  margin: 0 !important;
-}
-                    </code>
-                </pre>
+              <div class="tabCont">
+                <div class="highlightArea cScroll">
+                  <pre>
+                      <code class="language-css">
+  @font-face {
+    font-family: 'Noto Sans Light';
+    font-style: normal;
+    font-weight: 400;
+    src: url(./font/notoSans/eot/NotoSansKR-Light-Hestia.eot);
+    src: url(./font/notoSans/eot/NotoSansKR-Light-Hestia.eot?#iefix) format("embedded-opentype"), url(./font/notoSans/woff/NotoSansKR-Light-Hestia.woff) format("woff");
+  }
+  
+  @font-face {
+    font-family: 'Noto Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url(./font/notoSans/eot/NotoSansKR-Regular-Hestia.eot);
+    src: url(./font/notoSans/eot/NotoSansKR-Regular-Hestia.eot?#iefix) format("embedded-opentype"), url(./font/notoSans/woff/NotoSansKR-Regular-Hestia.woff) format("woff");
+  }
+  
+  @font-face {
+    font-family: 'Noto Sans Medium';
+    font-style: normal;
+    font-weight: 400;
+    src: url(./font/notoSans/eot/NotoSansKR-Medium-Hestia.eot);
+    src: url(./font/notoSans/eot/NotoSansKR-Medium-Hestia.eot?#iefix) format("embedded-opentype"), url(./font/notoSans/woff/NotoSansKR-Medium-Hestia.woff) format("woff");
+  }
+  
+  :root {
+    overflow-wrap: break-word;
+  }
+  
+  body, html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans DemLight', "맑은 고딕", "Malgun Gothic", Dotum, sans-serif;
+    font-size: 13px;
+    color: #333;
+    letter-spacing: -0.045em !important;
+  }
+  
+  :where(html, body, div, span, object, h1, h2, h3, h4, h5, h6, p, blockquote, a, button, abbr, address, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, footer, header, section, summary) {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+  }
+  
+  :where(article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section) {
+    display: block;
+  }
+  
+  ol, ul, li {
+    list-style: none;
+  }
+  
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  address {
+    font-style: normal;
+  }
+  
+  button {
+    display: inline-block;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  
+  input, button, a, select, option {
+    font-family: inherit;
+    font-size: inherit;
+  }
+  
+  button:focus {
+    outline: none;
+  }
+  
+  caption, hr {
+    display: none;
+  }
+  
+  pre {
+    word-break: break-all;
+    white-space: pre-line;
+    margin: 0 !important;
+  }
+                      </code>
+                  </pre>
+                </div>
               </div>
             </div>
           </div>
         </div>
+        
       </div>
     </div>
     @@include('include/popup-share.html')
+
+    <div class="topArea">
+      <button type="button" class="backtoTop">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <polygon fill-rule="evenodd" points="13 5.414 13 22 11 22 11 5.414 4.707 11.707 3.293 10.293 12 1.586 20.707 10.293 19.293 11.707"/>
+        </svg>
+        <span class="hidden">위로 올라가기</span>
+      </button>
+    </div>
   </div>
 </body>
 

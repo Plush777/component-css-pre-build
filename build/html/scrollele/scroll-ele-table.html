@@ -200,192 +200,194 @@
 </div>
             
             <div class="rightArea">
-                <div class="textBox">
-                    <div class="titleH1">
-                        <h1>table 내부 스크롤</h1>
-                    </div>
-
-                    <div class="tabWrap type01">
-                      <div class="tabNav">
-                        <ul class="tabList">
-                          <li class="active orange">HTML</li>
-                          <li class="pink">SCSS</li>
-                          <li class="blue">CSS</li>
-                        </ul>
+                <div class="inner">
+                    <div class="textBox">
+                      <div class="titleH1">
+                          <h1>table 내부 스크롤</h1>
                       </div>
 
-                      <div class="tabCont active">
-                        <div class="highlightArea cScroll">
-                          <pre>
-                            <code class="language-html">
-&lt;div class="table"&gt;
-    &lt;table&gt;
-        &lt;colgroup&gt;
-            &lt;col style="width: 120px;"&gt;
-            &lt;col style="width: 120px;"&gt;
-            &lt;col style="width: auto;"&gt;
-        &lt;/colgroup&gt;
-        &lt;thead&gt;
-            &lt;tr&gt;
-                &lt;th scope="col"&gt;1번째&lt;/th&gt;
-                &lt;th scope="col"&gt;2번째&lt;/th&gt;
-                &lt;th scope="col"&gt;3번째&lt;/th&gt;
-            &lt;/tr&gt;
-        &lt;/thead&gt;
-    &lt;/table&gt;
-&lt;/div&gt;
-&lt;div class="table overflow-y cScroll" style="max-height: 100px;"&gt;
-    &lt;table&gt;
-        &lt;colgroup&gt;
-            &lt;col style="width: 120px;"&gt;
-            &lt;col style="width: 120px;"&gt;
-            &lt;col style="width: auto;"&gt;
-        &lt;/colgroup&gt;
-        &lt;tbody&gt;
-            &lt;tr&gt;
-                &lt;td&gt;&lt;/td&gt;
-                &lt;td&gt;&lt;/td&gt;
-                &lt;td&gt;&lt;/td&gt;
-            &lt;/tr&gt;
-            &lt;tr&gt;
-                &lt;td&gt;&lt;/td&gt;
-                &lt;td&gt;&lt;/td&gt;
-                &lt;td&gt;&lt;/td&gt;
-            &lt;/tr&gt;
-            &lt;tr&gt;
-                &lt;td&gt;&lt;/td&gt;
-                &lt;td&gt;&lt;/td&gt;
-                &lt;td&gt;&lt;/td&gt;
-            &lt;/tr&gt;
-            &lt;tr&gt;
-                &lt;td&gt;&lt;/td&gt;
-                &lt;td&gt;&lt;/td&gt;
-                &lt;td&gt;&lt;/td&gt;
-            &lt;/tr&gt;
-            &lt;tr&gt;
-                &lt;td&gt;&lt;/td&gt;
-                &lt;td&gt;&lt;/td&gt;
-                &lt;td&gt;&lt;/td&gt;
-            &lt;/tr&gt;
-            &lt;tr&gt;
-                &lt;td&gt;&lt;/td&gt;
-                &lt;td&gt;&lt;/td&gt;
-                &lt;td&gt;&lt;/td&gt;
-            &lt;/tr&gt;
-        &lt;/tbody&gt;
-    &lt;/table&gt;
-&lt;/div&gt;
-                            </code>
+                      <div class="tabWrap type01">
+                        <div class="tabNav">
+                          <ul class="tabList">
+                            <li class="active orange">HTML</li>
+                            <li class="pink">SCSS</li>
+                            <li class="blue">CSS</li>
+                          </ul>
+                        </div>
+
+                        <div class="tabCont active">
+                          <div class="highlightArea cScroll">
+                            <pre>
+                              <code class="language-html">
+  &lt;div class="table"&gt;
+      &lt;table&gt;
+          &lt;colgroup&gt;
+              &lt;col style="width: 120px;"&gt;
+              &lt;col style="width: 120px;"&gt;
+              &lt;col style="width: auto;"&gt;
+          &lt;/colgroup&gt;
+          &lt;thead&gt;
+              &lt;tr&gt;
+                  &lt;th scope="col"&gt;1번째&lt;/th&gt;
+                  &lt;th scope="col"&gt;2번째&lt;/th&gt;
+                  &lt;th scope="col"&gt;3번째&lt;/th&gt;
+              &lt;/tr&gt;
+          &lt;/thead&gt;
+      &lt;/table&gt;
+  &lt;/div&gt;
+  &lt;div class="table overflow-y cScroll" style="max-height: 100px;"&gt;
+      &lt;table&gt;
+          &lt;colgroup&gt;
+              &lt;col style="width: 120px;"&gt;
+              &lt;col style="width: 120px;"&gt;
+              &lt;col style="width: auto;"&gt;
+          &lt;/colgroup&gt;
+          &lt;tbody&gt;
+              &lt;tr&gt;
+                  &lt;td&gt;&lt;/td&gt;
+                  &lt;td&gt;&lt;/td&gt;
+                  &lt;td&gt;&lt;/td&gt;
+              &lt;/tr&gt;
+              &lt;tr&gt;
+                  &lt;td&gt;&lt;/td&gt;
+                  &lt;td&gt;&lt;/td&gt;
+                  &lt;td&gt;&lt;/td&gt;
+              &lt;/tr&gt;
+              &lt;tr&gt;
+                  &lt;td&gt;&lt;/td&gt;
+                  &lt;td&gt;&lt;/td&gt;
+                  &lt;td&gt;&lt;/td&gt;
+              &lt;/tr&gt;
+              &lt;tr&gt;
+                  &lt;td&gt;&lt;/td&gt;
+                  &lt;td&gt;&lt;/td&gt;
+                  &lt;td&gt;&lt;/td&gt;
+              &lt;/tr&gt;
+              &lt;tr&gt;
+                  &lt;td&gt;&lt;/td&gt;
+                  &lt;td&gt;&lt;/td&gt;
+                  &lt;td&gt;&lt;/td&gt;
+              &lt;/tr&gt;
+              &lt;tr&gt;
+                  &lt;td&gt;&lt;/td&gt;
+                  &lt;td&gt;&lt;/td&gt;
+                  &lt;td&gt;&lt;/td&gt;
+              &lt;/tr&gt;
+          &lt;/tbody&gt;
+      &lt;/table&gt;
+  &lt;/div&gt;
+                              </code>
+                            </pre>
+                          </div>
+                        </div>
+
+                        <div class="tabCont">
+                          <div class="highlightArea cScroll">
+                            <pre>
+                              <code class="language-scss">
+  .table{
+      table{width: 100%;}
+      th,td{height: 30px; border: 1px solid #ddd; padding: 5px; box-sizing: border-box; font-family: 'Noto Sans';}
+      th{font-size: 14px; color: #333; background-color: #f5f5f5;}
+  }
+  
+  .tScroll{display: block;}
+                              </code>
                           </pre>
+                          </div>
+                        </div>
+
+                        <div class="tabCont">
+                          <div class="highlightArea cScroll">
+                            <pre>
+                              <code class="language-css">
+  .table th, .table td {
+    height: 30px;
+    border: 1px solid #ddd;
+    padding: 5px;
+    box-sizing: border-box;
+    font-family: 'Noto Sans';
+  }
+
+  .table th {
+    font-size: 14px;
+    color: #333;
+    background-color: #f5f5f5;
+  }
+
+  .tScroll{
+    display: block;
+  }
+                              </code>
+                            </pre>
+                          </div>
                         </div>
                       </div>
-
-                      <div class="tabCont">
-                        <div class="highlightArea cScroll">
-                          <pre>
-                            <code class="language-scss">
- .table{
-     table{width: 100%;}
-     th,td{height: 30px; border: 1px solid #ddd; padding: 5px; box-sizing: border-box; font-family: 'Noto Sans';}
-     th{font-size: 14px; color: #333; background-color: #f5f5f5;}
- }
- 
- .tScroll{display: block;}
-                            </code>
-                        </pre>
-                        </div>
+                      
+                      <div class="titleH2">
+                          <h2>Result</h2>
                       </div>
-
-                      <div class="tabCont">
-                        <div class="highlightArea cScroll">
-                          <pre>
-                            <code class="language-css">
-.table th, .table td {
-  height: 30px;
-  border: 1px solid #ddd;
-  padding: 5px;
-  box-sizing: border-box;
-  font-family: 'Noto Sans';
-}
-
-.table th {
-  font-size: 14px;
-  color: #333;
-  background-color: #f5f5f5;
-}
-
-.tScroll{
-  display: block;
-}
-                            </code>
-                          </pre>
-                        </div>
+                      <div class="resultArea">
+                          <div class="inner">
+                              <div class="table">
+                                  <table>
+                                      <colgroup>
+                                          <col style="width: 120px;">
+                                          <col style="width: 120px;">
+                                          <col style="width: auto;">
+                                      </colgroup>
+                                      <thead>
+                                          <tr>
+                                              <th scope="col">1번째</th>
+                                              <th scope="col">2번째</th>
+                                              <th scope="col">3번째</th>
+                                          </tr>
+                                      </thead>
+                                  </table>
+                              </div>
+                              <div class="table overflow-y maxH cScroll">
+                                  <table>
+                                      <colgroup>
+                                          <col style="width: 120px;">
+                                          <col style="width: 120px;">
+                                          <col style="width: auto;">
+                                      </colgroup>
+                                      <tbody>
+                                          <tr>
+                                              <td></td>
+                                              <td></td>
+                                              <td></td>
+                                          </tr>
+                                          <tr>
+                                              <td></td>
+                                              <td></td>
+                                              <td></td>
+                                          </tr>
+                                          <tr>
+                                              <td></td>
+                                              <td></td>
+                                              <td></td>
+                                          </tr>
+                                          <tr>
+                                              <td></td>
+                                              <td></td>
+                                              <td></td>
+                                          </tr>
+                                          <tr>
+                                              <td></td>
+                                              <td></td>
+                                              <td></td>
+                                          </tr>
+                                          <tr>
+                                              <td></td>
+                                              <td></td>
+                                              <td></td>
+                                          </tr>
+                                      </tbody>
+                                  </table>
+                              </div>
+                          </div>
                       </div>
-                    </div>
-                    
-                    <div class="titleH2">
-                        <h2>Result</h2>
-                    </div>
-                    <div class="resultArea">
-                        <div class="inner">
-                            <div class="table">
-                                <table>
-                                    <colgroup>
-                                        <col style="width: 120px;">
-                                        <col style="width: 120px;">
-                                        <col style="width: auto;">
-                                    </colgroup>
-                                    <thead>
-                                        <tr>
-                                            <th scope="col">1번째</th>
-                                            <th scope="col">2번째</th>
-                                            <th scope="col">3번째</th>
-                                        </tr>
-                                    </thead>
-                                </table>
-                            </div>
-                            <div class="table overflow-y maxH cScroll">
-                                <table>
-                                    <colgroup>
-                                        <col style="width: 120px;">
-                                        <col style="width: 120px;">
-                                        <col style="width: auto;">
-                                    </colgroup>
-                                    <tbody>
-                                        <tr>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>

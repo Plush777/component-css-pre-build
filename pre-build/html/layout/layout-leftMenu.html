@@ -179,267 +179,269 @@
             @@include('include/util.html')
             
             <div class="rightArea">
-                <div class="textBox">
-                    <div class="titleH1">
-                        <h1>Left menu</h1>
-                    </div>
-                    <div class="tabWrap type01">
-                      <div class="tabNav">
-                        <ul class="tabList">
-                          <li class="active orange">HTML</li>
-                          <li class="pink">SCSS</li>
-                          <li class="blue">CSS</li>
-                          <li class="yellow">JS</li>
-                        </ul>
+                <div class="inner">
+                    <div class="textBox">
+                      <div class="titleH1">
+                          <h1>Left menu</h1>
                       </div>
-
-                      <div class="tabCont active">
-                        <div class="highlightArea cScroll">
-                          <pre>
-                            <code class="language-html">
-&lt;div class="leftAreaType02 cScroll"&gt;
-    &lt;ul class="leftMenu"&gt;
-        &lt;li class="noDepth"&gt;
-            &lt;span&gt;
-                &lt;a href="#" title="홈"&gt;Home&lt;/a&gt;
-            &lt;/span&gt;
-        &lt;/li&gt;
-        &lt;li&gt;
-            &lt;span title="Menu01"&gt;Menu01&lt;/span&gt;
-            &lt;ul class="leftSubMenu"&gt;
-                &lt;li&gt;
-                    &lt;a href="#" title="Sub menu01"&gt;Sub menu01&lt;/a&gt;
-                &lt;/li&gt;
-                &lt;li&gt;
-                    &lt;a href="#" title="Sub menu02"&gt;Subm menu02&lt;/a&gt;
-                &lt;/li&gt;
-                &lt;li&gt;
-                    &lt;a href="#" title="Sub menu03"&gt;Sub menu03&lt;/a&gt;
-                &lt;/li&gt;
-            &lt;/ul&gt;
-        &lt;/li&gt;
-        &lt;li&gt;
-            &lt;span title="Menu02"&gt;Menu02&lt;/span&gt;
-            &lt;ul class="leftSubMenu"&gt;
-                &lt;li&gt;
-                    &lt;a href="#" title="Sub menu01"&gt;Sub menu01&lt;/a&gt;
-                &lt;/li&gt;
-                &lt;li&gt;
-                    &lt;a href="#" title="Sub menu02"&gt;Subm menu02&lt;/a&gt;
-                &lt;/li&gt;
-                &lt;li&gt;
-                    &lt;a href="#" title="Sub menu03"&gt;Sub menu03&lt;/a&gt;
-                &lt;/li&gt;
-            &lt;/ul&gt;
-        &lt;/li&gt;
-        &lt;li&gt;
-            &lt;span title="Menu03"&gt;Menu03&lt;/span&gt;
-            &lt;ul class="leftSubMenu"&gt;
-                &lt;li&gt;
-                    &lt;a href="#" title="Sub menu01"&gt;Sub menu01&lt;/a&gt;
-                &lt;/li&gt;
-                &lt;li&gt;
-                    &lt;a href="#" title="Sub menu02"&gt;Subm menu02&lt;/a&gt;
-                &lt;/li&gt;
-                &lt;li&gt;
-                    &lt;a href="#" title="Sub menu03"&gt;Sub menu03&lt;/a&gt;
-                &lt;/li&gt;
-            &lt;/ul&gt;
-        &lt;/li&gt;
-        &lt;li&gt;
-            &lt;span title="Menu04"&gt;Menu04&lt;/span&gt;
-            &lt;ul class="leftSubMenu"&gt;
-                &lt;li&gt;
-                    &lt;a href="#" title="Sub menu01"&gt;Sub menu01&lt;/a&gt;
-                &lt;/li&gt;
-                &lt;li&gt;
-                    &lt;a href="#" title="Sub menu02"&gt;Subm menu02&lt;/a&gt;
-                &lt;/li&gt;
-                &lt;li&gt;
-                    &lt;a href="#" title="Sub menu03"&gt;Sub menu03&lt;/a&gt;
-                &lt;/li&gt;
-                &lt;li&gt;
-                    &lt;a href="#" title="Sub menu04"&gt;Sub menu04&lt;/a&gt;
-                &lt;/li&gt;
-                &lt;li&gt;
-                    &lt;a href="#" title="Sub menu05"&gt;Sub menu05&lt;/a&gt;
-                &lt;/li&gt;
-                &lt;li&gt;
-                    &lt;a href="#" title="Sub menu06"&gt;Sub menu06&lt;/a&gt;
-                &lt;/li&gt;
-            &lt;/ul&gt;
-        &lt;/li&gt;
-    &lt;/ul&gt;
-&lt;/div&gt;
-                            </code>
-                          </pre>
+                      <div class="tabWrap type01">
+                        <div class="tabNav">
+                          <ul class="tabList">
+                            <li class="active orange">HTML</li>
+                            <li class="pink">SCSS</li>
+                            <li class="blue">CSS</li>
+                            <li class="yellow">JS</li>
+                          </ul>
                         </div>
-                      </div>
 
-                      <div class="tabCont">
-                        <div class="highlightArea cScroll">
-                          <pre>
-                            <code class="language-scss">
-.leftAreaType02{position: fixed; left: 0; width: 300px; height: 100%;
-overflow-y: auto; z-index: 1100;background-color: #1C253D;box-shadow: 0px 0px 3px 2px rgba($color: #fff, $alpha: 0.5);
-  >.leftMenu{
-    >li{position: relative; cursor: pointer;
-      &.noDepth{
-        span:after{display: none;}
-      }
-      span{position: relative; display: block; padding: 16px 0; text-indent: 28px;
-      font-family: 'Noto Sans Light'; font-size: 22px; color: $cfff; transition: .5s;
-        &:after{content: ''; width: 15px;height: 9px; position: absolute; top: 50%; right: 28px; transition: .5s;
-        transform: translateY(-50%);background: url("../images/ico/ico-down.svg")no-repeat;}
-      }
-      a{display: block;}
-      >a{display: block;}
-      >ul.leftSubMenu{display: none; background-color: #273147; 
-        li{height: 55px; line-height: 57px;
-          a{display: block; font-family: 'Noto Sans'; font-size: 18px; color: rgba($color: #fff, $alpha: 0.8);
-          text-indent: 50px; font-family: 'Noto Sans Light';
-            &:hover{background-color: #485162;}
-          }
-          &.active{
-            a{color: $emphasisType01;}
+                        <div class="tabCont active">
+                          <div class="highlightArea cScroll">
+                            <pre>
+                              <code class="language-html">
+  &lt;div class="leftAreaType02 cScroll"&gt;
+      &lt;ul class="leftMenu"&gt;
+          &lt;li class="noDepth"&gt;
+              &lt;span&gt;
+                  &lt;a href="#" title="홈"&gt;Home&lt;/a&gt;
+              &lt;/span&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+              &lt;span title="Menu01"&gt;Menu01&lt;/span&gt;
+              &lt;ul class="leftSubMenu"&gt;
+                  &lt;li&gt;
+                      &lt;a href="#" title="Sub menu01"&gt;Sub menu01&lt;/a&gt;
+                  &lt;/li&gt;
+                  &lt;li&gt;
+                      &lt;a href="#" title="Sub menu02"&gt;Subm menu02&lt;/a&gt;
+                  &lt;/li&gt;
+                  &lt;li&gt;
+                      &lt;a href="#" title="Sub menu03"&gt;Sub menu03&lt;/a&gt;
+                  &lt;/li&gt;
+              &lt;/ul&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+              &lt;span title="Menu02"&gt;Menu02&lt;/span&gt;
+              &lt;ul class="leftSubMenu"&gt;
+                  &lt;li&gt;
+                      &lt;a href="#" title="Sub menu01"&gt;Sub menu01&lt;/a&gt;
+                  &lt;/li&gt;
+                  &lt;li&gt;
+                      &lt;a href="#" title="Sub menu02"&gt;Subm menu02&lt;/a&gt;
+                  &lt;/li&gt;
+                  &lt;li&gt;
+                      &lt;a href="#" title="Sub menu03"&gt;Sub menu03&lt;/a&gt;
+                  &lt;/li&gt;
+              &lt;/ul&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+              &lt;span title="Menu03"&gt;Menu03&lt;/span&gt;
+              &lt;ul class="leftSubMenu"&gt;
+                  &lt;li&gt;
+                      &lt;a href="#" title="Sub menu01"&gt;Sub menu01&lt;/a&gt;
+                  &lt;/li&gt;
+                  &lt;li&gt;
+                      &lt;a href="#" title="Sub menu02"&gt;Subm menu02&lt;/a&gt;
+                  &lt;/li&gt;
+                  &lt;li&gt;
+                      &lt;a href="#" title="Sub menu03"&gt;Sub menu03&lt;/a&gt;
+                  &lt;/li&gt;
+              &lt;/ul&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+              &lt;span title="Menu04"&gt;Menu04&lt;/span&gt;
+              &lt;ul class="leftSubMenu"&gt;
+                  &lt;li&gt;
+                      &lt;a href="#" title="Sub menu01"&gt;Sub menu01&lt;/a&gt;
+                  &lt;/li&gt;
+                  &lt;li&gt;
+                      &lt;a href="#" title="Sub menu02"&gt;Subm menu02&lt;/a&gt;
+                  &lt;/li&gt;
+                  &lt;li&gt;
+                      &lt;a href="#" title="Sub menu03"&gt;Sub menu03&lt;/a&gt;
+                  &lt;/li&gt;
+                  &lt;li&gt;
+                      &lt;a href="#" title="Sub menu04"&gt;Sub menu04&lt;/a&gt;
+                  &lt;/li&gt;
+                  &lt;li&gt;
+                      &lt;a href="#" title="Sub menu05"&gt;Sub menu05&lt;/a&gt;
+                  &lt;/li&gt;
+                  &lt;li&gt;
+                      &lt;a href="#" title="Sub menu06"&gt;Sub menu06&lt;/a&gt;
+                  &lt;/li&gt;
+              &lt;/ul&gt;
+          &lt;/li&gt;
+      &lt;/ul&gt;
+  &lt;/div&gt;
+                              </code>
+                            </pre>
+                          </div>
+                        </div>
+
+                        <div class="tabCont">
+                          <div class="highlightArea cScroll">
+                            <pre>
+                              <code class="language-scss">
+  .leftAreaType02{position: fixed; left: 0; width: 300px; height: 100%;
+  overflow-y: auto; z-index: 1100;background-color: #1C253D;box-shadow: 0px 0px 3px 2px rgba($color: #fff, $alpha: 0.5);
+    >.leftMenu{
+      >li{position: relative; cursor: pointer;
+        &.noDepth{
+          span:after{display: none;}
+        }
+        span{position: relative; display: block; padding: 16px 0; text-indent: 28px;
+        font-family: 'Noto Sans Light'; font-size: 22px; color: $cfff; transition: .5s;
+          &:after{content: ''; width: 15px;height: 9px; position: absolute; top: 50%; right: 28px; transition: .5s;
+          transform: translateY(-50%);background: url("../images/ico/ico-down.svg")no-repeat;}
+        }
+        a{display: block;}
+        >a{display: block;}
+        >ul.leftSubMenu{display: none; background-color: #273147; 
+          li{height: 55px; line-height: 57px;
+            a{display: block; font-family: 'Noto Sans'; font-size: 18px; color: rgba($color: #fff, $alpha: 0.8);
+            text-indent: 50px; font-family: 'Noto Sans Light';
+              &:hover{background-color: #485162;}
+            }
+            &.active{
+              a{color: $emphasisType01;}
+            }
           }
         }
-      }
-      &.active{
-        span{background-color: #5869F0;
-          &:after{transform: translateY(-50%) rotate(180deg); background: url("../images/ico/ico-down-active.svg")no-repeat;}
+        &.active{
+          span{background-color: #5869F0;
+            &:after{transform: translateY(-50%) rotate(180deg); background: url("../images/ico/ico-down-active.svg")no-repeat;}
+          }
         }
       }
     }
   }
-}
-                            </code>
-                        </pre>
-                        </div>
-                      </div>
-
-                      <div class="tabCont">
-                        <div class="highlightArea cScroll">
-                          <pre>
-                            <code class="language-css">
-.wrap .leftAreaType02 {
-  position: fixed;
-  left: 0;
-  width: 300px;
-  height: 100%;
-  overflow-y: auto;
-  z-index: 1100;
-  background-color: #1C253D;
-  -webkit-box-shadow: 0px 0px 3px 2px rgba(255, 255, 255, 0.5);
-          box-shadow: 0px 0px 3px 2px rgba(255, 255, 255, 0.5);
-}
-
-.wrap .leftAreaType02 > .leftMenu > li {
-  position: relative;
-  cursor: pointer;
-}
-
-.wrap .leftAreaType02 > .leftMenu > li.noDepth span:after {
-  display: none;
-}
-
-.wrap .leftAreaType02 > .leftMenu > li span {
-  position: relative;
-  display: block;
-  padding: 16px 0;
-  text-indent: 28px;
-  font-family: 'Noto Sans Light';
-  font-size: 22px;
-  color: #fff;
-  -webkit-transition: .5s;
-  transition: .5s;
-}
-
-.wrap .leftAreaType02 > .leftMenu > li span:after {
-  content: '';
-  width: 15px;
-  height: 9px;
-  position: absolute;
-  top: 50%;
-  right: 28px;
-  -webkit-transition: .5s;
-  transition: .5s;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  background: url("../images/ico/ico-down.svg") no-repeat;
-}
-
-.wrap .leftAreaType02 > .leftMenu > li a {
-  display: block;
-}
-
-.wrap .leftAreaType02 > .leftMenu > li > a {
-  display: block;
-}
-
-.wrap .leftAreaType02 > .leftMenu > li > ul.leftSubMenu {
-  display: none;
-  background-color: #273147;
-}
-
-.wrap .leftAreaType02 > .leftMenu > li > ul.leftSubMenu li {
-  height: 55px;
-  line-height: 57px;
-}
-
-.wrap .leftAreaType02 > .leftMenu > li > ul.leftSubMenu li a {
-  display: block;
-  font-family: 'Noto Sans';
-  font-size: 18px;
-  color: rgba(255, 255, 255, 0.8);
-  text-indent: 50px;
-  font-family: 'Noto Sans Light';
-}
-
-.wrap .leftAreaType02 > .leftMenu > li > ul.leftSubMenu li a:hover {
-  background-color: #485162;
-}
-
-.wrap .leftAreaType02 > .leftMenu > li > ul.leftSubMenu li.active a {
-  color: #266bf7;
-}
-
-.wrap .leftAreaType02 > .leftMenu > li.active span {
-  background-color: #5869F0;
-}
-
-.wrap .leftAreaType02 > .leftMenu > li.active span:after {
-  -webkit-transform: translateY(-50%) rotate(180deg);
-          transform: translateY(-50%) rotate(180deg);
-  background: url("../images/ico/ico-down-active.svg") no-repeat;
-}
-                            </code>
+                              </code>
                           </pre>
+                          </div>
                         </div>
-                      </div>
 
-                      <div class="tabCont">
-                        <div class="highlightArea cScroll">
-                          <pre>
-                            <code class="language-javascript">
-$(document).ready(function(){
-    $('.leftAreaType02 .leftMenu > li > span').on({
-        "click":function(){
-            $(this).next('.leftSubMenu').slideToggle();
-            $(this).parent('li').toggleClass('active').siblings('li').removeClass('active').find('.leftSubMenu').slideUp();
-        }
-    });
-});
-                            </code>
-                          </pre>
+                        <div class="tabCont">
+                          <div class="highlightArea cScroll">
+                            <pre>
+                              <code class="language-css">
+  .wrap .leftAreaType02 {
+    position: fixed;
+    left: 0;
+    width: 300px;
+    height: 100%;
+    overflow-y: auto;
+    z-index: 1100;
+    background-color: #1C253D;
+    -webkit-box-shadow: 0px 0px 3px 2px rgba(255, 255, 255, 0.5);
+            box-shadow: 0px 0px 3px 2px rgba(255, 255, 255, 0.5);
+  }
+
+  .wrap .leftAreaType02 > .leftMenu > li {
+    position: relative;
+    cursor: pointer;
+  }
+
+  .wrap .leftAreaType02 > .leftMenu > li.noDepth span:after {
+    display: none;
+  }
+
+  .wrap .leftAreaType02 > .leftMenu > li span {
+    position: relative;
+    display: block;
+    padding: 16px 0;
+    text-indent: 28px;
+    font-family: 'Noto Sans Light';
+    font-size: 22px;
+    color: #fff;
+    -webkit-transition: .5s;
+    transition: .5s;
+  }
+
+  .wrap .leftAreaType02 > .leftMenu > li span:after {
+    content: '';
+    width: 15px;
+    height: 9px;
+    position: absolute;
+    top: 50%;
+    right: 28px;
+    -webkit-transition: .5s;
+    transition: .5s;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    background: url("../images/ico/ico-down.svg") no-repeat;
+  }
+
+  .wrap .leftAreaType02 > .leftMenu > li a {
+    display: block;
+  }
+
+  .wrap .leftAreaType02 > .leftMenu > li > a {
+    display: block;
+  }
+
+  .wrap .leftAreaType02 > .leftMenu > li > ul.leftSubMenu {
+    display: none;
+    background-color: #273147;
+  }
+
+  .wrap .leftAreaType02 > .leftMenu > li > ul.leftSubMenu li {
+    height: 55px;
+    line-height: 57px;
+  }
+
+  .wrap .leftAreaType02 > .leftMenu > li > ul.leftSubMenu li a {
+    display: block;
+    font-family: 'Noto Sans';
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.8);
+    text-indent: 50px;
+    font-family: 'Noto Sans Light';
+  }
+
+  .wrap .leftAreaType02 > .leftMenu > li > ul.leftSubMenu li a:hover {
+    background-color: #485162;
+  }
+
+  .wrap .leftAreaType02 > .leftMenu > li > ul.leftSubMenu li.active a {
+    color: #266bf7;
+  }
+
+  .wrap .leftAreaType02 > .leftMenu > li.active span {
+    background-color: #5869F0;
+  }
+
+  .wrap .leftAreaType02 > .leftMenu > li.active span:after {
+    -webkit-transform: translateY(-50%) rotate(180deg);
+            transform: translateY(-50%) rotate(180deg);
+    background: url("../images/ico/ico-down-active.svg") no-repeat;
+  }
+                              </code>
+                            </pre>
+                          </div>
+                        </div>
+
+                        <div class="tabCont">
+                          <div class="highlightArea cScroll">
+                            <pre>
+                              <code class="language-javascript">
+  $(document).ready(function(){
+      $('.leftAreaType02 .leftMenu > li > span').on({
+          "click":function(){
+              $(this).next('.leftSubMenu').slideToggle();
+              $(this).parent('li').toggleClass('active').siblings('li').removeClass('active').find('.leftSubMenu').slideUp();
+          }
+      });
+  });
+                              </code>
+                            </pre>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <div class="btnArea end">
-                        <button type="button" class="button Bgblue btnResult">
-                          <span>결과보기</span>
-                          <i class="ico result"></i>
-                        </button>
+                      <div class="btnArea end">
+                          <button type="button" class="button Bgblue btnResult">
+                            <span>결과보기</span>
+                            <i class="ico result"></i>
+                          </button>
+                      </div>
                     </div>
                 </div>
             </div>

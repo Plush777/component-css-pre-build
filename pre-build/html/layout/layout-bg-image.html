@@ -150,103 +150,105 @@
             @@include('include/util.html')
             
             <div class="rightArea">
-                <div class="textBox">
-                    <div class="titleH1">
-                        <h1>Background-image 100%</h1>
-                    </div>
-                    <div class="tabWrap type01">
-                      <div class="tabNav">
-                        <ul class="tabList">
-                          <li class="active orange">HTML</li>
-                          <li class="pink">SCSS</li>
-                          <li class="blue">CSS</li>
-                        </ul>
+                <div class="inner">
+                    <div class="textBox">
+                      <div class="titleH1">
+                          <h1>Background-image 100%</h1>
                       </div>
+                      <div class="tabWrap type01">
+                        <div class="tabNav">
+                          <ul class="tabList">
+                            <li class="active orange">HTML</li>
+                            <li class="pink">SCSS</li>
+                            <li class="blue">CSS</li>
+                          </ul>
+                        </div>
 
-                      <div class="tabCont active">
-                        <div class="highlightArea cScroll">
-                          <pre>
-                            <code class="language-html">
-&lt;div class="resultCont type01"&gt;
-    &lt;div class="titleH3"&gt;
-        &lt;h3&gt;background-size cover&lt;/h3&gt;
-    &lt;/div&gt;
-    &lt;div class="container"&gt;
-        &lt;div class="textBox"&gt;
-            &lt;div class="imgDiv"&gt;&lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
+                        <div class="tabCont active">
+                          <div class="highlightArea cScroll">
+                            <pre>
+                              <code class="language-html">
+  &lt;div class="resultCont type01"&gt;
+      &lt;div class="titleH3"&gt;
+          &lt;h3&gt;background-size cover&lt;/h3&gt;
+      &lt;/div&gt;
+      &lt;div class="container"&gt;
+          &lt;div class="textBox"&gt;
+              &lt;div class="imgDiv"&gt;&lt;/div&gt;
+          &lt;/div&gt;
+      &lt;/div&gt;
+  &lt;/div&gt;
 
-&lt;div class="resultCont type02"&gt;
-    &lt;div class="titleH3"&gt;
-        &lt;h3&gt;background-size 100% 100%&lt;/h3&gt;
-    &lt;/div&gt;
-    &lt;div class="container"&gt;
-        &lt;div class="textBox"&gt;
-            &lt;div class="imgDiv"&gt;&lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-                            </code>
+  &lt;div class="resultCont type02"&gt;
+      &lt;div class="titleH3"&gt;
+          &lt;h3&gt;background-size 100% 100%&lt;/h3&gt;
+      &lt;/div&gt;
+      &lt;div class="container"&gt;
+          &lt;div class="textBox"&gt;
+              &lt;div class="imgDiv"&gt;&lt;/div&gt;
+          &lt;/div&gt;
+      &lt;/div&gt;
+  &lt;/div&gt;
+                              </code>
+                            </pre>
+                          </div>
+                        </div>
+
+                        <div class="tabCont">
+                          <div class="highlightArea cScroll">
+                            <pre>
+                              <code class="language-scss">
+  .resultCont{position: relative;
+      .imgDiv{height: 600px; background-image: url("../images/common/1903x600.png"); background-repeat: no-repeat;}
+      &.type01{
+          .imgDiv{background-size: cover;}
+      }
+      &.type02{
+          .imgDiv{background-size: 100% 100%;}
+      }
+      +.resultCont{margin-top: 50px;}
+  }
+                              </code>
                           </pre>
+                          </div>
+                        </div>
+
+                        <div class="tabCont">
+                          <div class="highlightArea cScroll">
+                            <pre>
+                              <code class="language-css">
+  .resultCont {
+      position: relative;
+  }
+
+  .resultCont .imgDiv {
+      height: 600px;
+      background-image: url("../images/common/1903x600.png");
+      background-repeat: no-repeat;
+  }
+
+  .resultCont.type01 .imgDiv {
+      background-size: cover;
+  }
+
+  .resultCont.type02 .imgDiv {
+      background-size: 100% 100%;
+  }
+
+  .resultCont + .resultCont {
+      margin-top: 50px;
+  }
+                              </code>
+                            </pre>
+                          </div>
                         </div>
                       </div>
-
-                      <div class="tabCont">
-                        <div class="highlightArea cScroll">
-                          <pre>
-                            <code class="language-scss">
-.resultCont{position: relative;
-    .imgDiv{height: 600px; background-image: url("../images/common/1903x600.png"); background-repeat: no-repeat;}
-    &.type01{
-        .imgDiv{background-size: cover;}
-    }
-    &.type02{
-        .imgDiv{background-size: 100% 100%;}
-    }
-    +.resultCont{margin-top: 50px;}
-}
-                            </code>
-                        </pre>
-                        </div>
+                      <div class="btnArea end">
+                          <button type="button" class="button Bgblue btnResult">
+                            <span>결과보기</span>
+                            <i class="ico result"></i>
+                          </button>
                       </div>
-
-                      <div class="tabCont">
-                        <div class="highlightArea cScroll">
-                          <pre>
-                            <code class="language-css">
-.resultCont {
-    position: relative;
-}
-
-.resultCont .imgDiv {
-    height: 600px;
-    background-image: url("../images/common/1903x600.png");
-    background-repeat: no-repeat;
-}
-
-.resultCont.type01 .imgDiv {
-    background-size: cover;
-}
-
-.resultCont.type02 .imgDiv {
-    background-size: 100% 100%;
-}
-
-.resultCont + .resultCont {
-    margin-top: 50px;
-}
-                            </code>
-                          </pre>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="btnArea end">
-                        <button type="button" class="button Bgblue btnResult">
-                          <span>결과보기</span>
-                          <i class="ico result"></i>
-                        </button>
                     </div>
                 </div>
             </div>

@@ -202,119 +202,122 @@
 </div>
             
             <div class="rightArea">
-                <div class="textBox">
-                    <div class="titleH1">
-                        <h1>Tool tip</h1>
-                    </div>
-                    <div class="mainTxt">
-                        <p>아래 검은색 박스에 마우스를 갖다대면 툴팁이 표시됩니다.</p>
-                    </div>
-                    <div class="tabWrap type01">
-                      <div class="tabNav">
-                        <ul class="tabList">
-                          <li class="active orange">HTML</li>
-                          <li class="pink">SCSS</li>
-                          <li class="blue">CSS</li>
-                        </ul>
+                <div class="inner">
+                    <div class="textBox">
+                      <div class="titleH1">
+                          <h1>Tool tip</h1>
                       </div>
+                      <div class="mainTxt">
+                          <p>아래 검은색 박스에 마우스를 갖다대면 툴팁이 표시됩니다.</p>
+                      </div>
+                      <div class="tabWrap type01">
+                        <div class="tabNav">
+                          <ul class="tabList">
+                            <li class="active orange">HTML</li>
+                            <li class="pink">SCSS</li>
+                            <li class="blue">CSS</li>
+                          </ul>
+                        </div>
 
-                      <div class="tabCont active">
-                        <div class="highlightArea cScroll">
-                          <pre>
-                            <code class="language-html">
-&lt;div class="toolTipBox"&gt;
-    &lt;div class="exTooltip"&gt;
-        &lt;span&gt;툴팁 예제&lt;/span&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-                            </code>
+                        <div class="tabCont active">
+                          <div class="highlightArea cScroll">
+                            <pre>
+                              <code class="language-html">
+  &lt;div class="toolTipBox"&gt;
+      &lt;div class="exTooltip"&gt;
+          &lt;span&gt;툴팁 예제&lt;/span&gt;
+      &lt;/div&gt;
+  &lt;/div&gt;
+                              </code>
+                            </pre>
+                          </div>
+                        </div>
+
+                        <div class="tabCont">
+                          <div class="highlightArea cScroll">
+                            <pre>
+                              <code class="language-scss">
+  $c333 : #333 !default;
+  $cfff : #fff !default;
+  $d-fz : 'Noto Sans';
+
+  .toolTipBox{position: relative; width: 150px; border: 1px solid #222; height: 150px;
+      &:hover{
+          .exTooltip{opacity: 1; visibility: visible;}
+      }
+  }
+
+  .exTooltip{opacity: 0; visibility: hidden; position: absolute; top: 50%; left: 180px; transform: translateY(-50%); 
+  transition: .5s; z-index: 150; 
+      span{display: block; min-width: 60px; padding: 5px 0; font-family: $d-fz; font-size: 12px; border-radius: 3px; 
+      color: $cfff; text-align: center; background-color: $c333;}
+  }
+                              </code>
                           </pre>
+                          </div>
+                        </div>
+
+                        <div class="tabCont">
+                          <div class="highlightArea cScroll">
+                            <pre>
+                              <code class="language-css">
+  .toolTipBox {
+    position: relative;
+    width: 150px;
+    border: 1px solid #222;
+    height: 150px;
+  }
+
+  .toolTipBox:hover .exTooltip {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .exTooltip {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 50%;
+    left: 180px;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    -webkit-transition: .5s;
+    transition: .5s;
+    z-index: 150;
+  }
+
+  .exTooltip span {
+    display: block;
+    min-width: 60px;
+    padding: 5px 0;
+    font-family: "Noto Sans";
+    font-size: 12px;
+    border-radius: 3px;
+    color: #fff;
+    text-align: center;
+    background-color: #333;
+  }
+                              </code>
+                            </pre>
+                          </div>
                         </div>
                       </div>
 
-                      <div class="tabCont">
-                        <div class="highlightArea cScroll">
-                          <pre>
-                            <code class="language-scss">
-$c333 : #333 !default;
-$cfff : #fff !default;
-$d-fz : 'Noto Sans';
-
-.toolTipBox{position: relative; width: 150px; border: 1px solid #222; height: 150px;
-    &:hover{
-        .exTooltip{opacity: 1; visibility: visible;}
-    }
-}
-
-.exTooltip{opacity: 0; visibility: hidden; position: absolute; top: 50%; left: 180px; transform: translateY(-50%); 
-transition: .5s; z-index: 150; 
-    span{display: block; min-width: 60px; padding: 5px 0; font-family: $d-fz; font-size: 12px; border-radius: 3px; 
-    color: $cfff; text-align: center; background-color: $c333;}
-}
-                            </code>
-                        </pre>
-                        </div>
+                      <div class="titleH2">
+                          <h2>Result</h2>
                       </div>
-
-                      <div class="tabCont">
-                        <div class="highlightArea cScroll">
-                          <pre>
-                            <code class="language-css">
-.toolTipBox {
-  position: relative;
-  width: 150px;
-  border: 1px solid #222;
-  height: 150px;
-}
-
-.toolTipBox:hover .exTooltip {
-  opacity: 1;
-  visibility: visible;
-}
-
-.exTooltip {
-  opacity: 0;
-  visibility: hidden;
-  position: absolute;
-  top: 50%;
-  left: 180px;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  -webkit-transition: .5s;
-  transition: .5s;
-  z-index: 150;
-}
-
-.exTooltip span {
-  display: block;
-  min-width: 60px;
-  padding: 5px 0;
-  font-family: "Noto Sans";
-  font-size: 12px;
-  border-radius: 3px;
-  color: #fff;
-  text-align: center;
-  background-color: #333;
-}
-                            </code>
-                          </pre>
-                        </div>
+                      <div class="resultArea">
+                          <div class="inner flex">
+                              <div class="toolTipBox">
+                                <div class="exTooltip">
+                                      <span>툴팁 예제</span>
+                                  </div>
+                              </div>
+                          </div>
                       </div>
-                    </div>
-
-                    <div class="titleH2">
-                        <h2>Result</h2>
-                    </div>
-                    <div class="resultArea">
-                        <div class="inner flex">
-                            <div class="toolTipBox">
-                               <div class="exTooltip">
-                                    <span>툴팁 예제</span>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
+                
             </div>
         </div>
         <div class="popup share">

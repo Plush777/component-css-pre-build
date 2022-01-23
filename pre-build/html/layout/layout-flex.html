@@ -183,54 +183,825 @@
             @@include('include/util.html')
 
             <div class="rightArea">
-                <div class="textBox">
-                    <div class="titleH1">
-                        <h1>Floating Menu</h1>
-                    </div>
-                    <div class="tabWrap type01">
-                        <div class="tabNav">
-                            <ul class="tabList">
-                                <li class="active orange">HTML</li>
-                                <li class="pink">SCSS</li>
-                                <li class="blue">CSS</li>
-                            </ul>
+                <div class="inner">
+                    <div class="textBox">
+                        <div class="titleH1">
+                            <h1>Flex</h1>
                         </div>
-
-                        <div class="tabCont active">
-                            <div class="highlightArea cScroll">
-                                <pre>
-                            <code class="language-html">
-
-                            </code>
-                          </pre>
+                        <div class="tabWrap type01">
+                            <div class="tabNav">
+                                <ul class="tabList">
+                                    <li class="active orange">HTML</li>
+                                    <li class="pink">SCSS</li>
+                                    <li class="blue">CSS</li>
+                                </ul>
+                            </div>
+    
+                            <div class="tabCont active">
+                                <div class="highlightArea cScroll">
+                                    <pre>
+                                <code class="language-html">
+    &lt;div class="wrap"&gt;
+        &lt;div class="resultCont"&gt;
+            &lt;div class="titleH3"&gt;
+                &lt;h3&gt;display : flex&lt;/h3&gt;
+            &lt;/div&gt;
+            &lt;div class="container"&gt;
+                &lt;div class="flexArea fe-default"&gt;
+                    &lt;div class="flexItem"&gt;&lt;/div&gt;
+                    &lt;div class="flexItem"&gt;&lt;/div&gt;
+                    &lt;div class="flexItem"&gt;&lt;/div&gt;
+                    &lt;div class="flexItem"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    
+        &lt;div class="resultCont"&gt;
+            &lt;div class="titleH3"&gt;
+                &lt;h3&gt;display : inline-flex&lt;/h3&gt;
+            &lt;/div&gt;
+            &lt;div class="container"&gt;
+                &lt;div class="flexArea fe-inline"&gt;
+                    &lt;div class="flexItem"&gt;&lt;/div&gt;
+                    &lt;div class="flexItem"&gt;&lt;/div&gt;
+                    &lt;div class="flexItem"&gt;&lt;/div&gt;
+                    &lt;div class="flexItem"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    
+        &lt;div class="resultCont"&gt;
+            &lt;div class="titleH3"&gt;
+                &lt;h3&gt;flex-direction&lt;/h3&gt;
+            &lt;/div&gt;
+            &lt;div class="container"&gt;
+                &lt;div class="tagGroup"&gt;
+                    &lt;span class="tag default"&gt;row&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class="flexArea fd-row"&gt;
+                    &lt;div class="flexItem"&gt;&lt;/div&gt;
+                    &lt;div class="flexItem"&gt;&lt;/div&gt;
+                    &lt;div class="flexItem"&gt;&lt;/div&gt;
+                    &lt;div class="flexItem"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+    
+                &lt;div class="tagGroup"&gt;
+                    &lt;span class="tag gray"&gt;column&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class="flexArea fd-col"&gt;
+                    &lt;div class="flexItem"&gt;&lt;/div&gt;
+                    &lt;div class="flexItem"&gt;&lt;/div&gt;
+                    &lt;div class="flexItem"&gt;&lt;/div&gt;
+                    &lt;div class="flexItem"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+    
+                &lt;div class="tagGroup"&gt;
+                    &lt;span class="tag gray"&gt;row-reverse&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class="flexArea fd-row-re"&gt;
+                    &lt;div class="flexItem"&gt;&lt;/div&gt;
+                    &lt;div class="flexItem"&gt;&lt;/div&gt;
+                    &lt;div class="flexItem"&gt;&lt;/div&gt;
+                    &lt;div class="flexItem"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+    
+                &lt;div class="tagGroup"&gt;
+                    &lt;span class="tag gray"&gt;column-reverse&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class="flexArea fd-col-re"&gt;
+                    &lt;div class="flexItem"&gt;&lt;/div&gt;
+                    &lt;div class="flexItem"&gt;&lt;/div&gt;
+                    &lt;div class="flexItem"&gt;&lt;/div&gt;
+                    &lt;div class="flexItem"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    
+        &lt;div class="resultCont"&gt;
+            &lt;div class="titleH3"&gt;
+                &lt;h3&gt;display : justify-content&lt;/h3&gt;
+            &lt;/div&gt;
+            &lt;div class="container"&gt;
+    
+                &lt;div class="tagGroup"&gt;
+                    &lt;span class="tag gray"&gt;center&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class="flexArea jc-center"&gt;
+                    &lt;div class="flexItem"&gt;&lt;/div&gt;
+                    &lt;div class="flexItem"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+    
+                &lt;div class="tagGroup"&gt;
+                    &lt;span class="tag gray"&gt;flex-start&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class="flexArea jc-start"&gt;
+                    &lt;div class="flexItem"&gt;&lt;/div&gt;
+                    &lt;div class="flexItem"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+    
+                &lt;div class="tagGroup"&gt;
+                    &lt;span class="tag gray"&gt;flex-end&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class="flexArea jc-end"&gt;
+                    &lt;div class="flexItem"&gt;&lt;/div&gt;
+                    &lt;div class="flexItem"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+    
+                &lt;div class="tagGroup"&gt;
+                    &lt;span class="tag gray"&gt;space-between&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class="flexArea jc-between"&gt;
+                    &lt;div class="flexItem"&gt;&lt;/div&gt;
+                    &lt;div class="flexItem"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+    
+                &lt;div class="tagGroup"&gt;
+                    &lt;span class="tag gray"&gt;space-around&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class="flexArea jc-around"&gt;
+                    &lt;div class="flexItem"&gt;&lt;/div&gt;
+                    &lt;div class="flexItem"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+    
+                &lt;div class="tagGroup"&gt;
+                    &lt;span class="tag gray"&gt;space-evenly&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class="flexArea jc-evenly"&gt;
+                    &lt;div class="flexItem"&gt;&lt;/div&gt;
+                    &lt;div class="flexItem"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    
+        &lt;div class="resultCont"&gt;
+            &lt;div class="titleH3"&gt;
+                &lt;h3&gt;display : align-items&lt;/h3&gt;
+            &lt;/div&gt;
+            &lt;div class="container"&gt;
+    
+                &lt;div class="tagGroup"&gt;
+                    &lt;span class="tag gray"&gt;center&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class="flexArea ai-center"&gt;
+                    &lt;div class="flexItem"&gt;
+                        &lt;span&gt;Item&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div class="flexItem"&gt;
+                        &lt;span&gt;Item&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+    
+                &lt;div class="tagGroup"&gt;
+                    &lt;span class="tag gray"&gt;flex-start&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class="flexArea ai-start"&gt;
+                    &lt;div class="flexItem"&gt;
+                        &lt;span&gt;Item&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div class="flexItem"&gt;
+                        &lt;span&gt;Item&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+    
+                &lt;div class="tagGroup"&gt;
+                    &lt;span class="tag gray"&gt;flex-end&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class="flexArea ai-end"&gt;
+                    &lt;div class="flexItem"&gt;
+                        &lt;span&gt;Item&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div class="flexItem"&gt;
+                        &lt;span&gt;Item&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    
+        &lt;div class="resultCont"&gt;
+            &lt;div class="titleH3"&gt;
+                &lt;h3&gt;flex-basis&lt;/h3&gt;
+            &lt;/div&gt;
+            &lt;div class="container"&gt;
+    
+                &lt;div class="tagGroup"&gt;
+                    &lt;span class="tag default"&gt;flex-basis: auto&lt;/span&gt;
+                &lt;/div&gt;
+    
+                &lt;div class="flexArea flex-width fe-basis-d"&gt;
+                    &lt;div class="flexItem"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+    
+                &lt;div class="tagGroup"&gt;
+                    &lt;span class="tag gray"&gt;flex-basis: 600px (row)&lt;/span&gt;
+                &lt;/div&gt;
+    
+                &lt;div class="flexArea flex-width fe-basis"&gt;
+                    &lt;div class="flexItem"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+    
+                &lt;div class="tagGroup"&gt;
+                    &lt;span class="tag gray"&gt;flex-basis: 600px (column)&lt;/span&gt;
+                &lt;/div&gt;
+    
+                &lt;div class="flexArea flex-width fe-basis fd-col"&gt;
+                    &lt;div class="flexItem"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    
+        &lt;div class="resultCont"&gt;
+            &lt;div class="titleH3"&gt;
+                &lt;h3&gt;flex-grow&lt;/h3&gt;
+            &lt;/div&gt;
+            &lt;div class="container"&gt;
+    
+                &lt;div class="tagGroup"&gt;
+                    &lt;span class="tag default"&gt;flex-grow: 0&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class="flexArea flex-width fe-grow-d"&gt;
+                    &lt;div class="flexItem"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+    
+                &lt;div class="tagGroup"&gt;
+                    &lt;span class="tag gray"&gt;flex-grow: 1&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class="flexArea flex-width fe-grow"&gt;
+                    &lt;div class="flexItem"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    
+        &lt;div class="resultCont"&gt;
+            &lt;div class="titleH3"&gt;
+                &lt;h3&gt;flex-shrink&lt;/h3&gt;
+            &lt;/div&gt;
+            &lt;div class="container"&gt;
+    
+                &lt;div class="tagGroup"&gt;
+                    &lt;span class="tag default"&gt;flex-shrink: 1&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class="flexArea flex-width fe-shrink-d"&gt;
+                    &lt;div class="flexItem"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+    
+                &lt;div class="tagGroup"&gt;
+                    &lt;span class="tag gray"&gt;flex-shrink: 0&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class="flexArea flex-width fe-shrink"&gt;
+                    &lt;div class="flexItem"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    
+        &lt;div class="resultCont"&gt;
+            &lt;div class="titleH3"&gt;
+                &lt;h3&gt;flex&lt;/h3&gt;
+            &lt;/div&gt;
+            &lt;div class="container"&gt;
+    
+                &lt;div class="tagGroup"&gt;
+                    &lt;span class="tag gray"&gt;flex: 1&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class="flexArea flex-width flex1"&gt;
+                    &lt;div class="flexItem"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+    
+                &lt;div class="tagGroup"&gt;
+                    &lt;span class="tag gray"&gt;flex: 0.5&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class="flexArea flex-width flex-dp"&gt;
+                    &lt;div class="flexItem"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    
+        &lt;div class="resultCont"&gt;
+            &lt;div class="titleH3"&gt;
+                &lt;h3&gt;flex-wrap&lt;/h3&gt;
+            &lt;/div&gt;
+            &lt;div class="container"&gt;
+    
+                &lt;div class="tagGroup"&gt;
+                    &lt;span class="tag default"&gt;nowrap&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class="flexArea ai-center itemCt flex-width fe-wrap-d"&gt;
+                    &lt;div class="flexItem"&gt;
+                        &lt;span&gt;Item01&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div class="flexItem"&gt;
+                        &lt;span&gt;Item02&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div class="flexItem"&gt;
+                        &lt;span&gt;Item03&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div class="flexItem"&gt;
+                        &lt;span&gt;Item04&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+    
+                &lt;div class="tagGroup"&gt;
+                    &lt;span class="tag gray"&gt;wrap&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class="flexArea ai-center itemCt flex-width fe-wrap"&gt;
+                    &lt;div class="flexItem"&gt;
+                        &lt;span&gt;Item01&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div class="flexItem"&gt;
+                        &lt;span&gt;Item02&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div class="flexItem"&gt;
+                        &lt;span&gt;Item03&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div class="flexItem"&gt;
+                        &lt;span&gt;Item04&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+    
+                &lt;div class="tagGroup"&gt;
+                    &lt;span class="tag gray"&gt;wrap-reverse&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class="flexArea ai-center itemCt flex-width fe-wrap-re"&gt;
+                    &lt;div class="flexItem"&gt;
+                        &lt;span&gt;Item01&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div class="flexItem"&gt;
+                        &lt;span&gt;Item02&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div class="flexItem"&gt;
+                        &lt;span&gt;Item03&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div class="flexItem"&gt;
+                        &lt;span&gt;Item04&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    
+        &lt;div class="resultCont"&gt;
+            &lt;div class="titleH3"&gt;
+                &lt;h3&gt;gap (flex)&lt;/h3&gt;
+            &lt;/div&gt;
+            &lt;div class="container"&gt;
+    
+                &lt;div class="tagGroup"&gt;
+                    &lt;span class="tag gray"&gt;gap: 20px&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class="flexArea flex-width g20 flexWrap flexAdj"&gt;
+                    &lt;div class="flexItem"&gt;&lt;/div&gt;
+                    &lt;div class="flexItem"&gt;&lt;/div&gt;
+                    &lt;div class="flexItem"&gt;&lt;/div&gt;
+                    &lt;div class="flexItem"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+    
+                &lt;div class="tagGroup"&gt;
+                    &lt;span class="tag gray"&gt;row-gap: 20px&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class="flexArea flex-width row-g20 flexWrap flexAdj"&gt;
+                    &lt;div class="flexItem"&gt;&lt;/div&gt;
+                    &lt;div class="flexItem bgGray"&gt;&lt;/div&gt;
+                    &lt;div class="flexItem"&gt;&lt;/div&gt;
+                    &lt;div class="flexItem bgGray"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+    
+                &lt;div class="tagGroup"&gt;
+                    &lt;span class="tag gray"&gt;column-gap: 20px&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class="flexArea flex-width col-g20 flexWrap flexAdj"&gt;
+                    &lt;div class="flexItem"&gt;&lt;/div&gt;
+                    &lt;div class="flexItem"&gt;&lt;/div&gt;
+                    &lt;div class="flexItem bgGray"&gt;&lt;/div&gt;
+                    &lt;div class="flexItem bgGray"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    
+        &lt;div class="resultCont"&gt;
+            &lt;div class="titleH3"&gt;
+                &lt;h3&gt;order&lt;/h3&gt;
+            &lt;/div&gt;
+            &lt;div class="container"&gt;
+    
+                &lt;div class="flexArea fe-order ai-center itemCt flex-width"&gt;
+                    &lt;div class="flexItem"&gt;
+                        &lt;span&gt;Item01&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div class="flexItem"&gt;
+                        &lt;span&gt;Item02&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div class="flexItem"&gt;
+                        &lt;span&gt;Item03&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div class="flexItem"&gt;
+                        &lt;span&gt;Item04&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+                                </code>
+                              </pre>
+                                </div>
+                            </div>
+    
+                            <div class="tabCont">
+                                <div class="highlightArea cScroll">
+                                    <pre>
+                                        <code class="language-scss">
+    .tagGroup{
+        .tag{display: inline-flex; justify-content: center; min-width: 50px; height: 25px; line-height: 25px; 
+        padding: 0 10px; box-sizing: border-box; font-size: 16px; border-radius: 4px; font-family: 'Noto Sans'; 
+        color: $cfff; box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.35);
+            &.default{background-color: #ffa500;}
+            &.gray{background-color: #333;}
+        }
+    }                    
+    #wrap{
+        .resultCont{position: relative; padding: 50px; box-sizing: border-box;
+            .container{
+                .flexArea{display: flex;
+                    .flexItem{display: flex; width: 200px; height: 200px; max-width: 200px; font-size: 16px; font-family: 'Noto Sans'; 
+                    color: #fff; background-color: #000;
+                        &.bgGray{background-color: #444;}
+                        +.flexItem{margin-left: 10px;}
+                    }
+                    
+                    &.flexWrap{flex-wrap: wrap; width: 450px;}
+                    &.flex-width .flexItem{max-width: inherit;}
+                    &.flexAdj .flexItem+.flexItem{margin: 0;}
+                    &.itemCt .flexItem{justify-content: center;}
+    
+                    &.fe-inline{display: inline-flex;}
+                    &.fd-row{flex-direction: row;}
+                    &.fd-col{flex-direction: column;
+                        .flexItem+.flexItem{margin: 10px 0 0 0;}
+                    }
+                    &.fd-row-re{flex-direction: row-reverse;
+                        .flexItem+.flexItem{margin: 0 10px 0 0;}
+                    }
+                    &.fd-col-re{flex-direction: column-reverse;
+                        .flexItem+.flexItem{margin: 0 0 10px 0;}
+                    }
+    
+                    &.jc-center{justify-content: center;}
+                    &.jc-start{justify-content: flex-start;}
+                    &.jc-end{justify-content: flex-end;}
+                    &.jc-between{justify-content: space-between;}
+                    &.jc-around{justify-content: space-around;}
+                    &.jc-evenly{justify-content: space-evenly;}
+    
+                    &.ai-center .flexItem{align-items: center;}
+                    &.ai-start .flexItem{align-items: flex-start;}
+                    &.ai-end .flexItem{align-items: flex-end;}
+    
+                    &.flex1 .flexItem{flex: 1;}
+                    &.flex-dp .flexItem{flex: 0.5;}
+    
+                    &.fe-basis-d .flexItem{flex-basis: auto;}
+                    &.fe-basis .flexItem{flex-basis: 600px;}
+    
+                    &.fe-grow-d .flexItem{flex-grow: 0;}
+                    &.fe-grow .flexItem{flex-grow: 1;}
+    
+                    &.fe-shrink-d .flexItem{flex-shrink: 1; flex-basis: 1000px;}
+                    &.fe-shrink .flexItem{flex-shrink: 0; flex-basis: 1000px;}
+    
+                    &.fe-wrap,&.fe-wrap-re{width: 450px; gap: 20px;
+                        .flexItem+.flexItem{margin: 0;}
+                    }
+                    &.fe-wrap-d{flex-wrap:nowrap;}
+                    &.fe-wrap{flex-wrap: wrap;}
+                    &.fe-wrap-re{flex-wrap: wrap-reverse;}
+    
+                    &.g20{gap: 20px;}
+                    &.row-g20{row-gap: 20px;}
+                    &.col-g20{column-gap: 20px;}
+    
+                    &.fe-order .flexItem{
+                        &:first-of-type{order: 4;}
+                        &:nth-child(2){order: 3;}
+                        &:nth-child(3){order: 2;}
+                        &:last-of-type{order: 1;}
+                        +.flexItem{margin-left: 0; margin-right: 10px;}
+                    }
+                }
+                .tagGroup{margin-top: 120px;
+                    &:first-child,&:last-child{margin: 0;}
+                    +.flexArea{margin-top: 30px;}
+                }
+            }
+        }
+    }
+                                        </code>
+                                    </pre>
+                                </div>
+                            </div>
+    
+                            <div class="tabCont">
+                                <div class="highlightArea cScroll">
+                                    <pre>
+                                        <code class="language-css">
+    .tagGroup .tag {
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        min-width: 50px;
+        height: 25px;
+        line-height: 25px;
+        padding: 0 10px;
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+        font-size: 16px;
+        border-radius: 4px;
+        font-family: 'Noto Sans';
+        color: #fff;
+        -webkit-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.35);
+                box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.35);
+    }
+    
+    .tagGroup .tag.default {
+        background-color: #ffa500;
+    }
+    
+    .tagGroup .tag.gray {
+        background-color: #333;
+    }
+    
+    #wrap .resultCont {
+        position: relative;
+        padding: 50px;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    
+    #wrap .resultCont .container .flexArea {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+    
+    #wrap .resultCont .container .flexArea .flexItem {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        width: 200px;
+        height: 200px;
+        max-width: 200px;
+        font-size: 16px;
+        font-family: 'Noto Sans';
+        color: #fff;
+        background-color: #000;
+    }
+    
+    #wrap .resultCont .container .flexArea .flexItem.bgGray {
+        background-color: #444;
+    }
+    
+    #wrap .resultCont .container .flexArea .flexItem + .flexItem {
+        margin-left: 10px;
+    }
+    
+    #wrap .resultCont .container .flexArea.flexWrap {
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        width: 450px;
+    }
+    
+    #wrap .resultCont .container .flexArea.flexAdj .flexItem + .flexItem {
+        margin: 0;
+    }
+    
+    #wrap .resultCont .container .flexArea.itemCt .flexItem {
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+    }
+    
+    #wrap .resultCont .container .flexArea.fe-inline {
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+    }
+    
+    #wrap .resultCont .container .flexArea.fd-row {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+    }
+    
+    #wrap .resultCont .container .flexArea.fd-col {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+    }
+    
+    #wrap .resultCont .container .flexArea.fd-col .flexItem + .flexItem {
+        margin: 10px 0 0 0;
+    }
+    
+    #wrap .resultCont .container .flexArea.fd-row-re {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: reverse;
+            -ms-flex-direction: row-reverse;
+                flex-direction: row-reverse;
+    }
+    
+    #wrap .resultCont .container .flexArea.fd-row-re .flexItem + .flexItem {
+        margin: 0 10px 0 0;
+    }
+    
+    #wrap .resultCont .container .flexArea.fd-col-re {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+            -ms-flex-direction: column-reverse;
+                flex-direction: column-reverse;
+    }
+    
+    #wrap .resultCont .container .flexArea.fd-col-re .flexItem + .flexItem {
+        margin: 0 0 10px 0;
+    }
+    
+    #wrap .resultCont .container .flexArea.jc-center {
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+    }
+    
+    #wrap .resultCont .container .flexArea.jc-start {
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
+    }
+    
+    #wrap .resultCont .container .flexArea.jc-end {
+        -webkit-box-pack: end;
+            -ms-flex-pack: end;
+                justify-content: flex-end;
+    }
+    
+    #wrap .resultCont .container .flexArea.jc-between {
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+    }
+    
+    #wrap .resultCont .container .flexArea.jc-around {
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+    }
+    
+    #wrap .resultCont .container .flexArea.jc-evenly {
+        -webkit-box-pack: space-evenly;
+            -ms-flex-pack: space-evenly;
+                justify-content: space-evenly;
+    }
+    
+    #wrap .resultCont .container .flexArea.ai-center .flexItem {
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+    }
+    
+    #wrap .resultCont .container .flexArea.ai-start .flexItem {
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start;
+    }
+    
+    #wrap .resultCont .container .flexArea.ai-end .flexItem {
+        -webkit-box-align: end;
+            -ms-flex-align: end;
+                align-items: flex-end;
+    }
+    
+    #wrap .resultCont .container .flexArea.flex1 .flexItem {
+        -webkit-box-flex: 1;
+            -ms-flex: 1;
+                flex: 1;
+    }
+    
+    #wrap .resultCont .container .flexArea.flex-dp .flexItem {
+        -webkit-box-flex: 0.5;
+            -ms-flex: 0.5;
+                flex: 0.5;
+    }
+    
+    #wrap .resultCont .container .flexArea.fe-basis-d .flexItem {
+        -ms-flex-preferred-size: auto;
+            flex-basis: auto;
+    }
+    
+    #wrap .resultCont .container .flexArea.fe-basis .flexItem {
+        -ms-flex-preferred-size: 600px;
+            flex-basis: 600px;
+    }
+    
+    #wrap .resultCont .container .flexArea.fe-grow-d .flexItem {
+        -webkit-box-flex: 0;
+            -ms-flex-positive: 0;
+                flex-grow: 0;
+    }
+    
+    #wrap .resultCont .container .flexArea.fe-grow .flexItem {
+        -webkit-box-flex: 1;
+            -ms-flex-positive: 1;
+                flex-grow: 1;
+    }
+    
+    #wrap .resultCont .container .flexArea.fe-shrink-d .flexItem {
+        -ms-flex-negative: 1;
+            flex-shrink: 1;
+        -ms-flex-preferred-size: 1000px;
+            flex-basis: 1000px;
+    }
+    
+    #wrap .resultCont .container .flexArea.fe-shrink .flexItem {
+        -ms-flex-negative: 0;
+            flex-shrink: 0;
+        -ms-flex-preferred-size: 1000px;
+            flex-basis: 1000px;
+    }
+    
+    #wrap .resultCont .container .flexArea.fe-wrap, .wrap .resultCont .container .flexArea.fe-wrap-re {
+        width: 450px;
+        gap: 20px;
+    }
+    
+    #wrap .resultCont .container .flexArea.fe-wrap .flexItem + .flexItem, .wrap .resultCont .container .flexArea.fe-wrap-re .flexItem + .flexItem {
+        margin: 0;
+    }
+    
+    #wrap .resultCont .container .flexArea.fe-wrap-d {
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+    }
+    
+    #wrap .resultCont .container .flexArea.fe-wrap {
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    }
+    
+    #wrap .resultCont .container .flexArea.fe-wrap-re {
+        -ms-flex-wrap: wrap-reverse;
+            flex-wrap: wrap-reverse;
+    }
+    
+    #wrap .resultCont .container .flexArea.g20 {
+        gap: 20px;
+    }
+    
+    #wrap .resultCont .container .flexArea.row-g20 {
+        row-gap: 20px;
+    }
+    
+    #wrap .resultCont .container .flexArea.col-g20 {
+        -webkit-column-gap: 20px;
+            column-gap: 20px;
+    }
+    
+    #wrap .resultCont .container .flexArea.fe-order .flexItem:first-of-type {
+      -webkit-box-ordinal-group: 5;
+          -ms-flex-order: 4;
+              order: 4;
+    }
+    
+    #wrap .resultCont .container .flexArea.fe-order .flexItem:nth-child(2) {
+        -webkit-box-ordinal-group: 4;
+            -ms-flex-order: 3;
+                order: 3;
+    }
+    
+    #wrap .resultCont .container .flexArea.fe-order .flexItem:nth-child(3) {
+        -webkit-box-ordinal-group: 3;
+            -ms-flex-order: 2;
+                order: 2;
+    }
+    
+    #wrap .resultCont .container .flexArea.fe-order .flexItem:last-of-type {
+        -webkit-box-ordinal-group: 2;
+            -ms-flex-order: 1;
+                order: 1;
+    }
+    
+    #wrap .resultCont .container .flexArea.fe-order .flexItem + .flexItem {
+        margin-left: 0;
+        margin-right: 10px;
+    }
+                                        </code>
+                                    </pre>
+                                </div>
                             </div>
                         </div>
-
-                        <div class="tabCont">
-                            <div class="highlightArea cScroll">
-                                <pre>
-                            <code class="language-scss">
-
-                            </code>
-                        </pre>
-                            </div>
+                        <div class="btnArea end">
+                            <button type="button" class="button Bgblue btnResult">
+                                <span>결과보기</span>
+                                <i class="ico result"></i>
+                            </button>
                         </div>
-
-                        <div class="tabCont">
-                            <div class="highlightArea cScroll">
-                                <pre>
-                            <code class="language-css">
-
-                            </code>
-                          </pre>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="btnArea end">
-                        <button type="button" class="button Bgblue btnResult">
-                            <span>결과보기</span>
-                            <i class="ico result"></i>
-                        </button>
                     </div>
                 </div>
             </div>
@@ -246,7 +1017,401 @@
                 </button>
             </div>
             <div class="wrap pre flexLayout">
+                <div class="resultCont">
+                    <div class="titleH3">
+                        <h3>display : flex</h3>
+                    </div>
+                    <div class="container">
+                        <div class="flexArea fe-default">
+                            <div class="flexItem"></div>
+                            <div class="flexItem"></div>
+                            <div class="flexItem"></div>
+                            <div class="flexItem"></div>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="resultCont">
+                    <div class="titleH3">
+                        <h3>display : inline-flex</h3>
+                    </div>
+                    <div class="container">
+                        <div class="flexArea fe-inline">
+                            <div class="flexItem"></div>
+                            <div class="flexItem"></div>
+                            <div class="flexItem"></div>
+                            <div class="flexItem"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="resultCont">
+                    <div class="titleH3">
+                        <h3>flex-direction</h3>
+                    </div>
+                    <div class="container">
+                        <div class="tagGroup">
+                            <span class="tag default">row</span>
+                        </div>
+                        <div class="flexArea fd-row">
+                            <div class="flexItem"></div>
+                            <div class="flexItem"></div>
+                            <div class="flexItem"></div>
+                            <div class="flexItem"></div>
+                        </div>
+
+                        <div class="tagGroup">
+                            <span class="tag gray">column</span>
+                        </div>
+                        <div class="flexArea fd-col">
+                            <div class="flexItem"></div>
+                            <div class="flexItem"></div>
+                            <div class="flexItem"></div>
+                            <div class="flexItem"></div>
+                        </div>
+
+                        <div class="tagGroup">
+                            <span class="tag gray">row-reverse</span>
+                        </div>
+                        <div class="flexArea fd-row-re">
+                            <div class="flexItem"></div>
+                            <div class="flexItem"></div>
+                            <div class="flexItem"></div>
+                            <div class="flexItem"></div>
+                        </div>
+
+                        <div class="tagGroup">
+                            <span class="tag gray">column-reverse</span>
+                        </div>
+                        <div class="flexArea fd-col-re">
+                            <div class="flexItem"></div>
+                            <div class="flexItem"></div>
+                            <div class="flexItem"></div>
+                            <div class="flexItem"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="resultCont">
+                    <div class="titleH3">
+                        <h3>display : justify-content</h3>
+                    </div>
+                    <div class="container">
+
+                        <div class="tagGroup">
+                            <span class="tag gray">center</span>
+                        </div>
+                        <div class="flexArea jc-center">
+                            <div class="flexItem"></div>
+                            <div class="flexItem"></div>
+                        </div>
+
+                        <div class="tagGroup">
+                            <span class="tag gray">flex-start</span>
+                        </div>
+                        <div class="flexArea jc-start">
+                            <div class="flexItem"></div>
+                            <div class="flexItem"></div>
+                        </div>
+
+                        <div class="tagGroup">
+                            <span class="tag gray">flex-end</span>
+                        </div>
+                        <div class="flexArea jc-end">
+                            <div class="flexItem"></div>
+                            <div class="flexItem"></div>
+                        </div>
+
+                        <div class="tagGroup">
+                            <span class="tag gray">space-between</span>
+                        </div>
+                        <div class="flexArea jc-between">
+                            <div class="flexItem"></div>
+                            <div class="flexItem"></div>
+                        </div>
+
+                        <div class="tagGroup">
+                            <span class="tag gray">space-around</span>
+                        </div>
+                        <div class="flexArea jc-around">
+                            <div class="flexItem"></div>
+                            <div class="flexItem"></div>
+                        </div>
+
+                        <div class="tagGroup">
+                            <span class="tag gray">space-evenly</span>
+                        </div>
+                        <div class="flexArea jc-evenly">
+                            <div class="flexItem"></div>
+                            <div class="flexItem"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="resultCont">
+                    <div class="titleH3">
+                        <h3>display : align-items</h3>
+                    </div>
+                    <div class="container">
+
+                        <div class="tagGroup">
+                            <span class="tag gray">center</span>
+                        </div>
+                        <div class="flexArea ai-center">
+                            <div class="flexItem">
+                                <span>Item</span>
+                            </div>
+                            <div class="flexItem">
+                                <span>Item</span>
+                            </div>
+                        </div>
+
+                        <div class="tagGroup">
+                            <span class="tag gray">flex-start</span>
+                        </div>
+                        <div class="flexArea ai-start">
+                            <div class="flexItem">
+                                <span>Item</span>
+                            </div>
+                            <div class="flexItem">
+                                <span>Item</span>
+                            </div>
+                        </div>
+
+                        <div class="tagGroup">
+                            <span class="tag gray">flex-end</span>
+                        </div>
+                        <div class="flexArea ai-end">
+                            <div class="flexItem">
+                                <span>Item</span>
+                            </div>
+                            <div class="flexItem">
+                                <span>Item</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="resultCont">
+                    <div class="titleH3">
+                        <h3>flex-basis</h3>
+                    </div>
+                    <div class="container">
+
+                        <div class="tagGroup">
+                            <span class="tag default">flex-basis: auto</span>
+                        </div>
+
+                        <div class="flexArea flex-width fe-basis-d">
+                            <div class="flexItem"></div>
+                        </div>
+
+                        <div class="tagGroup">
+                            <span class="tag gray">flex-basis: 600px (row)</span>
+                        </div>
+
+                        <div class="flexArea flex-width fe-basis">
+                            <div class="flexItem"></div>
+                        </div>
+
+                        <div class="tagGroup">
+                            <span class="tag gray">flex-basis: 600px (column)</span>
+                        </div>
+
+                        <div class="flexArea flex-width fe-basis fd-col">
+                            <div class="flexItem"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="resultCont">
+                    <div class="titleH3">
+                        <h3>flex-grow</h3>
+                    </div>
+                    <div class="container">
+
+                        <div class="tagGroup">
+                            <span class="tag default">flex-grow: 0</span>
+                        </div>
+                        <div class="flexArea flex-width fe-grow-d">
+                            <div class="flexItem"></div>
+                        </div>
+
+                        <div class="tagGroup">
+                            <span class="tag gray">flex-grow: 1</span>
+                        </div>
+                        <div class="flexArea flex-width fe-grow">
+                            <div class="flexItem"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="resultCont">
+                    <div class="titleH3">
+                        <h3>flex-shrink</h3>
+                    </div>
+                    <div class="container">
+
+                        <div class="tagGroup">
+                            <span class="tag default">flex-shrink: 1</span>
+                        </div>
+                        <div class="flexArea flex-width fe-shrink-d">
+                            <div class="flexItem"></div>
+                        </div>
+
+                        <div class="tagGroup">
+                            <span class="tag gray">flex-shrink: 0</span>
+                        </div>
+                        <div class="flexArea flex-width fe-shrink">
+                            <div class="flexItem"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="resultCont">
+                    <div class="titleH3">
+                        <h3>flex</h3>
+                    </div>
+                    <div class="container">
+
+                        <div class="tagGroup">
+                            <span class="tag gray">flex: 1</span>
+                        </div>
+                        <div class="flexArea flex-width flex1">
+                            <div class="flexItem"></div>
+                        </div>
+
+                        <div class="tagGroup">
+                            <span class="tag gray">flex: 0.5</span>
+                        </div>
+                        <div class="flexArea flex-width flex-dp">
+                            <div class="flexItem"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="resultCont">
+                    <div class="titleH3">
+                        <h3>flex-wrap</h3>
+                    </div>
+                    <div class="container">
+
+                        <div class="tagGroup">
+                            <span class="tag default">nowrap</span>
+                        </div>
+                        <div class="flexArea ai-center itemCt flex-width fe-wrap-d">
+                            <div class="flexItem">
+                                <span>Item01</span>
+                            </div>
+                            <div class="flexItem">
+                                <span>Item02</span>
+                            </div>
+                            <div class="flexItem">
+                                <span>Item03</span>
+                            </div>
+                            <div class="flexItem">
+                                <span>Item04</span>
+                            </div>
+                        </div>
+
+                        <div class="tagGroup">
+                            <span class="tag gray">wrap</span>
+                        </div>
+                        <div class="flexArea ai-center itemCt flex-width fe-wrap">
+                            <div class="flexItem">
+                                <span>Item01</span>
+                            </div>
+                            <div class="flexItem">
+                                <span>Item02</span>
+                            </div>
+                            <div class="flexItem">
+                                <span>Item03</span>
+                            </div>
+                            <div class="flexItem">
+                                <span>Item04</span>
+                            </div>
+                        </div>
+
+                        <div class="tagGroup">
+                            <span class="tag gray">wrap-reverse</span>
+                        </div>
+                        <div class="flexArea ai-center itemCt flex-width fe-wrap-re">
+                            <div class="flexItem">
+                                <span>Item01</span>
+                            </div>
+                            <div class="flexItem">
+                                <span>Item02</span>
+                            </div>
+                            <div class="flexItem">
+                                <span>Item03</span>
+                            </div>
+                            <div class="flexItem">
+                                <span>Item04</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="resultCont">
+                    <div class="titleH3">
+                        <h3>gap (flex)</h3>
+                    </div>
+                    <div class="container">
+
+                        <div class="tagGroup">
+                            <span class="tag gray">gap: 20px</span>
+                        </div>
+                        <div class="flexArea flex-width g20 flexWrap flexAdj">
+                            <div class="flexItem"></div>
+                            <div class="flexItem"></div>
+                            <div class="flexItem"></div>
+                            <div class="flexItem"></div>
+                        </div>
+
+                        <div class="tagGroup">
+                            <span class="tag gray">row-gap: 20px</span>
+                        </div>
+                        <div class="flexArea flex-width row-g20 flexWrap flexAdj">
+                            <div class="flexItem"></div>
+                            <div class="flexItem bgGray"></div>
+                            <div class="flexItem"></div>
+                            <div class="flexItem bgGray"></div>
+                        </div>
+
+                        <div class="tagGroup">
+                            <span class="tag gray">column-gap: 20px</span>
+                        </div>
+                        <div class="flexArea flex-width col-g20 flexWrap flexAdj">
+                            <div class="flexItem"></div>
+                            <div class="flexItem"></div>
+                            <div class="flexItem bgGray"></div>
+                            <div class="flexItem bgGray"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="resultCont">
+                    <div class="titleH3">
+                        <h3>order</h3>
+                    </div>
+                    <div class="container">
+
+                        <div class="flexArea fe-order ai-center itemCt flex-width">
+                            <div class="flexItem">
+                                <span>Item01</span>
+                            </div>
+                            <div class="flexItem">
+                                <span>Item02</span>
+                            </div>
+                            <div class="flexItem">
+                                <span>Item03</span>
+                            </div>
+                            <div class="flexItem">
+                                <span>Item04</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         @@include('include/popup-share.html')

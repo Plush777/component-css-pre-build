@@ -131,7 +131,7 @@ $(document).ready(function () {
         "click": function () {
             // window.location.replace('/layout/');
             var layoutPage = location.href
-            layoutPage = layoutPage.replace('/layout/', '/layout/' + menuUrlArr[1] + '/');
+            layoutPage = layoutPage.replace('/layout/' + menuUrlArr[1] + '/');
             console.log(layoutPage);
         }
     })

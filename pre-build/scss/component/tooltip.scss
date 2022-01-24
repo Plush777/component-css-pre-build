@@ -1,6 +1,6 @@
 @import '../common/variable.scss';
 
-.resultArea .inner .toolTipBox{position: relative; width: 150px; border: 1px solid #222; height: 150px;
+.resultArea .inner .toolTipBox{position: relative; width: 150px; border: 1px solid $_222Bg; height: 150px;
     &:hover{
         .exTooltip{opacity: 1; visibility: visible;}
     }

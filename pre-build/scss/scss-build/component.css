@@ -182,7 +182,7 @@ pre {
 #wrap.main .btnStart span {
   position: relative;
   font-size: 22px;
-  font-family: 'Noto Sans';
+  font-family: "Noto Sans";
   margin-right: 20px;
   -webkit-transition: .3s;
   transition: .3s;
@@ -260,7 +260,7 @@ pre {
 
 #wrap.update .mainTxt p {
   font-size: 16px;
-  font-family: 'Noto Sans';
+  font-family: "Noto Sans";
   line-height: 1.5;
   color: #333;
 }
@@ -356,6 +356,7 @@ pre {
 }
 
 .topArea {
+  display: none;
   position: fixed;
   right: 30px;
   bottom: 30px;
@@ -441,7 +442,7 @@ pre {
   padding: 16px 0;
   text-indent: 28px;
   border-bottom: 1px solid rgba(0, 0, 18, 0.08);
-  font-family: 'Noto Sans';
+  font-family: "Noto Sans";
   font-size: 22px;
   color: #707070;
   -webkit-transition: .5s;
@@ -486,7 +487,7 @@ pre {
 
 .leftArea > .leftMenu > li > ul.leftSubMenu li a {
   display: block;
-  font-family: 'Noto Sans';
+  font-family: "Noto Sans";
   font-size: 18px;
   color: #707070;
 }
@@ -588,7 +589,7 @@ pre {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   color: #fff;
-  font-family: 'Noto Sans';
+  font-family: "Noto Sans";
   font-size: 11px;
   border-radius: 3px;
   text-align: center;
@@ -697,7 +698,7 @@ pre {
           flex: 1;
   display: block;
   width: 100%;
-  font-family: 'Noto Sans';
+  font-family: "Noto Sans";
   line-height: 30px;
   -webkit-transition: .5s;
   transition: .5s;
@@ -778,7 +779,7 @@ pre {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  padding: 0 50px;
+  padding: 0 100px;
 }
 
 .rightArea .highlightArea {
@@ -799,7 +800,7 @@ pre {
 
 .rightArea .mainTxt {
   font-size: 16px;
-  font-family: 'Noto Sans';
+  font-family: "Noto Sans";
   line-height: 1.5;
   color: #333;
 }
@@ -814,7 +815,7 @@ pre {
 
 /* h1 ~ h3 */
 .titleH1, .titleH2, .titleH3 {
-  font-family: 'Noto Sans';
+  font-family: "Noto Sans";
   color: #202020;
 }
 
@@ -857,7 +858,7 @@ pre {
   padding: 5px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: 'Noto Sans';
+  font-family: "Noto Sans";
 }
 
 .table th {
@@ -872,7 +873,7 @@ pre {
 
 .table.noticeBoard th, .table.noticeBoard td {
   border: 1px solid #5f5f5f;
-  font-family: 'Noto Sans';
+  font-family: "Noto Sans";
 }
 
 .table.noticeBoard th:last-child, .table.noticeBoard td:last-child {
@@ -979,7 +980,7 @@ pre {
 .popup .cont .inner p {
   font-size: 14px;
   color: #222;
-  font-family: 'Noto Sans';
+  font-family: "Noto Sans";
 }
 
 .popup .cont .inner p + .inputArea {
@@ -1031,7 +1032,7 @@ a.mail:hover {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 4px;
-  font-family: 'Noto Sans';
+  font-family: "Noto Sans";
   font-size: 14px;
   color: #fff;
 }
@@ -1124,7 +1125,7 @@ code[class*=language-], pre[class*=language-] pre {
   min-width: 40px !important;
   padding: 0 10px !important;
   font-size: 12px !important;
-  font-family: 'Noto Sans' !important;
+  font-family: "Noto Sans" !important;
   text-align: center !important;
   -webkit-transition: .5s !important;
   transition: .5s !important;
@@ -1196,7 +1197,7 @@ code[class*=language-], pre[class*=language-] pre {
 .boardList ul li {
   padding: 0;
   list-style: none;
-  font-family: 'Noto Sans';
+  font-family: "Noto Sans";
 }
 
 .boardList .head {
@@ -1300,7 +1301,7 @@ code[class*=language-], pre[class*=language-] pre {
 .boardList .cont .listShowHideBox .inner .tit p {
   font-size: 18px;
   color: #000;
-  font-family: 'Noto Sans';
+  font-family: "Noto Sans";
 }
 
 .boardList .cont .listShowHideBox .inner .tit + dd {
@@ -1310,7 +1311,7 @@ code[class*=language-], pre[class*=language-] pre {
 .boardList .cont .listShowHideBox .inner dd {
   font-size: 14px;
   color: #333;
-  font-family: 'Noto Sans';
+  font-family: "Noto Sans";
 }
 
 .boardList .cont .listShowHideBox .inner dd:before {
@@ -1412,7 +1413,7 @@ code[class*=language-], pre[class*=language-] pre {
   font-size: 16px;
   border: 1px solid #ddd;
   border-radius: 4px;
-  font-family: 'Noto Sans';
+  font-family: "Noto Sans";
   color: rgba(34, 34, 34, 0.5);
   -webkit-transition: 0.35s ease-in-out;
   transition: 0.35s ease-in-out;
@@ -1557,6 +1558,8 @@ i.ico.center {
 }
 
 /* import */
+/* text color */
+/* background */
 .wrap.pre.headerFixed .container, .wrap.pre.headerScroll .container, .wrap.pre.headerToggle .container {
   position: relative;
 }
@@ -1625,10 +1628,6 @@ i.ico.center {
   top: -65px;
 }
 
-.wrap.pre.headerScroll #header.headDown {
-  top: 0;
-}
-
 .wrap.pre.headerToggle {
   position: relative;
   width: 100%;
@@ -1678,6 +1677,8 @@ i.ico.center {
   top: -65px;
 }
 
+/* text color */
+/* background */
 .wrap.pre.gnbHover .container, .wrap.pre.gnb-li-hover .container, .wrap.pre.gnbFind .container {
   width: 1200px;
   margin: 0 auto;
@@ -1776,6 +1777,8 @@ i.ico.center {
   color: #fff;
 }
 
+/* text color */
+/* background */
 .wrap.pre.footerBasic .contents {
   width: 100%;
 }
@@ -2619,6 +2622,8 @@ i.ico.center {
   border-radius: 0 4px 4px 0;
 }
 
+/* text color */
+/* background */
 .customSelect {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2644,7 +2649,7 @@ i.ico.center {
   text-indent: 5px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background: url("../images/ico/ico-select-down.svg") no-repeat center right 10px;
+  background: url("../../images/ico/ico-select-down.svg") no-repeat center right 10px;
 }
 
 .customSelect > ul > li span {
@@ -2783,7 +2788,7 @@ input[type="image"], input[type="color"], input[type="button"] {
 }
 
 .checkbox input[type="checkbox"]:checked + label:before {
-  background-image: url("../images/ico/ico-checkbox-checked.svg");
+  background-image: url("../../images/ico/ico-checkbox-checked.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 25px 25px;
@@ -2875,12 +2880,14 @@ input[type="image"], input[type="color"], input[type="button"] {
   width: 16px;
   height: 16px;
   left: 0;
-  background-image: url("../images/ico/ico-radio-checked.svg");
+  background-image: url("../../images/ico/ico-radio-checked.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 16px 16px;
 }
 
+/* text color */
+/* background */
 .cScroll {
   overflow-y: auto;
   overflow-x: hidden;
@@ -3057,6 +3064,8 @@ input[type="image"], input[type="color"], input[type="button"] {
   display: block;
 }
 
+/* text color */
+/* background */
 /* text color */
 /* background */
 .resultArea .inner .toolTipBox {

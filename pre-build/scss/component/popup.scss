@@ -20,7 +20,7 @@
     &.toastPop{
         #exToast{display: none; position: fixed; top: 50px; left: 50%; transform: translateX(-50%); 
         width: 290px; padding: 12px; box-sizing: border-box; border-radius: 4px; z-index: 9999;
-        background-color: rgba($color: #000, $alpha: 0.65);
+        background-color: rgba($color: $blackBg, $alpha: 0.65);
             span{display: block; text-align: center; font-size: 14px; color: $cfff; font-family: '맑은 고딕';}
         }
     }

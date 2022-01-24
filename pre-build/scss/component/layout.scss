@@ -16,12 +16,12 @@
           }
         }
         .titleH3{margin-bottom: 0; padding-bottom: 10px;}
-        .centerBox{padding: 50px; border: 2px solid #000; font-size: 22px; font-family: 'Noto Sans';}
+        .centerBox{padding: 50px; border: 2px solid $blackBg; font-size: 22px; font-family: $d-fz;}
       }
   
       &.bgImage{
         .resultCont{position: relative;
-          .imgDiv{height: 600px; background-image: url("../images/common/1903x600.png"); background-repeat: no-repeat;}
+          .imgDiv{height: 600px; background-image: url("../../images/common/1903x600.png"); background-repeat: no-repeat;}
           &.type01{
             .imgDiv{background-size: cover;}
           }
@@ -34,7 +34,7 @@
       
       &.leftMenu{
         .leftAreaType02{position: fixed; left: 0; width: 300px; height: 100%;
-          overflow-y: auto; z-index: 1100;background-color: #1C253D;box-shadow: 0px 0px 3px 2px rgba($color: #fff, $alpha: 0.5);
+          overflow-y: auto; z-index: 1100;background-color: #1C253D;box-shadow: 0px 0px 3px 2px rgba($color: $whiteBg, $alpha: 0.5);
           >.leftMenu{
             >li{position: relative; cursor: pointer;
               &.noDepth{
@@ -43,13 +43,13 @@
               span{position: relative; display: block; padding: 16px 0; text-indent: 28px;
               font-family: 'Noto Sans Light'; font-size: 22px; color: $cfff; transition: .5s;
                 &:after{content: ''; width: 15px;height: 9px; position: absolute; top: 50%; right: 28px; transition: .5s;
-                transform: translateY(-50%);background: url("../images/ico/ico-down.svg") no-repeat;}
+                transform: translateY(-50%);background: url("../../images/ico/ico-down.svg") no-repeat;}
               }
               a{display: block;}
               >a{display: block;}
               >ul.leftSubMenu{display: none; background-color: #273147; 
                 li{height: 55px; line-height: 57px;
-                  a{display: block; font-family: 'Noto Sans'; font-size: 18px; color: rgba($color: #fff, $alpha: 0.8);
+                  a{display: block; font-family: $d-fz; font-size: 18px; color: rgba($color: $cfff, $alpha: 0.8);
                   text-indent: 50px; font-family: 'Noto Sans Light';
                     &:hover{background-color: #485162;}
                   }
@@ -70,15 +70,17 @@
 
       &.floating{
         &.h2000{height: 2000px;}
-        #floatingMenu{position: fixed; right: 20px; bottom: 20px;
+        #floatingMenu{position: fixed; right: 40px; bottom: 20px;
           .menuArea{
-            .btnMenuList{width: 56px; height: 56px; border-radius: 50px; box-shadow: 0px 0px 8px 4px rgba($color: #000000, $alpha: 0.25); 
+            .btnMenuList{width: 56px; height: 56px; border-radius: 50px; box-shadow: 0px 0px 8px 4px rgba($color: $blackBg, $alpha: 0.25); 
             background: $c333 url("../../images/ico/ico-plus-w.png")no-repeat center;
-              &:hover ul.menuList li{visibility: visible; transform: translateY(0) scale(1);}
+              &:hover ul.menuList{
+                li{visibility: visible; transform: translateY(0) scale(1);}
+              }
             }
-            ul.menuList{position: absolute; top: -211px; display: flex; flex-direction: column; 
+            ul.menuList{position: absolute; top: -211px;
               li{visibility: hidden; transform: translateY(0) scale(0); transition: .5s; transition-delay: 0.03s; margin: 0 auto;
-              width: 56px; height: 56px; border-radius: 50px; box-shadow: 0px 0px 8px 4px rgba($color: #000000, $alpha: 0.25); background-color: $c333;
+              width: 56px; height: 56px; border-radius: 50px; box-shadow: 0px 0px 8px 4px rgba($color: $blackBg, $alpha: 0.25); background-color: $c333;
                 a{display: block; width: inherit; height: inherit;}
                 +li{margin-top: 15px;}
               }
@@ -91,8 +93,8 @@
         .resultCont{position: relative; padding: 50px; box-sizing: border-box;
           .container{
             .flexArea{display: flex;
-              .flexItem{display: flex; width: 200px; height: 200px; max-width: 200px; font-size: 16px; font-family: 'Noto Sans'; 
-              color: #fff; background-color: #000;
+              .flexItem{display: flex; width: 200px; height: 200px; max-width: 200px; font-size: 16px; font-family: $d-fz; 
+              color: $cfff; background-color: $blackBg;
                 &.bgGray{background-color: #444;}
                 +.flexItem{margin-left: 10px;}
               }
@@ -169,10 +171,10 @@
 
 .tagGroup{
   .tag{display: inline-flex; justify-content: center; min-width: 50px; height: 25px; line-height: 25px; 
-  padding: 0 10px; box-sizing: border-box; font-size: 16px; border-radius: 4px; font-family: 'Noto Sans'; 
+  padding: 0 10px; box-sizing: border-box; font-size: 16px; border-radius: 4px; font-family: $d-fz; 
   color: $cfff; box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.35);
     &.default{background-color: #ffa500;} //기본값 컬러
-    &.gray{background-color: #333;}
+    &.gray{background-color: $_333Bg;}
   }
 }
 
@@ -185,9 +187,9 @@
   
     &.type01{margin-bottom: 30px;
       >.tabNav{margin-bottom: 15px;
-        >.tabList{border-bottom: 2px solid #ddd; border-radius: 4px; background-color: #fff;
+        >.tabList{border-bottom: 2px solid $dddBg; border-radius: 4px; background-color: $whiteBg;
           >li{position: relative; flex: 1; height: 35px; line-height: 35px;font-size: 18px;
-          cursor: pointer; text-align: center; color: #000; font-family: 'Noto Sans';
+          cursor: pointer; text-align: center; color: $c000; font-family: $d-fz;
             &.orange.active:before{background-color: #ed5e26;}
             &.pink.active:before{background-color: #cf649a;}
             &.blue.active:before{background-color: #2693cc;}
@@ -202,10 +204,10 @@
   
     &.typeEx{
       >.tabNav{
-        >.tabList{display: flex;border: 1px solid #ddd; border-radius: 4px; font-size: 16px; color: #222;
+        >.tabList{display: flex;border: 1px solid $dddBg; border-radius: 4px; font-size: 16px; color: $c222;
           >li{position: relative; flex: 1; height: 50px; line-height: 50px; padding: 0 10px; cursor: pointer; 
-          box-sizing: border-box; text-align: center; background-color: #fff; font-family: 'Noto sans';
-            &.active{border-radius: 4px 0 0 4px; font-weight: bold;color: #fff;background-color: #266bf7;
+          box-sizing: border-box; text-align: center; background-color: $cfff; font-family: $d-fz;
+            &.active{border-radius: 4px 0 0 4px; font-weight: bold;color: $cfff;background-color: $blueBg;
               &:last-child{border-radius: 0 4px 4px 0;}
             }
           }

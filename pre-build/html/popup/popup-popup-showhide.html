@@ -173,182 +173,181 @@
               <div class="tabCont active">
                 <div class="highlightArea cScroll">
                   <pre>
-                              <code class="language-html">
-  &lt;div class="popup"&gt;
-      &lt;div class="head"&gt;
-          &lt;p&gt;Title&lt;/p&gt;
-          &lt;button type="button" class="btnClose"&gt;
-              &lt;span class="hidden"&gt;팝업 닫기&lt;/span&gt;
-          &lt;/button&gt;
-      &lt;/div&gt;
-      &lt;div class="cont"&gt;
-          &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur molestias perferendis dolore sapiente? Voluptas eum temporibus dolorem eius, sapiente maxime, fuga minus repellendus eveniet unde quia quis officiis fugiat dicta.&lt;/p&gt;
-      &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class="exDimmed"&gt;&lt;/div&gt;
-  &lt;button type="button" class="btnShowHide"&gt;팝업 열기&lt;/button&gt;
-                              </code>
-                            </pre>
+                    <code class="language-html">
+&lt;div class="popup"&gt;
+&lt;div class="head"&gt;
+&lt;p&gt;Title&lt;/p&gt;
+&lt;button type="button" class="btnClose"&gt;
+  &lt;span class="hidden"&gt;팝업 닫기&lt;/span&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class="cont"&gt;
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur molestias perferendis dolore sapiente? Voluptas eum temporibus dolorem eius, sapiente maxime, fuga minus repellendus eveniet unde quia quis officiis fugiat dicta.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="exDimmed"&gt;&lt;/div&gt;
+&lt;button type="button" class="btnShowHide"&gt;팝업 열기&lt;/button&gt;
+                    </code>
+                  </pre>
                 </div>
               </div>
 
               <div class="tabCont">
                 <div class="highlightArea cScroll">
                   <pre>
-                              <code class="language-scss">
-  $c333 : #333 !default;
-  $cfff : #fff !default;
-  $d-fz : 'Noto Sans';
-  $blueBg : #266bf7;
+                    <code class="language-scss">
+$c333 : #333 !default;
+$cfff : #fff !default;
+$d-fz : 'Noto Sans';
+$blueBg : #266bf7;
 
-  .wrap{position: relative;
-      .popup{position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 10000; box-shadow: 0px 0px 8px rgba($color: #000, $alpha: 0.35); display: none; width: 300px; border-radius: 4px;
-          .head{height: 50px; line-height: 50px; padding: 0 15px; box-sizing: border-box; border-radius: 4px 4px 0 0;
-          color: $cfff; font-family: $d-fz; font-size: 16px; background-color: $blueBg;
-              .btnClose{position: absolute; top: 17px; right: 15px; width: 21px; height: 21px; background: url("../../images/ico/ico-pop-close.png") no-repeat center;}
-          }
-          .cont{padding: 20px; box-sizing: border-box; border-radius: 0 0 4px 4px; 
-          font-family: $d-fz; font-size: 14px; background-color: $whiteBg;}
-      }
+.wrap{position: relative;
+  .popup{position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 10000; box-shadow: 0px 0px 8px rgba($color: #000, $alpha: 0.35); display: none; width: 300px; border-radius: 4px;
+  .head{height: 50px; line-height: 50px; padding: 0 15px; box-sizing: border-box; border-radius: 4px 4px 0 0;
+  color: $cfff; font-family: $d-fz; font-size: 16px; background-color: $blueBg;
+    .btnClose{position: absolute; top: 17px; right: 15px; width: 21px; height: 21px; background: url("../../images/ico/ico-pop-close.png") no-repeat center;}
+}
+.cont{padding: 20px; box-sizing: border-box; border-radius: 0 0 4px 4px; 
+font-family: $d-fz; font-size: 14px; background-color: $whiteBg;}
+}
 
-      .btnShowHide{position: absolute; top: 620px; left: 50%; transform: translateX(-50%); display: flex; align-items: center; 
-      justify-content: center; height: 50px; line-height: 50px;padding: 0 20px; box-sizing: border-box; border-radius: 4px; 
-      font-family: $d-fz; font-size: 16px; color: $cfff; background-color: $blueBg;}
-      .exDimmed{display: none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0, 0, 0,0.6);}
-  }
-                              </code>
-                          </pre>
+.btnShowHide{position: absolute; top: 620px; left: 50%; transform: translateX(-50%); display: flex; align-items: center; 
+justify-content: center; height: 50px; line-height: 50px;padding: 0 20px; box-sizing: border-box; border-radius: 4px; 
+font-family: $d-fz; font-size: 16px; color: $cfff; background-color: $blueBg;}
+.exDimmed{display: none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0, 0, 0,0.6);}
+}
+                    </code>
+                  </pre>
                 </div>
               </div>
 
               <div class="tabCont">
                 <div class="highlightArea cScroll">
                   <pre>
-                              <code class="language-css">
-  .wrap {
-      position: relative;
-  }
+                    <code class="language-css">
+.wrap {
+  position: relative;
+}
 
-  .wrap .popup {
-      display: none;
-      position: fixed; 
-      top: 50%; 
-      left: 50%; 
-      -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-      -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.35);
-            box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.35);
-      width: 300px;
-      border-radius: 4px;
-      z-index: 10000;
-  }
+.wrap .popup {
+  display: none;
+  position: fixed; 
+  top: 50%; 
+  left: 50%; 
+  -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.35);
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.35);
+  width: 300px;
+  border-radius: 4px;
+  z-index: 10000;
+}
 
-  .wrap .popup .head {
-      height: 50px;
-      line-height: 50px;
-      padding: 0 15px;
-      -webkit-box-sizing: border-box;
-              box-sizing: border-box;
-      border-radius: 4px 4px 0 0;
-      color: #fff;
-      font-family: "Noto Sans";
-      font-size: 16px;
-      background-color: #266bf7;
-  }
+.wrap .popup .head {
+  height: 50px;
+  line-height: 50px;
+  padding: 0 15px;
+  -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+  border-radius: 4px 4px 0 0;
+  color: #fff;
+  font-family: "Noto Sans";
+  font-size: 16px;
+  background-color: #266bf7;
+}
 
-  .wrap .popup .head .btnClose {
-      position: absolute;
-      top: 17px;
-      right: 15px;
-      width: 21px;
-      height: 21px;
-      background: url("../../images/ico/ico-pop-close.png") no-repeat center;
-  }
+.wrap .popup .head .btnClose {
+  position: absolute;
+  top: 17px;
+  right: 15px;
+  width: 21px;
+  height: 21px;
+  background: url("../../images/ico/ico-pop-close.png") no-repeat center;
+}
 
-  .wrap .popup .cont {
-      padding: 20px;
-      -webkit-box-sizing: border-box;
-              box-sizing: border-box;
-      border-radius: 0 0 4px 4px;
-      font-family: "Noto Sans";
-      font-size: 14px;
-      background-color: #fff;
-  }
+.wrap .popup .cont {
+  padding: 20px;
+  -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+  border-radius: 0 0 4px 4px;
+  font-family: "Noto Sans";
+  font-size: 14px;
+  background-color: #fff;
+}
 
-  .wrap .btnShowHide {
-      position: absolute;
-      top: 620px;
-      left: 50%;
-      -webkit-transform: translateX(-50%);
-              transform: translateX(-50%);
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center;
-      -webkit-box-pack: center;
-          -ms-flex-pack: center;
-              justify-content: center;
-      height: 50px;
-      line-height: 50px;
-      padding: 0 20px;
-      -webkit-box-sizing: border-box;
-              box-sizing: border-box;
-      border-radius: 4px;
-      font-family: "Noto Sans";
-      font-size: 16px;
-      color: #fff;
-      background-color: #266bf7;
-  }
+.wrap .btnShowHide {
+  position: absolute;
+  top: 620px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      transform: translateX(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+      align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 20px;
+  -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+  border-radius: 4px;
+  font-family: "Noto Sans";
+  font-size: 16px;
+  color: #fff;
+  background-color: #266bf7;
+}
 
-  .wrap .exDimmed {
-      display: none;
-      position: fixed;
-      z-index: 9999;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.6);
-    }
-                              </code>
-                            </pre>
+.wrap .exDimmed {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+                    </code>
+                  </pre>
                 </div>
               </div>
 
               <div class="tabCont">
                 <div class="highlightArea cScroll">
                   <pre>
-                              <code class="language-javascript">
-  $(document).ready(function(){
-      $('.wrap .btnShowHide').on({
-          "click":function(){
-              $('.popup').show();
-              $('.exDimmed').show();
-          }
-      });
+                    <code class="language-javascript">
+$(document).ready(function(){
+    $('.wrap .btnShowHide').on({
+        "click":function(){
+            $('.popup').show();
+            $('.exDimmed').show();
+        }
+    });
 
-      $('.btnClose').on({
-          "click":function(){
-              $('.popup').hide();
-              $('.exDimmed').remove();
-          }
-      });
-  });
-                              </code>
-                            </pre>
+    $('.btnClose').on({
+        "click":function(){
+            $('.popup').hide();
+            $('.exDimmed').remove();
+        }
+    });
+});
+                    </code>
+                  </pre>
                 </div>
               </div>
             </div>
+            <div class="btnArea end">
+              <button type="button" class="button Bgblue btnResult">
+                <span>결과보기</span>
+                <i class="ico result"></i>
+              </button>
+            </div>
           </div>
-        </div>
-
-        <div class="btnArea end">
-          <button type="button" class="button Bgblue btnResult">
-            <span>결과보기</span>
-            <i class="ico result"></i>
-          </button>
         </div>
       </div>
     </div>

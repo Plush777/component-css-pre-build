@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "AACA,gBAAgB;AAUhB,gBAAgB",
+    "mappings": "AACA,gBAAgB;AAahB,gBAAgB",
     "sources": [
         "../common/variable.scss"
     ],

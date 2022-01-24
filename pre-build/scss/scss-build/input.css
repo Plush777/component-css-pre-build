@@ -1,3 +1,5 @@
+/* text color */
+/* background */
 .customSelect {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -23,14 +25,14 @@
   text-indent: 5px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background: url("../images/ico/ico-select-down.svg") no-repeat center right 10px;
+  background: url("../../images/ico/ico-select-down.svg") no-repeat center right 10px;
 }
 
 .customSelect > ul > li span {
   display: block;
   line-height: 28px;
   color: #222;
-  font-family: 'Noto Sans';
+  font-family: "Noto Sans";
   cursor: pointer;
 }
 
@@ -69,7 +71,7 @@ textarea {
   padding: 10px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: 'Noto Sans';
+  font-family: "Noto Sans";
   border-radius: 4px;
   color: #222;
   font-size: 14px;
@@ -108,7 +110,7 @@ input {
   padding-left: 5px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: 'Noto Sans';
+  font-family: "Noto Sans";
   border-radius: 4px;
   color: #222;
   background-color: #fff;
@@ -130,7 +132,7 @@ input[type="image"], input[type="color"], input[type="button"] {
   padding: 0 5px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: 'Noto Sans';
+  font-family: "Noto Sans";
   border-radius: 2px;
   color: #222;
   vertical-align: middle;
@@ -162,7 +164,7 @@ input[type="image"], input[type="color"], input[type="button"] {
 }
 
 .checkbox input[type="checkbox"]:checked + label:before {
-  background-image: url("../images/ico/ico-checkbox-checked.svg");
+  background-image: url("../../images/ico/ico-checkbox-checked.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 25px 25px;
@@ -173,7 +175,7 @@ input[type="image"], input[type="color"], input[type="button"] {
   vertical-align: middle;
   font-size: 14px;
   color: #222;
-  font-family: 'Noto Sans';
+  font-family: "Noto Sans";
   cursor: pointer;
 }
 
@@ -254,7 +256,7 @@ input[type="image"], input[type="color"], input[type="button"] {
   width: 16px;
   height: 16px;
   left: 0;
-  background-image: url("../images/ico/ico-radio-checked.svg");
+  background-image: url("../../images/ico/ico-radio-checked.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 16px 16px;

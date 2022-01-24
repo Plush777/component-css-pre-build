@@ -1,15 +1,17 @@
+@import '../common/variable.scss';
+
 .wrap.pre{
     &.headerFixed,&.headerScroll,&.headerToggle{
         .container{position: relative;}
-        #header{position: fixed; width: 100%; height: 65px; z-index: 1000; background-color: #333;
+        #header{position: fixed; width: 100%; height: 65px; z-index: 1000; background-color: $_333Bg;
             .inner{display: flex; align-items: center; justify-content: center; padding: 15px; box-sizing: border-box;
                 span{display: inline-block; line-height: 32px; 
-                font-size: 20px; font-family: 'Noto Sans'; color: #fff;}
+                font-size: 20px; font-family: $d-fz; color: $cfff;}
             }
         }
         .contents{position: absolute; top: 0; width: 100%; height: 2000px;
         display: flex; align-items: center; justify-content: center; background-color: #555;
-            span{font-size: 30px; font-family: 'Noto Sans'; color: #fff;}
+            span{font-size: 30px; font-family: $d-fz; color: $cfff;}
         }
     }
 
@@ -23,7 +25,7 @@
         #bg{position: absolute; width: inherit; height: inherit; background-image: url("../../images/common/img-map.PNG");
         background-repeat: no-repeat; background-size: cover;}
         .btnHeadToggle{position: absolute; top: 26px; left: 50%; z-index: 990; transform: translateX(-50%); width: 70px; height: 70px; 
-        border-radius: 50%; border: 1px solid rgba($color: #222, $alpha: 0.5); background-size: 22px 22px; background-color: #fff; 
+        border-radius: 50%; border: 1px solid rgba($color: $_222Bg, $alpha: 0.5); background-size: 22px 22px; background-color: $whiteBg; 
         background-image: url("../../images/ico/ico-result-close.png"); background-repeat: no-repeat; background-position: center 40px; transition: .5s;
             &.active{top: -40px;}
         }

@@ -1,8 +1,9 @@
 {
     "version": 3,
-    "mappings": "",
+    "mappings": "ACCA,gBAAgB;AAUhB,gBAAgB",
     "sources": [
-        "../component/etc.scss"
+        "../component/etc.scss",
+        "../common/variable.scss"
     ],
     "names": [],
     "file": "etc.css"

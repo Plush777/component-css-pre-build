@@ -1,16 +1,18 @@
+@import '../common/variable.scss';
+
 .wrap.pre{
     &.gnbHover,&.gnb-li-hover,&.gnbFind{
         .container{width: 1200px; margin: 0 auto; padding-top: 60px;}
         #gnb{width: 100%;
-            #menuBg{display: none; position: absolute; left: 0; top: 120px; width: 100%; height:365px; border-top: 1px solid #ddd;
-            box-shadow:-3px 3px 3px 0 rgba(0, 0, 0, 0.2); background-color: #fff; z-index: 1000;}
+            #menuBg{display: none; position: absolute; left: 0; top: 120px; width: 100%; height:365px; border-top: 1px solid $dddBg;
+            box-shadow:-3px 3px 3px 0 rgba(0, 0, 0, 0.2); background-color: $whiteBg; z-index: 1000;}
             ul.menuList{display: flex; justify-content: space-between;
                 a{display: block;}
                 >li{position: relative; line-height: 50px; text-align: center;
-                    >a{min-width: 80px; font-size: 24px; font-family: 'Noto Sans'; color: #000;}
+                    >a{min-width: 80px; font-size: 24px; font-family: $d-fz; color: $c000;}
                     .depthTwo{display: none; position: absolute; top: 80px; z-index: 1000; 
                         >li{line-height: 50px;
-                            >a{display: block; font-size: 16px; font-family: 'Noto Sans'; color: #444;}
+                            >a{display: block; font-size: 16px; font-family: $d-fz; color: #444;}
                         }
                     }
                 }
@@ -20,12 +22,12 @@
 
     &.gnbFind{
         #gnb{
-            ul.menuList{background-color: rgba($color: #333, $alpha: 0.5);
+            ul.menuList{background-color: rgba($color: $_333Bg, $alpha: 0.5);
                 li{padding: 5px; box-sizing: border-box; min-width: 130px;
-                    >a{color: #fff;}
+                    >a{color: $cfff;}
                     .depthTwo{top: 60px; left: 0;
-                        >li{border: 1px solid #ddd; border-top: 0; background-color: rgba($color: #333, $alpha: 0.8);
-                            >a{color: #fff;}
+                        >li{border: 1px solid $dddBg; border-top: 0; background-color: rgba($color: $_333Bg, $alpha: 0.8);
+                            >a{color: $cfff;}
                         }
                     }
                 }

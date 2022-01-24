@@ -69,15 +69,6 @@ $(document).ready(function () {
         }
     });
 
-
-    // $(document).on({"mouseup":function(e){
-    //     if($('.moreSubMenu').has(e.target).length == 0){
-    //         $('.moreSubMenu').removeClass('active');
-    //     }
-    // }
-    // });
-
-
     var tabList = $('.tabList li');
 
     $(tabList).on({
@@ -110,31 +101,31 @@ $(document).ready(function () {
         }
     });
 
-    // var urlState = window.location.pathname;
+    var urlState = window.location.pathname;
     // console.log(urlState);
-    // var urlArr = urlState.split('/');
+    var urlArr = urlState.split('/');
     // console.log(urlArr);
 
     /* 서브 홈버튼 */
-    // $('.btnBack').on({
-    //     "click": function () {
-    //         location.href = urlArr[0] + '/' + 'html/sub_first.html';
-    //     }
-    // })
-
-    var menuUrlPath = window.location.pathname;
-    console.log(menuUrlPath);
-    var menuUrlArr = menuUrlPath.split('/');
-    console.log(menuUrlArr);
-
-    $('.leftArea > .leftMenu > li > ul.leftSubMenu li a.layoutPage').on({
+    $('.btnBack').on({
         "click": function () {
-            // window.location.replace('/layout/');
-            var layoutPage = location.href
-            layoutPage = layoutPage.replace('/layout/' + menuUrlArr[1] + '/');
-            console.log(layoutPage);
+            location.href = urlArr[0] + '/' + 'html/sub_first.html';
         }
     })
+
+    // var menuUrlPath = window.location.pathname;
+    // console.log(menuUrlPath);
+    // var menuUrlArr = menuUrlPath.split('/');
+    // console.log(menuUrlArr);
+
+    // $('.leftArea > .leftMenu > li > ul.leftSubMenu li a.layoutPage').on({
+    //     "click": function () {
+    //         // window.location.replace('/layout/');
+    //         var layoutPage = location.href
+    //         layoutPage = layoutPage.replace('/layout/' + menuUrlArr[1] + '/');
+    //         console.log(layoutPage);
+    //     }
+    // })
 
     /* 히스토리 개수 */
     historyCount = history.length;
@@ -214,8 +205,9 @@ $(document).ready(function () {
         }
     })
 
-    const hCalcBody = $('#frameBody').height();
-    const hCalcWrap = $('#frameBody .wrap').height();
+    let hCalcBody = $('#frameBody').height();
+    let hCalcWrap = $('#frameBody .wrap').height();
+    // let hCalcContents = $('#frameBody .contents').height();
     console.log(hCalcBody, hCalcWrap);
 
     if (hCalcWrap > hCalcBody) {
@@ -223,6 +215,31 @@ $(document).ready(function () {
     } else {
         $('#frameBody .btnArea').removeClass('r20');
     }
+
+    /* #wrap 스크롤 존재여부확인 */
+    $.fn.hasScrollBar = function() {
+        return (this.prop("scrollHeight") == 0 && this.prop("clientHeight") == 0) || (this.prop("scrollHeight") > this.prop("clientHeight"));
+      };
+
+    if (!$('#wrap').hasScrollBar() == true) {
+        $('.topArea').css('display', 'none');
+    }
+
+    /* 스크롤 위치가 맨아래까지 가면 탑버튼 fadeIn */
+    $(window).scroll(function() {
+        if($(window).scrollTop() + $(window).height() == $(document).height()) {
+            $('.topArea').fadeIn();
+        }else{
+            $('.topArea').fadeOut();
+        }
+     });
+
+    /* frameBody esc */
+    $(document).on('keyup', function (e) {
+        if (e.keyCode == 27) {
+            $('#frameBody').hide();
+        }
+    });
 
     function liShowHideBoxClose() {
         $('.boardBox .boardItem:last-child').addClass('underLine');
@@ -233,7 +250,6 @@ $(document).ready(function () {
     } else {
         liShowHideBoxClose();
     }
-
 
     function clipBoard() {
         var clipboard = new ClipboardJS('.btnClip');
@@ -251,6 +267,7 @@ $(document).ready(function () {
         clipBoard();
     }
 
+    /* popup esc */
     function popupEscEvent() {
         $(document).on('keyup', function (e) {
             if (e.keyCode == 27) {

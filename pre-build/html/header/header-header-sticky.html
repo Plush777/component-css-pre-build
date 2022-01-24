@@ -296,30 +296,16 @@
                 <div class="highlightArea cScroll">
                   <pre>
                               <code class="language-javascript">
-  var lastScrollTop = 0; 
-  var delta = 1;
-  var navbarHeight = $('#header').outerHeight(); 
-
-  setInterval(function() {
-      hasScrolled();
-  }, 100);
-
-  function hasScrolled() {
-      var st = $(this).scrollTop();
-      
-      if(Math.abs(lastScrollTop - st) <= delta)
-          return; 
-      
-      if (st > lastScrollTop && st > navbarHeight){ 
-          $('#header').removeClass('headDown').addClass('headUp'); } 
-      else { 
-          if(st + $(window).height() < $(document).height()){ 
-              $('#header').removeClass('headUp').addClass('headDown'); 
-          } 
-      }
-
-      lastScrollTop = st;
-  };
+var lastScrollTop = 0;
+$('#frameBody').scroll(function () {
+    var st = $(this).scrollTop();
+    if (st > lastScrollTop) {
+        $('#header').removeClass('headDown').addClass('headUp');
+    } else {
+        $('#header').removeClass('headUp').addClass('headDown');
+    }
+    lastScrollTop = st;
+});
                               </code>
                             </pre>
                 </div>

@@ -1,3 +1,5 @@
+/* text color */
+/* background */
 .wrap.pre.headerFixed .container, .wrap.pre.headerScroll .container, .wrap.pre.headerToggle .container {
   position: relative;
 }
@@ -29,7 +31,7 @@
   display: inline-block;
   line-height: 32px;
   font-size: 20px;
-  font-family: 'Noto Sans';
+  font-family: "Noto Sans";
   color: #fff;
 }
 
@@ -52,7 +54,7 @@
 
 .wrap.pre.headerFixed .contents span, .wrap.pre.headerScroll .contents span, .wrap.pre.headerToggle .contents span {
   font-size: 30px;
-  font-family: 'Noto Sans';
+  font-family: "Noto Sans";
   color: #fff;
 }
 
@@ -64,10 +66,6 @@
 
 .wrap.pre.headerScroll #header.headUp {
   top: -65px;
-}
-
-.wrap.pre.headerScroll #header.headDown {
-  top: 0;
 }
 
 .wrap.pre.headerToggle {

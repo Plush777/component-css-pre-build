@@ -1,3 +1,5 @@
+/* text color */
+/* background */
 .cScroll {
   overflow-y: auto;
   overflow-x: hidden;
@@ -44,7 +46,7 @@
 .mouseMenu li {
   width: 150px;
   padding: 5px;
-  font-family: 'Noto Sans';
+  font-family: "Noto Sans";
 }
 
 .mouseMenu li:hover {

@@ -16,16 +16,15 @@
     &.headerScroll{
         #header{top: 0; transition: .2s ease;
             &.headUp{top: -65px;}
-            &.headDown{top: 0;}
         }
     }
 
     &.headerToggle{position: relative; width: 100%; height: 100%;
-        #bg{position: absolute; width: inherit; height: inherit; background-image: url("../images/common/img-map.PNG");
+        #bg{position: absolute; width: inherit; height: inherit; background-image: url("../../images/common/img-map.PNG");
         background-repeat: no-repeat; background-size: cover;}
         .btnHeadToggle{position: absolute; top: 26px; left: 50%; z-index: 990; transform: translateX(-50%); width: 70px; height: 70px; 
         border-radius: 50%; border: 1px solid rgba($color: #222, $alpha: 0.5); background-size: 22px 22px; background-color: #fff; 
-        background-image: url("../images/ico/ico-result-close.png"); background-repeat: no-repeat; background-position: center 40px; transition: .5s;
+        background-image: url("../../images/ico/ico-result-close.png"); background-repeat: no-repeat; background-position: center 40px; transition: .5s;
             &.active{top: -40px;}
         }
         #header{top: 0; transition: .5s;

@@ -1,7 +1,7 @@
 .customSelect{display: flex; flex: 1;
     >ul{flex: 1;
       >li{flex: 1; height: 30px; position: relative; border: 1px solid #ddd;
-      text-indent: 5px; box-sizing: border-box; background: url("../images/ico/ico-select-down.svg")no-repeat center right 10px;
+      text-indent: 5px; box-sizing: border-box; background: url("../../images/ico/ico-select-down.svg")no-repeat center right 10px;
         span{display: block; line-height: 28px; color: #222; font-family: 'Noto Sans'; cursor: pointer;}
         .selList{display: none; position: absolute; top: 29px; left: -1px; width: 100%; z-index: 200; 
         border: 1px solid #ddd; border-top: 0; border-radius: 0 0 4px 4px; background-color: #fff;
@@ -44,7 +44,7 @@ font-family: 'Noto Sans'; border-radius: 2px; color: #222; vertical-align: middl
 .checkbox{display: inline-block;
     input[type="checkbox"]{display: none;
       &:checked+label{
-        &:before{background-image: url("../images/ico/ico-checkbox-checked.svg");
+        &:before{background-image: url("../../images/ico/ico-checkbox-checked.svg");
         background-repeat: no-repeat; background-position: center; background-size: 25px 25px;
         border: 0;
         }
@@ -70,7 +70,7 @@ font-family: 'Noto Sans'; border-radius: 2px; color: #222; vertical-align: middl
     &.imgType{
       input[type="radio"]:checked+label{
         &:after{content: ''; border: 0; width: 16px; height: 16px; left: 0;
-        background-image: url("../images/ico/ico-radio-checked.svg");
+        background-image: url("../../images/ico/ico-radio-checked.svg");
         background-repeat: no-repeat ; background-position: center; background-size: 16px 16px;
         }
       }

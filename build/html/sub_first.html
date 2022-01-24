@@ -5,11 +5,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" href="../images/ico/ico-favi.png" sizes="16x16" />
-  <link rel="stylesheet" href="../css/component.css" type="text/css" />
-  <link rel="stylesheet" href="../css/prism.css" type="text/css" />
+  <link rel="stylesheet" href="../css/common/component.css" type="text/css" />
+  <link rel="stylesheet" href="../css/library/prism.css" type="text/css" />
   <script type="text/javascript" src="../lib/jquery-1.12.4.js"></script>
   <script type="text/javascript" src="../lib/swiper/js/swiper.js"></script>
-  <script src="../js/library/prism.js"></script>
+  <script src="../lib/prism.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
   <script type="text/javascript" src="../js/component.js"></script>
   <script type="text/javascript" src="../js/error.js"></script>
@@ -189,51 +189,54 @@
       </div>
 
       <div class="utilArea">
-  <ul>
-    <!-- <li>
+    <ul>
+        <!-- <li>
         <button type="button" class="btnDarkMode">
             <span class="hidden">다크모드 전환</span>
         </button>
     </li> -->
-      <li>
-          <a href="mailto:sky11916@naver.com" class="btnMail">
-              <span class="hidden">문의</span>
-              <div class="toolTip mail">
-                  <span>메일 문의</span>
-              </div>
-          </a>
-      </li>
-      <li>
-          <button type="button" class="btnShare">
-              <span class="hidden">공유</span>
-              <div class="toolTip share">
-                  <span>공유하기</span>
-              </div>
-          </button>
-          
-      </li>
-      <li>
-          <button type="button" class="btnMore">
-            <span class="hidden">더보기</span>
-              <div class="moreSubMenu">
-                <ul>
-                    <li>
-                        <a href="https://github.com/Plush777" target="_blank">Github</a>
-                    </li>
-                    <li>
-                        <a href="https://velog.io/@sky" target="_blank">Velog</a>
-                    </li>
-                    <li>
-                        <a href="update-note.html" target="_blank">Update note</a>
-                    </li>
-                </ul>
-              </div>
-              <div class="toolTip more">
-                  <span>더보기</span>
-              </div>
-          </button>
-      </li>
-  </ul>
+        <li>
+            <a href="mailto:sky11916@naver.com" class="btnMail">
+                <span class="hidden">문의</span>
+                <div class="toolTip mail">
+                    <span>메일 문의</span>
+                </div>
+            </a>
+        </li>
+        <li>
+            <button type="button" class="btnShare">
+                <span class="hidden">공유</span>
+                <div class="toolTip share">
+                    <span>공유하기</span>
+                </div>
+            </button>
+
+        </li>
+        <li>
+            <button type="button" class="btnMore">
+                <span class="hidden">더보기</span>
+                <div class="moreSubMenu">
+                    <ul>
+                        <li>
+                            <a href="https://github.com/Plush777" target="_blank">Github</a>
+                        </li>
+                        <li>
+                            <a href="https://velog.io/@sky" target="_blank">Velog</a>
+                        </li>
+                        <li>
+                            <a href="../../../html/update-note.html" target="_blank">Update note</a>
+                        </li>
+                        <li>
+                            <a href="https://www.buymeacoffee.com/P1ush" target="_blank">buymeacoffee</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="toolTip more">
+                    <span>더보기</span>
+                </div>
+            </button>
+        </li>
+    </ul>
 </div>
 
       <div class="rightArea">
@@ -258,7 +261,7 @@
               <div class="innerTxt">
                 <strong>라이센스</strong>
                 <p>해당 프로젝트에 사용 된 라이브러리 및 플러그인들은 <a href="../html/license.html" class="link" target="_blank">여기서</a>
-                확인하세요.
+                  확인하세요.
                 </p>
               </div>
               <div class="innerTxt">
@@ -277,7 +280,7 @@
               </div>
             </div>
           </div>
-  
+
           <div class="textBox">
             <div class="titleH2">
               <h2>기본 세팅 가이드</h2>
@@ -293,7 +296,7 @@
                   <li class="blue">CSS</li>
                 </ul>
               </div>
-  
+
               <div class="tabCont active">
                 <div class="highlightArea cScroll">
                   <pre>
@@ -317,7 +320,7 @@
                     </pre>
                 </div>
               </div>
-  
+
               <div class="tabCont">
                 <div class="highlightArea cScroll">
                   <pre>
@@ -382,7 +385,7 @@
                   </pre>
                 </div>
               </div>
-  
+
               <div class="tabCont">
                 <div class="highlightArea cScroll">
                   <pre>
@@ -487,7 +490,7 @@
             </div>
           </div>
         </div>
-        
+
       </div>
     </div>
     <div class="popup share">
@@ -508,7 +511,8 @@
     <div class="topArea">
       <button type="button" class="backtoTop">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <polygon fill-rule="evenodd" points="13 5.414 13 22 11 22 11 5.414 4.707 11.707 3.293 10.293 12 1.586 20.707 10.293 19.293 11.707"/>
+          <polygon fill-rule="evenodd"
+            points="13 5.414 13 22 11 22 11 5.414 4.707 11.707 3.293 10.293 12 1.586 20.707 10.293 19.293 11.707" />
         </svg>
         <span class="hidden">위로 올라가기</span>
       </button>

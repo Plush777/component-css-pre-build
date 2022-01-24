@@ -3,7 +3,6 @@
 
 <head>
     @@include('include/head.html')
-    <script src="../../js/component/layout.js"></script>
 </head>
 
 <body>
@@ -173,7 +172,11 @@
                     <span class="hidden">메뉴 열기</span>
                 </button>
             </div>
-
+            <div class="moreArea">
+                <button type="button" class="btnMobileMore">
+                    <span class="hidden">메뉴 열기</span>
+                </button>
+            </div>
             <div class="backArea">
                 <button type="button" class="btnBack">
                     <span class="hidden">뒤로가기</span>
@@ -196,7 +199,7 @@
                                     <li class="blue">CSS</li>
                                 </ul>
                             </div>
-    
+
                             <div class="tabCont active">
                                 <div class="highlightArea cScroll">
                                     <pre>
@@ -229,7 +232,6 @@
                 &lt;/div&gt;
             &lt;/div&gt;
         &lt;/div&gt;
-    
         &lt;div class="resultCont"&gt;
             &lt;div class="titleH3"&gt;
                 &lt;h3&gt;flex-direction&lt;/h3&gt;
@@ -602,7 +604,7 @@
                               </pre>
                                 </div>
                             </div>
-    
+
                             <div class="tabCont">
                                 <div class="highlightArea cScroll">
                                     <pre>
@@ -695,7 +697,7 @@
                                     </pre>
                                 </div>
                             </div>
-    
+
                             <div class="tabCont">
                                 <div class="highlightArea cScroll">
                                     <pre>
@@ -1415,6 +1417,15 @@
             </div>
         </div>
         @@include('include/popup-share.html')
+        <div class="topArea">
+            <button type="button" class="backtoTop">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <polygon fill-rule="evenodd"
+                        points="13 5.414 13 22 11 22 11 5.414 4.707 11.707 3.293 10.293 12 1.586 20.707 10.293 19.293 11.707" />
+                </svg>
+                <span class="hidden">위로 올라가기</span>
+            </button>
+        </div>
     </div>
 </body>
 

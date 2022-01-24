@@ -2,7 +2,7 @@
     "version": 3,
     "mappings": "AACA,gBAAgB;AAUhB,gBAAgB",
     "sources": [
-        "../variable.scss"
+        "../common/variable.scss"
     ],
     "names": [],
     "file": "variable.css"

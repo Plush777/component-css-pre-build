@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="../images/ico/ico-favi.png" sizes="16x16" />
-    <link rel="stylesheet" href="../css/component.css" type="text/css" />
+    <link rel="stylesheet" href="../css/common/component.css" type="text/css" />
     <script type="text/javascript" src="../lib/jquery-1.12.4.js"></script>
-    <script src="../js/paginga.jquery.js"></script>
+    <script src="../lib/paginga.jquery.js"></script>
     <script src="../js/component.js"></script>
     <title>업데이트 노트</title>
 </head>
+
 <body>
     <div id="wrap" class="update">
         <div id="container">
@@ -250,13 +252,14 @@
         </div>
     </div>
     <script>
-        $(function() {
+        $(function () {
             $(".paginate").paginga({
                 page: 1,
                 itemsPerPage: 7,
                 historyHashPrefix: "pageNo-"
             });
         });
-</script>
+    </script>
 </body>
+
 </html>

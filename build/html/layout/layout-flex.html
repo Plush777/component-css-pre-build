@@ -5,15 +5,14 @@
     <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="icon" href="../../images/ico/ico-favi.png" sizes="16x16" />
-<link rel="stylesheet" href="../../css/component.css" type="text/css" />
-<link rel="stylesheet" href="../../css/prism.css" />
+<link rel="stylesheet" href="../../css/common/component.css" type="text/css" />
+<link rel="stylesheet" href="../../css/library/prism.css" />
 <script type="text/javascript" src="../../lib/jquery-1.12.4.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
-<script src="../../../js/library/prism.js"></script>
+<script src="../../lib/prism.js"></script>
+<script src="../../js/component/layout.js"></script>
 <script src="../../js/component.js"></script>
 <title>Component css</title>
-
-    <script src="../../js/component/layout.js"></script>
 </head>
 
 <body>
@@ -23,7 +22,7 @@
                 <ul class="leftMenu">
                     <li>
                         <a href="main.html" title="메인으로">
-                            <img src="../../../images/common/logo.png" alt="서브 메인로고" />
+                            <img src="../../images/common/logo.png" alt="서브 메인로고" />
                             <span class="hidden">메인으로</span>
                         </a>
                     </li>
@@ -183,7 +182,11 @@
                     <span class="hidden">메뉴 열기</span>
                 </button>
             </div>
-
+            <div class="moreArea">
+                <button type="button" class="btnMobileMore">
+                    <span class="hidden">메뉴 열기</span>
+                </button>
+            </div>
             <div class="backArea">
                 <button type="button" class="btnBack">
                     <span class="hidden">뒤로가기</span>
@@ -191,46 +194,49 @@
             </div>
 
             <div class="utilArea">
-  <ul>
-      <li>
-          <a href="mailto:sky11916@naver.com" class="btnMail">
-              <span class="hidden">문의</span>
-              <div class="toolTip mail">
-                  <span>메일 문의</span>
-              </div>
-          </a>
-      </li>
-      <li>
-          <button type="button" class="btnShare">
-              <span class="hidden">공유</span>
-              <div class="toolTip share">
-                  <span>공유하기</span>
-              </div>
-          </button>
-          
-      </li>
-      <li>
-          <button type="button" class="btnMore">
-            <span class="hidden">더보기</span>
-              <div class="moreSubMenu">
-                <ul>
-                    <li>
-                        <a href="https://github.com/Plush777" target="_blank">Github</a>
-                    </li>
-                    <li>
-                        <a href="https://velog.io/@sky" target="_blank">Velog</a>
-                    </li>
-                    <li>
-                        <a href="update-note.html" target="_blank">Update note</a>
-                    </li>
-                </ul>
-              </div>
-              <div class="toolTip more">
-                  <span>더보기</span>
-              </div>
-          </button>
-      </li>
-  </ul>
+    <ul>
+        <li>
+            <a href="mailto:sky11916@naver.com" class="btnMail">
+                <span class="hidden">문의</span>
+                <div class="toolTip mail">
+                    <span>메일 문의</span>
+                </div>
+            </a>
+        </li>
+        <li>
+            <button type="button" class="btnShare">
+                <span class="hidden">공유</span>
+                <div class="toolTip share">
+                    <span>공유하기</span>
+                </div>
+            </button>
+
+        </li>
+        <li>
+            <button type="button" class="btnMore">
+                <span class="hidden">더보기</span>
+                <div class="moreSubMenu">
+                    <ul>
+                        <li>
+                            <a href="https://github.com/Plush777" target="_blank">Github</a>
+                        </li>
+                        <li>
+                            <a href="https://velog.io/@sky" target="_blank">Velog</a>
+                        </li>
+                        <li>
+                            <a href="../../../html/update-note.html" target="_blank">Update note</a>
+                        </li>
+                        <li>
+                            <a href="https://www.buymeacoffee.com/P1ush" target="_blank">buymeacoffee</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="toolTip more">
+                    <span>더보기</span>
+                </div>
+            </button>
+        </li>
+    </ul>
 </div>
 
             <div class="rightArea">
@@ -247,7 +253,7 @@
                                     <li class="blue">CSS</li>
                                 </ul>
                             </div>
-    
+
                             <div class="tabCont active">
                                 <div class="highlightArea cScroll">
                                     <pre>
@@ -280,7 +286,6 @@
                 &lt;/div&gt;
             &lt;/div&gt;
         &lt;/div&gt;
-    
         &lt;div class="resultCont"&gt;
             &lt;div class="titleH3"&gt;
                 &lt;h3&gt;flex-direction&lt;/h3&gt;
@@ -653,7 +658,7 @@
                               </pre>
                                 </div>
                             </div>
-    
+
                             <div class="tabCont">
                                 <div class="highlightArea cScroll">
                                     <pre>
@@ -746,7 +751,7 @@
                                     </pre>
                                 </div>
                             </div>
-    
+
                             <div class="tabCont">
                                 <div class="highlightArea cScroll">
                                     <pre>
@@ -1479,6 +1484,15 @@
     </div>
   </div>
   <div id="dimmed"></div>
+        <div class="topArea">
+            <button type="button" class="backtoTop">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <polygon fill-rule="evenodd"
+                        points="13 5.414 13 22 11 22 11 5.414 4.707 11.707 3.293 10.293 12 1.586 20.707 10.293 19.293 11.707" />
+                </svg>
+                <span class="hidden">위로 올라가기</span>
+            </button>
+        </div>
     </div>
 </body>
 

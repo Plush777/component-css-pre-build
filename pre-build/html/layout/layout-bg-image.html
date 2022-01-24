@@ -1,172 +1,177 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
-    @@include('include/head.html')
-    <script src="../../js/result.js"></script>
+  @@include('include/head.html')
 </head>
+
 <body>
-    <div id="wrap">
-        <div id="container">
-          <div class="leftArea cScroll">
-            <ul class="leftMenu">
+  <div id="wrap">
+    <div id="container">
+      <div class="leftArea cScroll">
+        <ul class="leftMenu">
+          <li>
+            <a href="main.html" title="메인으로">
+              @@include('include/logo.html')
+              <span class="hidden">메인으로</span>
+            </a>
+          </li>
+          <li class="noDepth">
+            <span>
+              <a href="sub_first.html" title="홈">Home</a>
+            </span>
+          </li>
+          <li>
+            <span title="Header">Header</span>
+            <ul class="leftSubMenu">
               <li>
-                <a href="main.html" title="메인으로">
-                  @@include('include/logo.html')
-                  <span class="hidden">메인으로</span>
-                </a>
-              </li>
-              <li class="noDepth">
-                <span>
-                  <a href="sub_first.html" title="홈">Home</a>
-                </span>
-              </li>
-              <li>
-                <span title="Header">Header</span>
-                <ul class="leftSubMenu">
-                  <li>
-                    <a href="#" title="Header fixed">Header fixed</a>
-                  </li>
-                  <li>
-                    <a href="#" title="Header Toggle">Header Toggle</a>
-                  </li>
-                  <li>
-                    <a href="#" title="scroll Header">scroll Header</a>
-                  </li>
-                </ul>
+                <a href="#" title="Header fixed">Header fixed</a>
               </li>
               <li>
-                <span title="GNB">GNB</span>
-                <ul class="leftSubMenu">
-                  <li>
-                    <a href="#" title="GNB Hover">GNB Hover</a>
-                  </li>
-                  <li>
-                    <a href="#" title="GNB li Hover">GNB li Hover</a>
-                  </li>
-                  <li>
-                    <a href="#" title="GNB li find Hover">GNB li find Hover</a>
-                  </li>
-                </ul>
+                <a href="#" title="Header Toggle">Header Toggle</a>
               </li>
               <li>
-                <span title="Footer">Footer</span>
-                <ul class="leftSubMenu">
-                  <li>
-                    <a href="#" title="Footer basic">Footer basic</a>
-                  </li>
-                  <li>
-                    <a href="#" title="Footer fixed">Footer fixed</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="active">
-                <span title="Layout">Layout</span>
-                <ul class="leftSubMenu block">
-                  <li>
-                    <a href="layout-centerEle.html" title="Center element">Center element</a>
-                  </li>
-                  <li>
-                    <a href="layout-tab.html" title="Tab">Tab</a>
-                  </li>
-                  <li class="active">
-                    <a href="layout-bg-image.html" title="Background-image 100%">Background-image 100%</a>
-                  </li>
-                  <li>
-                    <a href="#" title="Slide">Slide</a>
-                  </li>
-                  <li>
-                    <a href="#" title="Flex">Flex</a>
-                  </li>
-                  <li>
-                    <a href="#" title="Grid">Grid</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <span title="Input">Input</span>
-                <ul class="leftSubMenu">
-                  <li>
-                    <a href="input-inputStyle.html" title="Input">input</a>
-                  </li>
-                  <li>
-                    <a href="input-radioStyle.html" title="Radio">radio</a>
-                  </li>
-                  <li>
-                    <a href="input-selectStyle.html" title="Select">select</a>
-                  </li>
-                  <li>
-                    <a href="input-textareaStyle.html" title="textarea">textarea</a>
-                  </li>
-                  <li>
-                    <a href="input-chkboxStyle.html" title="checkbox">checkbox</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <span title="Scroll element">Scroll element</span>
-                <ul class="leftSubMenu">
-                  <li>
-                    <a href="scroll-ele-table.html" title="table 내부 스크롤">table 내부 스크롤</a>
-                  </li>
-                  <li>
-                    <a href="scroll-ele-overflow.html" title="Overflow scroll">Overflow scroll</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <span title="Custom">Custom</span>
-                <ul class="leftSubMenu">
-                  <li>
-                    <a href="custom-contextMenu.html" title="Context Menu">Context Menu</a>
-                  </li>
-                  <li>
-                    <a href="custom-scroll.html" title="Scroll design">Scroll design</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <span title="Interaction">Interaction</span>
-                <ul class="leftSubMenu">
-                  <li>
-                    <a href="#" title="Hover transfrom">Hover transfrom</a>
-                  </li>
-                  <li>
-                    <a href="#" title="FadeIn & FadeOut">FadeIn & FadeOut</a>
-                  </li>
-                  <li>
-                    <a href="#" title="Click popup">Click popup</a>
-                  </li>
-                </ul>
+                <a href="#" title="scroll Header">scroll Header</a>
               </li>
             </ul>
-          </div>
+          </li>
+          <li>
+            <span title="GNB">GNB</span>
+            <ul class="leftSubMenu">
+              <li>
+                <a href="#" title="GNB Hover">GNB Hover</a>
+              </li>
+              <li>
+                <a href="#" title="GNB li Hover">GNB li Hover</a>
+              </li>
+              <li>
+                <a href="#" title="GNB li find Hover">GNB li find Hover</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <span title="Footer">Footer</span>
+            <ul class="leftSubMenu">
+              <li>
+                <a href="#" title="Footer basic">Footer basic</a>
+              </li>
+              <li>
+                <a href="#" title="Footer fixed">Footer fixed</a>
+              </li>
+            </ul>
+          </li>
+          <li class="active">
+            <span title="Layout">Layout</span>
+            <ul class="leftSubMenu block">
+              <li>
+                <a href="layout-centerEle.html" title="Center element">Center element</a>
+              </li>
+              <li>
+                <a href="layout-tab.html" title="Tab">Tab</a>
+              </li>
+              <li class="active">
+                <a href="layout-bg-image.html" title="Background-image 100%">Background-image 100%</a>
+              </li>
+              <li>
+                <a href="#" title="Slide">Slide</a>
+              </li>
+              <li>
+                <a href="#" title="Flex">Flex</a>
+              </li>
+              <li>
+                <a href="#" title="Grid">Grid</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <span title="Input">Input</span>
+            <ul class="leftSubMenu">
+              <li>
+                <a href="input-inputStyle.html" title="Input">input</a>
+              </li>
+              <li>
+                <a href="input-radioStyle.html" title="Radio">radio</a>
+              </li>
+              <li>
+                <a href="input-selectStyle.html" title="Select">select</a>
+              </li>
+              <li>
+                <a href="input-textareaStyle.html" title="textarea">textarea</a>
+              </li>
+              <li>
+                <a href="input-chkboxStyle.html" title="checkbox">checkbox</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <span title="Scroll element">Scroll element</span>
+            <ul class="leftSubMenu">
+              <li>
+                <a href="scroll-ele-table.html" title="table 내부 스크롤">table 내부 스크롤</a>
+              </li>
+              <li>
+                <a href="scroll-ele-overflow.html" title="Overflow scroll">Overflow scroll</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <span title="Custom">Custom</span>
+            <ul class="leftSubMenu">
+              <li>
+                <a href="custom-contextMenu.html" title="Context Menu">Context Menu</a>
+              </li>
+              <li>
+                <a href="custom-scroll.html" title="Scroll design">Scroll design</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <span title="Interaction">Interaction</span>
+            <ul class="leftSubMenu">
+              <li>
+                <a href="#" title="Hover transfrom">Hover transfrom</a>
+              </li>
+              <li>
+                <a href="#" title="FadeIn & FadeOut">FadeIn & FadeOut</a>
+              </li>
+              <li>
+                <a href="#" title="Click popup">Click popup</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="moreArea">
+        <button type="button" class="btnMobileMore">
+          <span class="hidden">메뉴 열기</span>
+        </button>
+      </div>
+      <div class="backArea">
+        <button type="button" class="btnBack">
+          <span class="hidden">뒤로가기</span>
+        </button>
+      </div>
 
-            <div class="backArea">
-                <button type="button" class="btnBack">
-                    <span class="hidden">뒤로가기</span>
-                </button>
+      @@include('include/util.html')
+
+      <div class="rightArea">
+        <div class="inner">
+          <div class="textBox">
+            <div class="titleH1">
+              <h1>Background-image 100%</h1>
             </div>
+            <div class="tabWrap type01">
+              <div class="tabNav">
+                <ul class="tabList">
+                  <li class="active orange">HTML</li>
+                  <li class="pink">SCSS</li>
+                  <li class="blue">CSS</li>
+                </ul>
+              </div>
 
-            @@include('include/util.html')
-            
-            <div class="rightArea">
-                <div class="inner">
-                    <div class="textBox">
-                      <div class="titleH1">
-                          <h1>Background-image 100%</h1>
-                      </div>
-                      <div class="tabWrap type01">
-                        <div class="tabNav">
-                          <ul class="tabList">
-                            <li class="active orange">HTML</li>
-                            <li class="pink">SCSS</li>
-                            <li class="blue">CSS</li>
-                          </ul>
-                        </div>
-
-                        <div class="tabCont active">
-                          <div class="highlightArea cScroll">
-                            <pre>
+              <div class="tabCont active">
+                <div class="highlightArea cScroll">
+                  <pre>
                               <code class="language-html">
   &lt;div class="resultCont type01"&gt;
       &lt;div class="titleH3"&gt;
@@ -191,12 +196,12 @@
   &lt;/div&gt;
                               </code>
                             </pre>
-                          </div>
-                        </div>
+                </div>
+              </div>
 
-                        <div class="tabCont">
-                          <div class="highlightArea cScroll">
-                            <pre>
+              <div class="tabCont">
+                <div class="highlightArea cScroll">
+                  <pre>
                               <code class="language-scss">
   .resultCont{position: relative;
       .imgDiv{height: 600px; background-image: url("../images/common/1903x600.png"); background-repeat: no-repeat;}
@@ -210,12 +215,12 @@
   }
                               </code>
                           </pre>
-                          </div>
-                        </div>
+                </div>
+              </div>
 
-                        <div class="tabCont">
-                          <div class="highlightArea cScroll">
-                            <pre>
+              <div class="tabCont">
+                <div class="highlightArea cScroll">
+                  <pre>
                               <code class="language-css">
   .resultCont {
       position: relative;
@@ -240,54 +245,64 @@
   }
                               </code>
                             </pre>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="btnArea end">
-                          <button type="button" class="button Bgblue btnResult">
-                            <span>결과보기</span>
-                            <i class="ico result"></i>
-                          </button>
-                      </div>
-                    </div>
                 </div>
+              </div>
             </div>
-        </div>
-        <div id="frameBody" class="overflow-y">
-          <div id="toast">
-            <span>Esc 혹은 우측 상단 X 버튼을 눌러 결과창을 닫을 수 있습니다. </span>
+            <div class="btnArea end">
+              <button type="button" class="button Bgblue btnResult">
+                <span>결과보기</span>
+                <i class="ico result"></i>
+              </button>
+            </div>
           </div>
-          <div class="btnArea">
-            <button type="button" class="frameClose">
-              <span class="hidden">프레임 창닫기</span>
-            </button>
-          </div>
-          <div class="wrap pre bgImage">
-            
-            <div class="resultCont type01">
-                <div class="titleH3">
-                    <h3>background-size cover</h3>
-                </div>
-                <div class="container">
-                    <div class="textBox">
-                        <div class="imgDiv"></div>
-                    </div>
-                </div>
-            </div>
-    
-            <div class="resultCont type02">
-                <div class="titleH3">
-                    <h3>background-size 100% 100%</h3>
-                </div>
-                <div class="container">
-                    <div class="textBox">
-                        <div class="imgDiv"></div>
-                    </div>
-                </div>
-            </div>
         </div>
-        </div>
-        @@include('include/popup-share.html')
+      </div>
     </div>
+    <div id="frameBody" class="overflow-y">
+      <div id="toast">
+        <span>Esc 혹은 우측 상단 X 버튼을 눌러 결과창을 닫을 수 있습니다. </span>
+      </div>
+      <div class="btnArea">
+        <button type="button" class="frameClose">
+          <span class="hidden">프레임 창닫기</span>
+        </button>
+      </div>
+      <div class="wrap pre bgImage">
+
+        <div class="resultCont type01">
+          <div class="titleH3">
+            <h3>background-size cover</h3>
+          </div>
+          <div class="container">
+            <div class="textBox">
+              <div class="imgDiv"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="resultCont type02">
+          <div class="titleH3">
+            <h3>background-size 100% 100%</h3>
+          </div>
+          <div class="container">
+            <div class="textBox">
+              <div class="imgDiv"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    @@include('include/popup-share.html')
+    <div class="topArea">
+      <button type="button" class="backtoTop">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <polygon fill-rule="evenodd"
+            points="13 5.414 13 22 11 22 11 5.414 4.707 11.707 3.293 10.293 12 1.586 20.707 10.293 19.293 11.707" />
+        </svg>
+        <span class="hidden">위로 올라가기</span>
+      </button>
+    </div>
+  </div>
 </body>
+
 </html>

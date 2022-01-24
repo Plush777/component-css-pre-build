@@ -24,7 +24,7 @@
   src: url(./font/notoSans/eot/NotoSansKR-Medium-Hestia.eot?#iefix) format("embedded-opentype"), url(./font/notoSans/woff/NotoSansKR-Medium-Hestia.woff) format("woff");
 }
 
-@import 'variable.scss';       
+@import '../common/variable.scss';       
 
 /* reset */
 :root{overflow-wrap: break-word;}
@@ -56,8 +56,8 @@ pre{word-break:break-all;white-space:pre-line;margin: 0 !important;}
 #wrap{width: 100%; height: 100%;
   &.main{position: relative; transition: .5s; background-color: #4e4e4e;
     .logo a{display: block; width: 800px; height: 136px; transition: .5s ease-in-out;
-    background: url("../images/common/main-logo-g.png")no-repeat center;
-      &.change{background: url("../images/common/main-logo-w.png")no-repeat center;}
+    background: url("../../images/common/main-logo-g.png")no-repeat center;
+      &.change{background: url("../../images/common/main-logo-w.png")no-repeat center;}
     } 
     .centerArea{position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); text-align: center;}
     .btnStart{position: relative; display: inline-block; width: 170px; height: 56px; box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
@@ -65,14 +65,14 @@ pre{word-break:break-all;white-space:pre-line;margin: 0 !important;}
       span{position: relative; font-size: 22px; font-family: 'Noto Sans'; margin-right: 20px; transition: .3s;
       color: #fff; letter-spacing: 6.6px;
         &:after{content: ''; position: absolute; top: 6px; right: -30px; min-width: 20px; height: 20px; transition: .3s;
-        background: url("../images/ico/ico-arrow-right-w-shw.png")no-repeat center;}
+        background: url("../../images/ico/ico-arrow-right-w-shw.png")no-repeat center;}
       }
       &:before{content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: -1;
       transform: scaleX(0); transform-origin: 0 50%;  transition-duration: 0.3s; transition-property: transform; 
       transition-timing-function: ease-out; background: #fff;}
       &:hover{
         span{color: $c333;
-          &:after{background: url("../images/ico/ico-arrow-right-bk-shw.png")no-repeat center;}
+          &:after{background: url("../../images/ico/ico-arrow-right-bk-shw.png")no-repeat center;}
         }
         &:before{transform: scaleX(1);}
       }
@@ -92,7 +92,7 @@ pre{word-break:break-all;white-space:pre-line;margin: 0 !important;}
       p{font-size: 16px; font-family: 'Noto Sans';line-height: 1.5; color: $c333;}
     }
     .textBox{
-      .titleH3+.mainTxt p{font-size: 14px;}
+      .titleH3+.mainTxt p{font-size: 14px; }  
       +.textBox{margin-top: 75px;}
     }
   }
@@ -173,13 +173,13 @@ overflow-y: auto; background-color: #f5f5f5; z-index: 1100;
       border-bottom: 1px solid rgba($color: #000012, $alpha: 0.08);}
       &.active{
         span{color: $emphasisType01;
-          &:after{transform: translateY(-50%) rotate(180deg); background: url("../images/ico/ico-down-active.svg")no-repeat;}
+          &:after{transform: translateY(-50%) rotate(180deg); background: url("../../images/ico/ico-down-active.svg")no-repeat;}
         }
       }
       >span{position: relative; display: block; padding: 16px 0; text-indent: 28px;border-bottom: 1px solid rgba($color: #000012, $alpha: 0.08);
       font-family: 'Noto Sans'; font-size: 22px; color: $c70; transition: .5s;
         &:after{content: ''; width: 15px;height: 9px; position: absolute; top: 50%; right: 28px; transition: .5s;
-        transform: translateY(-50%);background: url("../images/ico/ico-down.svg")no-repeat;}
+        transform: translateY(-50%);background: url("../../images/ico/ico-down.svg")no-repeat;}
       }
       >a{display: block;}
       >ul.leftSubMenu{display: none; padding: 16px 28px 16px 28px; box-sizing: border-box;
@@ -205,7 +205,7 @@ overflow-y: auto; background-color: #f5f5f5; z-index: 1100;
 }
 
 .backArea{position: absolute; left: 340px; top: 22px; z-index: 1000;
-  .btnBack{position: relative; display: block; width: 30px; height: 30px; background-image: url("../images/ico/ico-home.png"); 
+  .btnBack{position: relative; display: block; width: 30px; height: 30px; background-image: url("../../images/ico/ico-home.png"); 
     background-repeat: no-repeat; background-position: center; background-size: 30px 30px;
     &:before{content: ''; opacity: 0; visibility: hidden; position: absolute; left: -5px; top: -5px; z-index: -1;
       width: 40px; height: 40px; border-radius: 50px; transition: .5s ease-in-out; background-color: rgba($color: $cddd, $alpha: 0.5);}
@@ -227,17 +227,17 @@ overflow-y: auto; background-color: #f5f5f5; z-index: 1100;
     &:before{content: ''; opacity: 0; visibility: hidden; position: absolute; left: 50%; transform: translateX(-50%); top: -5px; z-index: -1;
     width: 40px; height: 40px; border-radius: 50px; transition: .5s ease-in-out; background-color: rgba($color: $cddd, $alpha: 0.5);}
     button,a{display: block; width: 30px;height: 30px;
-      &.btnMail{background: url("../images/ico/ico-mail.svg")no-repeat center;
+      &.btnMail{background: url("../../images/ico/ico-mail.svg")no-repeat center;
         &:hover{
           .toolTip.mail{opacity: 1; visibility: visible;}
         }
       }
-      &.btnShare{background: url("../images/ico/ico-share-bk.svg")no-repeat center;
+      &.btnShare{background: url("../../images/ico/ico-share-bk.svg")no-repeat center;
         &:hover{
           .toolTip.share{opacity: 1; visibility: visible;}
         }
       }
-      &.btnMore{background: url("../images/ico/ico-more.svg")no-repeat center;
+      &.btnMore{background: url("../../images/ico/ico-more.svg")no-repeat center;
         &:hover{
           .toolTip.more{opacity: 1; visibility: visible;}
         }
@@ -257,7 +257,7 @@ overflow-y: auto; background-color: #f5f5f5; z-index: 1100;
 }
 
 .moreSubMenu{display: none; position: absolute; top: 40px; right: 0; z-index: 150;
-  >ul{width: 95px; height: 95px; flex-direction: column; border: 1px solid $cddd; box-shadow: 0px 0px 5px 1px $cddd;
+  >ul{width: 95px;flex-direction: column; border: 1px solid $cddd; box-shadow: 0px 0px 5px 1px $cddd;
   box-sizing: border-box; background-color: #f3f4f5;
     >li{flex: 1; display: block; width: 100%; font-family: 'Noto Sans'; line-height: 30px; transition: .5s;
       >a,span{width: auto; height: auto; color: #202020;text-align: center; white-space: nowrap; font-size: 12px;}
@@ -281,7 +281,7 @@ overflow-y: auto; background-color: #f5f5f5; z-index: 1100;
 
 .rightArea{position: absolute; right: 0; top: 0; display: flex; justify-content: center; width: calc(100% - 300px);  
 padding: 92px 0; z-index:950;
-  >.inner{max-width: 1200px; flex: 1; padding: 0 50px;}
+  >.inner{max-width: 1200px; flex: 1; padding: 0 100px;}
   .highlightArea{max-height: 500px;
     +.titleH2{margin-top: 20px;}
   }
@@ -375,8 +375,8 @@ font-size: 14px; color: #fff;
 }
 
 i.ico{display: inline-block; background-repeat: repeat; background-position: center;
-  &.share{width: 33px;height: 33px; background-image: url("../images/ico/ico-share-w.svg");}
-  &.result{margin-left: 10px; width: 7px;height: 11px; background-image: url("../images/ico/ico-result.svg");}
+  &.share{width: 33px;height: 33px; background-image: url("../../images/ico/ico-share-w.svg");}
+  &.result{margin-left: 10px; width: 7px;height: 11px; background-image: url("../../images/ico/ico-result.svg");}
 }
 
 .btnArea{position: relative; display: flex;
@@ -476,17 +476,17 @@ code[class*=language-], pre[class*=language-] pre{white-space: pre-wrap !importa
   .firstPage,.previousPage,.nextPage,.lastPage{
     &.disabled{cursor: default; background-color: rgba($color: #ccc, $alpha: 0.5);}
   }
-  .firstPage{background: url("../images/ico/ico-pagi-first.png")no-repeat center;
-    &:hover:not(.disabled){background: url("../images/ico/ico-pagi-first-hover.png")no-repeat center;}
+  .firstPage{background: url("../../images/ico/ico-pagi-first.png")no-repeat center;
+    &:hover:not(.disabled){background: url("../../images/ico/ico-pagi-first-hover.png")no-repeat center;}
   }
-  .previousPage{margin-left: 5px; background: url("../images/ico/ico-pagi-prev.png")no-repeat center;
-    &:hover:not(.disabled){background: url("../images/ico/ico-pagi-prev-hover.png")no-repeat center;}
+  .previousPage{margin-left: 5px; background: url("../../images/ico/ico-pagi-prev.png")no-repeat center;
+    &:hover:not(.disabled){background: url("../../images/ico/ico-pagi-prev-hover.png")no-repeat center;}
   }
-  .nextPage{margin-right: 5px; background: url("../images/ico/ico-pagi-next.png")no-repeat center;
-    &:hover:not(.disabled){background: url("../images/ico/ico-pagi-next-hover.png")no-repeat center;}
+  .nextPage{margin-right: 5px; background: url("../../images/ico/ico-pagi-next.png")no-repeat center;
+    &:hover:not(.disabled){background: url("../../images/ico/ico-pagi-next-hover.png")no-repeat center;}
   }
-  .lastPage{background: url("../images/ico/ico-pagi-last.png")no-repeat center;
-    &:hover:not(.disabled){background: url("../images/ico/ico-pagi-last-hover.png")no-repeat center;}
+  .lastPage{background: url("../../images/ico/ico-pagi-last.png")no-repeat center;
+    &:hover:not(.disabled){background: url("../../images/ico/ico-pagi-last-hover.png")no-repeat center;}
   }
   .pageNumbers{margin: 0 50px;
     >a{display: inline-block; width: 32px; height: 32px; line-height: 32px; text-align: center; font-size: 16px;
@@ -502,7 +502,7 @@ code[class*=language-], pre[class*=language-] pre{white-space: pre-wrap !importa
 #frameBody{display: none; position: absolute; width: 100%; height: 100%; background-color: #fff; z-index: 10000;
   .btnArea{position: fixed; top: 0; right: 0; z-index: 9999;
     .frameClose{width: 24px; height: 24px; padding: 18px; box-sizing: border-box;
-    border-radius: 0 0 0 5px; background-size: 24px 24px; background-image: url("../images/ico/ico-result-close.png");
+    border-radius: 0 0 0 5px; background-size: 24px 24px; background-image: url("../../images/ico/ico-result-close.png");
     background-repeat: no-repeat; background-position: center center; background-color: #fff;}
     &.r20{right: 20px;}
   }
@@ -518,16 +518,16 @@ background-color: rgba($color: #000, $alpha: 0.65);
 /* 모바일 */
 .moreArea{display: none; position: absolute; top: 20px; left: 20px; z-index: 1200; transition: .3s;
   .btnMobileMore{width: 24px; height: 24px; background-repeat: no-repeat; background-size: 24px 24px; background-position: center; 
-  background-image: url("../images/mobile/ico-mobile-more.png");}
+  background-image: url("../../images/mobile/ico-mobile-more.png");}
 }
 
 /* icon */
 i.ico{display: inline-block; background-repeat: no-repeat; background-position: center;
   /* White type */
-  &.plus-w{width: 32px; height: 32px; background-image: url("../images/ico/ico-plus-w.png");}
-  &.download-w{width: 48px; height: 48px; background-image: url("../images/ico/ico-download-w.png");}
-  &.bookMark-w{width: 48px; height: 48px; background-image: url("../images/ico/ico-bookMark-w.png");}
-  &.github-w{width: 48px; height: 48px; background-image: url("../images/ico/ico-github-w.png");}
+  &.plus-w{width: 32px; height: 32px; background-image: url("../../package-lock.json");}
+  &.download-w{width: 48px; height: 48px; background-image: url("../../images/ico/ico-download-w.png");}
+  &.bookMark-w{width: 48px; height: 48px; background-image: url("../../images/ico/ico-bookMark-w.png");}
+  &.github-w{width: 48px; height: 48px; background-image: url("../../images/ico/ico-github-w.png");}
 
   &.wide40{background-size: 40px 40px; background-position: center 8px;}
   &.wide32{background-size: 32px 32px; background-position: center 11px;}
@@ -535,14 +535,14 @@ i.ico{display: inline-block; background-repeat: no-repeat; background-position: 
 }
 
 /* import */
-@import '~/../component/header.scss';
-@import '~/../component/gnb.scss';
-@import '~/../component/footer.scss';
-@import '~/../component/layout.scss';
-@import '~/../component/input.scss';
-@import '~/../component/scrollele.scss';
-@import '~/../component/custom.scss';
-@import '~/../component/popup.scss';
-@import '~/../component/etc.scss';
-@import '~/../component/tooltip.scss';
-@import 'media.scss';
+@import '../component/header.scss';
+@import '../component/gnb.scss'; 
+@import '../component/footer.scss';
+@import '../component/layout.scss';
+@import '../component/input.scss';
+@import '../component/scrollele.scss';
+@import '../component/custom.scss';
+@import '../component/popup.scss';
+@import '../component/etc.scss';
+@import '../component/tooltip.scss';
+@import '../common/media.scss';

@@ -13,7 +13,7 @@ $(document).ready(function () {
 
     $('.topArea').on({
         "click": function () {
-            $('html').animate({scrollTop : 0}, 600);
+            $('html').animate({ scrollTop: 0 }, 600);
         }
     });
 
@@ -110,18 +110,32 @@ $(document).ready(function () {
         }
     });
 
-    var urlState = window.location.pathname;
-    console.log(urlState);
-    var urlArr = urlState.split('/');
-    console.log(urlArr);
+    // var urlState = window.location.pathname;
+    // console.log(urlState);
+    // var urlArr = urlState.split('/');
+    // console.log(urlArr);
 
     /* 서브 홈버튼 */
-    $('.btnBack').on({
+    // $('.btnBack').on({
+    //     "click": function () {
+    //         location.href = urlArr[0] + '/' + 'html/sub_first.html';
+    //     }
+    // })
+
+    var menuUrlPath = window.location.pathname;
+    console.log(menuUrlPath);
+    var menuUrlArr = menuUrlPath.split('/');
+    console.log(menuUrlArr);
+
+    $('.leftArea > .leftMenu > li > ul.leftSubMenu li a.layoutPage').on({
         "click": function () {
-            location.href = urlArr[0] + '/' + 'html/sub_first.html';
+            // window.location.replace('/layout/');
+            var layoutPage = location.href
+            layoutPage = layoutPage.replace('/layout/', '/layout/' + menuUrlArr[1] + '/');
+            console.log(layoutPage);
         }
     })
-    
+
     /* 히스토리 개수 */
     historyCount = history.length;
     console.log("히스토리 개수는 " + historyCount + "개 입니다.");

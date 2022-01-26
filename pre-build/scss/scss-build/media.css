@@ -48,43 +48,50 @@
   .leftArea.active {
     left: 0;
   }
-  .utilArea {
+  .leftArea.active ~ .headArea {
+    width: calc(100% - 300px);
+  }
+  .leftArea.active ~ .rightArea {
+    left: 300px;
+  }
+  .headArea {
+    width: 100%;
     -webkit-transition: .3s;
     transition: .3s;
   }
-  .utilArea li a.btnMail {
+  .headArea > .inner .utilArea {
+    -webkit-transition: .3s;
+    transition: .3s;
+  }
+  .headArea > .inner .utilArea li a.btnMail {
     width: 22px;
     height: 22px;
     background-size: 22px 22px;
   }
-  .utilArea li button.btnShare {
+  .headArea > .inner .utilArea li button.btnShare {
     width: 22px;
     height: 22px;
     background-size: 22px 22px;
   }
-  .utilArea li button.btnMore {
+  .headArea > .inner .utilArea li button.btnMore {
     width: 22px;
     height: 22px;
     background-size: 22px 22px;
   }
-  .utilArea li:before {
+  .headArea > .inner .utilArea li:before {
     width: 34px;
     height: 34px;
   }
-  .utilArea.move {
-    -webkit-transform: translate(calc(100% - -28px), 0);
-            transform: translate(calc(100% - -28px), 0);
+  .headArea > .inner .topArea {
+    display: none !important;
   }
-  .topArea {
-    display: none;
-  }
-  .moreArea {
+  .headArea > .inner .moreArea {
     display: block;
   }
-  .moreArea.active {
+  .headArea > .inner .moreArea.active {
     left: 320px;
   }
-  .backArea {
+  .headArea > .inner .backArea {
     display: none !important;
   }
   .rightArea {
@@ -100,10 +107,6 @@
   }
   .rightArea .mainTxt {
     font-size: 14px;
-  }
-  .rightArea.move {
-    -webkit-transform: translate(calc(100% - 70px), 0);
-            transform: translate(calc(100% - 70px), 0);
   }
   .innerTxt > strong {
     font-size: 18px;
@@ -185,6 +188,27 @@
   }
   .wrap.pre.gnbFind #gnb ul.menuList li {
     min-width: auto;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .leftArea.active {
+    width: calc(100% - 100px);
+  }
+  .leftArea.active ~ .rightArea {
+    left: 0;
+    margin: 0;
+    -webkit-transform: translate(calc(100% - 180px), 0);
+            transform: translate(calc(100% - 180px), 0);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 /*# sourceMappingURL=media.css.map */

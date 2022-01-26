@@ -190,16 +190,19 @@ $(document).ready(function () {
 
     $('.moreArea').on({
         "click": function () {
-            var moveElement = $(this).siblings('.rightArea,.utilArea');
-            var prevElement = $(this).prev('.leftArea');
+            var moveElement = $(this).parents('.headArea').siblings('.rightArea');
+            // var moveUtilElement = $(this).parents('.headArea').find('.utilArea');
+            var prevElement = $(this).parents('.headArea').prev('.leftArea');
 
             $(this).toggleClass('active');
             prevElement.toggleClass('active').siblings('.leftArea').removeClass('active');
             if (prevElement.hasClass('active')) {
                 moveElement.addClass('move');
+                // moveUtilElement.addClass('move');
                 $('body').css('overflow', 'hidden');
             } else if (!prevElement.hasClass('active')) {
                 moveElement.removeClass('move');
+                // moveUtilElement.removeClass('move');
                 $('body').css('overflow', 'auto');
             }
         }

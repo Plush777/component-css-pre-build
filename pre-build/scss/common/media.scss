@@ -118,6 +118,9 @@
 }
 
 @media screen and (max-width:600px){
+    .highlightArea{
+        &::-webkit-scrollbar{display: none;}
+    }
     .leftArea{
         &.active{min-width: 40%; max-width: 200px;
             ~.rightArea{left: 0; margin: 0; transform: translate(calc(100% - 80px),0);}
@@ -128,4 +131,69 @@
 
 @media screen and (max-width:500px){
     #container{flex-direction: column;}
+}
+
+
+/* hover */
+
+@media (hover: hover){
+    a{
+        &.link:hover{text-decoration: underline;}
+        &.mail:hover{text-decoration: underline;}
+    }
+
+    .headArea > .inner .utilArea li{
+        button,a{
+            &.btnMail{
+                &:hover{
+                    .toolTip.mail{opacity: 1; visibility: visible;}
+                }
+            }
+              &.btnShare{
+                &:hover{
+                  .toolTip.share{opacity: 1; visibility: visible;}
+                }
+            }
+              &.btnMore{
+                &:hover{
+                  .toolTip.more{opacity: 1; visibility: visible;}
+                }
+            }
+              &.btnDarkMode{
+                &:hover{
+                  .toolTip.more{opacity: 1; visibility: visible;}
+                }
+            }
+        }
+        &:hover{
+            &:before{opacity: 1; visibility: visible;}
+        }
+    }
+
+    .leftArea > .leftMenu > li > ul.leftSubMenu li a:hover{text-decoration: underline;}
+    .headArea > .inner .utilArea li .moreSubMenu > ul > li:hover{background-color: rgba($color: $cccBg, $alpha: 0.8);}
+    #wrap.main .btnStart{
+        &:hover{
+            &:before{transform: scaleX(1);}
+            span{color: $c333;
+                &:after{background: url("../../images/ico/ico-arrow-right-bk-shw.png")no-repeat center;}
+            }
+        }
+    }
+    #wrap.err .bottomDiv a:hover{text-decoration: underline;}
+    .topArea .backtoTop{
+        &:hover{background-color: $blackBg;
+            svg{stroke: $whiteBg; fill: $whiteBg;}
+        }
+    }
+    .headArea > .inner .backArea .btnBack:hover:before{opacity: 1; visibility: visible;}
+    .boardList .cont .li .boardBox .boardItem:last-child.underLine:hover{text-decoration: underline;}
+    .pager{
+        div:not(.pageNumbers):hover:not(.disabled){border-color: $blackBg;}
+        .pageNumbers > a.active,.pageNumbers > a:hover{border-color: $blackBg; color: rgba($color: $blackBg, $alpha: 1.0)}
+        .firstPage:hover:not(.disabled){background: url("../../images/ico/ico-pagi-first-hover.png")no-repeat center;}
+        .previousPage:hover:not(.disabled){background: url("../../images/ico/ico-pagi-prev-hover.png")no-repeat center;}
+        .nextPage:hover:not(.disabled){background: url("../../images/ico/ico-pagi-next-hover.png")no-repeat center;}
+        .lastPage:hover:not(.disabled){background: url("../../images/ico/ico-pagi-last-hover.png")no-repeat center;}
+    }
 }

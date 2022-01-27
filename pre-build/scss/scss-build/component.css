@@ -225,19 +225,6 @@ pre {
   background: #fff;
 }
 
-#wrap.main .btnStart:hover span {
-  color: #333;
-}
-
-#wrap.main .btnStart:hover span:after {
-  background: url("../../images/ico/ico-arrow-right-bk-shw.png") no-repeat center;
-}
-
-#wrap.main .btnStart:hover:before {
-  -webkit-transform: scaleX(1);
-          transform: scaleX(1);
-}
-
 #wrap.main.blue {
   background: #1694d2;
   -webkit-transition: .5s ease-in-out;
@@ -351,10 +338,6 @@ pre {
   font-size: 16px;
 }
 
-#wrap.err .bottomDiv a:hover {
-  text-decoration: underline;
-}
-
 .topArea {
   display: none;
   position: fixed;
@@ -378,15 +361,6 @@ pre {
   border: 1px solid #000;
   -webkit-transition: .5s;
   transition: .5s;
-}
-
-.topArea .backtoTop:hover {
-  background-color: #000;
-}
-
-.topArea .backtoTop:hover svg {
-  stroke: #fff;
-  fill: #fff;
 }
 
 #container {
@@ -492,10 +466,6 @@ pre {
   color: #707070;
 }
 
-.leftArea > .leftMenu > li > ul.leftSubMenu li a:hover {
-  text-decoration: underline;
-}
-
 .leftArea > .leftMenu > li > ul.leftSubMenu li.active a {
   color: #266bf7;
 }
@@ -555,11 +525,6 @@ pre {
   -webkit-transition: .5s ease-in-out;
   transition: .5s ease-in-out;
   background-color: rgba(221, 221, 221, 0.5);
-}
-
-.headArea > .inner .backArea .btnBack:hover:before {
-  opacity: 1;
-  visibility: visible;
 }
 
 .headArea > .inner .backArea.none {
@@ -630,10 +595,6 @@ pre {
   margin-left: 0;
 }
 
-.headArea > .inner .utilArea li .moreSubMenu > ul > li:hover {
-  background-color: rgba(204, 204, 204, 0.8);
-}
-
 .headArea > .inner .utilArea li .moreSubMenu.active {
   display: block;
 }
@@ -691,27 +652,12 @@ pre {
   background: url("../../images/ico/ico-mail.svg") no-repeat center;
 }
 
-.headArea > .inner .utilArea li button.btnMail:hover .toolTip.mail, .headArea > .inner .utilArea li a.btnMail:hover .toolTip.mail {
-  opacity: 1;
-  visibility: visible;
-}
-
 .headArea > .inner .utilArea li button.btnShare, .headArea > .inner .utilArea li a.btnShare {
   background: url("../../images/ico/ico-share-bk.svg") no-repeat center;
 }
 
-.headArea > .inner .utilArea li button.btnShare:hover .toolTip.share, .headArea > .inner .utilArea li a.btnShare:hover .toolTip.share {
-  opacity: 1;
-  visibility: visible;
-}
-
 .headArea > .inner .utilArea li button.btnMore, .headArea > .inner .utilArea li a.btnMore {
   background: url("../../images/ico/ico-more.svg") no-repeat center;
-}
-
-.headArea > .inner .utilArea li button.btnMore:hover .toolTip.more, .headArea > .inner .utilArea li a.btnMore:hover .toolTip.more {
-  opacity: 1;
-  visibility: visible;
 }
 
 .headArea > .inner .utilArea li button.btnDarkMode, .headArea > .inner .utilArea li a.btnDarkMode {
@@ -723,18 +669,8 @@ pre {
   background-size: 30px 30px;
 }
 
-.headArea > .inner .utilArea li button.btnDarkMode:hover .toolTip.more, .headArea > .inner .utilArea li a.btnDarkMode:hover .toolTip.more {
-  opacity: 1;
-  visibility: visible;
-}
-
 .headArea > .inner .utilArea li + li {
   margin-left: 30px;
-}
-
-.headArea > .inner .utilArea li:hover:before {
-  opacity: 1;
-  visibility: visible;
 }
 
 .headArea > .inner .moreArea {
@@ -1026,18 +962,10 @@ a.link {
   font-family: 'Noto Sans Medium';
 }
 
-a.link:hover {
-  text-decoration: underline;
-}
-
 a.mail {
   margin: 0px 5px 0 3px;
   color: #1694d2;
   font-family: 'Noto Sans Medium';
-}
-
-a.mail:hover {
-  text-decoration: underline;
 }
 
 .button {
@@ -1210,6 +1138,10 @@ code[class*=language-], pre[class*=language-] pre {
   background: #808080;
 }
 
+pre[class*=language-] {
+  padding: 16px !important;
+}
+
 .boardList {
   margin-top: 40px;
 }
@@ -1296,10 +1228,6 @@ code[class*=language-], pre[class*=language-] pre {
           flex: 1;
 }
 
-.boardList .cont .li .boardBox .boardItem:last-child.underLine:hover {
-  text-decoration: underline;
-}
-
 .boardList .cont .li:first-child {
   border-top: 0;
 }
@@ -1381,10 +1309,6 @@ code[class*=language-], pre[class*=language-] pre {
   transition: 0.35s ease-in-out;
 }
 
-.pager div:not(.pageNumbers):hover:not(.disabled) {
-  border-color: #000;
-}
-
 .pager .firstPage.disabled, .pager .previousPage.disabled, .pager .nextPage.disabled, .pager .lastPage.disabled {
   cursor: default;
   background-color: rgba(204, 204, 204, 0.5);
@@ -1394,17 +1318,9 @@ code[class*=language-], pre[class*=language-] pre {
   background: url("../../images/ico/ico-pagi-first.png") no-repeat center;
 }
 
-.pager .firstPage:hover:not(.disabled) {
-  background: url("../../images/ico/ico-pagi-first-hover.png") no-repeat center;
-}
-
 .pager .previousPage {
   margin-left: 5px;
   background: url("../../images/ico/ico-pagi-prev.png") no-repeat center;
-}
-
-.pager .previousPage:hover:not(.disabled) {
-  background: url("../../images/ico/ico-pagi-prev-hover.png") no-repeat center;
 }
 
 .pager .nextPage {
@@ -1412,16 +1328,8 @@ code[class*=language-], pre[class*=language-] pre {
   background: url("../../images/ico/ico-pagi-next.png") no-repeat center;
 }
 
-.pager .nextPage:hover:not(.disabled) {
-  background: url("../../images/ico/ico-pagi-next-hover.png") no-repeat center;
-}
-
 .pager .lastPage {
   background: url("../../images/ico/ico-pagi-last.png") no-repeat center;
-}
-
-.pager .lastPage:hover:not(.disabled) {
-  background: url("../../images/ico/ico-pagi-last-hover.png") no-repeat center;
 }
 
 .pager .pageNumbers {
@@ -1445,11 +1353,6 @@ code[class*=language-], pre[class*=language-] pre {
 
 .pager .pageNumbers > a + a {
   margin-left: 5px;
-}
-
-.pager .pageNumbers > a.active, .pager .pageNumbers > a:hover {
-  border-color: #000;
-  color: black;
 }
 
 #frameBody {
@@ -3102,6 +3005,8 @@ input[type="image"], input[type="color"], input[type="button"] {
   background-color: #333;
 }
 
+/* text color */
+/* background */
 @media screen and (max-width: 1280px) {
   .titleH1 {
     font-size: 28px;
@@ -3296,6 +3201,9 @@ input[type="image"], input[type="color"], input[type="button"] {
 }
 
 @media screen and (max-width: 600px) {
+  .highlightArea::-webkit-scrollbar {
+    display: none;
+  }
   .leftArea.active {
     min-width: 40%;
     max-width: 200px;
@@ -3319,6 +3227,88 @@ input[type="image"], input[type="color"], input[type="button"] {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+}
+
+/* hover */
+@media (hover: hover) {
+  a.link:hover {
+    text-decoration: underline;
+  }
+  a.mail:hover {
+    text-decoration: underline;
+  }
+  .headArea > .inner .utilArea li button.btnMail:hover .toolTip.mail, .headArea > .inner .utilArea li a.btnMail:hover .toolTip.mail {
+    opacity: 1;
+    visibility: visible;
+  }
+  .headArea > .inner .utilArea li button.btnShare:hover .toolTip.share, .headArea > .inner .utilArea li a.btnShare:hover .toolTip.share {
+    opacity: 1;
+    visibility: visible;
+  }
+  .headArea > .inner .utilArea li button.btnMore:hover .toolTip.more, .headArea > .inner .utilArea li a.btnMore:hover .toolTip.more {
+    opacity: 1;
+    visibility: visible;
+  }
+  .headArea > .inner .utilArea li button.btnDarkMode:hover .toolTip.more, .headArea > .inner .utilArea li a.btnDarkMode:hover .toolTip.more {
+    opacity: 1;
+    visibility: visible;
+  }
+  .headArea > .inner .utilArea li:hover:before {
+    opacity: 1;
+    visibility: visible;
+  }
+  .leftArea > .leftMenu > li > ul.leftSubMenu li a:hover {
+    text-decoration: underline;
+  }
+  .headArea > .inner .utilArea li .moreSubMenu > ul > li:hover {
+    background-color: rgba(204, 204, 204, 0.8);
+  }
+  #wrap.main .btnStart:hover:before {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+  #wrap.main .btnStart:hover span {
+    color: #333;
+  }
+  #wrap.main .btnStart:hover span:after {
+    background: url("../../images/ico/ico-arrow-right-bk-shw.png") no-repeat center;
+  }
+  #wrap.err .bottomDiv a:hover {
+    text-decoration: underline;
+  }
+  .topArea .backtoTop:hover {
+    background-color: #000;
+  }
+  .topArea .backtoTop:hover svg {
+    stroke: #fff;
+    fill: #fff;
+  }
+  .headArea > .inner .backArea .btnBack:hover:before {
+    opacity: 1;
+    visibility: visible;
+  }
+  .boardList .cont .li .boardBox .boardItem:last-child.underLine:hover {
+    text-decoration: underline;
+  }
+  .pager div:not(.pageNumbers):hover:not(.disabled) {
+    border-color: #000;
+  }
+  .pager .pageNumbers > a.active, .pager .pageNumbers > a:hover {
+    border-color: #000;
+    color: black;
+  }
+  .pager .firstPage:hover:not(.disabled) {
+    background: url("../../images/ico/ico-pagi-first-hover.png") no-repeat center;
+  }
+  .pager .previousPage:hover:not(.disabled) {
+    background: url("../../images/ico/ico-pagi-prev-hover.png") no-repeat center;
+  }
+  .pager .nextPage:hover:not(.disabled) {
+    background: url("../../images/ico/ico-pagi-next-hover.png") no-repeat center;
+  }
+  .pager .lastPage:hover:not(.disabled) {
+    background: url("../../images/ico/ico-pagi-last-hover.png") no-repeat center;
   }
 }
 /*# sourceMappingURL=component.css.map */

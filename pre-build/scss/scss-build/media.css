@@ -1,3 +1,5 @@
+/* text color */
+/* background */
 @media screen and (max-width: 1280px) {
   .titleH1 {
     font-size: 28px;
@@ -192,6 +194,9 @@
 }
 
 @media screen and (max-width: 600px) {
+  .highlightArea::-webkit-scrollbar {
+    display: none;
+  }
   .leftArea.active {
     min-width: 40%;
     max-width: 200px;
@@ -215,6 +220,88 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+}
+
+/* hover */
+@media (hover: hover) {
+  a.link:hover {
+    text-decoration: underline;
+  }
+  a.mail:hover {
+    text-decoration: underline;
+  }
+  .headArea > .inner .utilArea li button.btnMail:hover .toolTip.mail, .headArea > .inner .utilArea li a.btnMail:hover .toolTip.mail {
+    opacity: 1;
+    visibility: visible;
+  }
+  .headArea > .inner .utilArea li button.btnShare:hover .toolTip.share, .headArea > .inner .utilArea li a.btnShare:hover .toolTip.share {
+    opacity: 1;
+    visibility: visible;
+  }
+  .headArea > .inner .utilArea li button.btnMore:hover .toolTip.more, .headArea > .inner .utilArea li a.btnMore:hover .toolTip.more {
+    opacity: 1;
+    visibility: visible;
+  }
+  .headArea > .inner .utilArea li button.btnDarkMode:hover .toolTip.more, .headArea > .inner .utilArea li a.btnDarkMode:hover .toolTip.more {
+    opacity: 1;
+    visibility: visible;
+  }
+  .headArea > .inner .utilArea li:hover:before {
+    opacity: 1;
+    visibility: visible;
+  }
+  .leftArea > .leftMenu > li > ul.leftSubMenu li a:hover {
+    text-decoration: underline;
+  }
+  .headArea > .inner .utilArea li .moreSubMenu > ul > li:hover {
+    background-color: rgba(204, 204, 204, 0.8);
+  }
+  #wrap.main .btnStart:hover:before {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+  #wrap.main .btnStart:hover span {
+    color: #333;
+  }
+  #wrap.main .btnStart:hover span:after {
+    background: url("../../images/ico/ico-arrow-right-bk-shw.png") no-repeat center;
+  }
+  #wrap.err .bottomDiv a:hover {
+    text-decoration: underline;
+  }
+  .topArea .backtoTop:hover {
+    background-color: #000;
+  }
+  .topArea .backtoTop:hover svg {
+    stroke: #fff;
+    fill: #fff;
+  }
+  .headArea > .inner .backArea .btnBack:hover:before {
+    opacity: 1;
+    visibility: visible;
+  }
+  .boardList .cont .li .boardBox .boardItem:last-child.underLine:hover {
+    text-decoration: underline;
+  }
+  .pager div:not(.pageNumbers):hover:not(.disabled) {
+    border-color: #000;
+  }
+  .pager .pageNumbers > a.active, .pager .pageNumbers > a:hover {
+    border-color: #000;
+    color: black;
+  }
+  .pager .firstPage:hover:not(.disabled) {
+    background: url("../../images/ico/ico-pagi-first-hover.png") no-repeat center;
+  }
+  .pager .previousPage:hover:not(.disabled) {
+    background: url("../../images/ico/ico-pagi-prev-hover.png") no-repeat center;
+  }
+  .pager .nextPage:hover:not(.disabled) {
+    background: url("../../images/ico/ico-pagi-next-hover.png") no-repeat center;
+  }
+  .pager .lastPage:hover:not(.disabled) {
+    background: url("../../images/ico/ico-pagi-last-hover.png") no-repeat center;
   }
 }
 /*# sourceMappingURL=media.css.map */

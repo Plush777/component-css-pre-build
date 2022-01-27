@@ -3152,8 +3152,16 @@ input[type="image"], input[type="color"], input[type="button"] {
   .leftArea.active {
     left: 0;
   }
+  .leftArea.active ~ .headArea {
+    width: calc(100% - 300px);
+  }
+  .leftArea.active ~ .rightArea {
+    left: 300px;
+  }
   .headArea {
     width: 100%;
+    -webkit-transition: .3s;
+    transition: .3s;
   }
   .headArea > .inner .utilArea {
     -webkit-transition: .3s;
@@ -3177,10 +3185,6 @@ input[type="image"], input[type="color"], input[type="button"] {
   .headArea > .inner .utilArea li:before {
     width: 34px;
     height: 34px;
-  }
-  .headArea > .inner .utilArea.move {
-    -webkit-transform: translate(calc(100% - -28px), 0);
-            transform: translate(calc(100% - -28px), 0);
   }
   .headArea > .inner .topArea {
     display: none !important;
@@ -3207,10 +3211,6 @@ input[type="image"], input[type="color"], input[type="button"] {
   }
   .rightArea .mainTxt {
     font-size: 14px;
-  }
-  .rightArea.move {
-    -webkit-transform: translate(calc(100% - 90px), 0);
-            transform: translate(calc(100% - 90px), 0);
   }
   .innerTxt > strong {
     font-size: 18px;
@@ -3295,20 +3295,30 @@ input[type="image"], input[type="color"], input[type="button"] {
   }
 }
 
-@media screen and (max-width: 500px) {
-  #wrap {
-    overflow: hidden;
-  }
+@media screen and (max-width: 600px) {
   .leftArea.active {
-    width: calc(100% - 200px);
+    min-width: 40%;
+    max-width: 200px;
   }
-  .rightArea {
-    position: static;
-  }
-  .rightArea.move {
+  .leftArea.active ~ .rightArea {
+    left: 0;
     margin: 0;
-    -webkit-transform: translate(calc(100% - 180px), 0);
-            transform: translate(calc(100% - 180px), 0);
+    -webkit-transform: translate(calc(100% - 80px), 0);
+            transform: translate(calc(100% - 80px), 0);
+  }
+  .leftArea.active ~ .headArea {
+    width: 100%;
+    -webkit-transform: translate(calc(100% - 100px), 0);
+            transform: translate(calc(100% - 100px), 0);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 /*# sourceMappingURL=component.css.map */

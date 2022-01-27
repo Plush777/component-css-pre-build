@@ -2,7 +2,6 @@
     .titleH1{font-size: 28px;}
     .titleH2{font-size: 20px;}
     .titleH3{font-size: 16px;}
-    // .rightArea > .inner{padding: 0 50px;}
     .leftArea{
         .leftMenu>li{
             &:first-child >a{padding: 12px 0;}
@@ -47,7 +46,6 @@
                     }
                     &:before{width: 34px; height: 34px;}
                 }
-                // &.move{transform: translate(calc(100% - -28px),0);} 
             }
             .topArea{display: none !important;}
             .moreArea{display: block;
@@ -60,7 +58,6 @@
     .rightArea{left: 0; width: auto; transition: .3s; padding: 85px 0 20px 0; margin: 0 20px;
         .inner{padding: 0;}
         .mainTxt{font-size: 14px;}
-        // &.move{/*transform: translate(calc(100% - 90px),0);*/ transform: translate(calc(100% - 400px),0);}
     }
 
     .innerTxt > strong{font-size: 18px;}
@@ -122,17 +119,13 @@
 
 @media screen and (max-width:600px){
     .leftArea{
-        &.active{width: calc(100% - 100px);
-            ~.rightArea{left: 0; margin: 0; transform: translate(calc(100% - 180px),0);}
+        &.active{min-width: 40%; max-width: 200px;
+            ~.rightArea{left: 0; margin: 0; transform: translate(calc(100% - 80px),0);}
+            ~.headArea{width: 100%;transform: translate(calc(100% - 100px),0);}
         }
     }
-    // .rightArea{
-    //     &.move{margin: 0; transform: translate(calc(100% - 180px),0);}
-    // }
 }
 
 @media screen and (max-width:500px){
     #container{flex-direction: column;}
-    
-    
 }

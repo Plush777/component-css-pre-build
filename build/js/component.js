@@ -1,5 +1,14 @@
 $(document).ready(function () {
 
+    var urlStatehref = window.location.href;
+    var urlArrhref = urlStatehref.split('/');
+    // console.log(urlArrhref);
+    if (urlArrhref[4] == 'sub_first.html') {
+        $('.btnBack').css('display', 'none');
+    } else {
+        $('.btnBack').show();
+    }
+
     if (window.matchMedia("screen and (max-width: 1280px)").matches) {
         console.log("해상도가 1280px 이하입니다");
         $('body').addClass('mobileType');
@@ -102,7 +111,6 @@ $(document).ready(function () {
     });
 
     var urlState = window.location.pathname;
-    // console.log(urlState);
     var urlArr = urlState.split('/');
     // console.log(urlArr);
 
@@ -112,20 +120,6 @@ $(document).ready(function () {
             location.href = urlArr[0] + '/' + 'html/sub_first.html';
         }
     })
-
-    // var menuUrlPath = window.location.pathname;
-    // console.log(menuUrlPath);
-    // var menuUrlArr = menuUrlPath.split('/');
-    // console.log(menuUrlArr);
-
-    // $('.leftArea > .leftMenu > li > ul.leftSubMenu li a.layoutPage').on({
-    //     "click": function () {
-    //         // window.location.replace('/layout/');
-    //         var layoutPage = location.href
-    //         layoutPage = layoutPage.replace('/layout/' + menuUrlArr[1] + '/');
-    //         console.log(layoutPage);
-    //     }
-    // })
 
     /* 히스토리 개수 */
     historyCount = history.length;
@@ -220,22 +214,22 @@ $(document).ready(function () {
     }
 
     /* #wrap 스크롤 존재여부확인 */
-    $.fn.hasScrollBar = function() {
+    $.fn.hasScrollBar = function () {
         return (this.prop("scrollHeight") == 0 && this.prop("clientHeight") == 0) || (this.prop("scrollHeight") > this.prop("clientHeight"));
-      };
+    };
 
     if (!$('#wrap').hasScrollBar() == true) {
         $('.topArea').css('display', 'none');
     }
 
     /* 스크롤 위치가 맨아래까지 가면 탑버튼 fadeIn */
-    $(window).scroll(function() {
-        if($(window).scrollTop() + $(window).height() == $(document).height()) {
+    $(window).scroll(function () {
+        if ($(window).scrollTop() + $(window).height() == $(document).height()) {
             $('.topArea').fadeIn();
-        }else{
+        } else {
             $('.topArea').fadeOut();
         }
-     });
+    });
 
     /* frameBody esc */
     $(document).on('keyup', function (e) {

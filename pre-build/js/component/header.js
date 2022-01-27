@@ -1,4 +1,5 @@
 $(document).ready(function () {
+
     var lastScrollTop = 0;
     $('#frameBody').scroll(function () {
         var st = $(this).scrollTop();

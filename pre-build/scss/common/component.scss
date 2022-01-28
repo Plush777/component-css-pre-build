@@ -122,7 +122,7 @@ pre{word-break:break-all;white-space:pre-line;margin: 0 !important;}
   }
 }
 
-.topArea{display: none; position: fixed; right: 30px; bottom: 30px; z-index: 10000;
+.topArea{display: none; position: fixed; right: 30px; bottom: 30px; z-index: 9990;
   .backtoTop{display: flex; align-items: center; justify-content: center; width: 48px; height: 48px; 
   border: 1px solid $blackBg; transition: .5s;}
 }
@@ -172,7 +172,7 @@ overflow-y: auto; background-color: #f5f5f5; z-index: 1100;
 
 
 .headArea{position: relative; z-index: 960; width: calc(100% - 300px); margin-left: auto; padding-top: 20px;
-  >.inner{margin: 0 20px; display: flex;align-items: center; justify-content: space-between;
+  >.inner{margin: 0 24px; display: flex;align-items: center; justify-content: space-between;
 
     .backArea{
       .btnBack{position: relative; display: block; width: 30px; height: 30px; background-image: url("../../images/ico/ico-home.png"); 
@@ -335,7 +335,8 @@ i.ico{display: inline-block; background-repeat: repeat; background-position: cen
 
 #dimmed{display: none; position: fixed; z-index: 9998; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0, 0, 0,0.6);}
 
-code[class*=language-], pre[class*=language-] pre{white-space: pre-wrap !important;}
+code[class*=language-], pre[class*=language-] pre{white-space: pre-wrap !important; padding: 16px !important; font-size: 16px !important;
+word-break: break-all !important;}
 
 // code highlight
 .highlightArea{position: relative;
@@ -372,7 +373,6 @@ code[class*=language-], pre[class*=language-] pre{white-space: pre-wrap !importa
     &::-webkit-scrollbar-thumb:active { background: #808080; }
   }
 }
-pre[class*=language-]{padding: 16px !important;}
 
 // update page list
 .boardList{margin-top: 40px;
@@ -437,7 +437,7 @@ pre[class*=language-]{padding: 16px !important;}
 }
 
 // result
-#frameBody{display: none; position: absolute; width: 100%; height: 100%; background-color: $whiteBg; z-index: 10000;
+#frameBody{display: none; position: fixed; top: 0;width: 100%; height: 100%; background-color: $whiteBg; z-index: 10000;
   .btnArea{position: fixed; top: 0; right: 0; z-index: 9999;
     .frameClose{width: 24px; height: 24px; padding: 18px; box-sizing: border-box;
     border-radius: 0 0 0 5px; background-size: 24px 24px; background-image: url("../../images/ico/ico-result-close.png");

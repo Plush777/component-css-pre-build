@@ -127,9 +127,9 @@ $(document).ready(function () {
 
     function historyCountCheck() {
         if (historyCount == 1) {
-            $('.backArea').hide();
+            $('.backArea').css('visibility', 'hidden');
         } else if (historyCount > 1) {
-            $('.backArea').show();
+            $('.backArea').css('visibility', 'visible');
         }
     }
 

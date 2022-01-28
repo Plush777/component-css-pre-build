@@ -343,7 +343,7 @@ pre {
   position: fixed;
   right: 30px;
   bottom: 30px;
-  z-index: 10000;
+  z-index: 9990;
 }
 
 .topArea .backtoTop {
@@ -487,7 +487,7 @@ pre {
 }
 
 .headArea > .inner {
-  margin: 0 20px;
+  margin: 0 24px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1046,6 +1046,9 @@ i.ico.result {
 
 code[class*=language-], pre[class*=language-] pre {
   white-space: pre-wrap !important;
+  padding: 16px !important;
+  font-size: 16px !important;
+  word-break: break-all !important;
 }
 
 .highlightArea {
@@ -1136,10 +1139,6 @@ code[class*=language-], pre[class*=language-] pre {
 
 .highlightArea.cScroll::-webkit-scrollbar-thumb:active {
   background: #808080;
-}
-
-pre[class*=language-] {
-  padding: 16px !important;
 }
 
 .boardList {
@@ -1357,7 +1356,8 @@ pre[class*=language-] {
 
 #frameBody {
   display: none;
-  position: absolute;
+  position: fixed;
+  top: 0;
   width: 100%;
   height: 100%;
   background-color: #fff;
@@ -1714,7 +1714,7 @@ i.ico.center {
 }
 
 .wrap.pre.footerBasic #footer > .inner {
-  padding-top: 40px;
+  padding: 40px;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -1796,7 +1796,7 @@ i.ico.center {
 }
 
 .wrap.pre.footerFixed #footer > .inner {
-  padding-top: 40px;
+  padding: 40px;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -3109,7 +3109,7 @@ input[type="image"], input[type="color"], input[type="button"] {
     -webkit-transition: .3s;
     transition: .3s;
     padding: 85px 0 20px 0;
-    margin: 0 20px;
+    margin: 0 24px;
   }
   .rightArea .inner {
     padding: 0;

@@ -19,16 +19,6 @@ $(document).ready(function(){
             $('#exToast').fadeOut();
         },4000);
     */
-    $('.btnResult').on({
-        "click":function(){
-            if($('#frameBody').css('display') == 'block'){
-                $('#exToast').fadeIn();
-                setTimeout(function(){
-                    $('#exToast').fadeOut();
-                },4000);
-            }
-        }
-    });
 
     $('#drag').draggable({
         cancel:'.cont',

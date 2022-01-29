@@ -79,7 +79,7 @@
 }
 
 .wrap.pre.bgImage .resultCont.type01 .imgDiv {
-  background-size: cover;
+  background-size: 100% 100%;
 }
 
 .wrap.pre.bgImage .resultCont.type02 .imgDiv {

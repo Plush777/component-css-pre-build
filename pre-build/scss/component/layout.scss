@@ -23,7 +23,7 @@
         .resultCont{position: relative;
           .imgDiv{height: 600px; background-image: url("../../images/common/1903x600.png"); background-repeat: no-repeat;}
           &.type01{
-            .imgDiv{background-size: cover;}
+            .imgDiv{background-size: 100% 100%;}
           }
           &.type02{
             .imgDiv{background-size: 100% 100%;}

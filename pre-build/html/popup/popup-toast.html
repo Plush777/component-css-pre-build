@@ -311,6 +311,20 @@ $('#exToast').fadeOut();
       </button>
     </div>
   </div>
+  <script>
+    $(document).ready(function(){
+      $('.btnResult').on({
+        "click":function(){
+          if($('#frameBody').css('display') == 'block'){
+              $('#exToast').fadeIn();
+              setTimeout(function(){
+                  $('#exToast').fadeOut();
+              },4000);
+          }
+        }
+      })
+  });
+  </script>
 </body>
 
 </html>

@@ -24,6 +24,9 @@
   .leftArea .leftMenu > li ul.leftSubMenu li > a {
     font-size: 16px;
   }
+  .wrap.pre.gnbHover .container, .wrap.pre.gnb-li-hover .container, .wrap.pre.gnbFind .container {
+    margin: 0 40px;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -84,9 +87,6 @@
     width: 34px;
     height: 34px;
   }
-  .headArea > .inner .topArea {
-    display: none !important;
-  }
   .headArea > .inner .moreArea {
     display: block;
   }
@@ -104,11 +104,17 @@
     padding: 85px 0 20px 0;
     margin: 0 24px;
   }
-  .rightArea .inner {
+  .rightArea > .inner {
     padding: 0;
   }
   .rightArea .mainTxt {
     font-size: 14px;
+  }
+  .resultArea > .inner {
+    padding: 10px;
+  }
+  .topArea {
+    display: none !important;
   }
   .innerTxt > strong {
     font-size: 18px;
@@ -189,7 +195,7 @@
     font-size: 14px;
   }
   .wrap.pre.gnbFind #gnb ul.menuList li {
-    min-width: auto;
+    min-width: 90px;
   }
 }
 

@@ -1,5 +1,60 @@
 $(document).ready(function () {
 
+    //모바일 체크
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+        
+        //결과버튼 클릭 시 모바일에서만 팝업 실행
+        $('.btnResult').on({
+            "click": function (e) {
+                // 이 클릭 이벤트만 실행하고 다른 btnResult에 걸려있는 이벤트들은 무시함
+                e.stopImmediatePropagation();
+                var cook = $.cookie('mobileResultPopup'); 
+                if (cook == "ok") { 
+                    $('.popup.mobileResult').hide();
+                    $('#dimmed').hide();
+                    $('#frameBody').addClass('show');
+                } else{ 
+                    $('.popup.mobileResult').show();
+                    $('#dimmed').show();
+                }
+            }
+        });
+
+        $('.frameClose').on({
+            "click": function () {
+                $('#frameBody').addClass('hide');
+                $('#frameBody').removeClass('show');
+            }
+        });
+    }
+
+    $('.btnConfirm').on({
+        "click": function () {
+            $('#frameBody').addClass('show');
+            if ($('#frameBody').hasClass('hide')) {
+                $('#frameBody').removeClass('hide');
+            }
+        }
+    });
+
+    $('.btnCancel').on({
+        "click": function () {
+          $('.popup.mobileResult').hide();
+          $('#dimmed').hide();
+        }
+    });
+
+    $('.todayChkClose').on({
+        "click": function () {
+            if ($('#todayChk').is(":checked")){ 
+                $.cookie('mobileResultPopup', 'ok', { expires: 1, path: '/' }); 
+            } 
+            $('.popup.mobileResult').hide();
+            $('#dimmed').hide();
+            $('#frameBody').addClass('show');
+        }
+    });
+
     var urlStatehref = window.location.href;
     var urlArrhref = urlStatehref.split('/');
     // console.log(urlArrhref);
@@ -43,7 +98,8 @@ $(document).ready(function () {
 
     $('.btnResult').on({
         "click": function () {
-            $('#frameBody').show();
+            $('#frameBody').addClass('show');
+            $('#frameBody').removeClass('hide');
             if ($('#frameBody').css('display') == 'block') {
                 $('body').css('overflow', 'hidden');
                 $('#toast').fadeIn();
@@ -56,7 +112,8 @@ $(document).ready(function () {
 
     $('.frameClose').on({
         "click": function () {
-            $('#frameBody').hide();
+            $('#frameBody').addClass('hide');
+            $('#frameBody').removeClass('show');
             if ($('#frameBody').css('display') == 'none') {
                 $('body').css('overflow', 'visible');
             }
@@ -185,18 +242,15 @@ $(document).ready(function () {
     $('.moreArea').on({
         "click": function () {
             var moveElement = $(this).parents('.headArea').siblings('.rightArea');
-            // var moveUtilElement = $(this).parents('.headArea').find('.utilArea');
             var prevElement = $(this).parents('.headArea').prev('.leftArea');
 
             $(this).toggleClass('active');
             prevElement.toggleClass('active').siblings('.leftArea').removeClass('active');
             if (prevElement.hasClass('active')) {
                 moveElement.addClass('move');
-                // moveUtilElement.addClass('move');
                 $('body').css('overflow', 'hidden');
             } else if (!prevElement.hasClass('active')) {
                 moveElement.removeClass('move');
-                // moveUtilElement.removeClass('move');
                 $('body').css('overflow', 'auto');
             }
         }

@@ -904,17 +904,70 @@ pre {
           box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.35);
 }
 
-.popup.share {
+.popup.share, .popup.mobileResult {
   width: 350px;
 }
 
-.popup.share .cont {
+.popup.share .cont, .popup.mobileResult .cont {
   border-radius: 4px;
   text-align: center;
 }
 
-.popup.share .cont .inner {
+.popup.share .cont .inner, .popup.mobileResult .cont .inner {
   padding: 20px;
+}
+
+.popup.mobileResult {
+  width: 400px;
+}
+
+.popup.mobileResult .cont .inner {
+  border-bottom: 1px solid #ddd;
+}
+
+.popup.mobileResult .cont .inner strong {
+  font-size: 18px;
+  font-family: "Noto Sans";
+}
+
+.popup.mobileResult .cont .inner strong + p {
+  margin-top: 8px;
+}
+
+.popup.mobileResult .cont .inner p:last-of-type {
+  margin-top: 5px;
+  font-size: 13px;
+}
+
+.popup.mobileResult .btnArea {
+  width: 100%;
+}
+
+.popup.mobileResult .btnArea button {
+  -webkit-box-flex: 0.5;
+      -ms-flex: 0.5;
+          flex: 0.5;
+  height: 50px;
+  border-right: 1px solid #ddd;
+}
+
+.popup.mobileResult .btnArea button:last-child {
+  border-right: 0;
+}
+
+.popup.mobileResult .btnArea button.btnConfirm span {
+  color: #1886F3;
+}
+
+.popup.mobileResult .btnArea button.btnCancel span {
+  color: #E60A2F;
+}
+
+.popup.mobileResult .btnArea button span {
+  display: block;
+  line-height: 50px;
+  font-family: "Noto Sans";
+  font-weight: bold;
 }
 
 .popup .head {
@@ -1361,12 +1414,12 @@ code[class*=language-], pre[class*=language-] pre {
   position: fixed;
 }
 
-#frameBody::-webkit-scrollbar-thumb {
-  background-color: rgba(255, 255, 255, 0.85);
+#frameBody.show {
+  display: block;
 }
 
-#frameBody::-webkit-scrollbar-track {
-  background-color: #222;
+#frameBody.hide {
+  display: none;
 }
 
 #toast {
@@ -1438,6 +1491,86 @@ i.ico.wide32 {
 i.ico.center {
   display: block;
   margin: 0 auto;
+}
+
+/* mixin */
+:where(body, .cScroll, #frameBody, .resultArea .inner .exBox) {
+  overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #303030 transparent;
+}
+
+:where(body, .cScroll, #frameBody, .resultArea .inner .exBox)::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+:where(body, .cScroll, #frameBody, .resultArea .inner .exBox)::-webkit-scrollbar-button {
+  display: none;
+}
+
+:where(body, .cScroll, #frameBody, .resultArea .inner .exBox)::-webkit-scrollbar-track {
+  background-color: #e9e9e9;
+}
+
+:where(body, .cScroll, #frameBody, .resultArea .inner .exBox)::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 5px;
+}
+
+:where(body, .cScroll, #frameBody, .resultArea .inner .exBox)::-webkit-scrollbar-thumb:hover {
+  background: #b6b6b6;
+}
+
+:where(body, .cScroll, #frameBody, .resultArea .inner .exBox)::-webkit-scrollbar-thumb:active {
+  background: #808080;
+}
+
+#frameBody {
+  overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #303030 transparent;
+}
+
+#frameBody::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+#frameBody::-webkit-scrollbar-button {
+  display: none;
+}
+
+#frameBody::-webkit-scrollbar-track {
+  background-color: #222;
+}
+
+#frameBody::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 5px;
+}
+
+#frameBody::-webkit-scrollbar-thumb:hover {
+  background: #b6b6b6;
+}
+
+#frameBody::-webkit-scrollbar-thumb:active {
+  background: #808080;
+}
+
+::-moz-selection {
+  color: #fff;
+  background-color: rgba(38, 147, 204, 0.5);
+}
+
+::selection {
+  color: #fff;
+  background-color: rgba(38, 147, 204, 0.5);
+}
+
+::-moz-selection {
+  color: #fff;
+  background-color: rgba(38, 147, 204, 0.5);
 }
 
 /* import */
@@ -2764,56 +2897,6 @@ input[type="image"], input[type="color"], input[type="button"] {
 
 /* text color */
 /* background */
-/* text color */
-/* background */
-/* mixin */
-:where(body, .cScroll, #frameBody, .resultArea .inner .exBox) {
-  overflow: auto;
-  scrollbar-width: thin;
-  scrollbar-color: #303030 transparent;
-}
-
-:where(body, .cScroll, #frameBody, .resultArea .inner .exBox)::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
-}
-
-:where(body, .cScroll, #frameBody, .resultArea .inner .exBox)::-webkit-scrollbar-button {
-  display: none;
-}
-
-:where(body, .cScroll, #frameBody, .resultArea .inner .exBox)::-webkit-scrollbar-track {
-  background-color: #e9e9e9;
-}
-
-:where(body, .cScroll, #frameBody, .resultArea .inner .exBox)::-webkit-scrollbar-thumb {
-  background: #ccc;
-  border-radius: 5px;
-}
-
-:where(body, .cScroll, #frameBody, .resultArea .inner .exBox)::-webkit-scrollbar-thumb:hover {
-  background: #b6b6b6;
-}
-
-:where(body, .cScroll, #frameBody, .resultArea .inner .exBox)::-webkit-scrollbar-thumb:active {
-  background: #808080;
-}
-
-::-moz-selection {
-  color: #fff;
-  background-color: rgba(38, 147, 204, 0.5);
-}
-
-::selection {
-  color: #fff;
-  background-color: rgba(38, 147, 204, 0.5);
-}
-
-::-moz-selection {
-  color: #fff;
-  background-color: rgba(38, 147, 204, 0.5);
-}
-
 .mouseMenu {
   display: none;
   position: absolute;
@@ -3309,55 +3392,5 @@ input[type="image"], input[type="color"], input[type="button"] {
   .pager .lastPage:hover:not(.disabled) {
     background: url("../../images/ico/ico-pagi-last-hover.png") no-repeat center;
   }
-}
-
-/* text color */
-/* background */
-/* mixin */
-:where(body, .cScroll, #frameBody, .resultArea .inner .exBox) {
-  overflow: auto;
-  scrollbar-width: thin;
-  scrollbar-color: #303030 transparent;
-}
-
-:where(body, .cScroll, #frameBody, .resultArea .inner .exBox)::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
-}
-
-:where(body, .cScroll, #frameBody, .resultArea .inner .exBox)::-webkit-scrollbar-button {
-  display: none;
-}
-
-:where(body, .cScroll, #frameBody, .resultArea .inner .exBox)::-webkit-scrollbar-track {
-  background-color: #e9e9e9;
-}
-
-:where(body, .cScroll, #frameBody, .resultArea .inner .exBox)::-webkit-scrollbar-thumb {
-  background: #ccc;
-  border-radius: 5px;
-}
-
-:where(body, .cScroll, #frameBody, .resultArea .inner .exBox)::-webkit-scrollbar-thumb:hover {
-  background: #b6b6b6;
-}
-
-:where(body, .cScroll, #frameBody, .resultArea .inner .exBox)::-webkit-scrollbar-thumb:active {
-  background: #808080;
-}
-
-::-moz-selection {
-  color: #fff;
-  background-color: rgba(38, 147, 204, 0.5);
-}
-
-::selection {
-  color: #fff;
-  background-color: rgba(38, 147, 204, 0.5);
-}
-
-::-moz-selection {
-  color: #fff;
-  background-color: rgba(38, 147, 204, 0.5);
 }
 /*# sourceMappingURL=component.css.map */

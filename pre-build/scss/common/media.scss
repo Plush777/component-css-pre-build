@@ -115,17 +115,22 @@
 
     .highlightArea .code-toolbar .toolbar-item span{padding: 0 5px !important; font-size: 11px !important;}
 
-    .wrap.pre{
-        &.gnbHover,&.gnb-li-hover,&.gnbFind{
-            .container{width: auto; padding: 60px 20px 0 20px;
-                #gnb ul.menuList>li{
-                    >a{font-size: 18px;}
-                    .depthTwo>li>a{font-size: 14px;}
+    #frameBody{
+        .wrap.pre{
+            >.container{display: none;}
+            .gifCont{display: block;}
+            &.gnbHover,&.gnb-li-hover,&.gnbFind{
+                .container{width: auto; padding: 60px 20px 0 20px;
+                    #gnb ul.menuList>li{
+                        >a{font-size: 18px;}
+                        .depthTwo>li>a{font-size: 14px;}
+                    }
                 }
             }
-        }
-        &.gnbFind{
-            #gnb ul.menuList li{min-width: 90px;}
+            &.gnbFind{
+                #gnb ul.menuList li{min-width: 90px;}
+            }
+            .gifCont .gifArea >img{width: 95vw;}
         }
     }
 }

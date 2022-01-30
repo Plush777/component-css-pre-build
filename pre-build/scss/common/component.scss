@@ -295,13 +295,18 @@ box-shadow: 0px 0px 8px rgba($color: $blackBg, $alpha: 0.35);
       .inner{padding: 20px;}
     }
   }
-  &.mobileResult{width: 400px;
+  &.mobileResult{min-width: 300px; max-width: 500px; width: auto;
     .cont{
       .inner{border-bottom: 1px solid $dddBg;
         strong{font-size: 18px; font-family: $d-fz;
           +p{margin-top: 8px;}
         }
         p:last-of-type{margin-top: 5px; font-size: 13px;}
+        .todayClose{margin-top: 10px;
+          label{display: flex; align-items: center; justify-content: center;
+            span{font-size: 14px; font-family: 'Noto Sans';}
+          }
+        }
       }
     }
     .btnArea{width: 100%;
@@ -458,7 +463,11 @@ word-break: break-all !important;}
     background-repeat: no-repeat; background-position: center center; background-color: $whiteBg;}
     &.r20{right: 20px;}
   }
-  &.fixed{position: fixed;}
+  .gifCont{display: none; position: fixed; width: 100%; height: 100%; background: rgba(0, 0, 0,0.6); z-index: 9990;
+    .gifArea{position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); border-radius: 10px; box-shadow: 0 0 5px 2px rgba($color: $whiteBg, $alpha: 0.20);
+      >img{display: block; border-radius: inherit;}
+    }
+  }
   &.show{display: block;}
   &.hide{display: none;}
 }

@@ -13,17 +13,11 @@ $(document).ready(function () {
                     $('.popup.mobileResult').hide();
                     $('#dimmed').hide();
                     $('#frameBody').addClass('show');
+                    $('#frameBody').removeClass('hide');
                 } else{ 
                     $('.popup.mobileResult').show();
                     $('#dimmed').show();
                 }
-            }
-        });
-
-        $('.frameClose').on({
-            "click": function () {
-                $('#frameBody').addClass('hide');
-                $('#frameBody').removeClass('show');
             }
         });
     }
@@ -31,6 +25,8 @@ $(document).ready(function () {
     $('.btnConfirm').on({
         "click": function () {
             $('#frameBody').addClass('show');
+            $('.popup.mobileResult').hide();
+            $('#dimmed').hide();
             if ($('#frameBody').hasClass('hide')) {
                 $('#frameBody').removeClass('hide');
             }

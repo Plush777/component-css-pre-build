@@ -184,18 +184,27 @@
     padding: 0 5px !important;
     font-size: 11px !important;
   }
-  .wrap.pre.gnbHover .container, .wrap.pre.gnb-li-hover .container, .wrap.pre.gnbFind .container {
+  #frameBody .wrap.pre > .container {
+    display: none;
+  }
+  #frameBody .wrap.pre .gifCont {
+    display: block;
+  }
+  #frameBody .wrap.pre.gnbHover .container, #frameBody .wrap.pre.gnb-li-hover .container, #frameBody .wrap.pre.gnbFind .container {
     width: auto;
     padding: 60px 20px 0 20px;
   }
-  .wrap.pre.gnbHover .container #gnb ul.menuList > li > a, .wrap.pre.gnb-li-hover .container #gnb ul.menuList > li > a, .wrap.pre.gnbFind .container #gnb ul.menuList > li > a {
+  #frameBody .wrap.pre.gnbHover .container #gnb ul.menuList > li > a, #frameBody .wrap.pre.gnb-li-hover .container #gnb ul.menuList > li > a, #frameBody .wrap.pre.gnbFind .container #gnb ul.menuList > li > a {
     font-size: 18px;
   }
-  .wrap.pre.gnbHover .container #gnb ul.menuList > li .depthTwo > li > a, .wrap.pre.gnb-li-hover .container #gnb ul.menuList > li .depthTwo > li > a, .wrap.pre.gnbFind .container #gnb ul.menuList > li .depthTwo > li > a {
+  #frameBody .wrap.pre.gnbHover .container #gnb ul.menuList > li .depthTwo > li > a, #frameBody .wrap.pre.gnb-li-hover .container #gnb ul.menuList > li .depthTwo > li > a, #frameBody .wrap.pre.gnbFind .container #gnb ul.menuList > li .depthTwo > li > a {
     font-size: 14px;
   }
-  .wrap.pre.gnbFind #gnb ul.menuList li {
+  #frameBody .wrap.pre.gnbFind #gnb ul.menuList li {
     min-width: 90px;
+  }
+  #frameBody .wrap.pre .gifCont .gifArea > img {
+    width: 95vw;
   }
 }
 

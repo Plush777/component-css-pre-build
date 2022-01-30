@@ -89,7 +89,7 @@
 <br>
 
 - Text ellipsis
-- Key frames
+- Key frames (Disabled)
 
 
 

@@ -407,6 +407,7 @@ pre {
 .leftArea > .leftMenu > li.active span:after {
   -webkit-transform: translateY(-50%) rotate(180deg);
           transform: translateY(-50%) rotate(180deg);
+  right: 29px;
   background: url("../../images/ico/ico-down-active.svg") no-repeat;
 }
 
@@ -455,19 +456,47 @@ pre {
 }
 
 .leftArea > .leftMenu > li > ul.leftSubMenu li {
-  padding-bottom: 8px;
   border-bottom: 1px solid rgba(0, 0, 18, 0.08);
 }
 
 .leftArea > .leftMenu > li > ul.leftSubMenu li a {
+  position: relative;
   display: block;
+  padding-bottom: 8px;
   font-family: "Noto Sans";
   font-size: 1.13em;
   color: #707070;
 }
 
+.leftArea > .leftMenu > li > ul.leftSubMenu li a > .depthToggle {
+  position: absolute;
+  top: 5px;
+  right: 3px;
+  width: 17px;
+  height: 17px;
+  background-image: url("../../images/ico/ico-unfold.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 17px 17px;
+}
+
 .leftArea > .leftMenu > li > ul.leftSubMenu li.active a {
   color: #266bf7;
+}
+
+.leftArea > .leftMenu > li > ul.leftSubMenu li.on > a {
+  color: #266bf7;
+}
+
+.leftArea > .leftMenu > li > ul.leftSubMenu li.on .depthToggle {
+  width: 16px;
+  height: 1px;
+  top: 14px;
+  right: 3px;
+  background-size: 14px auto;
+  background-image: url("../../images/ico/ico-fold-on.png");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .leftArea > .leftMenu > li > ul.leftSubMenu li + li {
@@ -476,6 +505,42 @@ pre {
 
 .leftArea > .leftMenu > li > ul.leftSubMenu li.disabled > a {
   color: #ccc;
+}
+
+.leftArea > .leftMenu > li > ul.leftSubMenu li > .dep3 {
+  display: none;
+  padding: 8px 0 0 25px;
+  border-top: 1px solid rgba(0, 0, 18, 0.08);
+}
+
+.leftArea > .leftMenu > li > ul.leftSubMenu li > .dep3 > li {
+  position: relative;
+  padding-bottom: 5px;
+  border-bottom: 0;
+}
+
+.leftArea > .leftMenu > li > ul.leftSubMenu li > .dep3 > li:before {
+  content: '';
+  position: absolute;
+  top: 9px;
+  left: -20px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: rgba(32, 32, 32, 0.75);
+}
+
+.leftArea > .leftMenu > li > ul.leftSubMenu li > .dep3 > li > a {
+  font-size: 0.94em;
+}
+
+.leftArea > .leftMenu > li > ul.leftSubMenu li > .dep3 > li + li {
+  margin-top: 5px;
+}
+
+.leftArea > .leftMenu > li > ul.leftSubMenu li > .dep3 > li:last-of-type {
+  padding-bottom: 0;
+  border-bottom: 0;
 }
 
 .headArea {
@@ -1658,7 +1723,7 @@ i.ico.center {
 .wrap.pre.headerFixed #header .inner span, .wrap.pre.headerScroll #header .inner span, .wrap.pre.headerToggle #header .inner span {
   display: inline-block;
   line-height: 32px;
-  font-size: 20px;
+  font-size: 1.25em;
   font-family: "Noto Sans";
   color: #fff;
 }
@@ -1681,7 +1746,7 @@ i.ico.center {
 }
 
 .wrap.pre.headerFixed .contents span, .wrap.pre.headerScroll .contents span, .wrap.pre.headerToggle .contents span {
-  font-size: 30px;
+  font-size: 1.88em;
   font-family: "Noto Sans";
   color: #fff;
 }
@@ -1792,7 +1857,7 @@ i.ico.center {
 
 .wrap.pre.gnbHover #gnb ul.menuList > li > a, .wrap.pre.gnb-li-hover #gnb ul.menuList > li > a, .wrap.pre.gnbFind #gnb ul.menuList > li > a {
   min-width: 80px;
-  font-size: 24px;
+  font-size: 1.5em;
   font-family: "Noto Sans";
   color: #000;
 }
@@ -1810,7 +1875,7 @@ i.ico.center {
 
 .wrap.pre.gnbHover #gnb ul.menuList > li .depthTwo > li > a, .wrap.pre.gnb-li-hover #gnb ul.menuList > li .depthTwo > li > a, .wrap.pre.gnbFind #gnb ul.menuList > li .depthTwo > li > a {
   display: block;
-  font-size: 16px;
+  font-size: 1em;
   font-family: "Noto Sans";
   color: #444;
 }
@@ -1855,7 +1920,7 @@ i.ico.center {
   position: relative;
   min-height: calc(100vh - 322px);
   text-align: center;
-  font-size: 36px;
+  font-size: 2.25em;
   color: #fff;
   font-family: "Noto Sans";
   background-color: #444;
@@ -1918,7 +1983,7 @@ i.ico.center {
 }
 
 .wrap.pre.footerBasic #footer > .inner .linkArea ul li a {
-  font-size: 16px;
+  font-size: 1em;
   font-family: "Noto Sans";
   color: #fff;
 }
@@ -1937,7 +2002,7 @@ i.ico.center {
 }
 
 .wrap.pre.footerBasic #footer > .inner .bottomArea > .inner p.copy {
-  font-size: 14px;
+  font-size: 0.88em;
   color: #fff;
   font-family: '맑은 고딕';
   text-align: center;
@@ -2000,7 +2065,7 @@ i.ico.center {
 }
 
 .wrap.pre.footerFixed #footer > .inner .linkArea ul li a {
-  font-size: 16px;
+  font-size: 1em;
   font-family: "Noto Sans";
   color: #fff;
 }
@@ -2019,7 +2084,7 @@ i.ico.center {
 }
 
 .wrap.pre.footerFixed #footer > .inner .bottomArea > .inner p.copy {
-  font-size: 14px;
+  font-size: 0.88em;
   color: #fff;
   font-family: '맑은 고딕';
   text-align: center;
@@ -2090,7 +2155,7 @@ i.ico.center {
 .wrap.pre.centerEle .centerBox {
   padding: 50px;
   border: 2px solid #000;
-  font-size: 22px;
+  font-size: 1.38em;
   font-family: "Noto Sans";
 }
 
@@ -2143,7 +2208,7 @@ i.ico.center {
   padding: 16px 0;
   text-indent: 28px;
   font-family: 'Noto Sans Light';
-  font-size: 22px;
+  font-size: 1.38em;
   color: #fff;
   -webkit-transition: .5s;
   transition: .5s;
@@ -2160,7 +2225,8 @@ i.ico.center {
   transition: .5s;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  background: url("../../images/ico/ico-down.svg") no-repeat;
+  background-image: url("../../images/ico/ico-down.svg");
+  background-repeat: no-repeat;
 }
 
 .wrap.pre.leftMenu .leftAreaType02 > .leftMenu > li a {
@@ -2184,7 +2250,7 @@ i.ico.center {
 .wrap.pre.leftMenu .leftAreaType02 > .leftMenu > li > ul.leftSubMenu li a {
   display: block;
   font-family: "Noto Sans";
-  font-size: 18px;
+  font-size: 1.13em;
   color: rgba(255, 255, 255, 0.8);
   text-indent: 50px;
   font-family: 'Noto Sans Light';
@@ -2287,7 +2353,7 @@ i.ico.center {
   width: 200px;
   height: 200px;
   max-width: 200px;
-  font-size: 16px;
+  font-size: 1em;
   font-family: "Noto Sans";
   color: #fff;
   background-color: #000;
@@ -2559,7 +2625,7 @@ i.ico.center {
   padding: 0 10px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-size: 16px;
+  font-size: 1em;
   border-radius: 4px;
   font-family: "Noto Sans";
   color: #fff;
@@ -2610,7 +2676,7 @@ i.ico.center {
           flex: 1;
   height: 35px;
   line-height: 35px;
-  font-size: 18px;
+  font-size: 1.13em;
   cursor: pointer;
   text-align: center;
   color: #000;
@@ -2652,7 +2718,7 @@ i.ico.center {
   display: flex;
   border: 1px solid #ddd;
   border-radius: 4px;
-  font-size: 16px;
+  font-size: 1em;
   color: #222;
 }
 
@@ -2759,7 +2825,7 @@ textarea {
   font-family: "Noto Sans";
   border-radius: 4px;
   color: #222;
-  font-size: 14px;
+  font-size: 0.88em;
   resize: none;
   overflow-y: auto;
   background-color: #fff;
@@ -2858,7 +2924,7 @@ input[type="image"], input[type="color"], input[type="button"] {
 
 .checkbox label {
   vertical-align: middle;
-  font-size: 14px;
+  font-size: 0.88em;
   color: #222;
   font-family: "Noto Sans";
   cursor: pointer;
@@ -2906,7 +2972,7 @@ input[type="image"], input[type="color"], input[type="button"] {
       -ms-flex-align: center;
           align-items: center;
   font-family: "Noto Sans";
-  font-size: 14px;
+  font-size: 0.88em;
   color: #141414;
   cursor: pointer;
   text-indent: 5px;
@@ -2995,7 +3061,7 @@ input[type="image"], input[type="color"], input[type="button"] {
   border-radius: 4px 4px 0 0;
   color: #fff;
   font-family: "Noto Sans";
-  font-size: 16px;
+  font-size: 1em;
   background-color: #266bf7;
 }
 
@@ -3014,7 +3080,7 @@ input[type="image"], input[type="color"], input[type="button"] {
           box-sizing: border-box;
   border-radius: 0 0 4px 4px;
   font-family: "Noto Sans";
-  font-size: 14px;
+  font-size: 0.88em;
   background-color: #fff;
 }
 
@@ -3040,7 +3106,7 @@ input[type="image"], input[type="color"], input[type="button"] {
           box-sizing: border-box;
   border-radius: 4px;
   font-family: "Noto Sans";
-  font-size: 16px;
+  font-size: 1em;
   color: #fff;
   background-color: #266bf7;
 }
@@ -3075,7 +3141,7 @@ input[type="image"], input[type="color"], input[type="button"] {
 .wrap.pre.toastPop #exToast span {
   display: block;
   text-align: center;
-  font-size: 14px;
+  font-size: 0.88em;
   color: #fff;
   font-family: '맑은 고딕';
 }
@@ -3126,7 +3192,7 @@ input[type="image"], input[type="color"], input[type="button"] {
   min-width: 60px;
   padding: 5px 0;
   font-family: "Noto Sans";
-  font-size: 12px;
+  font-size: 0.75em;
   border-radius: 3px;
   color: #fff;
   text-align: center;
@@ -3319,6 +3385,9 @@ input[type="image"], input[type="color"], input[type="button"] {
     padding: 0 5px !important;
     font-size: 0.69em !important;
   }
+  #frameBody .wrap.pre.allRes > .container {
+    display: block;
+  }
   #frameBody .wrap.pre > .container {
     display: none;
   }
@@ -3350,6 +3419,9 @@ input[type="image"], input[type="color"], input[type="button"] {
   #frameBody .wrap.pre .gifCont .gifArea > img {
     width: 95vw;
   }
+  #frameBody .wrap.pre.leftMenu .leftAreaType02 > .leftMenu li span {
+    font-size: 1.13em;
+  }
   .titleH2.web, .resultArea.web {
     display: none;
   }
@@ -3357,6 +3429,16 @@ input[type="image"], input[type="color"], input[type="button"] {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+  .leftArea > .leftMenu > li > ul.leftSubMenu li a > .depthToggle {
+    width: 17px;
+    height: 17px;
+    top: 0;
+    background-size: 17px 17px;
+  }
+  .leftArea > .leftMenu > li > ul.leftSubMenu li.on a > .depthToggle {
+    top: 10px;
+    background-size: 14px auto;
   }
 }
 
@@ -3378,6 +3460,14 @@ input[type="image"], input[type="color"], input[type="button"] {
     width: 100%;
     -webkit-transform: translate(calc(100% - 100px), 0);
             transform: translate(calc(100% - 100px), 0);
+  }
+  #frameBody .wrap.pre.leftMenu .leftAreaType02 > .leftMenu li span {
+    font-size: 1em;
+  }
+  #frameBody .wrap.pre.leftMenu .leftAreaType02 > .leftMenu li span:after {
+    width: 13px;
+    height: 7px;
+    background-size: 13px 7px;
   }
 }
 

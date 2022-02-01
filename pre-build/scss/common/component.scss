@@ -141,7 +141,7 @@ overflow-y: auto; background-color: #f5f5f5; z-index: 1100;
       border-bottom: 1px solid rgba($color: #000012, $alpha: 0.08);}
       &.active{
         span{color: $emphasisType01;
-          &:after{transform: translateY(-50%) rotate(180deg); background: url("../../images/ico/ico-down-active.svg")no-repeat;}
+          &:after{transform: translateY(-50%) rotate(180deg); right: 29px; background: url("../../images/ico/ico-down-active.svg")no-repeat;}
         }
       }
       >span{position: relative; display: block; padding: 16px 0; text-indent: 28px;border-bottom: 1px solid rgba($color: #000012, $alpha: 0.08);
@@ -153,16 +153,34 @@ overflow-y: auto; background-color: #f5f5f5; z-index: 1100;
       >ul.leftSubMenu{display: none; padding: 16px 28px 16px 28px; box-sizing: border-box;
       border-bottom: 1px solid rgba($color: #000012, $alpha: 0.08); background-color: #eee;
         &.block{display: block;}
-        li{padding-bottom: 8px; border-bottom: 1px solid rgba($color: #000012, $alpha: 0.08);
-          a{display: block; font-family: $d-fz; font-size: 1.13em; color: $c70;}
+        li{border-bottom: 1px solid rgba($color: #000012, $alpha: 0.08);
+          a{position: relative; display: block;padding-bottom: 8px; font-family: $d-fz; font-size: 1.13em; color: $c70;
+            >.depthToggle{position: absolute; top: 5px; right: 3px; width: 17px; height: 17px;
+            background-image: url("../../images/ico/ico-unfold.png"); background-repeat: no-repeat; background-position: center;
+            background-size: 17px 17px;}
+          }
           &.active{
             a{color: $emphasisType01;}
+          }
+          &.on{
+            >a{color: $emphasisType01;}
+            .depthToggle{width: 16px; height: 1px; top: 14px; right: 3px; background-size: 14px auto;
+            background-image: url("../../images/ico/ico-fold-on.png"); background-repeat: no-repeat; background-position: center;}
           }
           +li{margin-top: 17px;}
 
           //비공개일때
           &.disabled{
             >a{color: #ccc;}
+          }
+          >.dep3{display: none; padding: 8px 0 0 25px; border-top: 1px solid rgba($color: #000012, $alpha: 0.08);
+            >li{position: relative; padding-bottom: 5px; border-bottom: 0;
+              &:before{content: ''; position: absolute; top: 9px; left: -20px; width: 6px; height: 6px;
+              border-radius: 50%; background-color: rgba($color: #202020, $alpha: 0.75);}
+              >a{font-size: 0.94em;}
+              +li{margin-top: 5px;}
+              &:last-of-type{padding-bottom: 0; border-bottom: 0;}
+            }
           }
         }
       }

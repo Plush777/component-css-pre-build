@@ -229,6 +229,19 @@
     display: -ms-flexbox;
     display: flex;
   }
+  .leftArea > .leftMenu > li > ul.leftSubMenu li a > .depthToggle {
+    width: 17px;
+    height: 17px;
+    top: 0;
+    background-size: 17px 17px;
+  }
+  .leftArea > .leftMenu > li > ul.leftSubMenu li.on a > .depthToggle {
+    top: 10px;
+    background-size: 14px auto;
+  }
+  .leftArea > .leftMenu > li.active span:after {
+    right: 31px;
+  }
 }
 
 @media screen and (max-width: 600px) {

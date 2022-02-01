@@ -163,6 +163,14 @@ $(document).ready(function () {
         }
     });
 
+    /* lnb dep3 메뉴 */
+    $('.dep3Cont').on({
+        "click": function () {
+            $(this).find('.dep3').stop().slideToggle();
+            $(this).toggleClass('on').siblings('li').removeClass('on').find('.leftSubMenu').slideUp();
+        }
+    });
+
     var urlState = window.location.pathname;
     var urlArr = urlState.split('/');
     // console.log(urlArr);

@@ -158,6 +158,14 @@
         &.web{display: none;}
     }
     .btnArea.mob{display: flex;}
+
+    .leftArea>.leftMenu>li{
+        >ul.leftSubMenu li{
+            a>.depthToggle{width: 17px; height: 17px; top: 0; background-size: 17px 17px;}
+            &.on a>.depthToggle{top: 10px; background-size: 14px auto;}
+        }
+        &.active span:after{right: 31px;}
+    }
 }
 
 @media screen and (max-width:600px){

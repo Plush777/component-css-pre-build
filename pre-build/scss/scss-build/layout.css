@@ -64,7 +64,7 @@
 .wrap.pre.centerEle .centerBox {
   padding: 50px;
   border: 2px solid #000;
-  font-size: 22px;
+  font-size: 1.38em;
   font-family: "Noto Sans";
 }
 
@@ -117,7 +117,7 @@
   padding: 16px 0;
   text-indent: 28px;
   font-family: 'Noto Sans Light';
-  font-size: 22px;
+  font-size: 1.38em;
   color: #fff;
   -webkit-transition: .5s;
   transition: .5s;
@@ -134,7 +134,8 @@
   transition: .5s;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  background: url("../../images/ico/ico-down.svg") no-repeat;
+  background-image: url("../../images/ico/ico-down.svg");
+  background-repeat: no-repeat;
 }
 
 .wrap.pre.leftMenu .leftAreaType02 > .leftMenu > li a {
@@ -158,7 +159,7 @@
 .wrap.pre.leftMenu .leftAreaType02 > .leftMenu > li > ul.leftSubMenu li a {
   display: block;
   font-family: "Noto Sans";
-  font-size: 18px;
+  font-size: 1.13em;
   color: rgba(255, 255, 255, 0.8);
   text-indent: 50px;
   font-family: 'Noto Sans Light';
@@ -261,7 +262,7 @@
   width: 200px;
   height: 200px;
   max-width: 200px;
-  font-size: 16px;
+  font-size: 1em;
   font-family: "Noto Sans";
   color: #fff;
   background-color: #000;
@@ -533,7 +534,7 @@
   padding: 0 10px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-size: 16px;
+  font-size: 1em;
   border-radius: 4px;
   font-family: "Noto Sans";
   color: #fff;
@@ -584,7 +585,7 @@
           flex: 1;
   height: 35px;
   line-height: 35px;
-  font-size: 18px;
+  font-size: 1.13em;
   cursor: pointer;
   text-align: center;
   color: #000;
@@ -626,7 +627,7 @@
   display: flex;
   border: 1px solid #ddd;
   border-radius: 4px;
-  font-size: 16px;
+  font-size: 1em;
   color: #222;
 }
 

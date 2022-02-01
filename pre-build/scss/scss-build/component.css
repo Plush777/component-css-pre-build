@@ -181,7 +181,7 @@ pre {
 
 #wrap.main .btnStart span {
   position: relative;
-  font-size: 22px;
+  font-size: 1.38em;
   font-family: "Noto Sans";
   margin-right: 20px;
   -webkit-transition: .3s;
@@ -246,14 +246,14 @@ pre {
 }
 
 #wrap.update .mainTxt p {
-  font-size: 16px;
+  font-size: 1em;
   font-family: "Noto Sans";
   line-height: 1.5;
   color: #333;
 }
 
 #wrap.update .textBox .titleH3 + .mainTxt p {
-  font-size: 14px;
+  font-size: 0.88em;
 }
 
 #wrap.update .textBox + .textBox {
@@ -267,7 +267,7 @@ pre {
 }
 
 #wrap.license .textBox .titleH3 + .mainTxt p {
-  font-size: 14px;
+  font-size: 0.88em;
 }
 
 #wrap.license .textBox + .textBox {
@@ -281,7 +281,7 @@ pre {
 #wrap.license .indentTxtArea ul li {
   list-style: inside;
   font-family: '맑은 고딕';
-  font-size: 14px;
+  font-size: 0.88em;
 }
 
 #wrap.license .indentTxtArea ul li + li {
@@ -312,7 +312,7 @@ pre {
 }
 
 #wrap.err .txtDiv {
-  font-size: 24px;
+  font-size: 1.5em;
 }
 
 #wrap.err .txtDiv + .descDiv {
@@ -320,7 +320,7 @@ pre {
 }
 
 #wrap.err .descDiv {
-  font-size: 16px;
+  font-size: 1em;
 }
 
 #wrap.err .descDiv p + p {
@@ -335,7 +335,7 @@ pre {
       -ms-flex-pack: end;
           justify-content: flex-end;
   margin-top: 40px;
-  font-size: 16px;
+  font-size: 1em;
 }
 
 .topArea {
@@ -417,7 +417,7 @@ pre {
   text-indent: 28px;
   border-bottom: 1px solid rgba(0, 0, 18, 0.08);
   font-family: "Noto Sans";
-  font-size: 22px;
+  font-size: 1.38em;
   color: #707070;
   -webkit-transition: .5s;
   transition: .5s;
@@ -462,7 +462,7 @@ pre {
 .leftArea > .leftMenu > li > ul.leftSubMenu li a {
   display: block;
   font-family: "Noto Sans";
-  font-size: 18px;
+  font-size: 1.13em;
   color: #707070;
 }
 
@@ -584,7 +584,7 @@ pre {
   color: #202020;
   text-align: center;
   white-space: nowrap;
-  font-size: 12px;
+  font-size: 0.75em;
 }
 
 .headArea > .inner .utilArea li .moreSubMenu > ul > li:before {
@@ -618,7 +618,7 @@ pre {
           box-sizing: border-box;
   color: #fff;
   font-family: "Noto Sans";
-  font-size: 11px;
+  font-size: 0.69em;
   border-radius: 3px;
   text-align: center;
   background-color: #333;
@@ -718,6 +718,10 @@ pre {
   margin-top: 50px;
 }
 
+.resultArea + .btnArea.mob {
+  margin-top: 0;
+}
+
 .rightArea {
   position: absolute;
   right: 0;
@@ -759,7 +763,7 @@ pre {
 }
 
 .rightArea .mainTxt {
-  font-size: 16px;
+  font-size: 1em;
   font-family: "Noto Sans";
   line-height: 1.5;
   color: #333;
@@ -787,21 +791,21 @@ pre {
 }
 
 .titleH1 {
-  font-size: 32px;
+  font-size: 2em;
 }
 
 .titleH2 {
-  font-size: 24px;
+  font-size: 1.5em;
 }
 
 .titleH3 {
-  font-size: 20px;
+  font-size: 1.25em;
 }
 
 .innerTxt > strong {
   display: block;
   margin-bottom: 5px;
-  font-size: 20px;
+  font-size: 1.25em;
 }
 
 .innerTxt + .innerTxt {
@@ -822,7 +826,7 @@ pre {
 }
 
 .table th {
-  font-size: 14px;
+  font-size: 0.88em;
   color: #333;
   background-color: #f5f5f5;
 }
@@ -846,14 +850,14 @@ pre {
 
 .table.noticeBoard th {
   height: 65px;
-  font-size: 18px;
+  font-size: 1.13em;
   color: #3b3b3b;
   background-color: #ddd;
 }
 
 .table.noticeBoard td {
   height: 40px;
-  font-size: 16px;
+  font-size: 1em;
   padding: 15px 25px 15px 25px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -928,7 +932,7 @@ pre {
 }
 
 .popup.mobileResult .cont .inner strong {
-  font-size: 18px;
+  font-size: 1.13em;
   font-family: "Noto Sans";
 }
 
@@ -938,7 +942,7 @@ pre {
 
 .popup.mobileResult .cont .inner p:last-of-type {
   margin-top: 5px;
-  font-size: 13px;
+  font-size: 0.81em;
 }
 
 .popup.mobileResult .cont .inner .todayClose {
@@ -958,7 +962,7 @@ pre {
 }
 
 .popup.mobileResult .cont .inner .todayClose label span {
-  font-size: 14px;
+  font-size: 0.88em;
   font-family: 'Noto Sans';
 }
 
@@ -1014,7 +1018,7 @@ pre {
 }
 
 .popup .cont .inner p {
-  font-size: 14px;
+  font-size: 0.88em;
   color: #222;
   font-family: "Noto Sans";
 }
@@ -1109,6 +1113,10 @@ i.ico.result {
           justify-content: flex-end;
 }
 
+.btnArea.mob {
+  display: none;
+}
+
 #dimmed {
   display: none;
   position: fixed;
@@ -1123,7 +1131,7 @@ i.ico.result {
 code[class*=language-], pre[class*=language-] pre {
   white-space: pre-wrap !important;
   padding: 16px !important;
-  font-size: 16px !important;
+  font-size: 1em !important;
   word-break: break-all !important;
 }
 
@@ -1155,7 +1163,7 @@ code[class*=language-], pre[class*=language-] pre {
   display: inline-block !important;
   min-width: 40px !important;
   padding: 0 10px !important;
-  font-size: 12px !important;
+  font-size: 0.75em !important;
   font-family: "Noto Sans" !important;
   text-align: center !important;
   -webkit-transition: .5s !important;
@@ -1201,7 +1209,7 @@ code[class*=language-], pre[class*=language-] pre {
 
 .boardList .head {
   color: #3b3b3b;
-  font-size: 18px;
+  font-size: 1.13em;
   background: #ddd;
 }
 
@@ -1241,7 +1249,7 @@ code[class*=language-], pre[class*=language-] pre {
 
 .boardList .cont .li {
   border-top: 1px solid #5f5f5f;
-  font-size: 16px;
+  font-size: 1em;
   padding: 10px 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -1294,7 +1302,7 @@ code[class*=language-], pre[class*=language-] pre {
 }
 
 .boardList .cont .listShowHideBox .inner .tit p {
-  font-size: 18px;
+  font-size: 1.13em;
   color: #000;
   font-family: "Noto Sans";
 }
@@ -1304,7 +1312,7 @@ code[class*=language-], pre[class*=language-] pre {
 }
 
 .boardList .cont .listShowHideBox .inner dd {
-  font-size: 14px;
+  font-size: 0.88em;
   color: #333;
   font-family: "Noto Sans";
 }
@@ -1347,7 +1355,7 @@ code[class*=language-], pre[class*=language-] pre {
   border: 1px solid #ddd;
   border-radius: 4px;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 1em;
   -webkit-transition: 0.35s ease-in-out;
   transition: 0.35s ease-in-out;
 }
@@ -1385,7 +1393,7 @@ code[class*=language-], pre[class*=language-] pre {
   height: 32px;
   line-height: 32px;
   text-align: center;
-  font-size: 16px;
+  font-size: 1em;
   border: 1px solid #ddd;
   border-radius: 4px;
   font-family: "Noto Sans";
@@ -1485,7 +1493,7 @@ code[class*=language-], pre[class*=language-] pre {
 #toast span {
   display: inline-block;
   text-align: center;
-  font-size: 14px;
+  font-size: 0.88em;
   color: #fff;
   font-family: '맑은 고딕';
 }
@@ -3129,27 +3137,27 @@ input[type="image"], input[type="color"], input[type="button"] {
 /* background */
 @media screen and (max-width: 1280px) {
   .titleH1 {
-    font-size: 28px;
+    font-size: 1.75em;
   }
   .titleH2 {
-    font-size: 20px;
+    font-size: 1.25em;
   }
   .titleH3 {
-    font-size: 16px;
+    font-size: 1em;
   }
   .leftArea .leftMenu > li:first-child > a {
     padding: 12px 0;
   }
   .leftArea .leftMenu > li span:not(.hidden) {
     padding: 12px 0;
-    font-size: 18px;
+    font-size: 1.13em;
     text-indent: 24px;
   }
   .leftArea .leftMenu > li ul.leftSubMenu {
     padding: 14px 24px 14px 24px;
   }
   .leftArea .leftMenu > li ul.leftSubMenu li > a {
-    font-size: 16px;
+    font-size: 1em;
   }
   .wrap.pre.gnbHover .container, .wrap.pre.gnb-li-hover .container, .wrap.pre.gnbFind .container {
     margin: 0 40px;
@@ -3166,7 +3174,7 @@ input[type="image"], input[type="color"], input[type="button"] {
     width: 160px;
   }
   .leftArea .leftMenu li span:not(.hidden) {
-    font-size: 16px;
+    font-size: 1em;
   }
   .leftArea .leftMenu li span:not(.hidden):after {
     background-size: 12px 7px;
@@ -3175,7 +3183,7 @@ input[type="image"], input[type="color"], input[type="button"] {
     background-size: 12px 7px;
   }
   .leftArea .leftMenu li ul.leftSubMenu li a {
-    font-size: 14px;
+    font-size: 0.88em;
   }
   .leftArea.active {
     left: 0;
@@ -3235,7 +3243,7 @@ input[type="image"], input[type="color"], input[type="button"] {
     padding: 0;
   }
   .rightArea .mainTxt {
-    font-size: 14px;
+    font-size: 0.88em;
   }
   .resultArea > .inner {
     padding: 10px;
@@ -3244,18 +3252,18 @@ input[type="image"], input[type="color"], input[type="button"] {
     display: none !important;
   }
   .innerTxt > strong {
-    font-size: 18px;
+    font-size: 1.13em;
   }
   .titleH1 {
-    font-size: 26px;
+    font-size: 1.63em;
     padding-bottom: 10px;
     margin-bottom: 15px;
   }
   .titleH2 {
-    font-size: 18px;
+    font-size: 1.13em;
   }
   .titleH3 {
-    font-size: 14px;
+    font-size: 0.88em;
   }
   .popup.share {
     width: 300px;
@@ -3264,7 +3272,7 @@ input[type="image"], input[type="color"], input[type="button"] {
     padding: 15px;
   }
   .popup.share .cont .inner p {
-    font-size: 12px;
+    font-size: 0.75em;
   }
   .popup.share .cont .inner p + .inputArea {
     margin-top: 15px;
@@ -3273,7 +3281,7 @@ input[type="image"], input[type="color"], input[type="button"] {
     margin-right: 10px;
   }
   .popup.share .cont .inner .inputArea button {
-    font-size: 12px;
+    font-size: 0.75em;
     min-width: 65px;
   }
   .tabWrap.type01 {
@@ -3288,7 +3296,7 @@ input[type="image"], input[type="color"], input[type="button"] {
   .tabWrap.type01 > .tabNav > .tabList > li {
     height: 30px;
     line-height: 30px;
-    font-size: 16px;
+    font-size: 1em;
   }
   .tabWrap.type01 > .tabNav > .tabList > li.active:before {
     height: 2px;
@@ -3299,7 +3307,7 @@ input[type="image"], input[type="color"], input[type="button"] {
             align-items: baseline;
     height: 30px;
     line-height: 30px;
-    font-size: 12px;
+    font-size: 0.75em;
   }
   i.ico.result {
     width: 5px;
@@ -3309,26 +3317,46 @@ input[type="image"], input[type="color"], input[type="button"] {
   }
   .highlightArea .code-toolbar .toolbar-item span {
     padding: 0 5px !important;
-    font-size: 11px !important;
+    font-size: 0.69em !important;
   }
-  .wrap.pre > .container {
+  #frameBody .wrap.pre > .container {
     display: none;
   }
-  .wrap.pre.gnbHover .container, .wrap.pre.gnb-li-hover .container, .wrap.pre.gnbFind .container {
+  #frameBody .wrap.pre .gifCont {
+    display: block;
+  }
+  #frameBody .wrap.pre.bgImage :where(.resultCont.type01, .resultCont.type02) {
+    display: none;
+  }
+  #frameBody .wrap.pre.floating {
+    height: auto;
+  }
+  #frameBody .wrap.pre.floating #floatingMenu {
+    display: none;
+  }
+  #frameBody .wrap.pre.gnbHover .container, #frameBody .wrap.pre.gnb-li-hover .container, #frameBody .wrap.pre.gnbFind .container {
     width: auto;
     padding: 60px 20px 0 20px;
   }
-  .wrap.pre.gnbHover .container #gnb ul.menuList > li > a, .wrap.pre.gnb-li-hover .container #gnb ul.menuList > li > a, .wrap.pre.gnbFind .container #gnb ul.menuList > li > a {
-    font-size: 18px;
+  #frameBody .wrap.pre.gnbHover .container #gnb ul.menuList > li > a, #frameBody .wrap.pre.gnb-li-hover .container #gnb ul.menuList > li > a, #frameBody .wrap.pre.gnbFind .container #gnb ul.menuList > li > a {
+    font-size: 1.13em;
   }
-  .wrap.pre.gnbHover .container #gnb ul.menuList > li .depthTwo > li > a, .wrap.pre.gnb-li-hover .container #gnb ul.menuList > li .depthTwo > li > a, .wrap.pre.gnbFind .container #gnb ul.menuList > li .depthTwo > li > a {
-    font-size: 14px;
+  #frameBody .wrap.pre.gnbHover .container #gnb ul.menuList > li .depthTwo > li > a, #frameBody .wrap.pre.gnb-li-hover .container #gnb ul.menuList > li .depthTwo > li > a, #frameBody .wrap.pre.gnbFind .container #gnb ul.menuList > li .depthTwo > li > a {
+    font-size: 0.88em;
   }
-  .wrap.pre.gnbFind #gnb ul.menuList li {
+  #frameBody .wrap.pre.gnbFind #gnb ul.menuList li {
     min-width: 90px;
   }
-  .wrap.pre .gifCont .gifArea > img {
-    width: 90vw;
+  #frameBody .wrap.pre .gifCont .gifArea > img {
+    width: 95vw;
+  }
+  .titleH2.web, .resultArea.web {
+    display: none;
+  }
+  .btnArea.mob {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 

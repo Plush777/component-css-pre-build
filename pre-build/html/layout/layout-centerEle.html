@@ -363,6 +363,33 @@
       </div>
     </div>
     @@include('include/popup-share.html')
+
+    <div class="popup mobileResult">
+      <div class="cont">
+          <div class="inner">
+            <strong>결과를 보기 전에 잠깐!</strong>
+            <p>모바일 환경에서는 코드 결과가 gif로 표시됩니다.</p>
+            <p>그래도 결과를 볼까요?</p>
+            <p>(제대로 된 결과를 보려면 노트북 또는 데스크탑에서 실행해주세요.)</p>
+            <div class="todayClose">
+              <label for="todayChk" class="todayChkClose">
+                  <input type="checkbox" id="todayChk">
+                  <span>오늘 하루 그만보기</span>
+              </label>
+            </div>
+          </div>
+          <div class="btnArea">
+            <button type="button" class="btnCancel">
+              <span>취소</span>
+            </button>
+            <button type="button" class="btnConfirm">
+              <span>확인</span>
+            </button>
+        </div>
+      </div>
+    </div>
+    <div id="dimmed"></div>
+
     <div class="topArea">
       <button type="button" class="backtoTop">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">

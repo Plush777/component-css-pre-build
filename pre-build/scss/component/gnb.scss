@@ -9,10 +9,10 @@
             ul.menuList{display: flex; justify-content: space-between;
                 a{display: block;}
                 >li{position: relative; line-height: 50px; text-align: center;
-                    >a{min-width: 80px; font-size: 24px; font-family: $d-fz; color: $c000;}
+                    >a{min-width: 80px; font-size: 1.5em; font-family: $d-fz; color: $c000;}
                     .depthTwo{display: none; position: absolute; top: 80px; z-index: 1000; 
                         >li{line-height: 50px;
-                            >a{display: block; font-size: 16px; font-family: $d-fz; color: #444;}
+                            >a{display: block; font-size: 1em; font-family: $d-fz; color: #444;}
                         }
                     }
                 }

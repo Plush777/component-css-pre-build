@@ -3,7 +3,7 @@
 .wrap.pre{
     &.footerBasic{
         .contents{width: 100%;}
-        .contBox{position: relative; min-height: calc(100vh - 322px); text-align: center; font-size: 36px; color: $cfff; font-family: $d-fz;
+        .contBox{position: relative; min-height: calc(100vh - 322px); text-align: center; font-size: 2.25em; color: $cfff; font-family: $d-fz;
         background-color: #444;
           span{position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);}
         }
@@ -17,7 +17,7 @@
             .linkArea{flex: 0.5; margin-left: auto;
               ul{display: flex; flex-direction: column;
                 li{ 
-                  a{font-size: 16px; font-family: $d-fz; color: $cfff;
+                  a{font-size: 1em; font-family: $d-fz; color: $cfff;
                     &:hover{text-decoration: underline;}
                   }
                   +li{margin-top: 10px;}
@@ -26,7 +26,7 @@
             }
             .bottomArea{
               >.inner{height: 58px; line-height: 58px;
-                p.copy{font-size: 14px; color: $cfff; font-family: '맑은 고딕'; text-align: center;}
+                p.copy{font-size: 0.88em; color: $cfff; font-family: '맑은 고딕'; text-align: center;}
               }
             }
           }
@@ -44,7 +44,7 @@
                 .linkArea{flex: 0.5; margin-left: auto;
                     ul{display: flex; flex-direction: column;
                         li{ 
-                            a{font-size: 16px; font-family: $d-fz; color: $cfff;
+                            a{font-size: 1em; font-family: $d-fz; color: $cfff;
                             &:hover{text-decoration: underline;}
                             }
                             +li{margin-top: 10px;}
@@ -53,7 +53,7 @@
                 }
                 .bottomArea{
                     >.inner{height: 58px; line-height: 58px;
-                        p.copy{font-size: 14px; color: $cfff; font-family: '맑은 고딕'; text-align: center;}
+                        p.copy{font-size: 0.88em; color: $cfff; font-family: '맑은 고딕'; text-align: center;}
                     }
                 }
             }

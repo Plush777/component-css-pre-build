@@ -16,7 +16,7 @@
           }
         }
         .titleH3{margin-bottom: 0; padding-bottom: 10px;}
-        .centerBox{padding: 50px; border: 2px solid $blackBg; font-size: 22px; font-family: $d-fz;}
+        .centerBox{padding: 50px; border: 2px solid $blackBg; font-size: 1.38em; font-family: $d-fz;}
       }
   
       &.bgImage{
@@ -41,15 +41,15 @@
                 span:after{display: none;}
               }
               span{position: relative; display: block; padding: 16px 0; text-indent: 28px;
-              font-family: 'Noto Sans Light'; font-size: 22px; color: $cfff; transition: .5s;
+              font-family: 'Noto Sans Light'; font-size: 1.38em; color: $cfff; transition: .5s;
                 &:after{content: ''; width: 15px;height: 9px; position: absolute; top: 50%; right: 28px; transition: .5s;
-                transform: translateY(-50%);background: url("../../images/ico/ico-down.svg") no-repeat;}
+                transform: translateY(-50%); background-image: url("../../images/ico/ico-down.svg"); background-repeat: no-repeat;}
               }
               a{display: block;}
               >a{display: block;}
               >ul.leftSubMenu{display: none; background-color: #273147; 
                 li{height: 55px; line-height: 57px;
-                  a{display: block; font-family: $d-fz; font-size: 18px; color: rgba($color: $cfff, $alpha: 0.8);
+                  a{display: block; font-family: $d-fz; font-size: 1.13em; color: rgba($color: $cfff, $alpha: 0.8);
                   text-indent: 50px; font-family: 'Noto Sans Light';
                     &:hover{background-color: #485162;}
                   }
@@ -93,7 +93,7 @@
         .resultCont{position: relative; padding: 50px; box-sizing: border-box;
           .container{
             .flexArea{display: flex;
-              .flexItem{display: flex; width: 200px; height: 200px; max-width: 200px; font-size: 16px; font-family: $d-fz; 
+              .flexItem{display: flex; width: 200px; height: 200px; max-width: 200px; font-size: 1em; font-family: $d-fz; 
               color: $cfff; background-color: $blackBg;
                 &.bgGray{background-color: #444;}
                 +.flexItem{margin-left: 10px;}
@@ -171,7 +171,7 @@
 
 .tagGroup{
   .tag{display: inline-flex; justify-content: center; min-width: 50px; height: 25px; line-height: 25px; 
-  padding: 0 10px; box-sizing: border-box; font-size: 16px; border-radius: 4px; font-family: $d-fz; 
+  padding: 0 10px; box-sizing: border-box; font-size: 1em; border-radius: 4px; font-family: $d-fz; 
   color: $cfff; box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.35);
     &.default{background-color: #ffa500;} //기본값 컬러
     &.gray{background-color: $_333Bg;}
@@ -188,7 +188,7 @@
     &.type01{margin-bottom: 30px;
       >.tabNav{margin-bottom: 15px;
         >.tabList{border-bottom: 2px solid $dddBg; border-radius: 4px; background-color: $whiteBg;
-          >li{position: relative; flex: 1; height: 35px; line-height: 35px;font-size: 18px;
+          >li{position: relative; flex: 1; height: 35px; line-height: 35px;font-size: 1.13em;
           cursor: pointer; text-align: center; color: $c000; font-family: $d-fz;
             &.orange.active:before{background-color: #ed5e26;}
             &.pink.active:before{background-color: #cf649a;}
@@ -204,7 +204,7 @@
   
     &.typeEx{
       >.tabNav{
-        >.tabList{display: flex;border: 1px solid $dddBg; border-radius: 4px; font-size: 16px; color: $c222;
+        >.tabList{display: flex;border: 1px solid $dddBg; border-radius: 4px; font-size: 1em; color: $c222;
           >li{position: relative; flex: 1; height: 50px; line-height: 50px; padding: 0 10px; cursor: pointer; 
           box-sizing: border-box; text-align: center; background-color: $cfff; font-family: $d-fz;
             &.active{border-radius: 4px 0 0 4px; font-weight: bold;color: $cfff;background-color: $blueBg;

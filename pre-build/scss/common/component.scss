@@ -62,7 +62,7 @@ pre{word-break:break-all;white-space:pre-line;margin: 0 !important;}
     .centerArea{position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); text-align: center;}
     .btnStart{position: relative; display: inline-block; width: 170px; height: 56px; box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
     background-color: rgba($color: $whiteBg, $alpha: 0.5); transform: perspective(1px) translateZ(0); 
-      span{position: relative; font-size: 22px; font-family: $d-fz; margin-right: 20px; transition: .3s;
+      span{position: relative; font-size: 1.38em; font-family: $d-fz; margin-right: 20px; transition: .3s;
       color: $cfff; letter-spacing: 6.6px;
         &:after{content: ''; position: absolute; top: 6px; right: -30px; min-width: 20px; height: 20px; transition: .3s;
         background: url("../../images/ico/ico-arrow-right-w-shw.png")no-repeat center;}
@@ -83,10 +83,10 @@ pre{word-break:break-all;white-space:pre-line;margin: 0 !important;}
           +li{margin-top: 10px;}
         }
       }
-      p{font-size: 16px; font-family: $d-fz;line-height: 1.5; color: $c333;}
+      p{font-size: 1em; font-family: $d-fz;line-height: 1.5; color: $c333;}
     }
     .textBox{
-      .titleH3+.mainTxt p{font-size: 14px; }  
+      .titleH3+.mainTxt p{font-size: 0.88em; }  
       +.textBox{margin-top: 75px;}
     }
   }
@@ -94,12 +94,12 @@ pre{word-break:break-all;white-space:pre-line;margin: 0 !important;}
   &.license{
     #contents{padding: 50px 0; min-width: 1200px; margin: 0 auto;}
     .textBox{
-      .titleH3+.mainTxt p{font-size: 14px;}
+      .titleH3+.mainTxt p{font-size: 0.88em;}
       +.textBox{margin-top: 75px;}
     }
     .indentTxtArea{padding: 30px 0 0 20px;
       ul{
-        li{list-style: inside; font-family: '맑은 고딕'; font-size: 14px;
+        li{list-style: inside; font-family: '맑은 고딕'; font-size: 0.88em;
           +li{padding-top: 5px;}
         }
       }
@@ -112,13 +112,13 @@ pre{word-break:break-all;white-space:pre-line;margin: 0 !important;}
       +.txtDiv{margin-top: 20px;}
     }
     .txtDiv,.descDiv,.bottomDiv{color: $cfff; font-family: '맑은 고딕';}
-    .txtDiv{font-size: 24px; 
+    .txtDiv{font-size: 1.5em; 
       +.descDiv{margin-top: 30px;}
     }
-    .descDiv{font-size: 16px;
+    .descDiv{font-size: 1em;
       p+p{margin-top: 15px;}
     }
-    .bottomDiv{display: flex; justify-content: flex-end; margin-top: 40px; font-size: 16px;}
+    .bottomDiv{display: flex; justify-content: flex-end; margin-top: 40px; font-size: 1em;}
   }
 }
 
@@ -145,7 +145,7 @@ overflow-y: auto; background-color: #f5f5f5; z-index: 1100;
         }
       }
       >span{position: relative; display: block; padding: 16px 0; text-indent: 28px;border-bottom: 1px solid rgba($color: #000012, $alpha: 0.08);
-      font-family: $d-fz; font-size: 22px; color: $c70; transition: .5s;
+      font-family: $d-fz; font-size: 1.38em; color: $c70; transition: .5s;
         &:after{content: ''; width: 15px;height: 9px; position: absolute; top: 50%; right: 28px; transition: .5s;
         transform: translateY(-50%);background: url("../../images/ico/ico-down.svg")no-repeat;}
       }
@@ -154,7 +154,7 @@ overflow-y: auto; background-color: #f5f5f5; z-index: 1100;
       border-bottom: 1px solid rgba($color: #000012, $alpha: 0.08); background-color: #eee;
         &.block{display: block;}
         li{padding-bottom: 8px; border-bottom: 1px solid rgba($color: #000012, $alpha: 0.08);
-          a{display: block; font-family: $d-fz; font-size: 18px; color: $c70;}
+          a{display: block; font-family: $d-fz; font-size: 1.13em; color: $c70;}
           &.active{
             a{color: $emphasisType01;}
           }
@@ -190,7 +190,7 @@ overflow-y: auto; background-color: #f5f5f5; z-index: 1100;
           >ul{width: 95px;flex-direction: column; border: 1px solid $cddd; box-shadow: 0px 0px 5px 1px $cddd;
           box-sizing: border-box; background-color: #f3f4f5;
             >li{flex: 1; display: block; width: 100%; font-family: $d-fz; line-height: 30px; transition: .5s;
-              >a,span{width: auto; height: auto; color: $c20;text-align: center; white-space: nowrap; font-size: 12px;}
+              >a,span{width: auto; height: auto; color: $c20;text-align: center; white-space: nowrap; font-size: 0.75em;}
               &:before{display: none;}
               +li{margin-left: 0;}
             }
@@ -199,7 +199,7 @@ overflow-y: auto; background-color: #f5f5f5; z-index: 1100;
         }
         .toolTip{opacity: 0; visibility: hidden; position: absolute; top: 42px; left: -14px; transition: .5s ease-in-out; z-index: 100;
           span{display: block; min-width: 60px; padding: 5px 0; box-sizing: border-box; color: $cfff;
-          font-family: $d-fz; font-size: 11px; border-radius: 3px; text-align: center;
+          font-family: $d-fz; font-size: 0.69em; border-radius: 3px; text-align: center;
           background-color: $c333;}
         }
         &:before{content: ''; opacity: 0; visibility: hidden; position: absolute; left: 50%; transform: translateX(-50%); top: -5px; z-index: -1;
@@ -231,6 +231,7 @@ overflow-y: auto; background-color: #f5f5f5; z-index: 1100;
     .textBox+.textBox{margin-top: 30px;}
   }
   +.btnArea{margin-top: 50px;}
+  +.btnArea.mob{margin-top: 0;}
 }
 
 .rightArea{position: absolute; right: 0; top: 0; display: flex; justify-content: center; width: calc(100% - 300px);  
@@ -246,7 +247,7 @@ padding: 92px 0; z-index:950;
   }
   
   /* 본문 텍스트 */
-  .mainTxt{font-size: 16px; font-family: $d-fz; line-height: 1.5; color: $c333;
+  .mainTxt{font-size: 1em; font-family: $d-fz; line-height: 1.5; color: $c333;
     +.highlightArea{margin-top: 15px;}
     +.tabWrap{margin-top: 30px;}
   }
@@ -255,27 +256,27 @@ padding: 92px 0; z-index:950;
 /* h1 ~ h3 */
 .titleH1,.titleH2,.titleH3{font-family: $d-fz; color: $c20;}
 .titleH1,.titleH2,.titleH3{margin-bottom: 20px; padding-bottom: 15px; font-weight: bold; border-bottom: 1px solid $cddd;}
-.titleH1{font-size: 32px;}
-.titleH2{font-size: 24px;}
-.titleH3{font-size: 20px;}      
+.titleH1{font-size: 2em;}
+.titleH2{font-size: 1.5em;}
+.titleH3{font-size: 1.25em;}      
 
 .innerTxt{
-  >strong{display: block; margin-bottom: 5px; font-size: 20px;}
+  >strong{display: block; margin-bottom: 5px; font-size: 1.25em;}
   +.innerTxt{margin-top: 35px;} 
 }
 
 .table{
   table{width: 100%;}
   th,td{height: 30px; border: 1px solid $cddd; padding: 5px; box-sizing: border-box; font-family: $d-fz;}
-  th{font-size: 14px; color: $c333; background-color: #f5f5f5;}
+  th{font-size: 0.88em; color: $c333; background-color: #f5f5f5;}
 
   &.noticeBoard{border-top: 7px solid #222;
     th,td{border: 1px solid #5f5f5f; font-family: $d-fz;
       &:last-child{border-right: 0;}
       &:first-child{border-left: 0;}
     }
-    th{height: 65px; font-size: 18px; color: #3b3b3b; background-color: $cddd;}
-    td{height: 40px; font-size: 16px; padding: 15px 25px 15px 25px; box-sizing: border-box; background-color: rgba($color: #f3f4f5, $alpha: 0.8);}
+    th{height: 65px; font-size: 1.13em; color: #3b3b3b; background-color: $cddd;}
+    td{height: 40px; font-size: 1em; padding: 15px 25px 15px 25px; box-sizing: border-box; background-color: rgba($color: #f3f4f5, $alpha: 0.8);}
     .tgContRow{display: none;
       .showHideBox{display: none;}
     }
@@ -298,13 +299,13 @@ box-shadow: 0px 0px 8px rgba($color: $blackBg, $alpha: 0.35);
   &.mobileResult{min-width: 300px; max-width: 500px; width: auto;
     .cont{
       .inner{border-bottom: 1px solid $dddBg;
-        strong{font-size: 18px; font-family: $d-fz;
+        strong{font-size: 1.13em; font-family: $d-fz;
           +p{margin-top: 8px;}
         }
-        p:last-of-type{margin-top: 5px; font-size: 13px;}
+        p:last-of-type{margin-top: 5px; font-size: 0.81em;}
         .todayClose{margin-top: 10px;
           label{display: flex; align-items: center; justify-content: center;
-            span{font-size: 14px; font-family: 'Noto Sans';}
+            span{font-size: 0.88em; font-family: 'Noto Sans';}
           }
         }
       }
@@ -327,7 +328,7 @@ box-shadow: 0px 0px 8px rgba($color: $blackBg, $alpha: 0.35);
   }
   .cont{background-color: $whiteBg;
     .inner{padding: 10px; box-sizing: border-box;
-      p{font-size: 14px; color: #222; font-family: $d-fz;
+      p{font-size: 0.88em; color: #222; font-family: $d-fz;
         +.inputArea{margin-top: 25px;}
       }
       .inputArea{
@@ -358,11 +359,12 @@ i.ico{display: inline-block; background-repeat: repeat; background-position: cen
 
 .btnArea{position: relative; display: flex;
   &.end{justify-content: flex-end;}
+  &.mob{display: none;}
 }
 
 #dimmed{display: none; position: fixed; z-index: 9998; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0, 0, 0,0.6);}
 
-code[class*=language-], pre[class*=language-] pre{white-space: pre-wrap !important; padding: 16px !important; font-size: 16px !important;
+code[class*=language-], pre[class*=language-] pre{white-space: pre-wrap !important; padding: 16px !important; font-size: 1em !important;
 word-break: break-all !important;}
 
 // code highlight
@@ -375,7 +377,7 @@ word-break: break-all !important;}
       }
       button{font-size: 12px !important; padding: 0 !important;}
       span{display: inline-block !important; min-width: 40px !important; 
-      padding: 0 10px !important; font-size: 12px !important; 
+      padding: 0 10px !important; font-size: 0.75em !important; 
       font-family: $d-fz !important; text-align: center!important; transition: .5s !important;
         &:hover{color: $cfff !important;}
       }
@@ -398,7 +400,7 @@ word-break: break-all !important;}
   ul{padding: 0;
     li{padding: 0; list-style: none; font-family: $d-fz;}
   }
-  .head{color: #3b3b3b; font-size: 18px; background: $cddd;
+  .head{color: #3b3b3b; font-size: 1.13em; background: $cddd;
     >ul{display: flex; border-top: 7px solid $_222Bg; border-bottom: 1px solid #5f5f5f; 
       >li{display: inherit; justify-content: center;
         >span{line-height: 65px;}
@@ -409,7 +411,7 @@ word-break: break-all !important;}
   }
 
   .cont{border-bottom: 1px solid #5f5f5f; background: rgba($color: #f3f4f5, $alpha: 0.8);
-    .li{border-top: 1px solid #5f5f5f; font-size: 16px; padding: 10px 0; box-sizing: border-box; cursor: pointer;
+    .li{border-top: 1px solid #5f5f5f; font-size: 1em; padding: 10px 0; box-sizing: border-box; cursor: pointer;
       .boardBox{display: flex;
         .boardItem{display: inherit; justify-content: center;
           &:first-child{width: 12%;}
@@ -421,10 +423,10 @@ word-break: break-all !important;}
     .listShowHideBox{display: none; padding: 0 30px; box-sizing: border-box; border-top: 1px solid #5f5f5f; background: rgba($color: #f3f4f5, $alpha: 0.8);
       .inner{padding: 20px 0;
         .tit{padding-bottom: 15px; border-bottom: 1px solid $cddd;
-          p{font-size: 18px; color: $c000; font-family: $d-fz;}
+          p{font-size: 1.13em; color: $c000; font-family: $d-fz;}
           +dd{margin-top: 20px;}
         }
-        dd{font-size: 14px; color: $c333; font-family: $d-fz;
+        dd{font-size: 0.88em; color: $c333; font-family: $d-fz;
           &:before{content: ''; display: inline-block; width: 6px; height: 6px; border-radius: 50%; vertical-align: middle;
           margin: -4px 10px 0 0; background-color: $blackBg;}
         }
@@ -436,7 +438,7 @@ word-break: break-all !important;}
 // update page pagination
 .pager{display: flex; justify-content: center; align-items: center; margin-top: 60px;
   div:not(.pageNumbers){display: flex; justify-content: center; width: 30px; height: 30px;
-  box-sizing: border-box; border: 1px solid $cddd; border-radius: 4px; cursor: pointer; font-size: 16px;
+  box-sizing: border-box; border: 1px solid $cddd; border-radius: 4px; cursor: pointer; font-size: 1em;
   transition: 0.35s ease-in-out;}
 
   .firstPage,.previousPage,.nextPage,.lastPage{
@@ -447,7 +449,7 @@ word-break: break-all !important;}
   .nextPage{margin-right: 5px; background: url("../../images/ico/ico-pagi-next.png")no-repeat center;}
   .lastPage{background: url("../../images/ico/ico-pagi-last.png")no-repeat center;}
   .pageNumbers{margin: 0 50px;
-    >a{display: inline-block; width: 32px; height: 32px; line-height: 32px; text-align: center; font-size: 16px;
+    >a{display: inline-block; width: 32px; height: 32px; line-height: 32px; text-align: center; font-size: 1em;
     border: 1px solid $cddd; border-radius: 4px; font-family: $d-fz; color: rgba($color: $c222, $alpha: 0.5);
     transition: 0.35s ease-in-out;
       +a{margin-left: 5px;}
@@ -475,7 +477,7 @@ word-break: break-all !important;}
 #toast{display: none; position: fixed; top: 120px; left: 50%; transform: translateX(-50%); 
 width: 290px; padding: 12px; box-sizing: border-box; border-radius: 4px; z-index: 10000;
 background-color: rgba($color: $blackBg, $alpha: 0.65);
-  span{display: inline-block; text-align: center; font-size: 14px; color: $cfff; font-family: '맑은 고딕';}
+  span{display: inline-block; text-align: center; font-size: 0.88em; color: $cfff; font-family: '맑은 고딕';}
 }
 
 /* icon */

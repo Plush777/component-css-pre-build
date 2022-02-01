@@ -40,3 +40,17 @@ component css는 웹 퍼블리싱 작업에 자주 사용되는 요소들의 스
 
 - 예쁜 UI도 좋지만, UX도 신경쓰자! (아무도 사용을 안할거 같지만..)
  -->
+ 
+ ## build (작업중..)
+
+component_css/pre-build
+
+gulp 설치
+```
+npm install gulp
+```
+
+실행
+```
+gulp
+```

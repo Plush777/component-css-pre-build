@@ -1,1 +1,54 @@
 @import '../common/variable.scss';
+
+#frameBody .wrap.pre{
+    &.topButton{
+        .container{height: 100%; background-color: $dddBg;}
+        #startLine{display: block; width: 100%; min-height: 200px; color: $cfff; font-size: 1em; background-color: $_222Bg;}
+        .btnArea{top: inherit; bottom: 20px; right: 20px;
+            .arrowTop{width: 45px; height: 45px; border-radius: 50%; background-image: url("../../images/ico/ico-top-button-w.png"); 
+            background-repeat: no-repeat; background-position: center; background-color: $_222Bg;}
+        }
+    }
+
+    &.etcRotate{
+        .resultCont{display: flex; justify-content: space-around; padding: 60px 20px 20px 20px;}
+        .rotateBox{width: 200px; height: 200px; transition: 1s;
+        border: 1px solid $blackBg; background-color: $dddBg;
+            &.degType01:hover{transform: rotate(45deg);}
+            &.degType02:hover{transform: rotate(0.5turn);}
+            &.degType03:hover{transform: rotate(360deg);}
+        }
+    }
+
+    &.fadeInout{
+        .tgArea{
+            &.fadeType01,&.fadeType02{
+                .btnFadeInout{min-width: 100px; height: 40px; font-family: $d-fz; font-size: 0.88em;
+                background-color: rgba($color: $dddBg, $alpha: 0.5);}
+            }
+
+            &.fadeType01{
+                .tgCont{opacity: 0; visibility: hidden; transition: .5s;}
+                .btnFadeInout.active ~.tgCont{opacity: 1; visibility: visible;}
+            }
+
+            &.fadeType02{
+                .tgCont{display: none;}
+            }
+        }
+    }
+
+    &.bdAni{
+        .borderArea{display: flex; flex-direction: column; align-items: center;
+            span{display: inline-block; font-family: 'Noto Sans'; font-size: 1.5em; cursor: pointer; text-transform: uppercase;
+                &:after{content: ''; display: inherit; border-bottom: 2px solid $blueBg; transform: scaleX(0); transition: .5s;}
+                &.leftBd:after{transform-origin: 0% 50%;}
+                &.rightBd:after{transform-origin: 100% 50%;}
+                &:hover{
+                    &:after{transform: scaleX(1);}
+                }
+                +span{margin-top: 30px;}
+            }
+        }
+    }
+}

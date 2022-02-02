@@ -53,6 +53,7 @@ pre{word-break:break-all;white-space:pre-line;margin: 0 !important;}
 }
 .tScroll{display: block;}
 
+.wrap.pre.h2000{height: 2000px;}
 #wrap{width: 100%; height: 100%;
   &.main{position: relative; transition: .5s; background-color: #4e4e4e;
     .logo a{display: block; width: 800px; height: 136px; transition: .5s ease-in-out;
@@ -127,7 +128,7 @@ pre{word-break:break-all;white-space:pre-line;margin: 0 !important;}
   border: 1px solid $blackBg; transition: .5s;}
 }
 
-#container{position: relative; display: flex;}
+#container{position: relative;display: flex;}
 
 .leftArea{position: fixed; left: 0; width: 300px; height: 100%; border-right: 1px solid $cddd; 
 overflow-y: auto; background-color: #f5f5f5; z-index: 1100;
@@ -180,7 +181,9 @@ overflow-y: auto; background-color: #f5f5f5; z-index: 1100;
               >a{font-size: 0.94em;}
               +li{margin-top: 5px;}
               &:last-of-type{padding-bottom: 0; border-bottom: 0;}
+              &.active:before{background-color: $blueBg;}
             }
+            &.block{display: block;}
           }
         }
       }
@@ -477,6 +480,7 @@ word-break: break-all !important;}
 
 // result
 #frameBody{display: none; position: fixed; top: 0;width: 100%; height: 100%; background-color: $whiteBg; z-index: 10000;
+  .container.hFull{height: 100%;}
   .btnArea{position: fixed; top: 0; right: 0; z-index: 9999;
     .frameClose{width: 24px; height: 24px; padding: 18px; box-sizing: border-box;
     border-radius: 0 0 0 5px; background-size: 24px 24px; background-image: url("../../images/ico/ico-result-close.png");
@@ -508,6 +512,10 @@ i.ico{display: inline-block; background-repeat: no-repeat; background-position: 
   &.wide40{background-size: 40px 40px; background-position: center 8px;}
   &.wide32{background-size: 32px 32px; background-position: center 11px;}
   &.center{display: block; margin: 0 auto;}
+}
+
+.resultCont{position: relative; padding: 50px; box-sizing: border-box;
+  &.middle{display: flex; align-items: center; justify-content: center; height: inherit;} //container: height 100%
 }
 
 /* mixin */

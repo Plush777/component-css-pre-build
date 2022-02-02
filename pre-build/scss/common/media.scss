@@ -23,7 +23,11 @@
     }
 }
 
-@media screen and (max-width:768px){   
+@media screen and (max-width:768px){
+    *{
+        &::-webkit-scrollbar{display: none;}
+        &.mobScroll::-webkit-scrollbar{display: block;} //모바일에서도 스크롤보이게
+    }
     .leftArea{left: -300px; transition: .3s;
         .leftMenu li{
             &:first-child >a>img{width: 160px;}

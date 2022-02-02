@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" href="../../images/ico/ico-favi.png" sizes="16x16" />
+<link rel="stylesheet" href="../../css/common/component.css" type="text/css" />
+<link rel="stylesheet" href="../../css/library/prism.css" />
+<script type="text/javascript" src="../../lib/jquery-1.12.4.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
+<script src="../../lib/prism.js"></script>
+<script src="../../lib/jquery-cookie-master/src/jquery.cookie.js"></script>
+<script src="../../js/component/etc.js"></script>
+<script src="../../js/component.js"></script>
+<title>Component css</title>
+</head>
+
+<body>
+  <div id="wrap">
+    <div id="container">
+      <div class="leftArea cScroll">
+        <ul class="leftMenu">
+          <li>
+            <a href="../../html/main.html" title="메인으로">
+              <img src="../../images/common/logo.png" alt="서브 메인로고" />
+              <span class="hidden">메인으로</span>
+            </a>
+          </li>
+          <li class="noDepth">
+            <span>
+              <a href="../../html/sub_first.html" title="홈">Home</a>
+            </span>
+          </li>
+          <li>
+            <span title="Header">Header</span>
+            <ul class="leftSubMenu">
+              <li>
+                <a href="../header/header-header-fixed.html" title="Header fixed">Header fixed</a>
+              </li>
+              <li>
+                <a href="../header/hedaer-header-toggle.html" title="Header Toggle">Header Toggle</a>
+              </li>
+              <li>
+                <a href="../header/header-header-sticky.html" title="Sticky Header">Sticky Header</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <span title="GNB">GNB</span>
+            <ul class="leftSubMenu">
+              <li>
+                <a href="../gnb/gnb-hover-full-dropdown.html" title="GNB Hover Full Dropdown">GNB Hover Full
+                  Dropdown</a>
+              </li>
+              <li>
+                <a href="../gnb/gnb-menu-hover-full-dropdown.html" title="GNB Menu hover Full Dropdown">GNB Menu
+                  hover Full Dropdown</a>
+              </li>
+              <li>
+                <a href="../gnb/gnb-hoverable-dropdown.html" title="GNB Hoverable Dropdown">GNB Hoverable
+                  Dropdown</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <span title="Footer">Footer</span>
+            <ul class="leftSubMenu">
+              <li>
+                <a href="../footer/footer-footer-basic.html" title="Footer basic">Footer basic</a>
+              </li>
+              <li>
+                <a href="../footer/footer-footer-fixed.html" title="Footer fixed">Footer fixed</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <span title="Layout">Layout</span>
+            <ul class="leftSubMenu">
+              <li>
+                <a href="../layout/layout-centerEle.html" title="Center element">Center element</a>
+              </li>
+              <li>
+                <a href="../layout/layout-tab.html" title="Tab">Tab</a>
+              </li>
+              <li>
+                <a href="../layout/layout-bg-image.html" title="Background-image 100%">Background-image 100%</a>
+              </li>
+              <li>
+                <a href="../layout/layout-leftMenu.html" title="Left menu">Left menu</a>
+              </li>
+              <li>
+                <a href="../layout/layout-floatingMenu.html" title="Floating menu">Floating menu</a>
+              </li>
+              <li class="disabled">
+                <a href="#none" title="Slide">Slide</a>
+              </li>
+              <li>
+                <a href="../layout/layout-flex.html" title="Flex">Flex</a>
+              </li>
+              <li class="disabled">
+                <a href="#none" title="Grid">Grid</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <span title="Input">Input</span>
+            <ul class="leftSubMenu">
+              <li>
+                <a href="../input/input-inputStyle.html" title="Input">input</a>
+              </li>
+              <li>
+                <a href="../input/input-radioStyle.html" title="Radio">radio</a>
+              </li>
+              <li>
+                <a href="../input/input-selectStyle.html" title="Select">select</a>
+              </li>
+              <li>
+                <a href="../input/input-textareaStyle.html" title="textarea">textarea</a>
+              </li>
+              <li>
+                <a href="../input/input-chkboxStyle.html" title="checkbox">checkbox</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <span title="Scroll element">Scroll element</span>
+            <ul class="leftSubMenu">
+              <li>
+                <a href="../scrollele/scroll-ele-table.html" title="Table inner scroll">Table inner scroll</a>
+              </li>
+              <li>
+                <a href="../scrollele/scroll-ele-overflow.html" title="Overflow scroll">Overflow scroll</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <span title="Custom">Custom</span>
+            <ul class="leftSubMenu">
+              <li>
+                <a href="../custom/custom-contextMenu.html" title="Context Menu">Context Menu</a>
+              </li>
+              <li>
+                <a href="../custom/custom-scroll.html" title="Scroll design">Scroll design</a>
+              </li>
+              <li>
+                <a href="../custom/custom-toolTip.html" title="toolTip">toolTip</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <span title="Popup">Popup</span>
+            <ul class="leftSubMenu">
+              <li>
+                <a href="../popup/popup-popup-showhide.html" title="Popup show/hide">Popup show/hide</a>
+              </li>
+              <li>
+                <a href="../popup/popup-toast.html" title="Toast popup">Toast popup</a>
+              </li>
+              <li>
+                <a href="../popup/popup-drag.html" title="Drag popup">Drag popup</a>
+              </li>
+            </ul>
+          </li>
+          <li class="active">
+            <span title="Etc">Etc</span>
+            <ul class="leftSubMenu block">
+              <li class="dep3Cont on">
+                <a href="#none" title="Animation element">Animation element
+                  <i class="depthToggle">
+                    <span class="hidden">3뎁스 아이콘</span>
+                  </i>
+                </a>
+                <ul class="dep3 block">
+                    <li>
+                      <a href="../etc/etc-top-button.html" title="Top button">Top button</a>
+                    </li>
+                    <li>
+                      <a href="#" title="Transform button">Transform button</a>
+                    </li>
+                    <li class="active">
+                      <a href="../etc/etc-rotate.html" title="Rotate element">Rotate element</a>
+                    </li>
+                    <li>
+                      <a href="../etc/etc-border.html" title="Boarder animation">Boarder animation</a>
+                    </li>
+                    <li>
+                      <a href="../etc/etc-fadeinout.html" title="Fade in/out">Fade in/out</a>
+                    </li>
+                    <li>
+                      <a href="../etc/etc-accordion.html" title="Accordion">Accordion</a>
+                    </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#" title="Text ellipsis">Text ellipsis</a>
+              </li>
+              <li class="disabled">
+                <a href="#none" title="Key frames">Key frames</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <div class="headArea">
+    <div class="inner">
+        <div class="moreArea">
+            <button type="button" class="btnMobileMore">
+                <span class="hidden">메뉴 열기</span>
+            </button>
+        </div>
+
+        <div class="backArea">
+            <button type="button" class="btnBack">
+                <span class="hidden">뒤로가기</span>
+            </button>
+        </div>
+
+        <div class="utilArea">
+            <ul>
+                <!-- <li>
+            <button type="button" class="btnDarkMode">
+                <span class="hidden">다크모드 전환</span>
+            </button>
+        </li> -->
+                <li>
+                    <a href="mailto:sky11916@naver.com" class="btnMail">
+                        <span class="hidden">문의</span>
+                        <div class="toolTip mail">
+                            <span>메일 문의</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <button type="button" class="btnShare">
+                        <span class="hidden">공유</span>
+                        <div class="toolTip share">
+                            <span>공유하기</span>
+                        </div>
+                    </button>
+
+                </li>
+                <li>
+                    <button type="button" class="btnMore">
+                        <span class="hidden">더보기</span>
+                        <div class="moreSubMenu">
+                            <ul>
+                                <li>
+                                    <a href="https://github.com/Plush777" target="_blank">Github</a>
+                                </li>
+                                <li>
+                                    <a href="https://velog.io/@sky" target="_blank">Velog</a>
+                                </li>
+                                <li>
+                                    <a href="../../../html/update-note.html" target="_blank">Update note</a>
+                                </li>
+                                <li>
+                                    <a href="https://www.buymeacoffee.com/P1ush" target="_blank">buymeacoffee</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="toolTip more">
+                            <span>더보기</span>
+                        </div>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+      <div class="rightArea">
+        <div class="inner">
+          <div class="textBox">
+            <div class="titleH1">
+              <h1>Rotate element</h1>
+            </div>
+            <div class="tabWrap type01">
+              <div class="tabNav">
+                <ul class="tabList">
+                  <li class="active orange">HTML</li>
+                  <li class="pink">SCSS</li>
+                  <li class="blue">CSS</li>
+                </ul>
+              </div>
+
+              <div class="tabCont active">
+                <div class="highlightArea cScroll">
+                    <pre>
+                        <code class="language-html">
+&lt;div class="wrap"&gt;
+    &lt;div class="container"&gt;
+        &lt;div class="resultCont"&gt;
+            &lt;div class="rotateBox degType01"&gt;&lt;/div&gt;
+            &lt;div class="rotateBox degType02"&gt;&lt;/div&gt;
+            &lt;div class="rotateBox degType03"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+                        </code>
+                    </pre>
+                </div>
+              </div>
+
+              <div class="tabCont">
+                <div class="highlightArea cScroll">
+                    <pre>
+                        <code class="language-scss">
+.wrap .resultCont{display: flex; justify-content: space-around; padding: 60px 20px 20px 20px;}
+.rotateBox{width: 200px; height: 200px; transition: 1s;
+border: 1px solid $blackBg; background-color: $dddBg;
+    &.degType01:hover{transform: rotate(45deg);}
+    &.degType02:hover{transform: rotate(0.5turn);}
+    &.degType03:hover{transform: rotate(360deg);}
+}
+                        </code>
+                    </pre>
+                </div>
+              </div>
+
+              <div class="tabCont">
+                <div class="highlightArea cScroll">
+                    <pre>
+                        <code class="language-css">
+.wrap .resultCont {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    padding: 60px 20px 20px 20px;
+}
+
+.wrap .rotateBox {
+    width: 200px;
+    height: 200px;
+    -webkit-transition: 1s;
+    transition: 1s;
+    border: 1px solid #000;
+    background-color: #ddd;
+}
+
+.wrap .rotateBox.degType01:hover {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+}
+
+.wrap .rotateBox.degType02:hover {
+    -webkit-transform: rotate(0.5turn);
+            transform: rotate(0.5turn);
+}
+
+.wrap .rotateBox.degType03:hover {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+}
+                        </code>
+                    </pre>
+                </div>
+              </div>
+            </div>
+            <div class="btnArea end">
+              <button type="button" class="button Bgblue btnResult">
+                <span>결과보기</span>
+                <i class="ico result"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="frameBody" class="overflow-y">
+      <div id="toast">
+        <span>Esc 혹은 우측 상단 X 버튼을 눌러 결과창을 닫을 수 있습니다. </span>
+      </div>
+      <div class="btnArea">
+        <button type="button" class="frameClose">
+          <span class="hidden">프레임 창닫기</span>
+        </button>
+      </div>
+      <div class="wrap pre etcRotate">
+        <div class="gifCont">
+            <div class="gifArea">
+              <img src="../../images/gif/etc/etc-rotate.gif" alt="gif 결과 이미지">
+            </div>
+        </div>
+        <div class="container hFull">
+            <div class="resultCont middle">
+                <div class="rotateBox degType01"></div>
+                <div class="rotateBox degType02"></div>
+                <div class="rotateBox degType03"></div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="popup share">
+    <div class="cont">
+      <div class="inner">
+        <p>아래 주소를 복사하여 다른 곳에 붙여넣으세요.</p>
+        <div class="inputArea flex">
+          <input type="text" id="subUrl" class="full">
+          <button type="button" data-clipboard-target="#subUrl" class="button Bgblue w75 btnClip">
+            복사
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="dimmed"></div>
+    <div class="popup mobileResult">
+      <div class="cont">
+          <div class="inner">
+            <strong>결과를 보기 전에 잠깐!</strong>
+            <p>모바일 환경에서는 코드 결과가 gif로 표시됩니다.</p>
+            <p>그래도 결과를 볼까요?</p>
+            <p>(제대로 된 결과를 보려면 노트북 또는 데스크탑에서 실행해주세요.)</p>
+            <div class="todayClose">
+              <label for="todayChk" class="todayChkClose">
+                  <input type="checkbox" id="todayChk">
+                  <span>오늘 하루 그만보기</span>
+              </label>
+            </div>
+          </div>
+          <div class="btnArea">
+            <button type="button" class="btnCancel">
+              <span>취소</span>
+            </button>
+            <button type="button" class="btnConfirm">
+              <span>확인</span>
+            </button>
+        </div>
+      </div>
+    </div>
+    <div id="dimmed"></div>
+    <div class="topArea">
+      <button type="button" class="backtoTop">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <polygon fill-rule="evenodd"
+            points="13 5.414 13 22 11 22 11 5.414 4.707 11.707 3.293 10.293 12 1.586 20.707 10.293 19.293 11.707" />
+        </svg>
+        <span class="hidden">위로 올라가기</span>
+      </button>
+    </div>
+  </div>
+</body>
+
+</html>

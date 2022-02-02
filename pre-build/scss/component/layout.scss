@@ -3,7 +3,7 @@
 .wrap{position: relative; width: 100%; height: 100%;
     &.pre{
       &.centerEle{
-        .resultCont{position: relative; padding: 50px; box-sizing: border-box;
+        .resultCont{
           &.type01{height: 100%; 
             .container{height: 100%; display: flex; align-items: center; justify-content: center;}
           }
@@ -20,7 +20,7 @@
       }
   
       &.bgImage{
-        .resultCont{position: relative;
+        .resultCont{
           .imgDiv{height: 600px; background-image: url("../../images/common/1903x600.png"); background-repeat: no-repeat;}
           &.type01{
             .imgDiv{background-size: 100% 100%;}
@@ -69,7 +69,6 @@
       }
 
       &.floating{
-        &.h2000{height: 2000px;}
         #floatingMenu{position: fixed; right: 40px; bottom: 20px;
           .menuArea{
             .btnMenuList{width: 56px; height: 56px; border-radius: 50px; box-shadow: 0px 0px 8px 4px rgba($color: $blackBg, $alpha: 0.25); 
@@ -90,7 +89,7 @@
       }
 
       &.flexLayout{
-        .resultCont{position: relative; padding: 50px; box-sizing: border-box;
+        .resultCont{
           .container{
             .flexArea{display: flex;
               .flexItem{display: flex; width: 200px; height: 200px; max-width: 200px; font-size: 1em; font-family: $d-fz; 

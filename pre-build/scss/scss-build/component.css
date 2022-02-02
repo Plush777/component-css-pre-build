@@ -132,6 +132,10 @@ pre {
   display: block;
 }
 
+.wrap.pre.h2000 {
+  height: 2000px;
+}
+
 #wrap {
   width: 100%;
   height: 100%;
@@ -541,6 +545,14 @@ pre {
 .leftArea > .leftMenu > li > ul.leftSubMenu li > .dep3 > li:last-of-type {
   padding-bottom: 0;
   border-bottom: 0;
+}
+
+.leftArea > .leftMenu > li > ul.leftSubMenu li > .dep3 > li.active:before {
+  background-color: #266bf7;
+}
+
+.leftArea > .leftMenu > li > ul.leftSubMenu li > .dep3.block {
+  display: block;
 }
 
 .headArea {
@@ -1481,6 +1493,10 @@ code[class*=language-], pre[class*=language-] pre {
   z-index: 10000;
 }
 
+#frameBody .container.hFull {
+  height: 100%;
+}
+
 #frameBody .btnArea {
   position: fixed;
   top: 0;
@@ -1608,6 +1624,26 @@ i.ico.wide32 {
 i.ico.center {
   display: block;
   margin: 0 auto;
+}
+
+.resultCont {
+  position: relative;
+  padding: 50px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.resultCont.middle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: inherit;
 }
 
 /* mixin */
@@ -2098,13 +2134,6 @@ i.ico.center {
   height: 100%;
 }
 
-.wrap.pre.centerEle .resultCont {
-  position: relative;
-  padding: 50px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
 .wrap.pre.centerEle .resultCont.type01 {
   height: 100%;
 }
@@ -2157,10 +2186,6 @@ i.ico.center {
   border: 2px solid #000;
   font-size: 1.38em;
   font-family: "Noto Sans";
-}
-
-.wrap.pre.bgImage .resultCont {
-  position: relative;
 }
 
 .wrap.pre.bgImage .resultCont .imgDiv {
@@ -2274,10 +2299,6 @@ i.ico.center {
   background: url("../../images/ico/ico-down-w.svg") no-repeat;
 }
 
-.wrap.pre.floating.h2000 {
-  height: 2000px;
-}
-
 .wrap.pre.floating #floatingMenu {
   position: fixed;
   right: 40px;
@@ -2329,13 +2350,6 @@ i.ico.center {
 
 .wrap.pre.floating #floatingMenu .menuArea ul.menuList li + li {
   margin-top: 15px;
-}
-
-.wrap.pre.flexLayout .resultCont {
-  position: relative;
-  padding: 50px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
 }
 
 .wrap.pre.flexLayout .resultCont .container .flexArea {
@@ -3160,6 +3174,143 @@ input[type="image"], input[type="color"], input[type="button"] {
 
 /* text color */
 /* background */
+#frameBody .wrap.pre.topButton .container {
+  height: 100%;
+  background-color: #ddd;
+}
+
+#frameBody .wrap.pre.topButton #startLine {
+  display: block;
+  width: 100%;
+  min-height: 200px;
+  color: #fff;
+  font-size: 1em;
+  background-color: #222;
+}
+
+#frameBody .wrap.pre.topButton .btnArea {
+  top: inherit;
+  bottom: 20px;
+  right: 20px;
+}
+
+#frameBody .wrap.pre.topButton .btnArea .arrowTop {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-image: url("../../images/ico/ico-top-button-w.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #222;
+}
+
+#frameBody .wrap.pre.etcRotate .resultCont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 60px 20px 20px 20px;
+}
+
+#frameBody .wrap.pre.etcRotate .rotateBox {
+  width: 200px;
+  height: 200px;
+  -webkit-transition: 1s;
+  transition: 1s;
+  border: 1px solid #000;
+  background-color: #ddd;
+}
+
+#frameBody .wrap.pre.etcRotate .rotateBox.degType01:hover {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+#frameBody .wrap.pre.etcRotate .rotateBox.degType02:hover {
+  -webkit-transform: rotate(0.5turn);
+          transform: rotate(0.5turn);
+}
+
+#frameBody .wrap.pre.etcRotate .rotateBox.degType03:hover {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+#frameBody .wrap.pre.fadeInout .tgArea.fadeType01 .btnFadeInout, #frameBody .wrap.pre.fadeInout .tgArea.fadeType02 .btnFadeInout {
+  min-width: 100px;
+  height: 40px;
+  font-family: "Noto Sans";
+  font-size: 0.88em;
+  background-color: rgba(221, 221, 221, 0.5);
+}
+
+#frameBody .wrap.pre.fadeInout .tgArea.fadeType01 .tgCont {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+#frameBody .wrap.pre.fadeInout .tgArea.fadeType01 .btnFadeInout.active ~ .tgCont {
+  opacity: 1;
+  visibility: visible;
+}
+
+#frameBody .wrap.pre.fadeInout .tgArea.fadeType02 .tgCont {
+  display: none;
+}
+
+#frameBody .wrap.pre.bdAni .borderArea {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#frameBody .wrap.pre.bdAni .borderArea span {
+  display: inline-block;
+  font-family: 'Noto Sans';
+  font-size: 1.5em;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+#frameBody .wrap.pre.bdAni .borderArea span:after {
+  content: '';
+  display: inherit;
+  border-bottom: 2px solid #000;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+#frameBody .wrap.pre.bdAni .borderArea span.leftBd:after {
+  -webkit-transform-origin: 0% 50%;
+          transform-origin: 0% 50%;
+}
+
+#frameBody .wrap.pre.bdAni .borderArea span.rightBd:after {
+  -webkit-transform-origin: 100% 50%;
+          transform-origin: 100% 50%;
+}
+
+#frameBody .wrap.pre.bdAni .borderArea span:hover:after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+#frameBody .wrap.pre.bdAni .borderArea span + span {
+  margin-top: 30px;
+}
+
 /* text color */
 /* background */
 .resultArea .inner .toolTipBox {
@@ -3231,6 +3382,12 @@ input[type="image"], input[type="color"], input[type="button"] {
 }
 
 @media screen and (max-width: 768px) {
+  *::-webkit-scrollbar {
+    display: none;
+  }
+  *.mobScroll::-webkit-scrollbar {
+    display: block;
+  }
   .leftArea {
     left: -300px;
     -webkit-transition: .3s;
@@ -3439,6 +3596,9 @@ input[type="image"], input[type="color"], input[type="button"] {
   .leftArea > .leftMenu > li > ul.leftSubMenu li.on a > .depthToggle {
     top: 10px;
     background-size: 14px auto;
+  }
+  .leftArea > .leftMenu > li.active span:after {
+    right: 31px;
   }
 }
 

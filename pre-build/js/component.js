@@ -164,7 +164,7 @@ $(document).ready(function () {
     });
 
     /* lnb dep3 메뉴 */
-    $('.dep3Cont').on({
+    $('.leftArea .leftMenu > li > .leftSubMenu>.dep3Cont').on({
         "click": function () {
             $(this).find('.dep3').stop().slideToggle();
             $(this).toggleClass('on').siblings('li').removeClass('on').find('.leftSubMenu').slideUp();
@@ -260,16 +260,16 @@ $(document).ready(function () {
         }
     })
 
-    let hCalcBody = $('#frameBody').height();
-    let hCalcWrap = $('#frameBody .wrap').height();
+    // let hCalcBody = $('#frameBody').height();
+    // let hCalcWrap = $('#frameBody .wrap').height();
     // let hCalcContents = $('#frameBody .contents').height();
-    console.log(hCalcBody, hCalcWrap);
+    // console.log(hCalcBody, hCalcWrap);
 
-    if (hCalcWrap > hCalcBody) {
-        $('#frameBody .btnArea').addClass('r20');
-    } else {
-        $('#frameBody .btnArea').removeClass('r20');
-    }
+    // if (hCalcWrap > hCalcBody) {
+    //     $('#frameBody .btnArea').addClass('r20');
+    // } else {
+    //     $('#frameBody .btnArea').removeClass('r20');
+    // }
 
     /* #wrap 스크롤 존재여부확인 */
     $.fn.hasScrollBar = function () {
@@ -332,3 +332,8 @@ $(document).ready(function () {
         });
     }
 });
+
+function prevent(e){
+    e.preventDefault();
+    e.stopImmediatePropagation();
+}

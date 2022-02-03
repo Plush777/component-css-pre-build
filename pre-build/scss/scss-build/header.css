@@ -30,7 +30,7 @@
 .wrap.pre.headerFixed #header .inner span, .wrap.pre.headerScroll #header .inner span, .wrap.pre.headerToggle #header .inner span {
   display: inline-block;
   line-height: 32px;
-  font-size: 20px;
+  font-size: 1.25em;
   font-family: "Noto Sans";
   color: #fff;
 }
@@ -53,7 +53,7 @@
 }
 
 .wrap.pre.headerFixed .contents span, .wrap.pre.headerScroll .contents span, .wrap.pre.headerToggle .contents span {
-  font-size: 30px;
+  font-size: 1.88em;
   font-family: "Noto Sans";
   color: #fff;
 }

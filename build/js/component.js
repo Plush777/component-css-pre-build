@@ -1,5 +1,56 @@
 $(document).ready(function () {
 
+    //모바일 체크
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+        
+        //결과버튼 클릭 시 모바일에서만 팝업 실행
+        $('.btnResult').on({
+            "click": function (e) {
+                // 이 클릭 이벤트만 실행하고 다른 btnResult에 걸려있는 이벤트들은 무시함
+                e.stopImmediatePropagation();
+                var cook = $.cookie('mobileResultPopup'); 
+                if (cook == "ok") { 
+                    $('.popup.mobileResult').hide();
+                    $('#dimmed').hide();
+                    $('#frameBody').addClass('show');
+                    $('#frameBody').removeClass('hide');
+                } else{ 
+                    $('.popup.mobileResult').show();
+                    $('#dimmed').show();
+                }
+            }
+        });
+    }
+
+    $('.btnConfirm').on({
+        "click": function () {
+            $('#frameBody').addClass('show');
+            $('.popup.mobileResult').hide();
+            $('#dimmed').hide();
+            if ($('#frameBody').hasClass('hide')) {
+                $('#frameBody').removeClass('hide');
+            }
+        }
+    });
+
+    $('.btnCancel').on({
+        "click": function () {
+          $('.popup.mobileResult').hide();
+          $('#dimmed').hide();
+        }
+    });
+
+    $('.todayChkClose').on({
+        "click": function () {
+            if ($('#todayChk').is(":checked")){ 
+                $.cookie('mobileResultPopup', 'ok', { expires: 1, path: '/' }); 
+            } 
+            $('.popup.mobileResult').hide();
+            $('#dimmed').hide();
+            $('#frameBody').addClass('show');
+        }
+    });
+
     var urlStatehref = window.location.href;
     var urlArrhref = urlStatehref.split('/');
     // console.log(urlArrhref);
@@ -43,7 +94,8 @@ $(document).ready(function () {
 
     $('.btnResult').on({
         "click": function () {
-            $('#frameBody').show();
+            $('#frameBody').addClass('show');
+            $('#frameBody').removeClass('hide');
             if ($('#frameBody').css('display') == 'block') {
                 $('body').css('overflow', 'hidden');
                 $('#toast').fadeIn();
@@ -56,7 +108,8 @@ $(document).ready(function () {
 
     $('.frameClose').on({
         "click": function () {
-            $('#frameBody').hide();
+            $('#frameBody').addClass('hide');
+            $('#frameBody').removeClass('show');
             if ($('#frameBody').css('display') == 'none') {
                 $('body').css('overflow', 'visible');
             }
@@ -110,6 +163,14 @@ $(document).ready(function () {
         }
     });
 
+    /* lnb dep3 메뉴 */
+    $('.leftArea .leftMenu > li > .leftSubMenu>.dep3Cont').on({
+        "click": function () {
+            $(this).find('.dep3').stop().slideToggle();
+            $(this).toggleClass('on').siblings('li').removeClass('on').find('.leftSubMenu').slideUp();
+        }
+    });
+
     var urlState = window.location.pathname;
     var urlArr = urlState.split('/');
     // console.log(urlArr);
@@ -127,9 +188,9 @@ $(document).ready(function () {
 
     function historyCountCheck() {
         if (historyCount == 1) {
-            $('.backArea').hide();
+            $('.backArea').css('visibility', 'hidden');
         } else if (historyCount > 1) {
-            $('.backArea').show();
+            $('.backArea').css('visibility', 'visible');
         }
     }
 
@@ -185,33 +246,30 @@ $(document).ready(function () {
     $('.moreArea').on({
         "click": function () {
             var moveElement = $(this).parents('.headArea').siblings('.rightArea');
-            // var moveUtilElement = $(this).parents('.headArea').find('.utilArea');
             var prevElement = $(this).parents('.headArea').prev('.leftArea');
 
             $(this).toggleClass('active');
             prevElement.toggleClass('active').siblings('.leftArea').removeClass('active');
             if (prevElement.hasClass('active')) {
                 moveElement.addClass('move');
-                // moveUtilElement.addClass('move');
                 $('body').css('overflow', 'hidden');
             } else if (!prevElement.hasClass('active')) {
                 moveElement.removeClass('move');
-                // moveUtilElement.removeClass('move');
                 $('body').css('overflow', 'auto');
             }
         }
     })
 
-    let hCalcBody = $('#frameBody').height();
-    let hCalcWrap = $('#frameBody .wrap').height();
+    // let hCalcBody = $('#frameBody').height();
+    // let hCalcWrap = $('#frameBody .wrap').height();
     // let hCalcContents = $('#frameBody .contents').height();
-    console.log(hCalcBody, hCalcWrap);
+    // console.log(hCalcBody, hCalcWrap);
 
-    if (hCalcWrap > hCalcBody) {
-        $('#frameBody .btnArea').addClass('r20');
-    } else {
-        $('#frameBody .btnArea').removeClass('r20');
-    }
+    // if (hCalcWrap > hCalcBody) {
+    //     $('#frameBody .btnArea').addClass('r20');
+    // } else {
+    //     $('#frameBody .btnArea').removeClass('r20');
+    // }
 
     /* #wrap 스크롤 존재여부확인 */
     $.fn.hasScrollBar = function () {
@@ -274,3 +332,8 @@ $(document).ready(function () {
         });
     }
 });
+
+function prevent(e){
+    e.preventDefault();
+    e.stopImmediatePropagation();
+}

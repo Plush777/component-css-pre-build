@@ -74,7 +74,7 @@ textarea {
   font-family: "Noto Sans";
   border-radius: 4px;
   color: #222;
-  font-size: 14px;
+  font-size: 0.88em;
   resize: none;
   overflow-y: auto;
   background-color: #fff;
@@ -173,7 +173,7 @@ input[type="image"], input[type="color"], input[type="button"] {
 
 .checkbox label {
   vertical-align: middle;
-  font-size: 14px;
+  font-size: 0.88em;
   color: #222;
   font-family: "Noto Sans";
   cursor: pointer;
@@ -221,7 +221,7 @@ input[type="image"], input[type="color"], input[type="button"] {
       -ms-flex-align: center;
           align-items: center;
   font-family: "Noto Sans";
-  font-size: 14px;
+  font-size: 0.88em;
   color: #141414;
   cursor: pointer;
   text-indent: 5px;

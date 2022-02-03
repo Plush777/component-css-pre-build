@@ -1,30 +1,41 @@
+/* text color */
+/* background */
 @media screen and (max-width: 1280px) {
   .titleH1 {
-    font-size: 28px;
+    font-size: 1.75em;
   }
   .titleH2 {
-    font-size: 20px;
+    font-size: 1.25em;
   }
   .titleH3 {
-    font-size: 16px;
+    font-size: 1em;
   }
   .leftArea .leftMenu > li:first-child > a {
     padding: 12px 0;
   }
   .leftArea .leftMenu > li span:not(.hidden) {
     padding: 12px 0;
-    font-size: 18px;
+    font-size: 1.13em;
     text-indent: 24px;
   }
   .leftArea .leftMenu > li ul.leftSubMenu {
     padding: 14px 24px 14px 24px;
   }
   .leftArea .leftMenu > li ul.leftSubMenu li > a {
-    font-size: 16px;
+    font-size: 1em;
+  }
+  .wrap.pre.gnbHover .container, .wrap.pre.gnb-li-hover .container, .wrap.pre.gnbFind .container {
+    margin: 0 40px;
   }
 }
 
 @media screen and (max-width: 768px) {
+  *::-webkit-scrollbar {
+    display: none;
+  }
+  *.mobScroll::-webkit-scrollbar {
+    display: block;
+  }
   .leftArea {
     left: -300px;
     -webkit-transition: .3s;
@@ -34,7 +45,7 @@
     width: 160px;
   }
   .leftArea .leftMenu li span:not(.hidden) {
-    font-size: 16px;
+    font-size: 1em;
   }
   .leftArea .leftMenu li span:not(.hidden):after {
     background-size: 12px 7px;
@@ -43,7 +54,7 @@
     background-size: 12px 7px;
   }
   .leftArea .leftMenu li ul.leftSubMenu li a {
-    font-size: 14px;
+    font-size: 0.88em;
   }
   .leftArea.active {
     left: 0;
@@ -82,9 +93,6 @@
     width: 34px;
     height: 34px;
   }
-  .headArea > .inner .topArea {
-    display: none !important;
-  }
   .headArea > .inner .moreArea {
     display: block;
   }
@@ -100,27 +108,33 @@
     -webkit-transition: .3s;
     transition: .3s;
     padding: 85px 0 20px 0;
-    margin: 0 20px;
+    margin: 0 24px;
   }
-  .rightArea .inner {
+  .rightArea > .inner {
     padding: 0;
   }
   .rightArea .mainTxt {
-    font-size: 14px;
+    font-size: 0.88em;
+  }
+  .resultArea > .inner {
+    padding: 10px;
+  }
+  .topArea {
+    display: none !important;
   }
   .innerTxt > strong {
-    font-size: 18px;
+    font-size: 1.13em;
   }
   .titleH1 {
-    font-size: 26px;
+    font-size: 1.63em;
     padding-bottom: 10px;
     margin-bottom: 15px;
   }
   .titleH2 {
-    font-size: 18px;
+    font-size: 1.13em;
   }
   .titleH3 {
-    font-size: 14px;
+    font-size: 0.88em;
   }
   .popup.share {
     width: 300px;
@@ -129,7 +143,7 @@
     padding: 15px;
   }
   .popup.share .cont .inner p {
-    font-size: 12px;
+    font-size: 0.75em;
   }
   .popup.share .cont .inner p + .inputArea {
     margin-top: 15px;
@@ -138,7 +152,7 @@
     margin-right: 10px;
   }
   .popup.share .cont .inner .inputArea button {
-    font-size: 12px;
+    font-size: 0.75em;
     min-width: 65px;
   }
   .tabWrap.type01 {
@@ -153,7 +167,7 @@
   .tabWrap.type01 > .tabNav > .tabList > li {
     height: 30px;
     line-height: 30px;
-    font-size: 16px;
+    font-size: 1em;
   }
   .tabWrap.type01 > .tabNav > .tabList > li.active:before {
     height: 2px;
@@ -164,7 +178,7 @@
             align-items: baseline;
     height: 30px;
     line-height: 30px;
-    font-size: 12px;
+    font-size: 0.75em;
   }
   i.ico.result {
     width: 5px;
@@ -174,24 +188,72 @@
   }
   .highlightArea .code-toolbar .toolbar-item span {
     padding: 0 5px !important;
-    font-size: 11px !important;
+    font-size: 0.69em !important;
   }
-  .wrap.pre.gnbHover .container, .wrap.pre.gnb-li-hover .container, .wrap.pre.gnbFind .container {
+  #frameBody .wrap.pre.allRes > .container {
+    display: block;
+  }
+  #frameBody .wrap.pre > .container {
+    display: none;
+  }
+  #frameBody .wrap.pre .gifCont {
+    display: block;
+  }
+  #frameBody .wrap.pre.bgImage :where(.resultCont.type01, .resultCont.type02) {
+    display: none;
+  }
+  #frameBody .wrap.pre.floating {
+    height: auto;
+  }
+  #frameBody .wrap.pre.floating #floatingMenu {
+    display: none;
+  }
+  #frameBody .wrap.pre.gnbHover .container, #frameBody .wrap.pre.gnb-li-hover .container, #frameBody .wrap.pre.gnbFind .container {
     width: auto;
     padding: 60px 20px 0 20px;
   }
-  .wrap.pre.gnbHover .container #gnb ul.menuList > li > a, .wrap.pre.gnb-li-hover .container #gnb ul.menuList > li > a, .wrap.pre.gnbFind .container #gnb ul.menuList > li > a {
-    font-size: 18px;
+  #frameBody .wrap.pre.gnbHover .container #gnb ul.menuList > li > a, #frameBody .wrap.pre.gnb-li-hover .container #gnb ul.menuList > li > a, #frameBody .wrap.pre.gnbFind .container #gnb ul.menuList > li > a {
+    font-size: 1.13em;
   }
-  .wrap.pre.gnbHover .container #gnb ul.menuList > li .depthTwo > li > a, .wrap.pre.gnb-li-hover .container #gnb ul.menuList > li .depthTwo > li > a, .wrap.pre.gnbFind .container #gnb ul.menuList > li .depthTwo > li > a {
-    font-size: 14px;
+  #frameBody .wrap.pre.gnbHover .container #gnb ul.menuList > li .depthTwo > li > a, #frameBody .wrap.pre.gnb-li-hover .container #gnb ul.menuList > li .depthTwo > li > a, #frameBody .wrap.pre.gnbFind .container #gnb ul.menuList > li .depthTwo > li > a {
+    font-size: 0.88em;
   }
-  .wrap.pre.gnbFind #gnb ul.menuList li {
-    min-width: auto;
+  #frameBody .wrap.pre.gnbFind #gnb ul.menuList li {
+    min-width: 90px;
+  }
+  #frameBody .wrap.pre .gifCont .gifArea > img {
+    width: 95vw;
+  }
+  #frameBody .wrap.pre.leftMenu .leftAreaType02 > .leftMenu li span {
+    font-size: 1.13em;
+  }
+  .titleH2.web, .resultArea.web {
+    display: none;
+  }
+  .btnArea.mob {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .leftArea > .leftMenu > li > ul.leftSubMenu li a > .depthToggle {
+    width: 17px;
+    height: 17px;
+    top: 0;
+    background-size: 17px 17px;
+  }
+  .leftArea > .leftMenu > li > ul.leftSubMenu li.on a > .depthToggle {
+    top: 10px;
+    background-size: 14px auto;
+  }
+  .leftArea > .leftMenu > li.active span:after {
+    right: 31px;
   }
 }
 
 @media screen and (max-width: 600px) {
+  .highlightArea::-webkit-scrollbar {
+    display: none;
+  }
   .leftArea.active {
     min-width: 40%;
     max-width: 200px;
@@ -207,6 +269,14 @@
     -webkit-transform: translate(calc(100% - 100px), 0);
             transform: translate(calc(100% - 100px), 0);
   }
+  #frameBody .wrap.pre.leftMenu .leftAreaType02 > .leftMenu li span {
+    font-size: 1em;
+  }
+  #frameBody .wrap.pre.leftMenu .leftAreaType02 > .leftMenu li span:after {
+    width: 13px;
+    height: 7px;
+    background-size: 13px 7px;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -215,6 +285,88 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+}
+
+/* hover */
+@media (hover: hover) {
+  a.link:hover {
+    text-decoration: underline;
+  }
+  a.mail:hover {
+    text-decoration: underline;
+  }
+  .headArea > .inner .utilArea li button.btnMail:hover .toolTip.mail, .headArea > .inner .utilArea li a.btnMail:hover .toolTip.mail {
+    opacity: 1;
+    visibility: visible;
+  }
+  .headArea > .inner .utilArea li button.btnShare:hover .toolTip.share, .headArea > .inner .utilArea li a.btnShare:hover .toolTip.share {
+    opacity: 1;
+    visibility: visible;
+  }
+  .headArea > .inner .utilArea li button.btnMore:hover .toolTip.more, .headArea > .inner .utilArea li a.btnMore:hover .toolTip.more {
+    opacity: 1;
+    visibility: visible;
+  }
+  .headArea > .inner .utilArea li button.btnDarkMode:hover .toolTip.more, .headArea > .inner .utilArea li a.btnDarkMode:hover .toolTip.more {
+    opacity: 1;
+    visibility: visible;
+  }
+  .headArea > .inner .utilArea li:hover:before {
+    opacity: 1;
+    visibility: visible;
+  }
+  .leftArea > .leftMenu > li > ul.leftSubMenu li a:hover {
+    text-decoration: underline;
+  }
+  .headArea > .inner .utilArea li .moreSubMenu > ul > li:hover {
+    background-color: rgba(204, 204, 204, 0.8);
+  }
+  #wrap.main .btnStart:hover:before {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+  #wrap.main .btnStart:hover span {
+    color: #333;
+  }
+  #wrap.main .btnStart:hover span:after {
+    background: url("../../images/ico/ico-arrow-right-bk-shw.png") no-repeat center;
+  }
+  #wrap.err .bottomDiv a:hover {
+    text-decoration: underline;
+  }
+  .topArea .backtoTop:hover {
+    background-color: #000;
+  }
+  .topArea .backtoTop:hover svg {
+    stroke: #fff;
+    fill: #fff;
+  }
+  .headArea > .inner .backArea .btnBack:hover:before {
+    opacity: 1;
+    visibility: visible;
+  }
+  .boardList .cont .li .boardBox .boardItem:last-child.underLine:hover {
+    text-decoration: underline;
+  }
+  .pager div:not(.pageNumbers):hover:not(.disabled) {
+    border-color: #000;
+  }
+  .pager .pageNumbers > a.active, .pager .pageNumbers > a:hover {
+    border-color: #000;
+    color: black;
+  }
+  .pager .firstPage:hover:not(.disabled) {
+    background: url("../../images/ico/ico-pagi-first-hover.png") no-repeat center;
+  }
+  .pager .previousPage:hover:not(.disabled) {
+    background: url("../../images/ico/ico-pagi-prev-hover.png") no-repeat center;
+  }
+  .pager .nextPage:hover:not(.disabled) {
+    background: url("../../images/ico/ico-pagi-next-hover.png") no-repeat center;
+  }
+  .pager .lastPage:hover:not(.disabled) {
+    background: url("../../images/ico/ico-pagi-last-hover.png") no-repeat center;
   }
 }
 /*# sourceMappingURL=media.css.map */

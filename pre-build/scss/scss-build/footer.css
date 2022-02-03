@@ -9,7 +9,7 @@
   position: relative;
   min-height: calc(100vh - 322px);
   text-align: center;
-  font-size: 36px;
+  font-size: 2.25em;
   color: #fff;
   font-family: "Noto Sans";
   background-color: #444;
@@ -29,7 +29,7 @@
 }
 
 .wrap.pre.footerBasic #footer > .inner {
-  padding-top: 40px;
+  padding: 40px;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -72,7 +72,7 @@
 }
 
 .wrap.pre.footerBasic #footer > .inner .linkArea ul li a {
-  font-size: 16px;
+  font-size: 1em;
   font-family: "Noto Sans";
   color: #fff;
 }
@@ -91,7 +91,7 @@
 }
 
 .wrap.pre.footerBasic #footer > .inner .bottomArea > .inner p.copy {
-  font-size: 14px;
+  font-size: 0.88em;
   color: #fff;
   font-family: '맑은 고딕';
   text-align: center;
@@ -111,7 +111,7 @@
 }
 
 .wrap.pre.footerFixed #footer > .inner {
-  padding-top: 40px;
+  padding: 40px;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -154,7 +154,7 @@
 }
 
 .wrap.pre.footerFixed #footer > .inner .linkArea ul li a {
-  font-size: 16px;
+  font-size: 1em;
   font-family: "Noto Sans";
   color: #fff;
 }
@@ -173,7 +173,7 @@
 }
 
 .wrap.pre.footerFixed #footer > .inner .bottomArea > .inner p.copy {
-  font-size: 14px;
+  font-size: 0.88em;
   color: #fff;
   font-family: '맑은 고딕';
   text-align: center;

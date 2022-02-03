@@ -1,7 +1,7 @@
 /* text color */
 /* background */
 .wrap.pre.gnbHover .container, .wrap.pre.gnb-li-hover .container, .wrap.pre.gnbFind .container {
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
   padding-top: 60px;
 }
@@ -45,7 +45,7 @@
 
 .wrap.pre.gnbHover #gnb ul.menuList > li > a, .wrap.pre.gnb-li-hover #gnb ul.menuList > li > a, .wrap.pre.gnbFind #gnb ul.menuList > li > a {
   min-width: 80px;
-  font-size: 24px;
+  font-size: 1.5em;
   font-family: "Noto Sans";
   color: #000;
 }
@@ -63,7 +63,7 @@
 
 .wrap.pre.gnbHover #gnb ul.menuList > li .depthTwo > li > a, .wrap.pre.gnb-li-hover #gnb ul.menuList > li .depthTwo > li > a, .wrap.pre.gnbFind #gnb ul.menuList > li .depthTwo > li > a {
   display: block;
-  font-size: 16px;
+  font-size: 1em;
   font-family: "Noto Sans";
   color: #444;
 }

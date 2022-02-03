@@ -6,12 +6,12 @@
         #header{position: fixed; width: 100%; height: 65px; z-index: 1000; background-color: $_333Bg;
             .inner{display: flex; align-items: center; justify-content: center; padding: 15px; box-sizing: border-box;
                 span{display: inline-block; line-height: 32px; 
-                font-size: 20px; font-family: $d-fz; color: $cfff;}
+                font-size: 1.25em; font-family: $d-fz; color: $cfff;}
             }
         }
         .contents{position: absolute; top: 0; width: 100%; height: 2000px;
         display: flex; align-items: center; justify-content: center; background-color: #555;
-            span{font-size: 30px; font-family: $d-fz; color: $cfff;}
+            span{font-size: 1.88em; font-family: $d-fz; color: $cfff;}
         }
     }
 

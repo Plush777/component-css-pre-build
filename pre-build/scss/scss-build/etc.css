@@ -1,3 +1,139 @@
 /* text color */
 /* background */
+#frameBody .wrap.pre.topButton .container {
+  height: 100%;
+  background-color: #ddd;
+}
+
+#frameBody .wrap.pre.topButton #startLine {
+  display: block;
+  width: 100%;
+  min-height: 200px;
+  color: #fff;
+  font-size: 1em;
+  background-color: #222;
+}
+
+#frameBody .wrap.pre.topButton .btnArea {
+  top: inherit;
+  bottom: 20px;
+  right: 20px;
+}
+
+#frameBody .wrap.pre.topButton .btnArea .arrowTop {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-image: url("../../images/ico/ico-top-button-w.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #222;
+}
+
+#frameBody .wrap.pre.etcRotate .resultCont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 60px 20px 20px 20px;
+}
+
+#frameBody .wrap.pre.etcRotate .rotateBox {
+  width: 200px;
+  height: 200px;
+  -webkit-transition: 1s;
+  transition: 1s;
+  border: 1px solid #000;
+  background-color: #ddd;
+}
+
+#frameBody .wrap.pre.etcRotate .rotateBox.degType01:hover {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+#frameBody .wrap.pre.etcRotate .rotateBox.degType02:hover {
+  -webkit-transform: rotate(0.5turn);
+          transform: rotate(0.5turn);
+}
+
+#frameBody .wrap.pre.etcRotate .rotateBox.degType03:hover {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+#frameBody .wrap.pre.fadeInout .tgArea.fadeType01 .btnFadeInout, #frameBody .wrap.pre.fadeInout .tgArea.fadeType02 .btnFadeInout {
+  min-width: 100px;
+  height: 40px;
+  font-family: "Noto Sans";
+  font-size: 0.88em;
+  background-color: rgba(221, 221, 221, 0.5);
+}
+
+#frameBody .wrap.pre.fadeInout .tgArea.fadeType01 .tgCont {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+#frameBody .wrap.pre.fadeInout .tgArea.fadeType01 .btnFadeInout.active ~ .tgCont {
+  opacity: 1;
+  visibility: visible;
+}
+
+#frameBody .wrap.pre.fadeInout .tgArea.fadeType02 .tgCont {
+  display: none;
+}
+
+#frameBody .wrap.pre.bdAni .borderArea {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#frameBody .wrap.pre.bdAni .borderArea span {
+  display: inline-block;
+  font-family: 'Noto Sans';
+  font-size: 1.5em;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+#frameBody .wrap.pre.bdAni .borderArea span:after {
+  content: '';
+  display: inherit;
+  border-bottom: 2px solid #266bf7;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+#frameBody .wrap.pre.bdAni .borderArea span.leftBd:after {
+  -webkit-transform-origin: 0% 50%;
+          transform-origin: 0% 50%;
+}
+
+#frameBody .wrap.pre.bdAni .borderArea span.rightBd:after {
+  -webkit-transform-origin: 100% 50%;
+          transform-origin: 100% 50%;
+}
+
+#frameBody .wrap.pre.bdAni .borderArea span:hover:after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+#frameBody .wrap.pre.bdAni .borderArea span + span {
+  margin-top: 30px;
+}
 /*# sourceMappingURL=etc.css.map */

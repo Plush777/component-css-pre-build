@@ -22,7 +22,7 @@
 }
 
 textarea{height: 150px; border: 1px solid $dddBg; padding: 10px; box-sizing: border-box;
-    font-family: $d-fz; border-radius: 4px; color: $c222; font-size: 14px; resize: none; overflow-y: auto;
+    font-family: $d-fz; border-radius: 4px; color: $c222; font-size: 0.88em; resize: none; overflow-y: auto;
     background-color: $whiteBg;
       &::placeholder{color: #aaa;}
       &:disabled{background-color: #f5f5f5;}
@@ -52,7 +52,7 @@ font-family: $d-fz; border-radius: 2px; color: $c222; vertical-align: middle;bac
         }
       }
     }
-    label{vertical-align: middle; font-size: 14px; color: $c222; font-family: $d-fz;cursor: pointer;
+    label{vertical-align: middle; font-size: 0.88em; color: $c222; font-family: $d-fz;cursor: pointer;
       &:before{content: ''; display: inline-block; width: 20px; height: 20px; border-radius: 4px; box-sizing: border-box;
       margin-right: 5px; vertical-align: sub; border: 1px solid $dddBg; background-color: $whiteBg;}
     }
@@ -62,7 +62,7 @@ font-family: $d-fz; border-radius: 2px; color: $c222; vertical-align: middle;bac
 .radio{display: inline-block; margin-right: 10px;margin-top: 0; cursor: pointer;
     input[type="radio"]{display: none;}
     &:last-child {margin-right: 0;}
-    label{position: relative; display: flex;align-items: center; font-family: $d-fz; font-size: 14px; color: #141414; cursor: pointer; text-indent: 5px;
+    label{position: relative; display: flex;align-items: center; font-family: $d-fz; font-size: 0.88em; color: #141414; cursor: pointer; text-indent: 5px;
       &:before{content: ''; display: inline-block; width: 14px; height: 14px; border: 1px solid $dddBg; border-radius: 50%; background-color: $whiteBg;}
     }
     input[type="radio"]:checked+label{

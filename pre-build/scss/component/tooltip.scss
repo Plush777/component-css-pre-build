@@ -8,6 +8,6 @@
 
 .exTooltip{opacity: 0; visibility: hidden; position: absolute; top: 50%; left: 180px; transform: translateY(-50%); 
 transition: .5s; z-index: 150; 
-    span{display: block; min-width: 60px; padding: 5px 0; font-family: $d-fz; font-size: 12px; border-radius: 3px; 
+    span{display: block; min-width: 60px; padding: 5px 0; font-family: $d-fz; font-size: 0.75em; border-radius: 3px; 
     color: $cfff; text-align: center; background-color: $c333;}
 }

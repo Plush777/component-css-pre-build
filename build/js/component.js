@@ -1,20 +1,20 @@
-$(document).ready(function () {
+$(function () {
 
     //모바일 체크
-    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-        
+    if (/Android|webOS|iPhone|iPad|BlackBerry|Opera Mini/i.test(navigator.userAgent)) {
+
         //결과버튼 클릭 시 모바일에서만 팝업 실행
         $('.btnResult').on({
             "click": function (e) {
                 // 이 클릭 이벤트만 실행하고 다른 btnResult에 걸려있는 이벤트들은 무시함
                 e.stopImmediatePropagation();
-                var cook = $.cookie('mobileResultPopup'); 
-                if (cook == "ok") { 
+                const cook = $.cookie('mobileResultPopup');
+                if (cook == "ok") {
                     $('.popup.mobileResult').hide();
                     $('#dimmed').hide();
                     $('#frameBody').addClass('show');
                     $('#frameBody').removeClass('hide');
-                } else{ 
+                } else {
                     $('.popup.mobileResult').show();
                     $('#dimmed').show();
                 }
@@ -35,24 +35,24 @@ $(document).ready(function () {
 
     $('.btnCancel').on({
         "click": function () {
-          $('.popup.mobileResult').hide();
-          $('#dimmed').hide();
+            $('.popup.mobileResult').hide();
+            $('#dimmed').hide();
         }
     });
 
     $('.todayChkClose').on({
         "click": function () {
-            if ($('#todayChk').is(":checked")){ 
-                $.cookie('mobileResultPopup', 'ok', { expires: 1, path: '/' }); 
-            } 
+            if ($('#todayChk').is(":checked")) {
+                $.cookie('mobileResultPopup', 'ok', { expires: 1, path: '/' });
+            }
             $('.popup.mobileResult').hide();
             $('#dimmed').hide();
             $('#frameBody').addClass('show');
         }
     });
 
-    var urlStatehref = window.location.href;
-    var urlArrhref = urlStatehref.split('/');
+    let urlStatehref = window.location.href;
+    let urlArrhref = urlStatehref.split('/');
     // console.log(urlArrhref);
     if (urlArrhref[4] == 'sub_first.html') {
         $('.btnBack').css('display', 'none');
@@ -80,7 +80,7 @@ $(document).ready(function () {
     $('.btnShare').on({
         "click": function () {
             $('#dimmed').fadeIn();
-            $('.popup').fadeIn();
+            $('.popup.share').fadeIn();
             popupEscEvent();
         }
     });
@@ -119,8 +119,8 @@ $(document).ready(function () {
     /* 더보기 메뉴 토글 및 툴팁 제어 */
     $('.utilArea li .btnMore').on({
         "click": function () {
-            var moreSubMenu = $(this).find('.moreSubMenu');
-            var moreTooltip = $(this).find('.toolTip.more');
+            const moreSubMenu = $(this).find('.moreSubMenu');
+            const moreTooltip = $(this).find('.toolTip.more');
 
             $(moreSubMenu).toggleClass('active');
             if (moreSubMenu.hasClass('active')) {
@@ -131,7 +131,7 @@ $(document).ready(function () {
         }
     });
 
-    var tabList = $('.tabList li');
+    const tabList = $('.tabList li');
 
     $(tabList).on({
         "click": function () {
@@ -171,8 +171,8 @@ $(document).ready(function () {
         }
     });
 
-    var urlState = window.location.pathname;
-    var urlArr = urlState.split('/');
+    let urlState = window.location.pathname;
+    let urlArr = urlState.split('/');
     // console.log(urlArr);
 
     /* 서브 홈버튼 */
@@ -205,28 +205,28 @@ $(document).ready(function () {
     });
 
     /* 테이블 아코디언 */
-    $('.table.noticeBoard .tgShowHideRow').on({
-        'click': function click() {
-            $(this).closest('.tgShowHideRow').toggleClass('active').siblings('.tgShowHideRow').removeClass('active');
+    // $('.table.noticeBoard .tgShowHideRow').on({
+    //     'click': function click() {
+    //         $(this).closest('.tgShowHideRow').toggleClass('active').siblings('.tgShowHideRow').removeClass('active');
 
-            var tgTableRow = $(this).next('.tgContRow');
-            if (tgTableRow.css('display') == 'none') {
-                tgTableRow.toggle().find('.showHideBox').stop().slideDown();
-                tgTableRow.siblings('.tgContRow').css('display', 'none').find('.showHideBox').slideUp();
-            } else {
-                tgTableRow.find('.showHideBox').stop().slideUp(function () {
-                    if ($(this).css('display') == 'none') {
-                        $(this).closest('.tgContRow').hide();
-                    }
-                });
-            }
-        }
-    });
+    //         var tgTableRow = $(this).next('.tgContRow');
+    //         if (tgTableRow.css('display') == 'none') {
+    //             tgTableRow.toggle().find('.showHideBox').stop().slideDown();
+    //             tgTableRow.siblings('.tgContRow').css('display', 'none').find('.showHideBox').slideUp();
+    //         } else {
+    //             tgTableRow.find('.showHideBox').stop().slideUp(function () {
+    //                 if ($(this).css('display') == 'none') {
+    //                     $(this).closest('.tgContRow').hide();
+    //                 }
+    //             });
+    //         }
+    //     }
+    // });
 
     /* update-note.html row */
     $('.boardList .cont.items .li').on({
         "click": function () {
-            var liShowHideBox = $(this).next('.listShowHideBox');
+            const liShowHideBox = $(this).next('.listShowHideBox');
 
             liShowHideBox.toggleClass('on').stop().slideToggle().siblings('.listShowHideBox').slideUp().removeClass('on');
             if (liShowHideBox.hasClass('on')) {
@@ -245,8 +245,8 @@ $(document).ready(function () {
 
     $('.moreArea').on({
         "click": function () {
-            var moveElement = $(this).parents('.headArea').siblings('.rightArea');
-            var prevElement = $(this).parents('.headArea').prev('.leftArea');
+            const moveElement = $(this).parents('.headArea').siblings('.rightArea');
+            const prevElement = $(this).parents('.headArea').prev('.leftArea');
 
             $(this).toggleClass('active');
             prevElement.toggleClass('active').siblings('.leftArea').removeClass('active');
@@ -333,7 +333,7 @@ $(document).ready(function () {
     }
 });
 
-function prevent(e){
+function prevent(e) {
     e.preventDefault();
     e.stopImmediatePropagation();
 }

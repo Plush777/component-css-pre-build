@@ -1,8 +1,8 @@
-$(document).ready(function () {
+$(function () {
 
-    var lastScrollTop = 0;
+    let lastScrollTop = 0;
     $('#frameBody').scroll(function () {
-        var st = $(this).scrollTop();
+        let st = $(this).scrollTop();
         if (st > lastScrollTop) {
             $('#header').removeClass('headDown').addClass('headUp');
         } else {

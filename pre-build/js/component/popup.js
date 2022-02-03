@@ -1,13 +1,13 @@
-$(document).ready(function(){
+$(function () {
     $('#frameBody .wrap.pre.popShowHide .btnShowHide').on({
-        "click":function(){
+        "click": function () {
             $('.popup').show();
             $('.exDimmed').show();
         }
     });
 
     $('.btnClose').on({
-        "click":function(){
+        "click": function () {
             $('.popup').hide();
             $('.exDimmed').remove();
         }
@@ -21,7 +21,7 @@ $(document).ready(function(){
     */
 
     $('#drag').draggable({
-        cancel:'.cont',
+        cancel: '.cont',
         containment: "window"
     });
 });

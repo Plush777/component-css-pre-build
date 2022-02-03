@@ -27,11 +27,11 @@
 @import '../common/variable.scss';    
 
 /* reset */
-:root[color-theme='light']{
+:root[data-theme='light']{
   --background: #{$whiteBg};
 }
 
-:root[color-theme='dark']{
+:root[data-theme='dark']{
   --background: #{$body};
 }
 :root{overflow-wrap: break-word;}

@@ -490,7 +490,7 @@ code[class*=language-], pre[class*=language-] pre{white-space: pre-wrap !importa
 }
 
 // result
-#frameBody{display: none; position: absolute; width: 100%; height: 100%; background-color: $whiteBg; z-index: 10000;
+#frameBody{display: none; position: absolute; top: 0; width: 100%; height: 100%; background-color: $whiteBg; z-index: 10000;
   .btnArea{position: fixed; top: 0; right: 0; z-index: 9999;
     .frameClose{width: 24px; height: 24px; padding: 18px; box-sizing: border-box;
     border-radius: 0 0 0 5px; background-size: 24px 24px; background-image: url("../../images/ico/ico-result-close.png");

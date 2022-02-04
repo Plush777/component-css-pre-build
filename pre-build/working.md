@@ -91,6 +91,10 @@
 - Text ellipsis
 - Key frames (Disabled)
 
+<br><br>
+
+## 다크모드 팔레트 정보
+
 
 
 

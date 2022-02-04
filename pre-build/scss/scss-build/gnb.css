@@ -1,5 +1,18 @@
 /* text color */
 /* background */
+/* darkMode */
+body {
+  --d-bg: #fff;
+}
+
+body[data-theme='light'] {
+  --d-bg: #fff;
+}
+
+body[data-theme='dark'] {
+  --d-bg: #121212;
+}
+
 .wrap.pre.gnbHover .container, .wrap.pre.gnb-li-hover .container, .wrap.pre.gnbFind .container {
   max-width: 1200px;
   margin: 0 auto;

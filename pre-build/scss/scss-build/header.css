@@ -1,5 +1,18 @@
 /* text color */
 /* background */
+/* darkMode */
+body {
+  --d-bg: #fff;
+}
+
+body[data-theme='light'] {
+  --d-bg: #fff;
+}
+
+body[data-theme='dark'] {
+  --d-bg: #121212;
+}
+
 .wrap.pre.headerFixed .container, .wrap.pre.headerScroll .container, .wrap.pre.headerToggle .container {
   position: relative;
 }

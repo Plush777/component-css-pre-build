@@ -1,6 +1,19 @@
 @charset "UTF-8";
 /* text color */
 /* background */
+/* darkMode */
+body {
+  --d-bg: #fff;
+}
+
+body[data-theme='light'] {
+  --d-bg: #fff;
+}
+
+body[data-theme='dark'] {
+  --d-bg: #121212;
+}
+
 .wrap.pre.footerBasic .contents {
   width: 100%;
 }

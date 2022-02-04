@@ -551,9 +551,8 @@
 }
 
 .tabWrap.type01 > .tabNav > .tabList {
-  border-bottom: 2px solid #ddd;
+  border-bottom: 2px solid var(--d-bdc);
   border-radius: 4px;
-  background-color: #fff;
 }
 
 .tabWrap.type01 > .tabNav > .tabList > li {
@@ -566,7 +565,7 @@
   font-size: 1.13em;
   cursor: pointer;
   text-align: center;
-  color: #000;
+  color: var(--c-tab);
   font-family: "Noto Sans";
 }
 

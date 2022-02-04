@@ -1,6 +1,5 @@
 /* text color */
 /* background */
-/* darkMode */
 @media screen and (max-width: 1280px) {
   .titleH1 {
     font-size: 1.75em;
@@ -368,6 +367,28 @@
   }
   .pager .lastPage:hover:not(.disabled) {
     background: url("../../images/ico/ico-pagi-last-hover.png") no-repeat center;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    --d-bg-body: #fff;
+    --d-c-title-h1: #202020;
+    --d-c-title-h2: #202020;
+    --d-c-title-h3: #202020;
+    --d-bdc: #ddd;
+    --d-c-main-txt: #333;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    --d-bg-body: #181818;
+    --d-c-title-h1: rgba(242, 241, 241, 1);
+    --d-c-title-h2: rgba(242, 241, 241, 1);
+    --d-c-title-h3: rgba(242, 241, 241, 1);
+    --d-bdc: #3a3b3d;
+    --d-c-main-txt: #ececec;
   }
 }
 /*# sourceMappingURL=media.css.map */

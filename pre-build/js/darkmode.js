@@ -1,35 +1,67 @@
 const darkModeEvent = document.querySelector('.btnDarkMode');
-const choiceTheme = localStorage.getItem('theme');
-let prefersTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-const getPrefersTheme = () => choiceTheme ? choiceTheme : prefersTheme;
-const domEle = document.documentElement;
+let choiceTheme = localStorage.getItem('theme');
+let prefersTheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
+const domBody = document.body;
+
+let setMode = prefersTheme ? 'dark' : 'light';
+
+setTheme = (varTheme) => {
+    setMode = varTheme
+    document.body.setAttribute.varTheme = varTheme;
+}
+
+darkModeLoad = () => {
+    const loadBody = document.body;
+    let cookBody = loadBody.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    currentBody = cookBody;
+
+    let endDate = new Date();
+    endDate.setFullYear(endDate.getFullYear() + 10);
+
+    document.cookie = 'theme=' + (currentBody == 'light' ? 'light' : 'dark') + '; Expires=' + endDate + ';'
+    // console.log(document.cookie)
+}
+
+darkModeSelected = () => {
+    return document.cookie.match(/theme=dark/i) != null;
+}
+
+themeFromCookie = () => {
+    domBody.getAttribute('data-theme') = darkModeSelected() ? 'dark' : 'light';
+}
 
 window.onload = () => {
-    if (getPrefersTheme === 'dark') {
-        domEle.setAttribute('data-theme', 'dark');
+    if (choiceTheme === 'dark') {
+        domBody.setAttribute('data-theme', 'dark');
         localStorage.setItem('theme', 'dark');
     } else {
-        domEle.setAttribute('data-theme', 'light');
+        domBody.setAttribute('data-theme', 'light');
         localStorage.setItem('theme', 'light');
     }
 };
 
 const darkActive = () => {
     darkModeEvent.classList.add('active');
+    domBody.setAttribute('data-theme', 'dark');
+    localStorage.setItem('theme', 'dark');
 }
 
 const darkDeactive = () => {
     darkModeEvent.classList.remove('active');
+    domBody.setAttribute('data-theme', 'light');
+    localStorage.setItem('theme', 'light');
 }
-    
+
 darkModeEvent.addEventListener('click', () => {
-    if (domEle.getAttribute('data-theme') === 'dark') {
-        domEle.setAttribute('data-theme', 'light');
-        localStorage.setItem('theme', 'light');
-        darkDeactive();
-    } else {
-        domEle.setAttribute('data-theme', 'dark');
-        localStorage.setItem('theme', 'dark');
+    const nextMode = setMode === 'light' ? 'dark' : 'light'
+    setTheme(nextMode);
+
+    choiceTheme = localStorage.getItem('theme');
+    if (choiceTheme === 'light') {
         darkActive();
+    } else {
+        darkDeactive();
     }
+
+    darkModeLoad();
 });

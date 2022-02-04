@@ -263,3 +263,21 @@
         .lastPage:hover:not(.disabled){background: url("../../images/ico/ico-pagi-last-hover.png")no-repeat center;}
     }
 }
+
+@media (prefers-color-scheme: light) {
+    body{
+        --d-bg: #fff;
+    }
+}
+
+
+@media (prefers-color-scheme: dark) {
+    // :root[data-theme='dark']{
+    //     --background: #{$body};
+    // }
+
+    body{
+        --d-bg: #121212;
+    }
+}
+

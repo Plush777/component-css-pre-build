@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="light dark" />
   <link rel="icon" href="../images/ico/ico-favi.png" sizes="16x16" />
   <link rel="stylesheet" href="../css/common/component.css" type="text/css" />
   <link rel="stylesheet" href="../css/library/prism.css" type="text/css" />
@@ -11,10 +12,13 @@
   <script type="text/javascript" src="../lib/swiper/js/swiper.js"></script>
   <script src="../lib/prism.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
-  <script src="../js/darkmode.js" defer></script>
   <script type="text/javascript" src="../js/component.js"></script>
   <script type="text/javascript" src="../js/error.js"></script>
+  <script src="../js/darkmode.js" defer></script>
   <title>Component css</title>
+  <script>
+    const colorScheme = localStorage.getItem("theme") || "light";
+  </script>
 </head>
 
 <body>
@@ -206,7 +210,11 @@
 
       @@include('include/util.html')
 
-     
+      <script type="text/javascript">
+        const useDark = colorScheme === "dark";
+        document.body.getAttribute('data-theme') === useDark;
+        document.body.getAttribute('data-theme') === !useDark;
+      </script>
 
       <div class="rightArea">
         <div class="inner">

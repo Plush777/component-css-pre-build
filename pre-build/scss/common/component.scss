@@ -52,7 +52,11 @@ pre{word-break:break-all;white-space:pre-line;margin: 0 !important;}
   bg: background
   hv: hover
   at: active
+  sc: scroll
+  ele: element
+  dis: disabled
   bdc: border color
+  pop: popup
 
 --------------------------------------------/
 
@@ -65,17 +69,36 @@ body{
   --d-c-title-h2: #202020;
   --d-c-title-h3: #202020;
   --d-c-main-txt: #333;
-  --d-c-left-menu-dep1: #707070;
-  --d-c-left-menu-dep2: #eee;
+  --d-c-left-menu-dep1: #333;
+  --d-c-left-menu-dep2: #707070;
+  --dis-c-left-menu-dep2: #ccc;
   --d-c-at-left-menu-dep1:#266bf7;
+  --d-c-at-left-menu-dep2:#266bf7;
+  --d-c-at-more-sub-menu: #202020;
+  --d-bg-left-menu-dep1: #707070;
+  --d-bg-left-menu-dep2: #eee;
+  --d-bg-at-more-sub-menu: #f3f4f5;
+  --d-bg-hv-more-sub-menu-item: rgba(204, 204, 204, 0.8);
+  --d-bg-hv-util-area-circle: rgba(221, 221, 221, 0.5);
+  --d-bg-pop-filter: none; //backdrop-filter
   --d-bdc: #ddd;
   --d-sc-thumb: #ccc;
   --d-sc-track: #e9e9e9;
   --d-sc-hv-thumb: #b6b6b6;
   --d-sc-at-thumb: #808080;
+  --d-svg-current: #000;
   --c-emphasis01: #266bf7; //a.link
   --c-emphasis02: #1694d2; //a.mail
   --c-tab:#000;
+  --logo-light: inline-block;
+  --logo-dark: none;
+  --ico-light: inline-block;
+  --ico-dark: none;
+  --mark-dep3: rgba(32, 32, 32, 0.75);
+  --bdc-btt: #000;
+  --bg-hv-btt: #000;
+  --hv-svg-btt: #fff;
+  --ele-shadow: #ddd;
 }
 
 body[data-theme='light']{
@@ -85,17 +108,36 @@ body[data-theme='light']{
   --d-c-title-h2: #202020;
   --d-c-title-h3: #202020;
   --d-c-main-txt: #333;
-  --d-c-left-menu-dep1: #707070;
-  --d-c-left-menu-dep2: #eee;
+  --d-c-left-menu-dep1: #333;
+  --d-c-left-menu-dep2: #707070;
+  --dis-c-left-menu-dep2: #ccc;
   --d-c-at-left-menu-dep1:#266bf7;
+  --d-c-at-left-menu-dep2:#266bf7;
+  --d-c-at-more-sub-menu: #202020;
+  --d-bg-left-menu-dep1: #707070;
+  --d-bg-left-menu-dep2: #eee;
+  --d-bg-at-more-sub-menu: #f3f4f5;
+  --d-bg-hv-more-sub-menu-item: rgba(204, 204, 204, 0.8);
+  --d-bg-hv-util-area-circle: rgba(221, 221, 221, 0.5);
+  --d-bg-pop-filter: none; //backdrop-filter
   --d-bdc: #ddd;
   --d-sc-thumb: #ccc;
   --d-sc-track: #e9e9e9;
   --d-sc-hv-thumb: #b6b6b6;
   --d-sc-at-thumb: #808080;
+  --d-svg-current: #000;
   --c-emphasis01: #266bf7;
   --c-emphasis02: #1694d2;
   --c-tab:#000;
+  --logo-light: inline-block;
+  --logo-dark: none;
+  --ico-light:inline-block;
+  --ico-dark: none;
+  --mark-dep3: rgba(32, 32, 32, 0.75);
+  --bdc-btt: #000;
+  --bg-hv-btt: #000;
+  --hv-svg-btt: #fff;
+  --ele-shadow: #ddd;
 }
 
 body[data-theme='dark']{
@@ -106,21 +148,48 @@ body[data-theme='dark']{
   --d-c-title-h3: rgba(242, 241, 241, 1);
   --d-c-main-txt: #ececec;
   --d-c-left-menu-dep1: rgba(242, 241, 241, 1);
-  --d-c-left-menu-dep2: #1e1f21;
+  --d-c-left-menu-dep2: #d9d9d9;
+  --dis-c-left-menu-dep2: #717171;
   --d-c-at-left-menu-dep1:rgba(89,148,241,1);
+  --d-c-at-left-menu-dep2:rgba(89,148,241,1);
+  --d-c-at-more-sub-menu: rgba(242, 241, 241, 1);
+  --d-bg-left-menu-dep1: rgba(242, 241, 241, 1);
+  --d-bg-left-menu-dep2: #1e1f21;
+  --d-bg-at-more-sub-menu: #2d2d2d;
+  --d-bg-hv-more-sub-menu-item: #53575C;
+  --d-bg-hv-util-area-circle: rgba(255,255,255,0.1);
+  --d-bg-pop-filter: blur(2.5px); //backdrop-filter
   --d-bdc: #3a3b3d;
   --d-sc-thumb: #686868;
   --d-sc-track: #424242;
   --d-sc-hv-thumb: #7b7b7b;
   --d-sc-at-thumb: #b6b6b6;
+  --d-svg-current: #fff;
   --c-emphasis01: rgba(89,148,241,1);
   --c-emphasis02: rgba(149,196,232,1);
   --c-tab:#ececec;
+  --logo-light: none;
+  --logo-dark: inline-block;
+  --ico-light: none;
+  --ico-dark: inline-block;
+  --mark-dep3: rgba(242, 241, 241, 1);
+  --bdc-btt: #fff;
+  --bg-hv-btt: #fff;
+  --hv-svg-btt: #000;
+  --d-svg-btt: #fff; //다크모드에서만 흰색
+  --ele-shadow: transparent;
 }
 
 body{
   color-scheme: light dark;
   background: var(--d-bg-body);
+  .lightLogo{display: var(--logo-light);}
+  .darkLogo{width: 180px; display: var(--logo-dark);}
+}
+
+svg{fill: currentColor;
+  &.lightType{display: var(--ico-light);}
+  &.darkType{display: var(--ico-dark);}
 }
 
 /* class */
@@ -205,7 +274,7 @@ body{
 
 .topArea{display: none; position: fixed; right: 30px; bottom: 30px; z-index: 9990;
   .backtoTop{display: flex; align-items: center; justify-content: center; width: 48px; height: 48px; 
-  border: 1px solid $blackBg; transition: .5s;}
+  border: 1px solid var(--bdc-btt); color: var(--d-svg-current); transition: .5s;}
 }
 
 #container{position: relative;display: flex;}
@@ -232,10 +301,10 @@ overflow-y: auto; background-color: var(--d-bg-left-menu); z-index: 1100;
       }
       >a{display: block;}
       >ul.leftSubMenu{display: none; padding: 16px 28px 16px 28px; box-sizing: border-box;
-      border-bottom: 1px solid rgba($color: #000012, $alpha: 0.08); background-color: var(--d-c-left-menu-dep2);
+      border-bottom: 1px solid var(--d-bdc); background-color: var(--d-bg-left-menu-dep2);
         &.block{display: block;}
-        li{border-bottom: 1px solid rgba($color: #000012, $alpha: 0.08);
-          a{position: relative; display: block;padding-bottom: 8px; font-family: $d-fz; font-size: 1.13em; color: $c70;
+        li{border-bottom: 1px solid var(--d-bdc);
+          a{position: relative; display: block;padding-bottom: 8px; font-family: $d-fz; font-size: 1.13em; color: var(--d-c-left-menu-dep2);
             >.depthToggle{position: absolute; top: 5px; right: 3px; width: 17px; height: 17px;
             background-image: url("../../images/ico/ico-unfold.png"); background-repeat: no-repeat; background-position: center;
             background-size: 17px 17px;}
@@ -244,7 +313,7 @@ overflow-y: auto; background-color: var(--d-bg-left-menu); z-index: 1100;
             a{color: $emphasisType01;}
           }
           &.on{
-            >a{color: $emphasisType01;}
+            >a{color: var(--d-c-at-left-menu-dep2);}
             .depthToggle{width: 16px; height: 1px; top: 14px; right: 3px; background-size: 14px auto;
             background-image: url("../../images/ico/ico-fold-on.png"); background-repeat: no-repeat; background-position: center;}
           }
@@ -252,12 +321,12 @@ overflow-y: auto; background-color: var(--d-bg-left-menu); z-index: 1100;
 
           //비공개일때
           &.disabled{
-            >a{color: #ccc;}
+            >a{color: var(--dis-c-left-menu-dep2);}
           }
-          >.dep3{display: none; padding: 8px 0 0 25px; border-top: 1px solid rgba($color: #000012, $alpha: 0.08);
+          >.dep3{display: none; padding: 8px 0 0 25px; border-top: 1px solid var(--d-bdc);
             >li{position: relative; padding-bottom: 5px; border-bottom: 0;
               &:before{content: ''; position: absolute; top: 9px; left: -20px; width: 6px; height: 6px;
-              border-radius: 50%; background-color: rgba($color: #202020, $alpha: 0.75);}
+              border-radius: 50%; background-color: var(--mark-dep3);}
               >a{font-size: 0.94em;}
               +li{margin-top: 5px;}
               &:last-of-type{padding-bottom: 0; border-bottom: 0;}
@@ -274,12 +343,11 @@ overflow-y: auto; background-color: var(--d-bg-left-menu); z-index: 1100;
 
 .headArea{position: relative; z-index: 960; width: calc(100% - 300px); margin-left: auto; padding-top: 20px;
   >.inner{margin: 0 24px; display: flex;align-items: center; justify-content: space-between;
-
     .backArea{
-      .btnBack{position: relative; display: block; width: 30px; height: 30px; background-image: url("../../images/ico/ico-home.png"); 
-        background-repeat: no-repeat; background-position: center; background-size: 30px 30px;
+      .btnBack{position: relative; display: block; color: var(--d-svg-current); width: 30px; height: 30px;
+        >svg{width: $util-svg-size; height: $util-svg-size;}
         &:before{content: ''; opacity: 0; visibility: hidden; position: absolute; left: -5px; top: -5px; z-index: -1;
-          width: 40px; height: 40px; border-radius: 50px; transition: .5s ease-in-out; background-color: rgba($color: $cddd, $alpha: 0.5);}
+          width: 40px; height: 40px; border-radius: 50px; transition: .5s ease-in-out; background-color: var(--d-bg-hv-util-area-circle);}
       }
       &.none{display: none;}
     }
@@ -288,10 +356,10 @@ overflow-y: auto; background-color: var(--d-bg-left-menu); z-index: 1100;
       ul{display: flex;align-items: center;}
       li{position: relative;
         .moreSubMenu{display: none; position: absolute; top: 40px; right: 0; z-index: 150;
-          >ul{width: 95px;flex-direction: column; border: 1px solid $cddd; box-shadow: 0px 0px 5px 1px $cddd;
-          box-sizing: border-box; background-color: #f3f4f5;
+          >ul{width: 95px;flex-direction: column; border: 1px solid var(--d-bdc); box-shadow: 0px 0px 5px 1px var(--ele-shadow);
+          box-sizing: border-box; background-color: var(--d-bg-at-more-sub-menu);
             >li{flex: 1; display: block; width: 100%; font-family: $d-fz; line-height: 30px; transition: .5s;
-              >a,span{width: auto; height: auto; color: $c20;text-align: center; white-space: nowrap; font-size: 0.75em;}
+              >a,span{width: auto; height: auto; color: var(--d-c-at-more-sub-menu);text-align: center; white-space: nowrap; font-size: 0.75em;}
               &:before{display: none;}
               +li{margin-left: 0;}
             }
@@ -304,13 +372,14 @@ overflow-y: auto; background-color: var(--d-bg-left-menu); z-index: 1100;
           background-color: $c333;}
         }
         &:before{content: ''; opacity: 0; visibility: hidden; position: absolute; left: 50%; transform: translateX(-50%); top: -5px; z-index: -1;
-        width: 40px; height: 40px; border-radius: 50px; transition: .5s ease-in-out; background-color: rgba($color: $cddd, $alpha: 0.5);}
-        button,a{display: block; width: 30px;height: 30px;
-          &.btnMail{background: url("../../images/ico/ico-mail.svg")no-repeat center;}
-          &.btnShare{background: url("../../images/ico/ico-share-bk.svg")no-repeat center;}
-          &.btnMore{background: url("../../images/ico/ico-more.svg")no-repeat center;}
-          &.btnDarkMode{width: 30px; height: 30px; background-image: url("../../images/ico/ico-brightness.png"); background-position: center;
-          background-repeat: no-repeat; background-size: 30px 30px;}
+        width: 40px; height: 40px; border-radius: 50px; transition: .5s ease-in-out; background-color: var(--d-bg-hv-util-area-circle);}
+        button,a{display: block; color: var(--d-svg-current);
+          &:where(.btnMail,.btnShare,.btnMore){
+            >svg{width: $util-svg-size; height: $util-svg-size;}
+          }
+          &.btnDarkMode{
+            >svg{width: $util-svg-size; height: $util-svg-size;}
+          }
         }
         +li{margin-left: 30px;}
       }
@@ -463,7 +532,7 @@ i.ico{display: inline-block; background-repeat: repeat; background-position: cen
   &.mob{display: none;}
 }
 
-#dimmed{display: none; position: fixed; z-index: 9998; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0, 0, 0,0.6);}
+#dimmed{display: none; position: fixed; z-index: 9998; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0, 0, 0,0.6); backdrop-filter: var(--d-bg-pop-filter);}
 
 code[class*=language-], pre[class*=language-] pre{white-space: pre-wrap !important; padding: 16px !important; font-size: 1em !important;
 word-break: break-all !important;}

@@ -1,5 +1,6 @@
 /* text color */
 /* background */
+/* unit */
 @media screen and (max-width: 1280px) {
   .titleH1 {
     font-size: 1.75em;
@@ -320,7 +321,7 @@
     text-decoration: underline;
   }
   .headArea > .inner .utilArea li .moreSubMenu > ul > li:hover {
-    background-color: rgba(204, 204, 204, 0.8);
+    background-color: var(--d-bg-hv-more-sub-menu-item);
   }
   #wrap.main .btnStart:hover:before {
     -webkit-transform: scaleX(1);
@@ -336,11 +337,10 @@
     text-decoration: underline;
   }
   .topArea .backtoTop:hover {
-    background-color: #000;
+    background-color: var(--bg-hv-btt);
   }
   .topArea .backtoTop:hover svg {
-    stroke: #fff;
-    fill: #fff;
+    fill: var(--hv-svg-btt);
   }
   .headArea > .inner .backArea .btnBack:hover:before {
     opacity: 1;

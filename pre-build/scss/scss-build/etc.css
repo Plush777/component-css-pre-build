@@ -1,18 +1,5 @@
 /* text color */
 /* background */
-/* darkMode */
-body {
-  --d-bg: #fff;
-}
-
-body[data-theme='light'] {
-  --d-bg: #fff;
-}
-
-body[data-theme='dark'] {
-  --d-bg: #121212;
-}
-
 #frameBody .wrap.pre.topButton .container {
   height: 100%;
   background-color: #ddd;

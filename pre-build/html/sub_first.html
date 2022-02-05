@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,11 +15,7 @@
   <script type="text/javascript" src="../js/error.js"></script>
   <script src="../js/darkmode.js" defer></script>
   <title>Component css</title>
-  <script>
-    const colorScheme = localStorage.getItem("theme") || "light";
-  </script>
 </head>
-
 <body>
   <div id="wrap">
     <div id="container">
@@ -28,7 +23,8 @@
         <ul class="leftMenu">
           <li>
             <a href="../html/main.html" title="메인으로">
-              <img src="../images/common/logo.png" alt="서브 메인로고" />
+              <img src="../images/common/logo.png" class="lightLogo" alt="서브 메인로고">
+              <img src="../images/common/main-logo-w.png" class="darkLogo" alt="서브 메인로고"/>
               <span class="hidden">메인으로</span>
             </a>
           </li>
@@ -209,12 +205,6 @@
       </div>
 
       @@include('include/util.html')
-
-      <script type="text/javascript">
-        const useDark = colorScheme === "dark";
-        document.body.getAttribute('data-theme') === useDark;
-        document.body.getAttribute('data-theme') === !useDark;
-      </script>
 
       <div class="rightArea">
         <div class="inner">

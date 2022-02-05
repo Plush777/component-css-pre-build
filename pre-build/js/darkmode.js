@@ -34,9 +34,11 @@ window.onload = () => {
     if (choiceTheme === 'dark') {
         domBody.setAttribute('data-theme', 'dark');
         localStorage.setItem('theme', 'dark');
+        darkModeEvent.classList.add('active');
     } else {
         domBody.setAttribute('data-theme', 'light');
         localStorage.setItem('theme', 'light');
+        darkModeEvent.classList.remove('active');
     }
 };
 

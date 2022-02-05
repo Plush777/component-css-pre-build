@@ -237,7 +237,7 @@
     }
 
     .leftArea > .leftMenu > li > ul.leftSubMenu li a:hover{text-decoration: underline;}
-    .headArea > .inner .utilArea li .moreSubMenu > ul > li:hover{background-color: rgba($color: $cccBg, $alpha: 0.8);}
+    .headArea > .inner .utilArea li .moreSubMenu > ul > li:hover{background-color: var(--d-bg-hv-more-sub-menu-item);}
     #wrap.main .btnStart{
         &:hover{
             &:before{transform: scaleX(1);}
@@ -248,8 +248,8 @@
     }
     #wrap.err .bottomDiv a:hover{text-decoration: underline;}
     .topArea .backtoTop{
-        &:hover{background-color: $blackBg;
-            svg{stroke: $whiteBg; fill: $whiteBg;}
+        &:hover{background-color: var(--bg-hv-btt);
+            svg{fill: var(--hv-svg-btt);}
         }
     }
     .headArea > .inner .backArea .btnBack:hover:before{opacity: 1; visibility: visible;}

@@ -93,8 +93,30 @@
 
 <br><br>
 
-## 다크모드 팔레트 정보
+## 접근성 작업
+<br>
+1. 모든 button , a , li (탭) 태그는 키보드로 조작할 수 있어야 한다.<br>
+(li에 포커싱이 필요한경우 tabindex="0" 을 추가)
+<br>
+2. 메뉴나 탭 등에는 title 속성을 추가하여 정보를 제공한다.<br>
+3. 특정 기능을 수행하는 버튼에 텍스트가 없을 경우 hidden 클래스를 추가하여 정보를 제공한다.<br>
 
+<!-- ## 다크모드 팔레트 정보 -->
+<br><br>
+## 다크모드 지원
+<br>
+1. 사용자의 선호테마 (os 배경색 설정) 에 따라 light 혹은 dark로 적용된다.<br>
+2. 사용자가 원하는 테마로 설정할 수 있다.<br>
+3. 사용자가 테마를 설정하고 다시 방문했을경우 설정값이 그대로 유지되어야 한다.<br>
+ex) 다크테마로 설정 후 재방문 시 다크테마가 계속 유지<br>
+4. 페이지 (url) 이동 또는 새로고침을 했을 때 시스템 설정과 사용자가 저장한 테마 설정과 서로 일치하지가 않아서 생기는 깜빡임 현상 (Flash of inAccurate coloR Theme) 이 일어나지 않아야 한다.<br><br>
 
+> https://css-tricks.com/flash-of-inaccurate-color-theme-fart/
+
+<br>
+5. 다크테마 색상을 지정할 때 채도 너무 낮은 색상은 피한다. (채도가 너무 높지도 낮지도 않은 색상 지정)
+<br><br>
+
+> https://material.io/design/color/the-color-system.html#tools-for-picking-colors
 
 

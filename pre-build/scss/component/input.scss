@@ -29,8 +29,8 @@ textarea{height: 150px; border: 1px solid $dddBg; padding: 10px; box-sizing: bor
       &.full{width: 100%;}
 }
     
-input{height: 30px; border: 1px solid $dddBg; padding-left: 5px; box-sizing: border-box; 
-font-family: $d-fz; border-radius: 4px; color: $c222; background-color: $whiteBg;
+input{height: 30px; border: 1px solid var(--bdc-input); padding-left: 5px; box-sizing: border-box; 
+font-family: $d-fz; border-radius: 4px; color: var(--d-c-input); background-color: var(--d-bg-input);
     &.full{width: 100%;}
 }
     

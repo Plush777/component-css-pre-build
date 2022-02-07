@@ -280,7 +280,7 @@
   font-size: 1em;
   font-family: "Noto Sans";
   color: #fff;
-  background-color: #000;
+  background-color: var(--d-fb-box);
 }
 
 .wrap.pre.flexLayout .resultCont .container .flexArea .flexItem.bgGray {

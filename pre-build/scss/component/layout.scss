@@ -100,7 +100,7 @@
           .container{
             .flexArea{display: flex;
               .flexItem{display: flex; width: 200px; height: 200px; max-width: 200px; font-size: 1em; font-family: $d-fz; 
-              color: $cfff; background-color: $blackBg;
+              color: $cfff; background-color: var(--d-fb-box);
                 &.bgGray{background-color: #444;}
                 +.flexItem{margin-left: 10px;}
               }

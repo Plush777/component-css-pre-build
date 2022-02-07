@@ -1,6 +1,7 @@
 @charset "UTF-8";
 /* text color */
 /* background */
+/* unit */
 .wrap {
   position: relative;
   width: 100%;
@@ -179,12 +180,26 @@
 }
 
 .wrap.pre.floating #floatingMenu .menuArea .btnMenuList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 56px;
   height: 56px;
   border-radius: 50px;
   -webkit-box-shadow: 0px 0px 8px 4px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 0px 8px 4px rgba(0, 0, 0, 0.25);
-  background: #333 url("../../images/ico/ico-plus-w.png") no-repeat center;
+  background-color: #333;
+}
+
+.wrap.pre.floating #floatingMenu .menuArea .btnMenuList > svg {
+  width: 26px;
+  height: 26px;
 }
 
 .wrap.pre.floating #floatingMenu .menuArea .btnMenuList:hover ul.menuList li {
@@ -206,7 +221,6 @@
   transition: .5s;
   -webkit-transition-delay: 0.03s;
           transition-delay: 0.03s;
-  margin: 0 auto;
   width: 56px;
   height: 56px;
   border-radius: 50px;
@@ -216,9 +230,32 @@
 }
 
 .wrap.pre.floating #floatingMenu .menuArea ul.menuList li a {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: inherit;
   height: inherit;
+}
+
+.wrap.pre.floating #floatingMenu .menuArea ul.menuList li a svg.github {
+  width: 38px;
+  height: 38px;
+}
+
+.wrap.pre.floating #floatingMenu .menuArea ul.menuList li a svg.bookmark {
+  width: 34px;
+  height: 34px;
+}
+
+.wrap.pre.floating #floatingMenu .menuArea ul.menuList li a svg.download {
+  width: 32px;
+  height: 32px;
 }
 
 .wrap.pre.floating #floatingMenu .menuArea ul.menuList li + li {
@@ -596,6 +633,10 @@
   height: 3px;
   bottom: -1px;
   left: 0;
+}
+
+.tabWrap.type01 > .tabNav > .tabList > li:focus-visible {
+  outline: 1.5px solid var(--d-key-focus);
 }
 
 .tabWrap.typeEx > .tabNav > .tabList {

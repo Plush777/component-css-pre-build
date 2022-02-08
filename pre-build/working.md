@@ -75,15 +75,13 @@
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             ㆍTop button<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            ㆍTransform button<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             ㆍRotate element<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             ㆍBoarder animation<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             ㆍFade in / out<br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            ㆍList slide up / down<br>
+            ㆍaccordion<br>
         </div>
     </details>
 <br>

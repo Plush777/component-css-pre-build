@@ -11,19 +11,30 @@
   .titleH3 {
     font-size: 1em;
   }
+  .rightArea > .inner {
+    padding: 0 60px;
+  }
   .leftArea .leftMenu > li:first-child > a {
     padding: 12px 0;
   }
-  .leftArea .leftMenu > li span:not(.hidden) {
+  .leftArea .leftMenu > li span > a {
     padding: 12px 0;
     font-size: 1.13em;
     text-indent: 24px;
+  }
+  .leftArea .leftMenu > li span > a svg {
+    width: 27px;
+    height: 15px;
+    top: 21px;
   }
   .leftArea .leftMenu > li ul.leftSubMenu {
     padding: 14px 24px 14px 24px;
   }
   .leftArea .leftMenu > li ul.leftSubMenu li > a {
     font-size: 1em;
+  }
+  .leftArea .leftMenu > li.active span a svg {
+    top: 18px;
   }
   .wrap.pre.gnbHover .container, .wrap.pre.gnb-li-hover .container, .wrap.pre.gnbFind .container {
     margin: 0 40px;
@@ -38,24 +49,26 @@
     display: block;
   }
   .leftArea {
-    left: -300px;
+    left: -301px;
     -webkit-transition: .3s;
     transition: .3s;
   }
   .leftArea .leftMenu li:first-child > a > img {
     width: 160px;
   }
-  .leftArea .leftMenu li span:not(.hidden) {
+  .leftArea .leftMenu li span > a {
     font-size: 1em;
   }
-  .leftArea .leftMenu li span:not(.hidden):after {
-    background-size: 12px 7px;
-  }
-  .leftArea .leftMenu li.active span:after {
-    background-size: 12px 7px;
+  .leftArea .leftMenu li span > a svg {
+    top: 20px;
+    width: 20px;
+    height: 14px;
   }
   .leftArea .leftMenu li ul.leftSubMenu li a {
     font-size: 0.88em;
+  }
+  .leftArea .leftMenu li.active span a svg {
+    top: 17px;
   }
   .leftArea.active {
     left: 0;
@@ -70,32 +83,31 @@
     width: 100%;
     -webkit-transition: .3s;
     transition: .3s;
+    padding-top: 30px;
   }
   .headArea > .inner .utilArea {
     -webkit-transition: .3s;
     transition: .3s;
   }
-  .headArea > .inner .utilArea li a.btnMail {
+  .headArea > .inner .utilArea li a.btnMail svg {
     width: 22px;
     height: 22px;
-    background-size: 22px 22px;
   }
-  .headArea > .inner .utilArea li button.btnShare {
+  .headArea > .inner .utilArea li button.btnShare svg, .headArea > .inner .utilArea li button.btnMore svg {
     width: 22px;
     height: 22px;
-    background-size: 22px 22px;
   }
-  .headArea > .inner .utilArea li button.btnMore {
+  .headArea > .inner .utilArea li button.btnDarkMode svg {
     width: 22px;
     height: 22px;
-    background-size: 22px 22px;
-  }
-  .headArea > .inner .utilArea li:before {
-    width: 34px;
-    height: 34px;
   }
   .headArea > .inner .moreArea {
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .headArea > .inner .moreArea .btnMobileMore {
+    color: var(--d-svg-current);
   }
   .headArea > .inner .moreArea.active {
     left: 320px;

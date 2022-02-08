@@ -316,9 +316,7 @@ $(function () {
         });
     }
 
-    if (!document.querySelector('.btnClip')) {
-        return;
-    } else {
+    if (document.querySelector('.btnClip')) {
         clipBoard();
     }
 

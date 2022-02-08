@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko" class="no-js">
 
 <head>
   <meta charset="UTF-8" />
@@ -16,6 +16,14 @@
   <script type="text/javascript" src="../js/error.js"></script>
   <script src="../js/darkmode.js" defer></script>
   <title>Component css</title>
+  <style>
+    .js body {
+      display: none;
+    }
+  </style>
+  <script>
+    (function (H) { H.className = H.className.replace(/\bno-js\b/, 'js') })(document.documentElement)
+  </script>
 </head>
 
 <body>
@@ -239,27 +247,24 @@
                 </a>
                 <ul class="dep3">
                   <li>
-                    <a href="#" title="Top button">Top button</a>
+                    <a href="../html/etc/etc-top-button.html" title="Top button">Top button</a>
                   </li>
                   <li>
-                    <a href="#" title="Transform button">Transform button</a>
+                    <a href="../html/etc/etc-rotate.html" title="Rotate element">Rotate element</a>
                   </li>
                   <li>
-                    <a href="#" title="Rotate element">Rotate element</a>
+                    <a href="../html/etc/etc-border.html" title="Boarder animation">Boarder animation</a>
                   </li>
                   <li>
-                    <a href="#" title="Boarder animation">Boarder animation</a>
+                    <a href="../html/etc/etc-fadeinout.html" title="Fade in/out">Fade in/out</a>
                   </li>
                   <li>
-                    <a href="#" title="Fade in/out">Fade in/out</a>
-                  </li>
-                  <li>
-                    <a href="#" title="Accordion">Accordion</a>
+                    <a href="../html/etc/etc-accordion.html" title="Accordion">Accordion</a>
                   </li>
                 </ul>
               </li>
               <li>
-                <a href="#" title="Text ellipsis">Text ellipsis</a>
+                <a href="../html/etc/etc-ellipsis.html" title="Text ellipsis">Text ellipsis</a>
               </li>
               <li class="disabled">
                 <a href="#none" title="Key frames">Key frames</a>
@@ -643,6 +648,7 @@
       </button>
     </div>
   </div>
+  <script> document.body.style.display = "block"; </script>
 </body>
 
 </html>

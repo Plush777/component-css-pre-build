@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko" class="no-js">
 
 <head>
   <meta charset="UTF-8" />
@@ -16,6 +16,14 @@
   <script type="text/javascript" src="../js/error.js"></script>
   <script src="../js/darkmode.js" defer></script>
   <title>Component css</title>
+  <style>
+    .js body {
+      display: none;
+    }
+  </style>
+  <script>
+    (function (H) { H.className = H.className.replace(/\bno-js\b/, 'js') })(document.documentElement)
+  </script>
 </head>
 
 <body>
@@ -534,6 +542,7 @@
       </button>
     </div>
   </div>
+  <script> document.body.style.display = "block"; </script>
 </body>
 
 </html>

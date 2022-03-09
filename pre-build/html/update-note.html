@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko" class="skel">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="../images/ico/ico-favi.png" sizes="16x16" />
     <link rel="stylesheet" href="../css/common/component.css" type="text/css" />
+    <link rel="stylesheet" href="../css/common/skeleton.css" type="text/css" />
     <script type="text/javascript" src="../lib/jquery-1.12.4.js"></script>
     <script src="../lib/paginga.jquery.js"></script>
     <script src="../js/component.js"></script>
@@ -21,7 +22,9 @@
                         <h1>업데이트 노트</h1>
                     </div>
                     <div class="mainTxt">
-                        <p>새로운 수정사항이나 추가된 것들을 기록하는 공간입니다.</p>
+                        <div class="skelRow">
+                            <p>새로운 수정사항이나 추가된 것들을 기록하는 공간입니다.</p>
+                        </div>  
                     </div>
                 </div>
 
@@ -241,11 +244,29 @@
                         </dl>
                     </div>
                     <div class="pager">
-                        <div class="firstPage btnPagi"></div>
-                        <div class="previousPage btnPagi"></div>
+                        <div class="firstPage btnPagi">
+                            <svg width="12" height="12" viewBox="0 0 27.168 28.068">
+                                <path id="angle-double-left" d="M16.734,31.5a.889.889,0,0,1-.281.647l-1.406,1.406a.885.885,0,0,1-1.294,0L.647,20.447a.885.885,0,0,1,0-1.294L13.753,6.047a.885.885,0,0,1,1.294,0l1.406,1.406a.885.885,0,0,1,0,1.294L5.4,19.8,16.453,30.853a.889.889,0,0,1,.281.647Zm10.8,0a.889.889,0,0,1-.281.647l-1.406,1.406a.885.885,0,0,1-1.294,0L11.447,20.447a.885.885,0,0,1,0-1.294L24.553,6.047a.885.885,0,0,1,1.294,0l1.406,1.406a.885.885,0,0,1,0,1.294L16.2,19.8,27.253,30.853a.889.889,0,0,1,.281.647Z" transform="translate(-0.366 -5.766)" fill="#bcbcbc"/>
+                            </svg>
+                        </div>
+                        <div class="previousPage btnPagi">
+                            <svg width="12" height="12" viewBox="0 0 16.368 28.068">
+                                <path id="angle-left" d="M16.734,8.1a.889.889,0,0,1-.281.647L5.4,19.8,16.453,30.853a.885.885,0,0,1,0,1.294l-1.406,1.406a.885.885,0,0,1-1.294,0L.647,20.447a.885.885,0,0,1,0-1.294L13.753,6.047a.885.885,0,0,1,1.294,0l1.406,1.406a.889.889,0,0,1,.281.647Z" transform="translate(-0.366 -5.766)" fill="#bcbcbc"/>
+                            </svg>
+                        </div>
                         <div class="pageNumbers btnPagi"></div>
-                        <div class="nextPage btnPagi"></div>
-                        <div class="lastPage btnPagi"></div>
+                        <div class="nextPage btnPagi">
+                            <svg width="12" height="12" viewBox="0 0 16.368 28.068">
+                                <g id="angle-right" transform="translate(16.734 -5.766) rotate(180)">
+                                  <path id="패스_6" data-name="패스 6" d="M16.734-8.1a.889.889,0,0,0-.281-.647L5.4-19.8,16.453-30.853a.889.889,0,0,0,.281-.647.889.889,0,0,0-.281-.647l-1.406-1.406a.889.889,0,0,0-.647-.281.889.889,0,0,0-.647.281L.647-20.447a.889.889,0,0,0-.281.647.889.889,0,0,0,.281.647L13.753-6.047a.889.889,0,0,0,.647.281.889.889,0,0,0,.647-.281l1.406-1.406a.889.889,0,0,0,.281-.647Z" fill="#bcbcbc"/>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="lastPage btnPagi">
+                            <svg width="12" height="12" viewBox="0 0 27.168 28.068">
+                                <path id="패스_7" data-name="패스 7" d="M11.166-31.5a.889.889,0,0,1,.281-.647l1.406-1.406a.889.889,0,0,1,.647-.281.889.889,0,0,1,.647.281L27.253-20.447a.889.889,0,0,1,.281.647.889.889,0,0,1-.281.647L14.147-6.047a.889.889,0,0,1-.647.281.889.889,0,0,1-.647-.281L11.447-7.453a.889.889,0,0,1-.281-.647.889.889,0,0,1,.281-.647L22.5-19.8,11.447-30.853a.889.889,0,0,1-.281-.647Zm-10.8,0a.889.889,0,0,1,.281-.647l1.406-1.406a.889.889,0,0,1,.647-.281.889.889,0,0,1,.647.281L16.453-20.447a.889.889,0,0,1,.281.647.889.889,0,0,1-.281.647L3.347-6.047a.889.889,0,0,1-.647.281.889.889,0,0,1-.647-.281L.647-7.453A.889.889,0,0,1,.366-8.1a.889.889,0,0,1,.281-.647L11.7-19.8.647-30.853A.889.889,0,0,1,.366-31.5Z" transform="translate(-0.366 33.834)" fill="#bcbcbc"/>
+                            </svg>
+                        </div>
                     </div>
                 </div>
             </div>

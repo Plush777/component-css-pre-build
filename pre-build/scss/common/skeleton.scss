@@ -1,0 +1,56 @@
+html{
+    &.skel{
+        button,a{pointer-events: none;}
+        .utilArea ul li{
+            button,a{width: 30px; height: 30px; border-radius: 20px; background-color: var(--d-bg-skeleton);}
+            svg{display: none;}
+            &:hover:before{pointer-events: none; background-color: transparent;}
+        }
+        .backArea button{border-radius: 20px; background-color: var(--d-bg-skeleton);
+            >*{display: none;}
+        }
+        .highlightArea{min-height: 400px; background-color: var(--d-bg-skeleton);
+            >*{display: none;}
+        }
+        .btnArea .btnResult{min-width: 85px; height: 34px;background-color: var(--d-bg-skeleton);
+            >*{display: none;}
+        }
+        .tabWrap.type01 .tabNav .tabList{min-height: 37px; border-bottom: 0; background-color: var(--d-bg-skeleton);
+            >*{display: none;}
+        }
+        :where(.titleH1,.titleH2,.titleH3){min-height: 35px; border-radius: 4px; border-bottom: 0; background-color: var(--d-bg-skeleton);
+            h1,h2,h3{display: none;}
+        }
+        .rightArea{
+            .inner .textBox{
+                &:last-child .mainTxt{height: 20px; border-radius: 4px; background-color: var(--d-bg-skeleton);
+                    >*{display: none;}
+                }
+                .mainTxt{
+                    .skelRow{width: 100%; height: 20px; border-radius: 4px; background-color: var(--d-bg-skeleton);
+                        p{display: none;}
+                        +.skelRow{margin-top: 15px;}
+                    }
+                    .innerTxt{
+                        .skelRow{
+                            strong,p{display: none;}
+                            &.wd120{width: 120px;}
+                        }
+                    }
+                }
+            }
+        }
+        #wrap.update #container .textBox .mainTxt .skelRow{height: 20px; border-radius: 4px; background-color: var(--d-bg-skeleton);
+            >*{display: none;}
+        }
+        .boardList{min-height: 460px; border-radius: 4px; background-color: var(--d-bg-skeleton);
+            >*{display: none;}
+        }
+        .moreArea button{width: 30px; height: 30px; border-radius: 20px; background-color: var(--d-bg-skeleton);
+            >*{display: none;}
+        }
+        .resultArea{min-height: 200px; border: 0; background-color: var(--d-bg-skeleton);
+            >*{display: none;}
+        }
+    }
+}

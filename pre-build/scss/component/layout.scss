@@ -144,7 +144,7 @@
               &.fe-grow .flexItem{flex-grow: 1;}
 
               &.fe-shrink-d .flexItem{flex-shrink: 1; flex-basis: 1000px;}
-              &.fe-shrink .flexItem{flex-shrink: 0; flex-basis: 1000px;}
+              &.fe-shrink .flexItem{flex-shrink: 0; flex-basis: 100%;}
 
               &.fe-wrap,&.fe-wrap-re{width: 450px; gap: 20px;
                 .flexItem+.flexItem{margin: 0;}

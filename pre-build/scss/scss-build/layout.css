@@ -454,8 +454,8 @@
 .wrap.pre.flexLayout .resultCont .container .flexArea.fe-shrink .flexItem {
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  -ms-flex-preferred-size: 1000px;
-      flex-basis: 1000px;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
 }
 
 .wrap.pre.flexLayout .resultCont .container .flexArea.fe-wrap, .wrap.pre.flexLayout .resultCont .container .flexArea.fe-wrap-re {

@@ -204,25 +204,6 @@ $(function () {
         }
     });
 
-    /* 테이블 아코디언 */
-    // $('.table.noticeBoard .tgShowHideRow').on({
-    //     'click': function click() {
-    //         $(this).closest('.tgShowHideRow').toggleClass('active').siblings('.tgShowHideRow').removeClass('active');
-
-    //         var tgTableRow = $(this).next('.tgContRow');
-    //         if (tgTableRow.css('display') == 'none') {
-    //             tgTableRow.toggle().find('.showHideBox').stop().slideDown();
-    //             tgTableRow.siblings('.tgContRow').css('display', 'none').find('.showHideBox').slideUp();
-    //         } else {
-    //             tgTableRow.find('.showHideBox').stop().slideUp(function () {
-    //                 if ($(this).css('display') == 'none') {
-    //                     $(this).closest('.tgContRow').hide();
-    //                 }
-    //             });
-    //         }
-    //     }
-    // });
-
     /* update-note.html row */
     $('.boardList .cont.items .li').on({
         "click": function () {
@@ -335,3 +316,20 @@ function prevent(e) {
     e.preventDefault();
     e.stopImmediatePropagation();
 }
+
+const fouc = (F) => {
+    F.className = F.className.replace(/\bno-display\b/, 'show-display');
+    document.documentElement = F;
+};
+
+document.addEventListener('DOMContentLoaded', () => {
+    const el = document.documentElement;
+    const skeletonRow = document.querySelectorAll('.skelRow');
+    
+    setTimeout(() => {
+        el.classList.remove('skel');
+        for (let i = 0; i < skeletonRow.length; i++) {
+            skeletonRow[i].classList.remove('skelRow');
+        }
+    }, 1000);
+});

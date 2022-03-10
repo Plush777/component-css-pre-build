@@ -137,4 +137,106 @@
 #frameBody .wrap.pre.bdAni .borderArea span + span {
   margin-top: 30px;
 }
+
+#frameBody .wrap.pre.acn .container {
+  height: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+#frameBody .wrap.pre.acn .container .resultCont {
+  height: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#frameBody .wrap.pre.acn .accordion {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+#frameBody .wrap.pre.acn .accordion ul {
+  width: inherit;
+}
+
+#frameBody .wrap.pre.acn .accordion ul li {
+  background-color: var(--d-bg-left-menu);
+  cursor: pointer;
+}
+
+#frameBody .wrap.pre.acn .accordion ul li:first-of-type {
+  border-top: 1px solid var(--d-bdc-left-menu);
+}
+
+#frameBody .wrap.pre.acn .accordion ul li .head {
+  height: 60px;
+  padding: 0 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 20px;
+  font-family: 'Noto Sans';
+  color: var(--d-c-left-menu-depth);
+}
+
+#frameBody .wrap.pre.acn .accordion ul li .head .arrowUp {
+  display: none;
+}
+
+#frameBody .wrap.pre.acn .accordion ul li .cont {
+  border-bottom: 1px solid var(--d-bdc-left-menu);
+  background-color: var(--d-bg-left-menu-dep2);
+}
+
+#frameBody .wrap.pre.acn .accordion ul li .cont > .inner {
+  visibility: hidden;
+  height: 0;
+  -webkit-transition: .5s;
+  transition: .5s;
+  overflow: hidden;
+}
+
+#frameBody .wrap.pre.acn .accordion ul li .cont > .inner .txtArea {
+  padding: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#frameBody .wrap.pre.acn .accordion ul li .cont p {
+  color: var(--d-c-left-menu-depth);
+}
+
+#frameBody .wrap.pre.acn .accordion ul li.on .arrowDown {
+  display: none;
+}
+
+#frameBody .wrap.pre.acn .accordion ul li.on .arrowUp {
+  display: block;
+}
+
+#frameBody .wrap.pre.acn .accordion ul li.on .cont > .inner {
+  visibility: visible;
+  height: 200px;
+}
 /*# sourceMappingURL=etc.css.map */

@@ -124,9 +124,18 @@ $(function () {
 
             $(moreSubMenu).toggleClass('active');
             if (moreSubMenu.hasClass('active')) {
+
                 $(moreTooltip).hide();
             } else if (!moreSubMenu.hasClass('active')) {
                 $(moreTooltip).show();
+            }
+        }
+    });
+
+    $(document).on({
+        "click": function (e) {
+            if ($('.utilArea li .btnMore .moreSubMenu').has(e.target).length == 0) {
+                $('.utilArea li .btnMore .moreSubMenu').removeClass('active');
             }
         }
     });
@@ -331,5 +340,5 @@ document.addEventListener('DOMContentLoaded', () => {
         for (let i = 0; i < skeletonRow.length; i++) {
             skeletonRow[i].classList.remove('skelRow');
         }
-    }, 1000);
+    }, 900);
 });

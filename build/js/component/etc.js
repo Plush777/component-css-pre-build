@@ -16,4 +16,10 @@ $(function(){
             $(this).siblings('.tgCont').fadeToggle();
         }
     });
+
+    $('.accordion ul li').on({
+        "click": function () {
+            $(this).toggleClass('on').siblings('li').removeClass('on');
+        }
+    });
 });

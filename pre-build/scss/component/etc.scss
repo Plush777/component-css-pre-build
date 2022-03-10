@@ -51,4 +51,32 @@
             }
         }
     }
+
+    &.acn{
+        .container{height: 100%; max-width: 1000px; margin: 0 auto;
+            .resultCont{height: inherit; display: flex; align-items: center; justify-content: center;}
+        }
+        .accordion{display: flex; align-items: center; justify-content: center; width: 100%;
+            ul{width: inherit;
+                li{background-color: var(--d-bg-left-menu); cursor: pointer;
+                    &:first-of-type{border-top: 1px solid var(--d-bdc-left-menu);}
+                    .head{height: 60px; padding: 0 20px; display: flex; align-items: center;
+                    justify-content: space-between; font-size: 20px; font-family: 'Noto Sans'; color: var(--d-c-left-menu-depth);
+                        .arrowUp{display: none;}
+                    }
+                    .cont{ border-bottom: 1px solid var(--d-bdc-left-menu); background-color: var(--d-bg-left-menu-dep2);
+                        >.inner{visibility: hidden; height: 0; transition: .5s; overflow: hidden;
+                            .txtArea{padding: 20px; box-sizing: border-box;}
+                        }
+                        p{color: var(--d-c-left-menu-depth);}
+                    }
+                    &.on{
+                        .arrowDown{display: none;}
+                        .arrowUp{display: block;}
+                        .cont>.inner{visibility: visible; height: 200px;}
+                    }
+                }
+            }
+        }
+    }
 }

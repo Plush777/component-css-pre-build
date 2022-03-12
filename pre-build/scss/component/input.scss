@@ -2,15 +2,14 @@
 
 .customSelect{display: flex; flex: 1;
     >ul{flex: 1;
-      >li{flex: 1; height: 30px; position: relative; border: 1px solid $dddBg;
-      text-indent: 5px; box-sizing: border-box; background: url("../../images/ico/ico-select-down.svg")no-repeat center right 10px;
-        span{display: block; line-height: 28px; color: $c222; font-family: $d-fz; cursor: pointer;}
+      >li{display: flex; align-items: center; flex: 1; height: 30px; position: relative; border: 1px solid var(--d-bdc);
+      text-indent: 5px; box-sizing: border-box; cursor: pointer; background-color: var(--d-bg-select);
+        >span{flex: 0.975; display: block; line-height: 28px; color: var(--c-333-white); font-family: $d-fz;}
+        svg{fill: var(--svg-fill-type01);}
         .selList{display: none; position: absolute; top: 29px; left: -1px; width: 100%; z-index: 200; 
-        border: 1px solid $dddBg; border-top: 0; border-radius: 0 0 4px 4px; background-color: $whiteBg;
-          li{
-            &:hover{background-color: #3399ff;
-              span{color: $cfff;}
-            }
+        border: 1px solid var(--d-bdc); border-top: 0; border-radius: 0 0 4px 4px; background-color: var(--d-bg-select);
+          li{font-family: $d-fz; color: var(--c-333-white);
+            &:hover{background-color: #3399ff;}
           }
         }
       }
@@ -22,22 +21,22 @@
 }
 
 textarea{height: 150px; border: 1px solid $dddBg; padding: 10px; box-sizing: border-box;
-    font-family: $d-fz; border-radius: 4px; color: $c222; font-size: 0.88em; resize: none; overflow-y: auto;
-    background-color: $whiteBg;
+font-family: $d-fz; border-radius: 4px; color: var(--c-333-white); font-size: 0.88em; resize: none; overflow-y: auto;
+background-color: var(--fff-black21);
       &::placeholder{color: #aaa;}
       &:disabled{background-color: #f5f5f5;}
       &.full{width: 100%;}
 }
     
-input{height: 30px; border: 1px solid var(--bdc-input); margin: 0 5px 0 0; box-sizing: border-box; 
-font-family: $d-fz; border-radius: 4px; color: var(--d-c-input); background-color: var(--bg-chk);
+input{height: 30px; border: 1px solid var(--d-bdc); margin: 0 5px 0 0; box-sizing: border-box; 
+font-family: $d-fz; border-radius: 4px; color: var(--c-333-white); background-color: var(--d-bg-input);
     &.full{width: 100%;}
 }
     
 input[type="image"],input[type="color"],input[type="button"]{display: inline-block; vertical-align: middle;}
     
-.select{display: inline-block; height: 30px; border: 1px solid $dddBg; padding: 0 5px; box-sizing: border-box;
-font-family: $d-fz; border-radius: 2px; color: $c222; vertical-align: middle;background-color: $whiteBg;}
+.select{display: inline-block; height: 30px; border: 1px solid var(--d-bdc); padding: 0 5px; box-sizing: border-box;
+font-family: $d-fz; border-radius: 2px; color: var(--c-333-white); vertical-align: middle;background-color: var(--d-bg-select);}
     
 .selContainer{display: flex;
     label{display: flex;align-items: center; margin-right: 7px;}
@@ -52,9 +51,9 @@ font-family: $d-fz; border-radius: 2px; color: $c222; vertical-align: middle;bac
         }
       }
     }
-    label{vertical-align: middle; font-size: 0.88em; color: $c222; font-family: $d-fz;cursor: pointer;
+    label{vertical-align: middle; font-size: 0.88em; color: var(--c-333-white); font-family: $d-fz;cursor: pointer;
       &:before{content: ''; display: inline-block; width: 20px; height: 20px; border-radius: 4px; box-sizing: border-box;
-      margin-right: 5px; vertical-align: sub; border: 1px solid $dddBg; background-color: $whiteBg;}
+      margin-right: 5px; vertical-align: sub; border: 1px solid $dddBg; background-color: var(--bg-chk);}
     }
     +.checkbox{margin-left: 10px;}
 }
@@ -63,7 +62,7 @@ font-family: $d-fz; border-radius: 2px; color: $c222; vertical-align: middle;bac
     input[type="radio"]{display: none;}
     &:last-child {margin-right: 0;}
     label{position: relative; display: flex;align-items: center; font-family: $d-fz; font-size: 0.88em; color: #141414; cursor: pointer; text-indent: 5px;
-      &:before{content: ''; display: inline-block; width: 14px; height: 14px; border: 1px solid $dddBg; border-radius: 50%; background-color: $whiteBg;}
+      &:before{content: ''; display: inline-block; width: 14px; height: 14px; border: 1px solid $dddBg; border-radius: 50%; background-color: var(--d-bg-input);}
     }
     input[type="radio"]:checked+label{
       &:after{content: ''; position: absolute; top: 50%; transform: translateY(-50%); left: 5px; 

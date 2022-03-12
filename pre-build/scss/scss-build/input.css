@@ -17,24 +17,37 @@
 }
 
 .customSelect > ul > li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
   height: 30px;
   position: relative;
-  border: 1px solid #ddd;
+  border: 1px solid var(--d-bdc);
   text-indent: 5px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background: url("../../images/ico/ico-select-down.svg") no-repeat center right 10px;
+  cursor: pointer;
+  background-color: var(--d-bg-select);
 }
 
-.customSelect > ul > li span {
+.customSelect > ul > li > span {
+  -webkit-box-flex: 0.975;
+      -ms-flex: 0.975;
+          flex: 0.975;
   display: block;
   line-height: 28px;
-  color: #222;
+  color: var(--c-333-white);
   font-family: "Noto Sans";
-  cursor: pointer;
+}
+
+.customSelect > ul > li svg {
+  fill: var(--svg-fill-type01);
 }
 
 .customSelect > ul > li .selList {
@@ -44,18 +57,19 @@
   left: -1px;
   width: 100%;
   z-index: 200;
-  border: 1px solid #ddd;
+  border: 1px solid var(--d-bdc);
   border-top: 0;
   border-radius: 0 0 4px 4px;
-  background-color: #fff;
+  background-color: var(--d-bg-select);
+}
+
+.customSelect > ul > li .selList li {
+  font-family: "Noto Sans";
+  color: var(--c-333-white);
 }
 
 .customSelect > ul > li .selList li:hover {
   background-color: #3399ff;
-}
-
-.customSelect > ul > li .selList li:hover span {
-  color: #fff;
 }
 
 .customSelect.active ul li .selList {
@@ -74,11 +88,11 @@ textarea {
           box-sizing: border-box;
   font-family: "Noto Sans";
   border-radius: 4px;
-  color: #222;
+  color: var(--c-333-white);
   font-size: 0.88em;
   resize: none;
   overflow-y: auto;
-  background-color: #fff;
+  background-color: var(--fff-black21);
 }
 
 textarea::-webkit-input-placeholder {
@@ -107,14 +121,14 @@ textarea.full {
 
 input {
   height: 30px;
-  border: 1px solid var(--bdc-input);
+  border: 1px solid var(--d-bdc);
   margin: 0 5px 0 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: "Noto Sans";
   border-radius: 4px;
-  color: var(--d-c-input);
-  background-color: var(--bg-chk);
+  color: var(--c-333-white);
+  background-color: var(--d-bg-input);
 }
 
 input.full {
@@ -129,15 +143,15 @@ input[type="image"], input[type="color"], input[type="button"] {
 .select {
   display: inline-block;
   height: 30px;
-  border: 1px solid #ddd;
+  border: 1px solid var(--d-bdc);
   padding: 0 5px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: "Noto Sans";
   border-radius: 2px;
-  color: #222;
+  color: var(--c-333-white);
   vertical-align: middle;
-  background-color: #fff;
+  background-color: var(--d-bg-select);
 }
 
 .selContainer {
@@ -175,7 +189,7 @@ input[type="image"], input[type="color"], input[type="button"] {
 .checkbox label {
   vertical-align: middle;
   font-size: 0.88em;
-  color: #222;
+  color: var(--c-333-white);
   font-family: "Noto Sans";
   cursor: pointer;
 }
@@ -191,7 +205,7 @@ input[type="image"], input[type="color"], input[type="button"] {
   margin-right: 5px;
   vertical-align: sub;
   border: 1px solid #ddd;
-  background-color: #fff;
+  background-color: var(--bg-chk);
 }
 
 .checkbox + .checkbox {
@@ -235,7 +249,7 @@ input[type="image"], input[type="color"], input[type="button"] {
   height: 14px;
   border: 1px solid #ddd;
   border-radius: 50%;
-  background-color: #fff;
+  background-color: var(--d-bg-input);
 }
 
 .radio input[type="radio"]:checked + label:after {

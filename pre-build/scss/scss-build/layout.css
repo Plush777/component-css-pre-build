@@ -57,9 +57,13 @@
 
 .wrap.pre.centerEle .centerBox {
   padding: 50px;
-  border: 2px solid #000;
+  border: 2px solid var(--c-333-white);
   font-size: 1.38em;
   font-family: "Noto Sans";
+}
+
+.wrap.pre.centerEle .centerBox span {
+  color: var(--c-333-white);
 }
 
 .wrap.pre.bgImage .resultCont .imgDiv {
@@ -602,7 +606,7 @@
   font-size: 1.13em;
   cursor: pointer;
   text-align: center;
-  color: var(--c-tab);
+  color: var(--black-white);
   font-family: "Noto Sans";
 }
 
@@ -636,7 +640,7 @@
 }
 
 .tabWrap.type01 > .tabNav > .tabList > li:focus-visible {
-  outline: 1.5px solid var(--d-key-focus);
+  outline: 1.5px solid var(--black-white);
 }
 
 .tabWrap.typeEx > .tabNav > .tabList {
@@ -669,7 +673,7 @@
   border-radius: 4px 0 0 4px;
   font-weight: bold;
   color: #fff;
-  background-color: #266bf7;
+  background-color: var(--primary-type02);
 }
 
 .tabWrap.typeEx > .tabNav > .tabList > li.active:last-child {

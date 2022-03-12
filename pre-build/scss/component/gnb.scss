@@ -4,15 +4,15 @@
     &.gnbHover,&.gnb-li-hover,&.gnbFind{
         .container{max-width: 1200px; margin: 0 auto; padding-top: 60px;}
         #gnb{width: 100%;
-            #menuBg{display: none; position: absolute; left: 0; top: 120px; width: 100%; height:365px; border-top: 1px solid $dddBg;
-            box-shadow:-3px 3px 3px 0 rgba(0, 0, 0, 0.2); background-color: $whiteBg; z-index: 1000;}
+            #menuBg{display: none; position: absolute; left: 0; top: 120px; width: 100%; height:365px; border-top: 1px solid var(--d-bdc);
+            box-shadow:-3px 3px 3px 0 rgba(0, 0, 0, 0.2); background-color: var(--white-black21); z-index: 1000;}
             ul.menuList{display: flex; justify-content: space-between;
                 a{display: block;}
                 >li{position: relative; line-height: 50px; text-align: center;
-                    >a{min-width: 80px; font-size: 1.5em; font-family: $d-fz; color: $c000;}
+                    >a{min-width: 80px; font-size: 1.5em; font-family: $d-fz; color: var(--c-333-white);}
                     .depthTwo{display: none; position: absolute; top: 80px; z-index: 1000; 
                         >li{line-height: 50px;
-                            >a{display: block; font-size: 1em; font-family: $d-fz; color: #444;}
+                            >a{display: block; font-size: 1em; font-family: $d-fz; color: var(--c-333-white);}
                         }
                     }
                 }
@@ -26,7 +26,7 @@
                 li{padding: 5px; box-sizing: border-box; min-width: 130px;
                     >a{color: $cfff;}
                     .depthTwo{top: 60px; left: 0;
-                        >li{border: 1px solid $dddBg; border-top: 0; background-color: rgba($color: $_333Bg, $alpha: 0.8);
+                        >li{border: 1px solid var(--d-bdc); border-top: 0; background-color: rgba($color: $_333Bg, $alpha: 0.8);
                             >a{color: $cfff;}
                         }
                     }

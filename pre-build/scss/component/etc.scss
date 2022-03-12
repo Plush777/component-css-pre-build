@@ -2,8 +2,8 @@
 
 #frameBody .wrap.pre{
     &.topButton{
-        .container{height: 100%; background-color: $dddBg;}
-        #startLine{display: block; width: 100%; min-height: 200px; color: $cfff; font-size: 1em; background-color: $_222Bg;}
+        .container{height: 100%;}
+        #startLine{display: block; width: 100%; min-height: 200px; color: var(--c-333-white); font-size: 1em; background-color: $_222Bg;}
         .btnArea{top: inherit; bottom: 20px; right: 20px;
             .arrowTop{width: 45px; height: 45px; border-radius: 50%; background-image: url("../../images/ico/ico-top-button-w.png"); 
             background-repeat: no-repeat; background-position: center; background-color: $_222Bg;}
@@ -23,6 +23,7 @@
     &.fadeInout{
         .tgArea{
             &.fadeType01,&.fadeType02{
+                .tgCont span{color: var(--c-333-white);}
                 .btnFadeInout{min-width: 100px; height: 40px; font-family: $d-fz; font-size: 0.88em;
                 background-color: rgba($color: $dddBg, $alpha: 0.5);}
             }
@@ -40,8 +41,8 @@
 
     &.bdAni{
         .borderArea{display: flex; flex-direction: column; align-items: center;
-            span{display: inline-block; font-family: 'Noto Sans'; font-size: 1.5em; cursor: pointer; text-transform: uppercase;
-                &:after{content: ''; display: inherit; border-bottom: 2px solid $blueBg; transform: scaleX(0); transition: .5s;}
+            span{display: inline-block; font-family: 'Noto Sans'; font-size: 1.5em; cursor: pointer; text-transform: uppercase; color: var(--c-333-white);
+                &:after{content: ''; display: inherit; border-bottom: 2px solid var(--primary-type02); transform: scaleX(0); transition: .5s;}
                 &.leftBd:after{transform-origin: 0% 50%;}
                 &.rightBd:after{transform-origin: 100% 50%;}
                 &:hover{
@@ -59,16 +60,16 @@
         .accordion{display: flex; align-items: center; justify-content: center; width: 100%;
             ul{width: inherit;
                 li{background-color: var(--d-bg-left-menu); cursor: pointer;
-                    &:first-of-type{border-top: 1px solid var(--d-bdc-left-menu);}
+                    &:first-of-type{border-top: 1px solid var(--d-bdc);}
                     .head{height: 60px; padding: 0 20px; display: flex; align-items: center;
-                    justify-content: space-between; font-size: 20px; font-family: 'Noto Sans'; color: var(--d-c-left-menu-depth);
+                    justify-content: space-between; font-size: 20px; font-family: 'Noto Sans'; color: var(--c-333-white);
                         .arrowUp{display: none;}
                     }
-                    .cont{ border-bottom: 1px solid var(--d-bdc-left-menu); background-color: var(--d-bg-left-menu-dep2);
+                    .cont{ border-bottom: 1px solid var(--d-bdc); background-color: var(--d-bg-left-menu-dep2);
                         >.inner{visibility: hidden; height: 0; transition: .5s; overflow: hidden;
                             .txtArea{padding: 20px; box-sizing: border-box;}
                         }
-                        p{color: var(--d-c-left-menu-depth);}
+                        p{color: var(--c-333-white);}
                     }
                     &.on{
                         .arrowDown{display: none;}

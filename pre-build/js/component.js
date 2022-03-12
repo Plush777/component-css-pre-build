@@ -124,7 +124,6 @@ $(function () {
 
             $(moreSubMenu).toggleClass('active');
             if (moreSubMenu.hasClass('active')) {
-
                 $(moreTooltip).hide();
             } else if (!moreSubMenu.hasClass('active')) {
                 $(moreTooltip).show();
@@ -134,8 +133,8 @@ $(function () {
 
     $(document).on({
         "click": function (e) {
-            if ($('.utilArea li .btnMore .moreSubMenu').has(e.target).length == 0) {
-                $('.utilArea li .btnMore .moreSubMenu').removeClass('active');
+            if (!$(e.target).closest('.utilArea li .btnMore').length) {
+                $('.moreSubMenu').removeClass('active');
             }
         }
     });
@@ -250,17 +249,6 @@ $(function () {
         }
     })
 
-    // let hCalcBody = $('#frameBody').height();
-    // let hCalcWrap = $('#frameBody .wrap').height();
-    // let hCalcContents = $('#frameBody .contents').height();
-    // console.log(hCalcBody, hCalcWrap);
-
-    // if (hCalcWrap > hCalcBody) {
-    //     $('#frameBody .btnArea').addClass('r20');
-    // } else {
-    //     $('#frameBody .btnArea').removeClass('r20');
-    // }
-
     /* #wrap 스크롤 존재여부확인 */
     $.fn.hasScrollBar = function () {
         return (this.prop("scrollHeight") == 0 && this.prop("clientHeight") == 0) || (this.prop("scrollHeight") > this.prop("clientHeight"));
@@ -296,20 +284,6 @@ $(function () {
         liShowHideBoxClose();
     }
 
-    function clipBoard() {
-        var clipboard = new ClipboardJS('.btnClip');
-        clipboard.on('success', function () {
-            alert('클립보드에 복사되었습니다. 다른 곳에 이 링크를 붙여넣으세요.');
-        });
-        clipboard.on('error', function () {
-            alert('클립보드 복사에 실패하였습니다. 다시 시도해주세요.');
-        });
-    }
-
-    if (document.querySelector('.btnClip')) {
-        clipBoard();
-    }
-
     /* popup esc */
     function popupEscEvent() {
         $(document).on('keyup', function (e) {
@@ -341,4 +315,18 @@ document.addEventListener('DOMContentLoaded', () => {
             skeletonRow[i].classList.remove('skelRow');
         }
     }, 900);
+
+    copySubUrl = () => {
+        var clip = new ClipboardJS('.btn');
+        clip.on('success', function () {
+            alert('클립보드에 복사되었습니다. 다른 곳에 이 링크를 붙여넣으세요.');
+        });
+        clip.on('error', function () {
+            alert('클립보드 복사에 실패하였습니다. 다시 시도해주세요.');
+        });
+    }
+
+    if (document.querySelector('.btn')) {
+        copySubUrl();
+    }
 });

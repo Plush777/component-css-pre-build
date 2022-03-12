@@ -28,7 +28,7 @@
 .resultArea .inner .toolTipBox {
   position: relative;
   width: 150px;
-  border: 1px solid #222;
+  border: 1px solid var(--c-333-white);
   height: 150px;
 }
 

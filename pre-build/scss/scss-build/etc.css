@@ -3,14 +3,13 @@
 /* unit */
 #frameBody .wrap.pre.topButton .container {
   height: 100%;
-  background-color: #ddd;
 }
 
 #frameBody .wrap.pre.topButton #startLine {
   display: block;
   width: 100%;
   min-height: 200px;
-  color: #fff;
+  color: var(--c-333-white);
   font-size: 1em;
   background-color: #222;
 }
@@ -64,6 +63,10 @@
           transform: rotate(360deg);
 }
 
+#frameBody .wrap.pre.fadeInout .tgArea.fadeType01 .tgCont span, #frameBody .wrap.pre.fadeInout .tgArea.fadeType02 .tgCont span {
+  color: var(--c-333-white);
+}
+
 #frameBody .wrap.pre.fadeInout .tgArea.fadeType01 .btnFadeInout, #frameBody .wrap.pre.fadeInout .tgArea.fadeType02 .btnFadeInout {
   min-width: 100px;
   height: 40px;
@@ -107,12 +110,13 @@
   font-size: 1.5em;
   cursor: pointer;
   text-transform: uppercase;
+  color: var(--c-333-white);
 }
 
 #frameBody .wrap.pre.bdAni .borderArea span:after {
   content: '';
   display: inherit;
-  border-bottom: 2px solid #266bf7;
+  border-bottom: 2px solid var(--primary-type02);
   -webkit-transform: scaleX(0);
           transform: scaleX(0);
   -webkit-transition: .5s;
@@ -180,7 +184,7 @@
 }
 
 #frameBody .wrap.pre.acn .accordion ul li:first-of-type {
-  border-top: 1px solid var(--d-bdc-left-menu);
+  border-top: 1px solid var(--d-bdc);
 }
 
 #frameBody .wrap.pre.acn .accordion ul li .head {
@@ -197,7 +201,7 @@
           justify-content: space-between;
   font-size: 20px;
   font-family: 'Noto Sans';
-  color: var(--d-c-left-menu-depth);
+  color: var(--c-333-white);
 }
 
 #frameBody .wrap.pre.acn .accordion ul li .head .arrowUp {
@@ -205,7 +209,7 @@
 }
 
 #frameBody .wrap.pre.acn .accordion ul li .cont {
-  border-bottom: 1px solid var(--d-bdc-left-menu);
+  border-bottom: 1px solid var(--d-bdc);
   background-color: var(--d-bg-left-menu-dep2);
 }
 
@@ -224,7 +228,7 @@
 }
 
 #frameBody .wrap.pre.acn .accordion ul li .cont p {
-  color: var(--d-c-left-menu-depth);
+  color: var(--c-333-white);
 }
 
 #frameBody .wrap.pre.acn .accordion ul li.on .arrowDown {

@@ -73,7 +73,7 @@
                 }
             }
             .moreArea{display: flex;
-                .btnMobileMore{color: var(--d-svg-current);}
+                .btnMobileMore{color: var(--c-333-white);}
                 &.active{left: 320px;} 
             }
             .backArea{display: none !important;}
@@ -192,6 +192,19 @@
     }
 
     .tagGroup .tag{font-size: 0.813em;}
+    #wrap{
+        &.update{
+            .boardList{
+                .head{font-size: 1em;}
+                .cont .li{font-size: 0.875em;}
+                .listShowHideBox{
+                    .tit p{font-size: 1em;}
+                    dd{font-size: 0.813em;}
+                }
+            }
+        }
+    }
+    .pager{margin-top: 45px;}
 }
 
 @media screen and (max-width:600px){
@@ -222,6 +235,12 @@
         &.license #container{flex-direction: column;
             #contents{width: auto; max-width: 1200px;}
         }
+        &.update{
+            .boardList{
+                .head{font-size: 0.875em;}
+                .cont .li{font-size: 0.813em;}
+            }
+        }
     }
     #frameBody .wrap.pre{
         &.flexLayout{
@@ -234,6 +253,12 @@
         }
     }
     .tagGroup .tag{min-width: 40px; height: 20px; line-height: 20px; font-size: 0.688em;}
+    .pager{
+        .pageNumbers{margin: 0 30px;
+            > a{width: 26px; height: 26px; line-height: 26px; font-size: 0.875em;}
+        }
+        div:not(.pageNumbers){width: 26px; height: 26px; font-size: 0.875em;}
+    }
 }
 
 

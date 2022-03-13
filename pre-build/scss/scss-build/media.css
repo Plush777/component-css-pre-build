@@ -117,7 +117,7 @@
     display: flex;
   }
   .headArea > .inner .moreArea .btnMobileMore {
-    color: var(--d-svg-current);
+    color: var(--c-333-white);
   }
   .headArea > .inner .moreArea.active {
     left: 320px;

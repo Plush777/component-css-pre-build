@@ -449,6 +449,7 @@
                   <li class="active orange" tabindex="0">HTML</li>
                   <li class="pink" tabindex="0">SCSS</li>
                   <li class="blue" tabindex="0">CSS</li>
+                  <li class="yellow" tabindex="0">JS</li>
                 </ul>
               </div>
 
@@ -456,21 +457,21 @@
                 <div class="highlightArea cScroll">
                   <pre>
                       <code class="language-html">
-  &lt;!DOCTYPE html&gt;
-  &lt;html lang="ko"&gt;
-  &lt;head&gt;
-      &lt;meta charset="UTF-8" /&gt;
-      &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
-      &lt;link rel="stylesheet" href="" type="text/css" /&gt;
-      &lt;script type="text/javascript" src=""&gt;&lt;/script&gt;
-      &lt;title&gt;&lt;/title&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-      &lt;div id="wrap"&gt;
-          
-      &lt;/div&gt;
-  &lt;/body&gt;
-  &lt;/html&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8" /&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+    &lt;link rel="stylesheet" href="" type="text/css" /&gt;
+    &lt;script type="text/javascript" src=""&gt;&lt;/script&gt;
+    &lt;title&gt;&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id="wrap"&gt;
+        
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
                         </code>
                     </pre>
                 </div>
@@ -480,62 +481,49 @@
                 <div class="highlightArea cScroll">
                   <pre>
                       <code class="language-scss">
-  $c20 : #202020 !default;
-  $c333 : #333 !default;
-  $c70 : #707070 !default;
-  $cddd : #ddd !default;
-  $cfff : #fff !default;
-  $d-fz : 'Noto Sans';
-  $emphasisType01 : #266bf7 !default;
-  $emphasisType02: #1694d2 !default;
-    
-  /* background */
-  $blueBg : $emphasisType01;
-  $whiteBg : $cfff;
-  
-  @font-face {
-    font-family: 'Noto Sans Light';
-    font-style: normal;
-    font-weight: 400;
-    src: url(./font/notoSans/eot/NotoSansKR-Light-Hestia.eot);
-    src: url(./font/notoSans/eot/NotoSansKR-Light-Hestia.eot?#iefix) format("embedded-opentype"), url(./font/notoSans/woff/NotoSansKR-Light-Hestia.woff) format("woff");
-  }
-  
-  @font-face {
-    font-family: 'Noto Sans';
-    font-style: normal;
-    font-weight: 400;
-    src: url(./font/notoSans/eot/NotoSansKR-Regular-Hestia.eot);
-    src: url(./font/notoSans/eot/NotoSansKR-Regular-Hestia.eot?#iefix) format("embedded-opentype"), url(./font/notoSans/woff/NotoSansKR-Regular-Hestia.woff) format("woff");
-  }
-  
-  @font-face {
-    font-family: 'Noto Sans Medium';
-    font-style: normal;
-    font-weight: 400;
-    src: url(./font/notoSans/eot/NotoSansKR-Medium-Hestia.eot);
-    src: url(./font/notoSans/eot/NotoSansKR-Medium-Hestia.eot?#iefix) format("embedded-opentype"), url(./font/notoSans/woff/NotoSansKR-Medium-Hestia.woff) format("woff");
-  }
-  
-  /* reset */
-  :root{overflow-wrap: break-word;}
-  body,html{width: 100%;height: 100%;margin: 0;padding: 0; font-family:'Noto Sans DemLight', "맑은 고딕", "Malgun Gothic", Dotum, sans-serif;
-  font-size:13px;color: $c333;letter-spacing:-0.045em !important;}
-  :where(html, body, div, span, object,h1, h2, h3, h4, h5, h6, p, blockquote, a, button, abbr, address, 
-  img, q,dl, dt, dd, ol, ul, li,fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr,
-  th, td,article, aside, footer, header, section, summary){
-    margin:0;padding:0;border:0;font:inherit;
-  }
-  :where(article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section){display: block;}
-  ol,ul,li{list-style: none;}
-  table{border-collapse: collapse;border-spacing: 0;}
-  a{text-decoration: none;color: inherit;}
-  address{font-style: normal;}
-  button{display: inline-block;border: none;background-color: transparent;cursor: pointer;}
-  input,button,a,select,option{font-family:inherit;font-size:inherit;}
-  button:focus{outline:none;}
-  caption,hr{display:none;}
-  pre{word-break:break-all;white-space:pre-line;margin: 0 !important;}
+@font-face {
+  font-family: 'Noto Sans Light';
+  font-style: normal;
+  font-weight: 400;
+  src: url(./font/notoSans/eot/NotoSansKR-Light-Hestia.eot);
+  src: url(./font/notoSans/eot/NotoSansKR-Light-Hestia.eot?#iefix) format("embedded-opentype"), url(./font/notoSans/woff/NotoSansKR-Light-Hestia.woff) format("woff");
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url(./font/notoSans/eot/NotoSansKR-Regular-Hestia.eot);
+  src: url(./font/notoSans/eot/NotoSansKR-Regular-Hestia.eot?#iefix) format("embedded-opentype"), url(./font/notoSans/woff/NotoSansKR-Regular-Hestia.woff) format("woff");
+}
+
+@font-face {
+  font-family: 'Noto Sans Medium';
+  font-style: normal;
+  font-weight: 400;
+  src: url(./font/notoSans/eot/NotoSansKR-Medium-Hestia.eot);
+  src: url(./font/notoSans/eot/NotoSansKR-Medium-Hestia.eot?#iefix) format("embedded-opentype"), url(./font/notoSans/woff/NotoSansKR-Medium-Hestia.woff) format("woff");
+}
+
+/* reset */
+:root{overflow-wrap: break-word;}
+body,html{width: 100%;height: 100%;margin: 0;padding: 0; font-family:'Noto Sans DemLight', "맑은 고딕", "Malgun Gothic", Dotum, sans-serif;
+font-size:13px;color: $c333;letter-spacing:-0.045em !important;}
+:where(html, body, div, span, object,h1, h2, h3, h4, h5, h6, p, blockquote, a, button, abbr, address, 
+img, q,dl, dt, dd, ol, ul, li,fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr,
+th, td,article, aside, footer, header, section, summary){
+  margin:0;padding:0;border:0;font:inherit;
+}
+:where(article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section){display: block;}
+ol,ul,li{list-style: none;}
+table{border-collapse: collapse;border-spacing: 0;}
+a{text-decoration: none;color: inherit;}
+address{font-style: normal;}
+button{display: inline-block;border: none;background-color: transparent;cursor: pointer;}
+input,button,a,select,option{font-family:inherit;font-size:inherit;}
+button:focus{outline:none;}
+caption,hr{display:none;}
+pre{word-break:break-all;white-space:pre-line;margin: 0 !important;}
                       </code>
                   </pre>
                 </div>
@@ -545,99 +533,111 @@
                 <div class="highlightArea cScroll">
                   <pre>
                       <code class="language-css">
-  @font-face {
-    font-family: 'Noto Sans Light';
-    font-style: normal;
-    font-weight: 400;
-    src: url(./font/notoSans/eot/NotoSansKR-Light-Hestia.eot);
-    src: url(./font/notoSans/eot/NotoSansKR-Light-Hestia.eot?#iefix) format("embedded-opentype"), url(./font/notoSans/woff/NotoSansKR-Light-Hestia.woff) format("woff");
-  }
-  
-  @font-face {
-    font-family: 'Noto Sans';
-    font-style: normal;
-    font-weight: 400;
-    src: url(./font/notoSans/eot/NotoSansKR-Regular-Hestia.eot);
-    src: url(./font/notoSans/eot/NotoSansKR-Regular-Hestia.eot?#iefix) format("embedded-opentype"), url(./font/notoSans/woff/NotoSansKR-Regular-Hestia.woff) format("woff");
-  }
-  
-  @font-face {
-    font-family: 'Noto Sans Medium';
-    font-style: normal;
-    font-weight: 400;
-    src: url(./font/notoSans/eot/NotoSansKR-Medium-Hestia.eot);
-    src: url(./font/notoSans/eot/NotoSansKR-Medium-Hestia.eot?#iefix) format("embedded-opentype"), url(./font/notoSans/woff/NotoSansKR-Medium-Hestia.woff) format("woff");
-  }
-  
-  :root {
-    overflow-wrap: break-word;
-  }
-  
-  body, html {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    font-family: 'Noto Sans DemLight', "맑은 고딕", "Malgun Gothic", Dotum, sans-serif;
-    font-size: 13px;
-    color: #333;
-    letter-spacing: -0.045em !important;
-  }
-  
-  :where(html, body, div, span, object, h1, h2, h3, h4, h5, h6, p, blockquote, a, button, abbr, address, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, footer, header, section, summary) {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font: inherit;
-  }
-  
-  :where(article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section) {
-    display: block;
-  }
-  
-  ol, ul, li {
-    list-style: none;
-  }
-  
-  table {
-    border-collapse: collapse;
-    border-spacing: 0;
-  }
-  
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
-  
-  address {
-    font-style: normal;
-  }
-  
-  button {
-    display: inline-block;
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-  }
-  
-  input, button, a, select, option {
-    font-family: inherit;
-    font-size: inherit;
-  }
-  
-  button:focus {
-    outline: none;
-  }
-  
-  caption, hr {
-    display: none;
-  }
-  
-  pre {
-    word-break: break-all;
-    white-space: pre-line;
-    margin: 0 !important;
-  }
+@font-face {
+  font-family: 'Noto Sans Light';
+  font-style: normal;
+  font-weight: 400;
+  src: url(./font/notoSans/eot/NotoSansKR-Light-Hestia.eot);
+  src: url(./font/notoSans/eot/NotoSansKR-Light-Hestia.eot?#iefix) format("embedded-opentype"), url(./font/notoSans/woff/NotoSansKR-Light-Hestia.woff) format("woff");
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url(./font/notoSans/eot/NotoSansKR-Regular-Hestia.eot);
+  src: url(./font/notoSans/eot/NotoSansKR-Regular-Hestia.eot?#iefix) format("embedded-opentype"), url(./font/notoSans/woff/NotoSansKR-Regular-Hestia.woff) format("woff");
+}
+
+@font-face {
+  font-family: 'Noto Sans Medium';
+  font-style: normal;
+  font-weight: 400;
+  src: url(./font/notoSans/eot/NotoSansKR-Medium-Hestia.eot);
+  src: url(./font/notoSans/eot/NotoSansKR-Medium-Hestia.eot?#iefix) format("embedded-opentype"), url(./font/notoSans/woff/NotoSansKR-Medium-Hestia.woff) format("woff");
+}
+
+:root {
+  overflow-wrap: break-word;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Noto Sans DemLight', "맑은 고딕", "Malgun Gothic", Dotum, sans-serif;
+  font-size: 13px;
+  color: #333;
+  letter-spacing: -0.045em !important;
+}
+
+:where(html, body, div, span, object, h1, h2, h3, h4, h5, h6, p, blockquote, a, button, abbr, address, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, footer, header, section, summary) {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+}
+
+:where(article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section) {
+  display: block;
+}
+
+ol, ul, li {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+address {
+  font-style: normal;
+}
+
+button {
+  display: inline-block;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+input, button, a, select, option {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+button:focus {
+  outline: none;
+}
+
+caption, hr {
+  display: none;
+}
+
+pre {
+  word-break: break-all;
+  white-space: pre-line;
+  margin: 0 !important;
+}
+                      </code>
+                  </pre>
+                </div>
+              </div>
+
+              <div class="tabCont">
+                <div class="highlightArea cScroll">
+                  <pre>
+                      <code class="language-javascript">
+$(function () {
+
+});
                       </code>
                   </pre>
                 </div>
@@ -645,7 +645,6 @@
             </div>
           </div>
         </div>
-
       </div>
     </div>
     <div class="popup share">

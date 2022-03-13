@@ -12,5 +12,11 @@ $(function () {
             $('.centerArea .logo a').removeClass('change');
         }
     });
+
+    $('.btnStart').on({
+        "click": function (e) {
+            location.href = 'sub_first.html';
+        }
+    });
 });
 

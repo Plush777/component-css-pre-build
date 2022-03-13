@@ -3430,7 +3430,7 @@ input[type="image"], input[type="color"], input[type="button"] {
   display: block;
   width: 100%;
   min-height: 200px;
-  color: var(--c-333-white);
+  color: #fff;
   font-size: 1em;
   background-color: #222;
 }

@@ -3,10 +3,12 @@
 #frameBody .wrap.pre{
     &.topButton{
         .container{height: 100%;}
-        #startLine{display: block; width: 100%; min-height: 200px; color: var(--c-333-white); font-size: 1em; background-color: $_222Bg;}
+        #startLine{display: block; width: 100%; min-height: 200px; color: $cfff; font-size: 1em; background-color: $_222Bg;}
         .btnArea{top: inherit; bottom: 20px; right: 20px;
-            .arrowTop{width: 45px; height: 45px; border-radius: 50%; background-image: url("../../images/ico/ico-top-button-w.png"); 
-            background-repeat: no-repeat; background-position: center; background-color: $_222Bg;}
+            .arrowTop{display: flex; align-items: center; justify-content: center; width: 45px; height: 45px; border-radius: 50%; 
+            background-color: $_222Bg;
+                svg{position: static; top: inherit; left: inherit;}
+            }
         }
     }
 

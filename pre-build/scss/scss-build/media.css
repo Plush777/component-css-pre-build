@@ -52,9 +52,6 @@
 }
 
 @media screen and (max-width: 768px) {
-  *::-webkit-scrollbar {
-    display: none;
-  }
   *.mobScroll::-webkit-scrollbar {
     display: block;
   }
@@ -281,6 +278,21 @@
   .tagGroup .tag {
     font-size: 0.813em;
   }
+  #wrap.update .boardList .head {
+    font-size: 1em;
+  }
+  #wrap.update .boardList .cont .li {
+    font-size: 0.875em;
+  }
+  #wrap.update .boardList .listShowHideBox .tit p {
+    font-size: 1em;
+  }
+  #wrap.update .boardList .listShowHideBox dd {
+    font-size: 0.813em;
+  }
+  .pager {
+    margin-top: 45px;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -323,6 +335,12 @@
     width: auto;
     max-width: 1200px;
   }
+  #wrap.update .boardList .head {
+    font-size: 0.875em;
+  }
+  #wrap.update .boardList .cont .li {
+    font-size: 0.813em;
+  }
   #frameBody .wrap.pre.flexLayout .resultCont .container .flexArea.fe-wrap, #frameBody .wrap.pre.flexLayout .resultCont .container .flexArea.fe-wrap-re, #frameBody .wrap.pre.flexLayout .resultCont .container .flexArea.flexWrap {
     width: 140px;
   }
@@ -338,6 +356,20 @@
     height: 20px;
     line-height: 20px;
     font-size: 0.688em;
+  }
+  .pager .pageNumbers {
+    margin: 0 30px;
+  }
+  .pager .pageNumbers > a {
+    width: 26px;
+    height: 26px;
+    line-height: 26px;
+    font-size: 0.875em;
+  }
+  .pager div:not(.pageNumbers) {
+    width: 26px;
+    height: 26px;
+    font-size: 0.875em;
   }
 }
 

@@ -241,10 +241,10 @@ $(function () {
             prevElement.toggleClass('active').siblings('.leftArea').removeClass('active');
             if (prevElement.hasClass('active')) {
                 moveElement.addClass('move');
-                $('body').css('overflow', 'hidden');
+                // $('body').css('overflow', 'hidden');
             } else if (!prevElement.hasClass('active')) {
                 moveElement.removeClass('move');
-                $('body').css('overflow', 'auto');
+                // $('body').css('overflow', 'auto');
             }
         }
     })
@@ -308,7 +308,7 @@ const fouc = (F) => {
 document.addEventListener('DOMContentLoaded', () => {
     const el = document.documentElement;
     const skeletonRow = document.querySelectorAll('.skelRow');
-    
+
     setTimeout(() => {
         el.classList.remove('skel');
         for (let i = 0; i < skeletonRow.length; i++) {

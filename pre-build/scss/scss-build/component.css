@@ -3,24 +3,24 @@
   font-family: 'Noto Sans Light';
   font-style: normal;
   font-weight: 400;
-  src: url(./font/notoSans/eot/NotoSansKR-Light-Hestia.eot);
-  src: url(./font/notoSans/eot/NotoSansKR-Light-Hestia.eot?#iefix) format("embedded-opentype"), url(./font/notoSans/woff/NotoSansKR-Light-Hestia.woff) format("woff");
+  src: url(../font/notoSans/eot/NotoSansKR-Light-Hestia.eot);
+  src: url(../font/notoSans/eot/NotoSansKR-Light-Hestia.eot?#iefix) format("embedded-opentype"), url(../font/notoSans/woff/NotoSansKR-Light-Hestia.woff) format("woff");
 }
 
 @font-face {
   font-family: 'Noto Sans';
   font-style: normal;
   font-weight: 400;
-  src: url(./font/notoSans/eot/NotoSansKR-Regular-Hestia.eot);
-  src: url(./font/notoSans/eot/NotoSansKR-Regular-Hestia.eot?#iefix) format("embedded-opentype"), url(./font/notoSans/woff/NotoSansKR-Regular-Hestia.woff) format("woff");
+  src: url(../font/notoSans/eot/NotoSansKR-Regular-Hestia.eot);
+  src: url(../font/notoSans/eot/NotoSansKR-Regular-Hestia.eot?#iefix) format("embedded-opentype"), url(../font/notoSans/woff/NotoSansKR-Regular-Hestia.woff) format("woff");
 }
 
 @font-face {
   font-family: 'Noto Sans Medium';
   font-style: normal;
   font-weight: 400;
-  src: url(./font/notoSans/eot/NotoSansKR-Medium-Hestia.eot);
-  src: url(./font/notoSans/eot/NotoSansKR-Medium-Hestia.eot?#iefix) format("embedded-opentype"), url(./font/notoSans/woff/NotoSansKR-Medium-Hestia.woff) format("woff");
+  src: url(../font/notoSans/eot/NotoSansKR-Medium-Hestia.eot);
+  src: url(../font/notoSans/eot/NotoSansKR-Medium-Hestia.eot?#iefix) format("embedded-opentype"), url(../font/notoSans/woff/NotoSansKR-Medium-Hestia.woff) format("woff");
 }
 
 /* text color */
@@ -386,7 +386,6 @@ svg.darkType {
   position: relative;
   font-size: 1.38em;
   font-family: "Noto Sans";
-  margin-right: 20px;
   -webkit-transition: .3s;
   transition: .3s;
   color: #fff;
@@ -402,7 +401,6 @@ svg.darkType {
   height: 20px;
   -webkit-transition: .3s;
   transition: .3s;
-  background: url("../../images/ico/ico-arrow-right-w-shw.png") no-repeat center;
 }
 
 #wrap.main .btnStart:before {
@@ -435,8 +433,8 @@ svg.darkType {
 }
 
 #wrap.update #contents {
-  padding: 50px 0;
-  min-width: 1200px;
+  padding: 50px 20px 50px 20px;
+  width: 1200px;
   margin: 0 auto;
 }
 
@@ -1487,6 +1485,7 @@ code[class*=language-], pre[class*=language-] pre {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding: 0 20px;
   border-top: 7px solid var(--black-white);
   border-bottom: 1px solid #5f5f5f;
 }
@@ -1520,7 +1519,7 @@ code[class*=language-], pre[class*=language-] pre {
 .boardList .cont .li {
   border-top: 1px solid #5f5f5f;
   font-size: 1em;
-  padding: 10px 0;
+  padding: 10px 20px 10px 20px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   cursor: pointer;
@@ -2368,8 +2367,6 @@ code[class*=language-], pre[class*=language-] pre {
   overflow-y: auto;
   z-index: 1100;
   background-color: #1C253D;
-  -webkit-box-shadow: 0px 0px 3px 2px rgba(255, 255, 255, 0.5);
-          box-shadow: 0px 0px 3px 2px rgba(255, 255, 255, 0.5);
 }
 
 .wrap.pre.leftMenu .leftAreaType02 > .leftMenu > li {
@@ -2393,19 +2390,14 @@ code[class*=language-], pre[class*=language-] pre {
   transition: .5s;
 }
 
-.wrap.pre.leftMenu .leftAreaType02 > .leftMenu > li span:after {
-  content: '';
-  width: 15px;
-  height: 9px;
+.wrap.pre.leftMenu .leftAreaType02 > .leftMenu > li span svg {
   position: absolute;
-  top: 50%;
-  right: 28px;
+  top: 25px;
+  right: 20px;
+  width: 30px;
+  height: 18px;
   -webkit-transition: .5s;
   transition: .5s;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  background-image: url("../../images/ico/ico-down.svg");
-  background-repeat: no-repeat;
 }
 
 .wrap.pre.leftMenu .leftAreaType02 > .leftMenu > li a {
@@ -2433,6 +2425,8 @@ code[class*=language-], pre[class*=language-] pre {
   color: rgba(255, 255, 255, 0.8);
   text-indent: 50px;
   font-family: 'Noto Sans Light';
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 .wrap.pre.leftMenu .leftAreaType02 > .leftMenu > li > ul.leftSubMenu li a:hover {
@@ -2447,10 +2441,10 @@ code[class*=language-], pre[class*=language-] pre {
   background-color: #5869F0;
 }
 
-.wrap.pre.leftMenu .leftAreaType02 > .leftMenu > li.active span:after {
-  -webkit-transform: translateY(-50%) rotate(-180deg);
-          transform: translateY(-50%) rotate(-180deg);
-  background: url("../../images/ico/ico-down-w.svg") no-repeat;
+.wrap.pre.leftMenu .leftAreaType02 > .leftMenu > li.active span svg {
+  top: 21px;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 .wrap.pre.floating #floatingMenu {
@@ -3442,13 +3436,25 @@ input[type="image"], input[type="color"], input[type="button"] {
 }
 
 #frameBody .wrap.pre.topButton .btnArea .arrowTop {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 45px;
   height: 45px;
   border-radius: 50%;
-  background-image: url("../../images/ico/ico-top-button-w.png");
-  background-repeat: no-repeat;
-  background-position: center;
   background-color: #222;
+}
+
+#frameBody .wrap.pre.topButton .btnArea .arrowTop svg {
+  position: static;
+  top: inherit;
+  left: inherit;
 }
 
 #frameBody .wrap.pre.etcRotate .resultCont {
@@ -3784,7 +3790,7 @@ input[type="image"], input[type="color"], input[type="button"] {
     display: flex;
   }
   .headArea > .inner .moreArea .btnMobileMore {
-    color: var(--d-svg-current);
+    color: var(--c-333-white);
   }
   .headArea > .inner .moreArea.active {
     left: 320px;
@@ -3948,6 +3954,21 @@ input[type="image"], input[type="color"], input[type="button"] {
   .tagGroup .tag {
     font-size: 0.813em;
   }
+  #wrap.update .boardList .head {
+    font-size: 1em;
+  }
+  #wrap.update .boardList .cont .li {
+    font-size: 0.875em;
+  }
+  #wrap.update .boardList .listShowHideBox .tit p {
+    font-size: 1em;
+  }
+  #wrap.update .boardList .listShowHideBox dd {
+    font-size: 0.813em;
+  }
+  .pager {
+    margin-top: 45px;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -3990,6 +4011,12 @@ input[type="image"], input[type="color"], input[type="button"] {
     width: auto;
     max-width: 1200px;
   }
+  #wrap.update .boardList .head {
+    font-size: 0.875em;
+  }
+  #wrap.update .boardList .cont .li {
+    font-size: 0.813em;
+  }
   #frameBody .wrap.pre.flexLayout .resultCont .container .flexArea.fe-wrap, #frameBody .wrap.pre.flexLayout .resultCont .container .flexArea.fe-wrap-re, #frameBody .wrap.pre.flexLayout .resultCont .container .flexArea.flexWrap {
     width: 140px;
   }
@@ -4005,6 +4032,20 @@ input[type="image"], input[type="color"], input[type="button"] {
     height: 20px;
     line-height: 20px;
     font-size: 0.688em;
+  }
+  .pager .pageNumbers {
+    margin: 0 30px;
+  }
+  .pager .pageNumbers > a {
+    width: 26px;
+    height: 26px;
+    line-height: 26px;
+    font-size: 0.875em;
+  }
+  .pager div:not(.pageNumbers) {
+    width: 26px;
+    height: 26px;
+    font-size: 0.875em;
   }
 }
 

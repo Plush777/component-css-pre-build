@@ -13,7 +13,11 @@
             }
             ul.leftSubMenu{padding: 14px 24px 14px 24px;
                 li{
-                    >a{font-size: 1em;}
+                    >a{font-size: 1em;
+                        svg{top: 4px;}
+                    }
+                    >.dep3>li>a{font-size: 0.906em;}
+                    &.on>a svg.fold{top: 13px;}
                 }
             }
             &.active span a svg{top: 18px;}
@@ -36,17 +40,31 @@
 
 @media screen and (max-width:768px){
     *{
-        // &::-webkit-scrollbar{display: none;}
+        &::-webkit-scrollbar{display: none;}
         &.mobScroll::-webkit-scrollbar{display: block;} //모바일에서도 스크롤보이게
     }
     .leftArea{left: -301px; transition: .3s;
         .leftMenu li{
-            &:first-child >a>img{width: 160px;}
+            &:first-child >a>img{width: 53%;}
             span>a{font-size: 1em;
                 svg{top: 20px; width: 20px; height: 14px;}
             }
             ul.leftSubMenu{
-                li a{font-size: 0.88em;}
+                li{
+                    a{font-size: 0.88em;
+                        svg{
+                            &.unfold{width: 14px; height: 14px;}
+                            
+                        }
+                    }
+                    .dep3{
+                        >li{padding-bottom: 5px;
+                            >a{font-size: 0.750em;}
+                            &:before{top: 7px; width: 5px; height: 5px;}
+                        }
+                    }
+                    &.on>a svg.fold{width: 12px; top: 11px;}
+                }
             }
             &.active span a svg{top: 17px;}
         }
@@ -208,11 +226,12 @@
 }
 
 @media screen and (max-width:600px){
+    #wrap{overflow: hidden;}
     .highlightArea{
         &::-webkit-scrollbar{display: none;}
     }
     .leftArea{
-        &.active{min-width: 40%; max-width: 200px;
+        &.active{max-width: calc(100% - 100px);
             ~.rightArea{left: 0; margin: 0; transform: translate(calc(100% - 80px),0);}
             ~.headArea{width: 100%;transform: translate(calc(100% - 100px),0);}
         }
@@ -309,11 +328,6 @@
         }
     }
     #wrap.err .bottomDiv a:hover{text-decoration: underline;}
-    .topArea .backtoTop{
-        &:hover{background-color: var(--bg-hv-btt);
-            svg{fill: var(--hv-svg-btt);}
-        }
-    }
     .headArea > .inner .backArea .btnBack:hover:before{opacity: 1; visibility: visible;}
     .boardList .cont .li .boardBox .boardItem:last-child.underLine:hover{text-decoration: underline;}
     .pager{

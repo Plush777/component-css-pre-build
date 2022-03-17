@@ -232,7 +232,7 @@ body[data-theme='dark']{
 
 body{background: var(--d-bg-body);
   .lightLogo{display: var(--img-light);}
-  .darkLogo{width: 180px; display: var(--img-dark);}
+  .darkLogo{width: 60%; display: var(--img-dark);}
   &.eleShow{display: block;}
 }
 
@@ -336,8 +336,9 @@ overflow-y: auto; background-color: var(--d-bg-left-menu); z-index: 1100;
       &:first-child >a{padding: 16px 0; text-indent: 28px; 
       border-bottom: 1px solid var(--d-bdc);}
       >span{display: block;
-        a{display: flex; align-items: center; justify-content: space-between; position: relative; padding: 16px 0; text-indent: 28px;border-bottom: 1px solid var(--d-bdc);
-          font-family: $d-fz; font-size: 1.38em; color: var(--c-333-white); transition: .5s;
+        a{display: block; /*align-items: center; justify-content: space-between;*/ position: relative; padding: 16px 0; 
+        text-indent: 28px;border-bottom: 1px solid var(--d-bdc); text-overflow: ellipsis; overflow: hidden;
+        white-space: nowrap; font-family: $d-fz; font-size: 1.38em; color: var(--c-333-white); transition: .5s;
             svg{position: absolute; top: 27px; right: 0; width: 30px; height: 18px; margin-right: 17px; transition: .5s;}
         }
       }
@@ -351,7 +352,8 @@ overflow-y: auto; background-color: var(--d-bg-left-menu); z-index: 1100;
       border-bottom: 1px solid var(--d-bdc); background-color: var(--d-bg-left-menu-dep2);
         &.block{display: block;}
         li{border-bottom: 1px solid var(--d-bdc);
-          a{position: relative; display: block;padding-bottom: 8px; font-family: $d-fz; font-size: 1.13em; color: var(--c-333-white);
+          a{position: relative; display: block; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; 
+          padding-bottom: 8px; font-family: $d-fz; font-size: 1.13em; color: var(--c-333-white);
             svg{position: absolute; top: 5px; right: 0;
               &.fold{display: none;}
             }
@@ -374,7 +376,7 @@ overflow-y: auto; background-color: var(--d-bg-left-menu); z-index: 1100;
             >a{color: var(--dis-c-left-menu-dep2);}
           }
           >.dep3{display: none; padding: 8px 0 0 25px; border-top: 1px solid var(--d-bdc);
-            >li{position: relative; padding-bottom: 5px; border-bottom: 0;
+            >li{position: relative; border-bottom: 0;
               &:before{content: ''; position: absolute; top: 9px; left: -20px; width: 6px; height: 6px;
               border-radius: 50%; background-color: var(--mark-dep3);}
               >a{font-size: 0.94em;}

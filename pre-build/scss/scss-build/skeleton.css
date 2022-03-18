@@ -36,13 +36,13 @@ html.skel .highlightArea > * {
   display: none;
 }
 
-html.skel .btnArea .btnResult {
+html.skel .btnArea .btnResult, html.skel .btnDataDownload {
   min-width: 85px;
   height: 34px;
   background-color: var(--d-bg-skeleton);
 }
 
-html.skel .btnArea .btnResult > * {
+html.skel .btnArea .btnResult > *, html.skel .btnDataDownload > * {
   display: none;
 }
 

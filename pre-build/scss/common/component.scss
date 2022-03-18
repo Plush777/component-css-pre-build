@@ -253,6 +253,7 @@ svg{fill: currentColor;
 
 .wrap.pre.h2000{height: 2000px;}
 #wrap{width: 100%; height: 100%;
+  &.scrollHidden{overflow: hidden;}
   .mainTxt{color: var(--d-c-text);}
   &.main{position: relative; transition: .5s; background-color: #4e4e4e;
     .logo a{display: block; width: 800px; height: 136px; transition: .5s ease-in-out;
@@ -585,6 +586,7 @@ font-size: 14px; color: $cfff;
 
 .btnArea{position: relative; display: flex;
   &.end{justify-content: flex-end;}
+  &.sb{justify-content: space-between;}
   &.mob{display: none;}
 }
 
@@ -707,6 +709,10 @@ background-color: rgba($color: $blackBg, $alpha: 0.65);
 
 .resultCont{position: relative; padding: 50px; box-sizing: border-box;
   &.middle{display: flex; align-items: center; justify-content: center; height: inherit;} //container: height 100%
+}
+
+.btnDataDownload{
+  svg{margin-top: 2px;}
 }
 
 /* mixin */

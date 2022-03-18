@@ -65,6 +65,14 @@ $(function () {
         $('body').addClass('mobileType');
     } else {
         $('body').removeClass('mobileType');
+    } 
+
+    if (window.matchMedia("screen and (max-width: 600px)").matches) {
+        $('.moreArea').on({
+            "click": function () {
+                $(this).parents('#wrap').toggleClass('scrollHidden')
+            }
+        });
     }
 
     if (document.getElementById('subUrl')) {

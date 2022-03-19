@@ -5,7 +5,7 @@ $(function () {
     const mobilePopupResult = $('.popup.mobileResult');
     const btnBack = $('.btnBack');
     const toast = $('#toast');
-    const topArea = $('.topArea')
+    const topArea = $('.topArea');
 
     //모바일 체크
     if (/Android|webOS|iPhone|iPad|BlackBerry|Opera Mini/i.test(navigator.userAgent)) {
@@ -100,7 +100,7 @@ $(function () {
         }
     });
 
-    dimmed.on({
+    $(dimmed).on({
         "click": function () {
             $(this).fadeOut();
             $('.popup').fadeOut();
@@ -363,4 +363,11 @@ document.addEventListener('DOMContentLoaded', () => {
     if (document.querySelector('.btn')) {
         copySubUrl();
     }
+
+    // leftMenu text-ellipsis
+    const gnbList = $('.leftArea .leftMenu li:nth-child(4) .leftSubMenu li:nth-child(2)');
+    gnbList.addClass('twoLine');
+    if (window.matchMedia("screen and (max-width: 1280px)").matches) {
+        gnbList.removeClass('twoLine');
+    } 
 });

@@ -322,18 +322,16 @@
                 <div class="highlightArea cScroll">
                   <pre>
                               <code class="language-html">
-  &lt;div id="wrap"&gt;
-      &lt;div class="container"&gt;
-          &lt;div id="header"&gt;
-              &lt;div class="inner"&gt;
-                  &lt;span&gt;header&lt;/span&gt;
-              &lt;/div&gt;
-          &lt;/div&gt;
-          &lt;div class="contents"&gt;
-              &lt;span&gt;contents&lt;/span&gt;
+&lt;div id="wrap"&gt;
+      &lt;div id="header"&gt;
+          &lt;div class="inner"&gt;
+              &lt;span&gt;header&lt;/span&gt;
           &lt;/div&gt;
       &lt;/div&gt;
-  &lt;/div&gt;
+      &lt;div class="contents"&gt;
+          &lt;span&gt;contents&lt;/span&gt;
+      &lt;/div&gt;
+&lt;/div&gt;
                               </code>
                             </pre>
                 </div>
@@ -343,18 +341,16 @@
                 <div class="highlightArea cScroll">
                   <pre>
                               <code class="language-scss">
-  .container{position: relative;}
-  #header{position: fixed; top:0; transition: .2s ease; width: 100%; height: 65px; z-index: 1000; background-color: #333;
-    .inner{display: flex; align-items: center; justify-content: center; padding: 15px; box-sizing: border-box;
-        span{display: inline-block; line-height: 32px; font-size: 20px; font-family: 'Noto Sans'; color: #fff;}
-      }
-    &.headUp{top: -65px;}
-    &.headDown{top: 0;}
-  }
-  .contents{position: absolute; top: 65px; width: 100%; height: 2000px;
-  display: flex; align-items: center; justify-content: center; background-color: #555;
-      span{font-size: 30px; font-family: 'Noto Sans'; color: #fff;}
-  }
+#header{position: fixed; top:0; transition: .2s ease; width: 100%; height: 65px; z-index: 1000; background-color: #333;
+  .inner{display: flex; align-items: center; justify-content: center; padding: 15px; box-sizing: border-box;
+      span{display: inline-block; line-height: 32px; font-size: 20px; font-family: 'Noto Sans'; color: #fff;}
+    }
+  &.headUp{top: -65px;}
+}
+.contents{position: absolute; top: 65px; width: 100%; height: 2000px;
+display: flex; align-items: center; justify-content: center; background-color: #555;
+    span{font-size: 30px; font-family: 'Noto Sans'; color: #fff;}
+}
                               </code>
                           </pre>
                 </div>
@@ -364,69 +360,65 @@
                 <div class="highlightArea cScroll">
                   <pre>
                               <code class="language-css">
-  #wrap .container {
-      position: relative;
-  }
+#wrap #header {
+    position: fixed;
+    top: 0;
+    transition: .2s ease;
+    width: 100%;
+    height: 65px;
+    z-index: 1000;
+    background-color: #333;
+}
 
-  #wrap #header {
-      position: fixed;
-      top: 0;
-      transition: .2s ease;
-      width: 100%;
-      height: 65px;
-      z-index: 1000;
-      background-color: #333;
-  }
+#wrap #header.headUp {
+  top: -65px;
+}
 
-  #wrap #header .headUp {
-    top: -65px;
-  }
+#wrap #header .inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 15px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
 
-  #wrap #header .inner {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center;
-      -webkit-box-pack: center;
-          -ms-flex-pack: center;
-              justify-content: center;
-      padding: 15px;
-      -webkit-box-sizing: border-box;
-              box-sizing: border-box;
-  }
+#wrap #header .inner span {
+    display: inline-block;
+    line-height: 32px;
+    font-size: 20px;
+    font-family: 'Noto Sans';
+    color: #fff;
+}
 
-  #wrap #header .inner span {
-      display: inline-block;
-      line-height: 32px;
-      font-size: 20px;
-      font-family: 'Noto Sans';
-      color: #fff;
-  }
+#wrap .contents {
+    position: absolute;
+    top: 65px;
+    width: 100%;
+    height: 2000px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background-color: #555;
+}
 
-  #wrap .contents {
-      position: absolute;
-      top: 65px;
-      width: 100%;
-      height: 2000px;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center;
-      -webkit-box-pack: center;
-          -ms-flex-pack: center;
-              justify-content: center;
-      background-color: #555;
-  }
-
-  #wrap .contents span {
-      font-size: 30px;
-      font-family: 'Noto Sans';
-      color: #fff;
-  }
+#wrap .contents span {
+    font-size: 30px;
+    font-family: 'Noto Sans';
+    color: #fff;
+}
                               </code>
                             </pre>
                 </div>
@@ -436,9 +428,9 @@
                 <div class="highlightArea cScroll">
                   <pre>
                       <code class="language-javascript">
-$(document).ready(function() {
+$(function() {
     var lastScrollTop = 0;
-    $('#frameBody').scroll(function() {
+    $(window).scroll(function() {
         var st = $(this).scrollTop();
         if (st > lastScrollTop) {
             $('#header').removeClass('headDown').addClass('headUp');

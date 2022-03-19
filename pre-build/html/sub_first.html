@@ -110,30 +110,78 @@
             </span>
             <ul class="leftSubMenu">
               <li>
-                <a href="../html/layout/layout-centerEle.html" title="Center element">Center element</a>
+                  <a href="../html/layout/layout-centerEle.html" title="Center element">Center element</a>
               </li>
               <li>
-                <a href="../html/layout/layout-tab.html" title="Tab">Tab</a>
+                  <a href="../html/layout/layout-tab.html" title="Tab">Tab</a>
               </li>
               <li>
-                <a href="../html/layout/layout-bg-image.html" title="Background-image 100%">Background-image 100%</a>
+                  <a href="../html/layout/layout-bg-image.html" title="Background-image 100%">Background-image
+                      100%</a>
               </li>
               <li>
-                <a href="../html/layout/layout-leftMenu.html" title="Left menu">Left menu</a>
+                  <a href="../html/layout/layout-leftMenu.html" title="Left menu">Left menu</a>
               </li>
               <li>
-                <a href="../html/layout/layout-floatingMenu.html" title="Floating menu">Floating menu</a>
+                  <a href="../html/layout/layout-floatingMenu.html" title="Floating menu">Floating
+                      menu</a>
               </li>
               <li class="disabled">
-                <a href="#none" title="Slide">Slide</a>
+                  <a href="#none" title="Slide">Slide</a>
               </li>
-              <li>
-                <a href="../html/layout/layout-flex.html" title="Flex">Flex</a>
+              <li class="dep3Cont">
+                  <a href="#none" title="Flex Layout">Flex Layout
+                      <svg width="18" height="18" viewBox="0 0 18 18" class="unfold">
+                          <path id="ios-plus-empty"
+                              d="M27,18.633H18.563V27H17.368V18.633H9V17.438h8.367V9h1.195v8.438H27Z"
+                              transform="translate(-9 -9)"></path>
+                      </svg>
+                      <svg width="16" height="1" viewBox="0 0 16 1" class="fold">
+                          <rect id="사각형_14" data-name="사각형 14" width="16" height="1"></rect>
+                      </svg>
+                  </a>
+                  <ul class="dep3">
+                      <li>
+                          <a href="#none" title="flex box" onclick="prevent(event)">flex box</a>
+                      </li>
+                      <li>
+                          <a href="../html/layout/layout-flex-direction.html"
+                              title="flex-direction">flex-direction</a>
+                      </li>
+                      <li>
+                          <a href="../html/layout/layout-justify-content.html"
+                              title="justify-content">justify-content</a>
+                      </li>
+                      <li>
+                          <a href="../html/layout/layout-align-items.html" title="align-items">align-items</a>
+                      </li>
+                      <li>
+                          <a href="../html/layout/layout-flex-basis.html" title="flex-basis">flex-basis</a>
+                      </li>
+                      <li>
+                          <a href="../html/layout/layout-flex-grow.html" title="flex-grow">flex-grow</a>
+                      </li>
+                      <li>
+                          <a href="../html/layout/layout-flex-shrink.html" title="flex-shrink">flex-shrink</a>
+                      </li>
+                      <li>
+                          <a href="../html/layout/layout-flex-option.html" title="flex">flex</a>
+                      </li>
+                      <li>
+                          <a href="../html/layout/layout-flex-wrap.html" title="flex-wrap">flex-wrap</a>
+                      </li>
+                      <li>
+                          <a href="../html/layout/layout-gap.html" title="gap">gap</a>
+                      </li>
+                      <li>
+                          <a href="../html/layout/layout-order.html" title="order">order</a>
+                      </li>
+                  </ul>
               </li>
               <li class="disabled">
-                <a href="#none" title="Grid">Grid</a>
+                  <a href="#none" title="Grid">Grid</a>
               </li>
-            </ul>
+          </ul>
           </li>
           <li>
             <span>
@@ -287,16 +335,13 @@
                   </p>
               </div>
               <div class="skelRow">
-                  <p>필요한 코드만 긁어서 바로 사용할 수 있다는게 장점입니다.</p>
+                  <p>필요한 코드만 긁어서 본인 프로젝트에 사용할 수 있습니다.</p>
               </div>
               <br>
               <div class="skelRow">
-                  <p>물론 코딩을 직접안하고 복사 붙여넣기로 단순하게 코드를 가져간다는게 좋은 방법은 아니지만
-                    매 프로젝트 세팅할 때마다 비슷한 스타일의 코드를
+                  <p>앞으로 더 많은 스타일 컴포넌트들을 기록할 예정이며, 추후에 추가될 mobile, keyframe, grid layout ,slide layout에 대한
+                  가이드도 제공할 예정입니다. 
                   </p>
-              </div>
-              <div class="skelRow">
-                  <p>일일이 치는게 지겨운 분들 혹은 html & css를 배우고 있으신 분들에게 포커스를 맞춘 프로젝트라고 생각 해주시면 되겠습니다.</p>
               </div>
               <br><br>
               <div class="innerTxt">
@@ -343,7 +388,7 @@
               <h2>기본 세팅 가이드</h2>
             </div>
             <div class="mainTxt">
-              <p>해당 프로젝트에서 쓰인 HTML/SCSS/CSS 기본 세팅 구조입니다.</p>
+              <p>해당 프로젝트에서 쓰인 HTML/SCSS/CSS/JS 기본 세팅 구조입니다.</p>
             </div>
             <div class="tabWrap type01">
               <div class="tabNav">
@@ -383,13 +428,27 @@
                 <div class="highlightArea cScroll">
                   <pre>
                       <code class="language-scss">
-@font-face {
-  font-family: 'Noto Sans Light';
-  font-style: normal;
-  font-weight: 400;
-  src: url(./font/notoSans/eot/NotoSansKR-Light-Hestia.eot);
-  src: url(./font/notoSans/eot/NotoSansKR-Light-Hestia.eot?#iefix) format("embedded-opentype"), url(./font/notoSans/woff/NotoSansKR-Light-Hestia.woff) format("woff");
-}
+/* text color */
+$c20 : #202020 !default;  
+$c222 : #222 !default;
+$c333 : #333 !default;
+$c70 : #707070 !default;
+$cddd : #ddd !default;
+$c000 : #000 !default;
+$c-ccc : #ccc !default;
+$cfff : #fff !default;
+$d-fz : 'Noto Sans';
+$emphasisType01 : #266bf7 !default;
+$emphasisType02: #1694d2 !default;
+
+/* background */
+$blueBg : $emphasisType01;
+$whiteBg : $cfff;
+$cccBg : $c-ccc;
+$dddBg : $cddd;
+$_222Bg : $c222;
+$_333Bg : $c333;
+$blackBg : $c000;
 
 @font-face {
   font-family: 'Noto Sans';
@@ -397,14 +456,6 @@
   font-weight: 400;
   src: url(./font/notoSans/eot/NotoSansKR-Regular-Hestia.eot);
   src: url(./font/notoSans/eot/NotoSansKR-Regular-Hestia.eot?#iefix) format("embedded-opentype"), url(./font/notoSans/woff/NotoSansKR-Regular-Hestia.woff) format("woff");
-}
-
-@font-face {
-  font-family: 'Noto Sans Medium';
-  font-style: normal;
-  font-weight: 400;
-  src: url(./font/notoSans/eot/NotoSansKR-Medium-Hestia.eot);
-  src: url(./font/notoSans/eot/NotoSansKR-Medium-Hestia.eot?#iefix) format("embedded-opentype"), url(./font/notoSans/woff/NotoSansKR-Medium-Hestia.woff) format("woff");
 }
 
 /* reset */
@@ -436,27 +487,11 @@ pre{word-break:break-all;white-space:pre-line;margin: 0 !important;}
                   <pre>
                       <code class="language-css">
 @font-face {
-  font-family: 'Noto Sans Light';
-  font-style: normal;
-  font-weight: 400;
-  src: url(./font/notoSans/eot/NotoSansKR-Light-Hestia.eot);
-  src: url(./font/notoSans/eot/NotoSansKR-Light-Hestia.eot?#iefix) format("embedded-opentype"), url(./font/notoSans/woff/NotoSansKR-Light-Hestia.woff) format("woff");
-}
-
-@font-face {
   font-family: 'Noto Sans';
   font-style: normal;
   font-weight: 400;
   src: url(./font/notoSans/eot/NotoSansKR-Regular-Hestia.eot);
   src: url(./font/notoSans/eot/NotoSansKR-Regular-Hestia.eot?#iefix) format("embedded-opentype"), url(./font/notoSans/woff/NotoSansKR-Regular-Hestia.woff) format("woff");
-}
-
-@font-face {
-  font-family: 'Noto Sans Medium';
-  font-style: normal;
-  font-weight: 400;
-  src: url(./font/notoSans/eot/NotoSansKR-Medium-Hestia.eot);
-  src: url(./font/notoSans/eot/NotoSansKR-Medium-Hestia.eot?#iefix) format("embedded-opentype"), url(./font/notoSans/woff/NotoSansKR-Medium-Hestia.woff) format("woff");
 }
 
 :root {

@@ -591,6 +591,10 @@ svg.darkType {
   cursor: pointer;
 }
 
+.leftArea > .leftMenu > li:nth-of-type(4) .leftSubMenu li:nth-of-type(2).twoLine a {
+  white-space: normal;
+}
+
 .leftArea > .leftMenu > li a {
   display: block;
 }
@@ -1800,6 +1804,15 @@ code[class*=language-], pre[class*=language-] pre {
   height: inherit;
 }
 
+.btnDataDownload {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .btnDataDownload svg {
   margin-top: 2px;
 }
@@ -1984,11 +1997,17 @@ code[class*=language-], pre[class*=language-] pre {
   border: 1px solid rgba(34, 34, 34, 0.5);
   background-size: 22px 22px;
   background-color: #fff;
-  background-image: url("../../images/ico/ico-result-close.png");
-  background-repeat: no-repeat;
-  background-position: center 40px;
   -webkit-transition: .5s;
   transition: .5s;
+}
+
+.wrap.pre.headerToggle .btnHeadToggle svg {
+  position: inherit;
+  top: 39px;
+  right: 21px;
+  width: 22px;
+  height: 22px;
+  fill: #000;
 }
 
 .wrap.pre.headerToggle .btnHeadToggle.active {

@@ -25,8 +25,8 @@
         #bg{position: absolute; width: inherit; height: inherit; background-image: url("../../images/common/img-map.PNG");
         background-repeat: no-repeat; background-size: cover;}
         .btnHeadToggle{position: absolute; top: 26px; left: 50%; z-index: 990; transform: translateX(-50%); width: 70px; height: 70px; 
-        border-radius: 50%; border: 1px solid rgba($color: $_222Bg, $alpha: 0.5); background-size: 22px 22px; background-color: $whiteBg; 
-        background-image: url("../../images/ico/ico-result-close.png"); background-repeat: no-repeat; background-position: center 40px; transition: .5s;
+        border-radius: 50%; border: 1px solid rgba($color: $_222Bg, $alpha: 0.5); background-size: 22px 22px; background-color: $whiteBg; transition: .5s;
+            svg{position: inherit; top: 39px; right: 21px; width: 22px; height: 22px; fill: #000;}
             &.active{top: -40px;}
         }
         #header{top: 0; transition: .5s;

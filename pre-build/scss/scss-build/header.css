@@ -97,11 +97,17 @@
   border: 1px solid rgba(34, 34, 34, 0.5);
   background-size: 22px 22px;
   background-color: #fff;
-  background-image: url("../../images/ico/ico-result-close.png");
-  background-repeat: no-repeat;
-  background-position: center 40px;
   -webkit-transition: .5s;
   transition: .5s;
+}
+
+.wrap.pre.headerToggle .btnHeadToggle svg {
+  position: inherit;
+  top: 39px;
+  right: 21px;
+  width: 22px;
+  height: 22px;
+  fill: #000;
 }
 
 .wrap.pre.headerToggle .btnHeadToggle.active {

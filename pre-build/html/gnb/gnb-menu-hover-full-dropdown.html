@@ -322,7 +322,8 @@
                 <div class="highlightArea cScroll">
                   <pre>
                               <code class="language-html">
-&lt;div id="gnb"&gt;
+&lt;div id="wrap"&gt;
+  &lt;div id="gnb"&gt;
     &lt;div id="menuBg"&gt;&lt;/div&gt;
     &lt;ul class="menuList"&gt;
         &lt;li&gt;
@@ -411,6 +412,7 @@
             &lt;/ul&gt;
         &lt;/li&gt;
     &lt;/ul&gt;
+  &lt;/div&gt;
 &lt;/div&gt;
                               </code>
                             </pre>
@@ -516,7 +518,7 @@
                   <pre>
                               <code class="language-javascript">
 $(document).ready(function(){
-  $('.gnb-li-hover #gnb').on({
+  $('#gnb').on({
     "mouseleave":function (){
       $('#menuBg,.depthTwo').stop().slideUp();
     }

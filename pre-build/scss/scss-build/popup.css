@@ -28,11 +28,8 @@
 
 .wrap.pre.popShowHide .popup .head .btnClose, .wrap.pre.dragPop .popup .head .btnClose {
   position: absolute;
-  top: 17px;
-  right: 15px;
-  width: 21px;
-  height: 21px;
-  background: url("../../images/ico/ico-pop-close.png") no-repeat center;
+  top: 5px;
+  right: 10px;
 }
 
 .wrap.pre.popShowHide .popup .cont, .wrap.pre.dragPop .popup .cont {
@@ -75,7 +72,7 @@
 .wrap.pre .exDimmed {
   display: none;
   position: fixed;
-  z-index: 9999;
+  z-index: 9990;
   left: 0;
   top: 0;
   width: 100%;

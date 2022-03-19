@@ -47,7 +47,7 @@
 }
 
 .customSelect > ul > li svg {
-  fill: var(--svg-fill-type01);
+  fill: var(--c-333-white);
 }
 
 .customSelect > ul > li .selList {

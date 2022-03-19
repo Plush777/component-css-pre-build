@@ -1,4 +1,11 @@
 $(function () {
+    const frameBody = $('#frameBody');
+    const documentBody = $('body');
+    const dimmed = $('#dimmed');
+    const mobilePopupResult = $('.popup.mobileResult');
+    const btnBack = $('.btnBack');
+    const toast = $('#toast');
+    const topArea = $('.topArea')
 
     //모바일 체크
     if (/Android|webOS|iPhone|iPad|BlackBerry|Opera Mini/i.test(navigator.userAgent)) {
@@ -10,13 +17,13 @@ $(function () {
                 e.stopImmediatePropagation();
                 const cook = $.cookie('mobileResultPopup');
                 if (cook == "ok") {
-                    $('.popup.mobileResult').hide();
-                    $('#dimmed').hide();
-                    $('#frameBody').addClass('show');
-                    $('#frameBody').removeClass('hide');
+                    mobilePopupResult.hide();
+                    dimmed.hide();
+                    frameBody.addClass('show');
+                    frameBody.removeClass('hide');
                 } else {
-                    $('.popup.mobileResult').show();
-                    $('#dimmed').show();
+                    mobilePopupResult.show();
+                    dimmed.show();
                 }
             }
         });
@@ -24,19 +31,19 @@ $(function () {
 
     $('.btnConfirm').on({
         "click": function () {
-            $('#frameBody').addClass('show');
-            $('.popup.mobileResult').hide();
-            $('#dimmed').hide();
-            if ($('#frameBody').hasClass('hide')) {
-                $('#frameBody').removeClass('hide');
+            frameBody.addClass('show');
+            mobilePopupResult.hide();
+            dimmed.hide();
+            if (frameBody.hasClass('hide')) {
+                frameBody.removeClass('hide');
             }
         }
     });
 
     $('.btnCancel').on({
         "click": function () {
-            $('.popup.mobileResult').hide();
-            $('#dimmed').hide();
+            mobilePopupResult.hide();
+            dimmed.hide();
         }
     });
 
@@ -45,9 +52,9 @@ $(function () {
             if ($('#todayChk').is(":checked")) {
                 $.cookie('mobileResultPopup', 'ok', { expires: 1, path: '/' });
             }
-            $('.popup.mobileResult').hide();
-            $('#dimmed').hide();
-            $('#frameBody').addClass('show');
+            mobilePopupResult.hide();
+            dimmed.hide();
+            frameBody.addClass('show');
         }
     });
 
@@ -55,16 +62,16 @@ $(function () {
     let urlArrhref = urlStatehref.split('/');
     // console.log(urlArrhref);
     if (urlArrhref[4] == 'sub_first.html') {
-        $('.btnBack').css('display', 'none');
+        btnBack.css('display', 'none');
     } else {
-        $('.btnBack').show();
+        btnBack.show();
     }
 
     if (window.matchMedia("screen and (max-width: 1280px)").matches) {
         console.log("해상도가 1280px 이하입니다");
-        $('body').addClass('mobileType');
+        documentBody.addClass('mobileType');
     } else {
-        $('body').removeClass('mobileType');
+        documentBody.removeClass('mobileType');
     } 
 
     if (window.matchMedia("screen and (max-width: 600px)").matches) {
@@ -79,7 +86,7 @@ $(function () {
         document.getElementById('subUrl').value = window.location.href;
     }
 
-    $('.topArea').on({
+    $(topArea).on({
         "click": function () {
             $('html').animate({ scrollTop: 0 }, 600);
         }
@@ -87,13 +94,13 @@ $(function () {
 
     $('.btnShare').on({
         "click": function () {
-            $('#dimmed').fadeIn();
+            dimmed.fadeIn();
             $('.popup.share').fadeIn();
             popupEscEvent();
         }
     });
 
-    $('#dimmed').on({
+    dimmed.on({
         "click": function () {
             $(this).fadeOut();
             $('.popup').fadeOut();
@@ -102,13 +109,13 @@ $(function () {
 
     $('.btnResult').on({
         "click": function () {
-            $('#frameBody').addClass('show');
-            $('#frameBody').removeClass('hide');
-            if ($('#frameBody').css('display') == 'block') {
-                $('body').css('overflow', 'hidden');
-                $('#toast').fadeIn();
+            frameBody.addClass('show');
+            frameBody.removeClass('hide');
+            if (frameBody.css('display') == 'block') {
+                documentBody.css('overflow', 'hidden');
+                toast.fadeIn();
                 setTimeout(function () {
-                    $('#toast').fadeOut();
+                    toast.fadeOut();
                 }, 4000);
             }
         }
@@ -116,10 +123,10 @@ $(function () {
 
     $('.frameClose').on({
         "click": function () {
-            $('#frameBody').addClass('hide');
-            $('#frameBody').removeClass('show');
-            if ($('#frameBody').css('display') == 'none') {
-                $('body').css('overflow', 'visible');
+            frameBody.addClass('hide');
+            frameBody.removeClass('show');
+            if (frameBody.css('display') == 'none') {
+                documentBody.css('overflow', 'visible');
             }
         }
     });
@@ -159,14 +166,16 @@ $(function () {
     /* prism js 코드 하이라이트 툴팁에 클래스추가 */
     $(tabList).on({
         "click": function () {
+            let tabCont = $(this).parents('.tabNav').siblings('.tabCont');
+
             if ($(this).eq(2).click()) {
-                $(this).parents('.tabNav').siblings('.tabCont').eq(1).find('.toolbar').children('.toolbar-item').last().addClass('scssStyle');
+                tabCont.eq(1).find('.toolbar').children('.toolbar-item').last().addClass('scssStyle');
             }
             if ($(this).eq(3).click()) {
-                $(this).parents('.tabNav').siblings('.tabCont').eq(2).find('.toolbar').children('.toolbar-item').last().addClass('cssStyle');
+                tabCont.eq(2).find('.toolbar').children('.toolbar-item').last().addClass('cssStyle');
             }
             if ($(this).eq(4).click()) {
-                $(this).parents('.tabNav').siblings('.tabCont').eq(3).find('.toolbar').children('.toolbar-item').last().addClass('jsStyle');
+                tabCont.eq(3).find('.toolbar').children('.toolbar-item').last().addClass('jsStyle');
             }
         }
     });
@@ -192,7 +201,7 @@ $(function () {
     // console.log(urlArr);
 
     /* 서브 홈버튼 */
-    $('.btnBack').on({
+    $(btnBack).on({
         "click": function () {
             location.href = urlArr[0] + '/' + 'html/sub_first.html';
         }
@@ -203,14 +212,16 @@ $(function () {
     console.log("히스토리 개수는 " + historyCount + "개 입니다.");
 
     function historyCountCheck() {
+        let backArea = $('.backArea');
+
         if (historyCount == 1) {
-            $('.backArea').css('visibility', 'hidden');
+            backArea.css('visibility', 'hidden');
         } else if (historyCount > 1) {
-            $('.backArea').css('visibility', 'visible');
+            backArea.css('visibility', 'visible');
         }
     }
 
-    if (!$('body').hasClass('mobileType')) {
+    if (!documentBody.hasClass('mobileType')) {
         historyCountCheck();
     }
 
@@ -224,12 +235,13 @@ $(function () {
     $('.boardList .cont.items .li').on({
         "click": function () {
             const liShowHideBox = $(this).next('.listShowHideBox');
+            const boardItemFind = $(this).closest('.li').find('.boardItem');
 
             liShowHideBox.toggleClass('on').stop().slideToggle().siblings('.listShowHideBox').slideUp().removeClass('on');
             if (liShowHideBox.hasClass('on')) {
-                $(this).closest('.li').find('.boardItem').removeClass('underLine');
+                boardItemFind.removeClass('underLine');
             } else if (!liShowHideBox.hasClass('on')) {
-                $(this).closest('.li').find('.boardItem').last().addClass('underLine');
+                boardItemFind.last().addClass('underLine');
             }
         }
     });
@@ -249,10 +261,10 @@ $(function () {
             prevElement.toggleClass('active').siblings('.leftArea').removeClass('active');
             if (prevElement.hasClass('active')) {
                 moveElement.addClass('move');
-                $('body').css('overflow', 'hidden');
+                documentBody.css('overflow', 'hidden');
             } else if (!prevElement.hasClass('active')) {
                 moveElement.removeClass('move');
-                $('body').css('overflow', 'auto');
+                documentBody.css('overflow', 'auto');
             }
         }
     })
@@ -263,22 +275,22 @@ $(function () {
     };
 
     if (!$('#wrap').hasScrollBar() == true) {
-        $('.topArea').css('display', 'none');
+        topArea.css('display', 'none');
     }
 
     /* 스크롤 위치가 맨아래까지 가면 탑버튼 fadeIn */
     $(window).scroll(function () {
         if ($(window).scrollTop() + $(window).height() == $(document).height()) {
-            $('.topArea').fadeIn();
+            topArea.fadeIn();
         } else {
-            $('.topArea').fadeOut();
+            topArea.fadeOut();
         }
     });
 
     /* frameBody esc */
     $(document).on('keyup', function (e) {
         if (e.keyCode == 27) {
-            $('#frameBody').hide();
+            frameBody.attr('class', 'hide');
         }
     });
 
@@ -312,6 +324,20 @@ const fouc = (F) => {
     F.className = F.className.replace(/\bno-display\b/, 'show-display');
     document.documentElement = F;
 };
+
+// $(document).on('keydown', function (e) {
+//     if (e.keyCode == 123) { //f12
+//         return false;
+//     }else if (e.ctrlKey && e.shiftKey && e.keyCode == 73) { //ctrl + shift + i
+//         return false;
+//     }
+// });
+
+// 우클릭 방지
+$(document).on("contextmenu", function (e) {        
+    e.preventDefault();
+    alert("우클릭은 금지되었습니다.");
+});
 
 document.addEventListener('DOMContentLoaded', () => {
     const el = document.documentElement;

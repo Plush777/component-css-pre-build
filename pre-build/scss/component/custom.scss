@@ -9,6 +9,8 @@ border-radius:4px; background:#f5f5f5;
 }
 
 .resultArea .inner .toolTipBox{position: relative; width: 150px; border: 1px solid var(--c-333-white); height: 150px;
+padding: 5px; box-sizing: border-box;
+    p{font-size: 14px; color: var(--c-333-white);}
     &:hover{
         .exTooltip{opacity: 1; visibility: visible;}
     }

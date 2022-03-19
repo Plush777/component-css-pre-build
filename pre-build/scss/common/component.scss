@@ -688,7 +688,7 @@ word-break: break-all !important;}
   .container.hFull{height: 100%;}
   .btnArea{position: fixed; top: 0; right: 0; z-index: 9999;
     .frameClose{position: relative; width: 24px; height: 24px; padding: 18px; box-sizing: border-box;
-    color: #000; border-radius: 0 0 0 5px; background-color: $whiteBg;}
+    color: #000; border-radius: 0 0 0 5px; background-color: $whiteBg; z-index: 10000;}
     svg{position: absolute; top: 7px; left: 7px; width: 24px; height: 24px;}
     &.r20{right: 20px;}
   }

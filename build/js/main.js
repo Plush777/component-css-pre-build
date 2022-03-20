@@ -15,7 +15,7 @@ $(function () {
 
     $('.btnStart').on({
         "click": function (e) {
-            location.href = 'sub_first.html';
+            location.href = 'html/sub_first.html';
         }
     });
 });

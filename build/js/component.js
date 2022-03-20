@@ -198,7 +198,7 @@ $(function () {
 
     let urlState = window.location.pathname;
     let urlArr = urlState.split('/');
-    console.log(urlArr);
+    // console.log(urlArr);
 
     /* 서브 홈버튼 */
     $(btnBack).on({

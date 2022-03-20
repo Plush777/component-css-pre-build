@@ -977,6 +977,7 @@ svg.darkType {
 
 .resultArea .inner .textBox p {
   color: var(--c-333-white);
+  font-family: 'Noto Sans';
 }
 
 .resultArea .inner .textBox p.eps {

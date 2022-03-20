@@ -321,27 +321,18 @@
                 <div class="highlightArea cScroll">
                   <pre>
                               <code class="language-html">
-&lt;div class="resultCont type01"&gt;
-    &lt;div class="titleH3"&gt;
-        &lt;h3&gt;background-size cover&lt;/h3&gt;
-    &lt;/div&gt;
-    &lt;div class="container"&gt;
-        &lt;div class="textBox"&gt;
-            &lt;div class="imgDiv"&gt;&lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class="resultCont type02"&gt;
-    &lt;div class="titleH3"&gt;
-        &lt;h3&gt;background-size 100% 100%&lt;/h3&gt;
-    &lt;/div&gt;
-    &lt;div class="container"&gt;
-        &lt;div class="textBox"&gt;
-            &lt;div class="imgDiv"&gt;&lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
+&lt;div id="wrap"&gt;          
+  &lt;div class="container type01"&gt;
+      &lt;div class="textBox"&gt;
+          &lt;div class="imgDiv"&gt;&lt;/div&gt;
+      &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="container type02"&gt;
+      &lt;div class="textBox"&gt;
+          &lt;div class="imgDiv"&gt;&lt;/div&gt;
+      &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt; 
                               </code>
                             </pre>
                 </div>
@@ -351,16 +342,17 @@
                 <div class="highlightArea cScroll">
                   <pre>
                               <code class="language-scss">
-.resultCont{position: relative;
-    .imgDiv{height: 600px; background-image: url("../images/common/1903x600.png"); background-repeat: no-repeat;}
+.container{
     &.type01{
-        .imgDiv{background-size: cover;}
+      .imgDiv{background-size: cover;}
     }
     &.type02{
         .imgDiv{background-size: 100% 100%;}
     }
-    +.resultCont{margin-top: 50px;}
+    +.container{margin-top: 50px;}
 }
+.imgDiv{height: 600px; background-image: url("../images/common/1903x600.png"); background-repeat: no-repeat;}
+
                               </code>
                           </pre>
                 </div>
@@ -370,26 +362,22 @@
                 <div class="highlightArea cScroll">
                   <pre>
                               <code class="language-css">
-.resultCont {
-    position: relative;
-}
-
-.resultCont .imgDiv {
+.imgDiv {
     height: 600px;
     background-image: url("../images/common/1903x600.png");
     background-repeat: no-repeat;
 }
 
-.resultCont.type01 .imgDiv {
+.container.type01 .imgDiv {
     background-size: cover;
 }
 
-.resultCont.type02 .imgDiv {
+.container.type02 .imgDiv {
     background-size: 100% 100%;
 }
 
-.resultCont + .resultCont {
-    margin-top: 50px;
+.container + .container {
+  margin-top: 50px;
 }
                               </code>
                             </pre>
@@ -397,7 +385,7 @@
               </div>
             </div>
             <div class="btnArea sb">
-              <a href="/images/common/1903x600.png" download="layout-bg-image-img" title="파일 다운로드" class="button Bgblue btnDataDownload">
+              <a href="../../images/common/1903x600.png" download="layout-bg-image-img" title="파일 다운로드" class="button Bgblue btnDataDownload">
                 <span>다운로드</span>
                 <svg width="24px" height="24px" version="1.1" viewBox="0 0 700 700">
                   <g>

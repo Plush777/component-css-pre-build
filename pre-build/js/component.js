@@ -198,7 +198,7 @@ $(function () {
 
     let urlState = window.location.pathname;
     let urlArr = urlState.split('/');
-    // console.log(urlArr);
+    console.log(urlArr);
 
     /* 서브 홈버튼 */
     $(btnBack).on({
@@ -329,6 +329,12 @@ const fouc = (F) => {
 //     if (e.keyCode == 123) { //f12
 //         return false;
 //     }else if (e.ctrlKey && e.shiftKey && e.keyCode == 73) { //ctrl + shift + i
+//         return false;
+//     }else if (e.ctrlKey && e.shiftKey && e.keyCode == 74) { //ctrl + shift + j
+//         return false;
+//     }else if (e.ctrlKey && e.keyCode == 85) { //ctrl + u
+//         return false;
+//     }else if (e.ctrlKey && e.shiftKey && e.keyCode == 67) { //ctrl + shift + c
 //         return false;
 //     }
 // });

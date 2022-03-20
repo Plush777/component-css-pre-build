@@ -436,8 +436,10 @@
                 <div class="highlightArea cScroll">
                   <pre>
                     <code class="language-html">
-&lt;div id="exToast"&gt;
-  &lt;span&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit.&lt;/span&gt;
+&lt;div id="wrap"&gt;                     
+  &lt;div id="exToast"&gt;
+    &lt;span&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit.&lt;/span&gt;
+  &lt;/div&gt;
 &lt;/div&gt;
                     </code>
                   </pre>
@@ -464,7 +466,7 @@
                 <div class="highlightArea cScroll">
                   <pre>
                     <code class="language-css">
-.wrap #exToast {
+#exToast {
   display: none;
   position: fixed;
   top: 50px;
@@ -480,7 +482,7 @@
   background-color: rgba(0, 0, 0, 0.65);
 }
 
-.wrap #exToast span {
+#exToast span {
   display: block;
   text-align: center;
   font-size: 14px;
@@ -496,24 +498,11 @@
                 <div class="highlightArea cScroll">
                   <pre>
                     <code class="language-javascript">
-$(document).ready(function(){
-
-/* 클릭했을 때 토스트 팝업이 뜰 경우 
-$('').on({
-"click":function(){
+$(function(){
   $('#exToast').fadeIn();
   setTimeout(function(){
-      $('#exToast').fadeOut();
+    $('#exToast').fadeOut();
   },4000);
-}
-});
-*/
-
-$('#exToast').fadeIn();
-setTimeout(function(){
-$('#exToast').fadeOut();
-},4000);
-
 });
                     </code>
                   </pre>

@@ -321,14 +321,12 @@
                 <div class="highlightArea cScroll">
                   <pre>
                         <code class="language-html">
-&lt;div class="wrap"&gt;
-    &lt;div class="container"&gt;
-        &lt;div class="resultCont"&gt;
-            &lt;div class="rotateBox degType01"&gt;&lt;/div&gt;
-            &lt;div class="rotateBox degType02"&gt;&lt;/div&gt;
-            &lt;div class="rotateBox degType03"&gt;&lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
+&lt;div id="wrap"&gt;
+  &lt;div class="resultCont"&gt;
+      &lt;div class="rotateBox degType01"&gt;&lt;/div&gt;
+      &lt;div class="rotateBox degType02"&gt;&lt;/div&gt;
+      &lt;div class="rotateBox degType03"&gt;&lt;/div&gt;
+  &lt;/div&gt;
 &lt;/div&gt;
                         </code>
                     </pre>
@@ -339,7 +337,7 @@
                 <div class="highlightArea cScroll">
                   <pre>
                         <code class="language-scss">
-.wrap .resultCont{display: flex; justify-content: space-around; padding: 60px 20px 20px 20px;}
+#wrap .resultCont{display: flex; justify-content: space-around; padding: 60px 20px 20px 20px;}
 .rotateBox{width: 200px; height: 200px; transition: 1s;
 border: 1px solid $blackBg; background-color: $dddBg;
     &.degType01:hover{transform: rotate(45deg);}
@@ -355,7 +353,7 @@ border: 1px solid $blackBg; background-color: $dddBg;
                 <div class="highlightArea cScroll">
                   <pre>
                         <code class="language-css">
-.wrap .resultCont {
+#wrap .resultCont {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -364,7 +362,7 @@ border: 1px solid $blackBg; background-color: $dddBg;
     padding: 60px 20px 20px 20px;
 }
 
-.wrap .rotateBox {
+#wrap .rotateBox {
     width: 200px;
     height: 200px;
     -webkit-transition: 1s;
@@ -373,17 +371,17 @@ border: 1px solid $blackBg; background-color: $dddBg;
     background-color: #ddd;
 }
 
-.wrap .rotateBox.degType01:hover {
+#wrap .rotateBox.degType01:hover {
     -webkit-transform: rotate(45deg);
             transform: rotate(45deg);
 }
 
-.wrap .rotateBox.degType02:hover {
+#wrap .rotateBox.degType02:hover {
     -webkit-transform: rotate(0.5turn);
             transform: rotate(0.5turn);
 }
 
-.wrap .rotateBox.degType03:hover {
+#wrap .rotateBox.degType03:hover {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
 }

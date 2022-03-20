@@ -434,19 +434,20 @@
                 <div class="highlightArea cScroll">
                   <pre>
                               <code class="language-html">
-&lt;div class="tabWrap typeEx"&gt;
-    &lt;div class="tabNav"&gt;
-        &lt;ul class="tabList"&gt;
-            &lt;li class="active"&gt;Tab1&lt;/li&gt;
-            &lt;li&gt;Tab2&lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;/div&gt;
-    &lt;div class="tabCont active"&gt;
-        contents 1
-    &lt;/div&gt;
-    &lt;div class="tabCont"&gt;
-        contents 2
-    &lt;/div&gt;
+&lt;div id="wrap"&gt;
+  &lt;div class="tabWrap"&gt;
+      &lt;div class="tabNav"&gt;
+          &lt;ul class="tabList"&gt;
+              &lt;li class="active"&gt;Tab1&lt;/li&gt;
+              &lt;li&gt;Tab2&lt;/li&gt;
+          &lt;/ul&gt;
+      &lt;/div&gt;
+      &lt;div class="tabCont active"&gt;
+        &lt;p&gt;contents 1&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="tabCont"&gt;
+        &lt;p&gt;contents 2&lt;/p&gt;
+      &lt;/div&gt;
 &lt;/div&gt;
                               </code>
                             </pre>
@@ -462,19 +463,16 @@
         &.active{display: block;}
     }
     .tabNav .tabList{display: flex;}
-    
-    &.typeEx{
-        >.tabNav{
-            >.tabList{display: flex;border: 1px solid #ddd; border-radius: 4px; font-size: 16px; color: #222;
-                >li{position: relative; flex: 1; height: 50px; line-height: 50px; padding: 0 10px; cursor: pointer; 
-                box-sizing: border-box; text-align: center; background-color: #fff; font-family: 'Noto sans';
-                    &.active{border-radius: 4px 0 0 4px; font-weight: bold;color: #fff;background-color: #266bf7;
-                        &:last-child{border-radius: 0 4px 4px 0;}
-                    }
-                }
-            }
-        }
-    }
+      >.tabNav{
+          >.tabList{display: flex;border: 1px solid #ddd; border-radius: 4px; font-size: 16px; color: #222;
+              >li{position: relative; flex: 1; height: 50px; line-height: 50px; padding: 0 10px; cursor: pointer; 
+              box-sizing: border-box; text-align: center; background-color: #fff; font-family: 'Noto sans';
+                  &.active{border-radius: 4px 0 0 4px; font-weight: bold;color: #fff;background-color: #266bf7;
+                      &:last-child{border-radius: 0 4px 4px 0;}
+                  }
+              }
+          }
+      }
 }
                               </code>
                           </pre>
@@ -497,7 +495,7 @@
     display: flex;
 }
 
-.tabWrap.typeEx > .tabNav > .tabList {
+.tabWrap > .tabNav > .tabList {
     display: flex;
     border: 1px solid #ddd;
     border-radius: 4px;
@@ -505,7 +503,7 @@
     color: #222;
 }
 
-.tabWrap.typeEx > .tabNav > .tabList > li {
+.tabWrap > .tabNav > .tabList > li {
     position: relative;
     flex: 1;
     height: 50px;
@@ -518,14 +516,14 @@
     font-family: 'Noto sans';
 }
 
-.tabWrap.typeEx > .tabNav > .tabList > li.active {
+.tabWrap > .tabNav > .tabList > li.active {
     border-radius: 4px 0 0 4px;
     font-weight: bold;
     color: #fff;
     background-color: #266bf7;
 }
 
-.tabWrap.typeEx > .tabNav > .tabList > li.active:last-child {
+.tabWrap > .tabNav > .tabList > li.active:last-child {
     border-radius: 0 4px 4px 0;
 }
                               </code>
@@ -537,12 +535,14 @@
                 <div class="highlightArea cScroll">
                   <pre>
                               <code class="language-javascript">
-$('.tabList li').on({
-  "click":function(){
-    $(this).addClass('active').siblings('li').removeClass('active');
-    $(this).closest('.tabNav').siblings('.tabCont').eq($(this).index()).addClass('active').siblings('.tabCont').removeClass('active');
-  }
-})
+$(function(){
+  $('.tabList li').on({
+    "click":function(){
+      $(this).addClass('active').siblings('li').removeClass('active');
+      $(this).closest('.tabNav').siblings('.tabCont').eq($(this).index()).addClass('active').siblings('.tabCont').removeClass('active');
+    }
+  })
+});
                               </code>
                             </pre>
                 </div>

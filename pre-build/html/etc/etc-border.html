@@ -321,13 +321,11 @@
                 <div class="highlightArea cScroll">
                   <pre>
                         <code class="language-html">
-&lt;div class="resultCont"&gt;
-    &lt;div class="contArea"&gt;
-        &lt;div class="borderArea"&gt;
-            &lt;span class="centerBd"&gt;가운데 보더 애니메이션&lt;/span&gt;
-            &lt;span class="rightBd"&gt;오른쪽 보더 애니메이션&lt;/span&gt;
-            &lt;span class="leftBd"&gt;왼쪽 보더 애니메이션&lt;/span&gt;
-        &lt;/div&gt;
+&lt;div id="wrap"&gt;
+    &lt;div class="borderArea"&gt;
+        &lt;span class="centerBd"&gt;가운데 보더 애니메이션&lt;/span&gt;
+        &lt;span class="rightBd"&gt;오른쪽 보더 애니메이션&lt;/span&gt;
+        &lt;span class="leftBd"&gt;왼쪽 보더 애니메이션&lt;/span&gt;
     &lt;/div&gt;
 &lt;/div&gt;
                         </code>
@@ -359,7 +357,7 @@
                 <div class="highlightArea cScroll">
                   <pre>
                         <code class="language-css">
-.wrap .borderArea {
+.borderArea {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -372,7 +370,7 @@
             align-items: center;
 }
 
-.wrap .borderArea span {
+.borderArea span {
     display: inline-block;
     font-family: 'Noto Sans';
     font-size: 1.5em;
@@ -380,7 +378,7 @@
     text-transform: uppercase;
 }
 
-.wrap .borderArea span:after {
+.borderArea span:after {
     content: '';
     display: inherit;
     border-bottom: 2px solid #000;
@@ -390,22 +388,22 @@
     transition: .5s;
 }
 
-.wrap .borderArea span.leftBd:after {
+.borderArea span.leftBd:after {
     -webkit-transform-origin: 0% 50%;
             transform-origin: 0% 50%;
 }
 
-.wrap .borderArea span.rightBd:after {
+.borderArea span.rightBd:after {
     -webkit-transform-origin: 100% 50%;
             transform-origin: 100% 50%;
 }
 
-.wrap .borderArea span:hover:after {
+.borderArea span:hover:after {
     -webkit-transform: scaleX(1);
             transform: scaleX(1);
 }
 
-.wrap .borderArea span + span {
+.borderArea span + span {
     margin-top: 30px;
 }
                         </code>

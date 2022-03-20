@@ -322,14 +322,12 @@
                 <div class="highlightArea cScroll">
                   <pre>
                         <code class="language-html">
-&lt;div class="wrap"&gt;
-    &lt;div class="container"&gt;
-        &lt;div class="btnArea"&gt;
-            &lt;button type="button" class="arrowTop"&gt;
-                &lt;span class="hidden"&gt;상단으로 가기&lt;/span&gt;
-            &lt;/button&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
+&lt;div id="wrap"&gt;
+  &lt;div class="btnArea"&gt;
+      &lt;button type="button" class="arrowTop"&gt;
+          &lt;span class="hidden"&gt;상단으로 가기&lt;/span&gt;
+      &lt;/button&gt;
+  &lt;/div&gt;
 &lt;/div&gt;
                         </code>
                     </pre>
@@ -340,7 +338,7 @@
                 <div class="highlightArea cScroll">
                   <pre>
                         <code class="language-scss">
-.wrap{
+#wrap{
     .btnArea{position: fixed; bottom: 20px; right: 20px;
         .arrowTop{width: 45px; height: 45px; border-radius: 50%; background-image: url("../../images/ico/ico-top-button-w.png"); 
         background-repeat: no-repeat; background-position: center; background-color: $_222Bg;}
@@ -355,13 +353,13 @@
                 <div class="highlightArea cScroll">
                   <pre>
                         <code class="language-css">
-.wrap .btnArea {
+#wrap .btnArea {
     position: fixed;
     bottom: 20px;
     right: 20px;
 }
     
-.wrap .btnArea .arrowTop {
+#wrap .btnArea .arrowTop {
     width: 45px;
     height: 45px;
     border-radius: 50%;
@@ -392,7 +390,7 @@ $(function(){
               </div>
             </div>
             <div class="btnArea sb">
-              <a href="/images/ico/ico-top.svg" download="etc-top-button-img" title="파일 다운로드" class="button Bgblue btnDataDownload">
+              <a href="../../images/ico/ico-top.svg" download="etc-top-button-img" title="파일 다운로드" class="button Bgblue btnDataDownload">
                 <span>다운로드</span>
                 <svg width="24px" height="24px" version="1.1" viewBox="0 0 700 700">
                   <g>

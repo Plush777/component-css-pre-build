@@ -436,19 +436,24 @@
                 <div class="highlightArea cScroll">
                   <pre>
                     <code class="language-html">
-&lt;div class="popup"&gt;
-&lt;div class="head"&gt;
-&lt;p&gt;Title&lt;/p&gt;
-&lt;button type="button" class="btnClose"&gt;
-  &lt;span class="hidden"&gt;팝업 닫기&lt;/span&gt;
-&lt;/button&gt;
+&lt;div id="wrap"&gt;                      
+  &lt;div class="popup"&gt;
+    &lt;div class="head"&gt;
+      &lt;p&gt;Title&lt;/p&gt;
+      &lt;button type="button" class="btnClose"&gt;
+      &lt;svg id="_16_x" data-name="16 / x" width="22" height="22" viewBox="0 0 16 16"&gt;
+        &lt;path id="icon" d="M5.707,7.121,1.414,11.414,0,10,4.293,5.707,0,1.414,1.414,0,5.707,4.293,10,0l1.414,1.414L7.121,5.707,11.414,10,10,11.414,5.707,7.121Z" transform="translate(2.293 2.293)"&gt;</path>
+      &lt;/svg&gt;
+        &lt;span class="hidden"&gt;팝업 닫기&lt;/span&gt;
+      &lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class="cont"&gt;
+      &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur molestias perferendis dolore sapiente? Voluptas eum temporibus dolorem eius, sapiente maxime, fuga minus repellendus eveniet unde quia quis officiis fugiat dicta.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="exDimmed"&gt;&lt;/div&gt;
+  &lt;button type="button" class="btnShowHide"&gt;팝업 열기&lt;/button&gt;
 &lt;/div&gt;
-&lt;div class="cont"&gt;
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur molestias perferendis dolore sapiente? Voluptas eum temporibus dolorem eius, sapiente maxime, fuga minus repellendus eveniet unde quia quis officiis fugiat dicta.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="exDimmed"&gt;&lt;/div&gt;
-&lt;button type="button" class="btnShowHide"&gt;팝업 열기&lt;/button&gt;
                     </code>
                   </pre>
                 </div>
@@ -458,24 +463,21 @@
                 <div class="highlightArea cScroll">
                   <pre>
                     <code class="language-scss">
-$c333 : #333 !default;
-$cfff : #fff !default;
-$d-fz : 'Noto Sans';
-$blueBg : #266bf7;
-
-.wrap{position: relative;
+#wrap{position: relative;
   .popup{position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 10000; box-shadow: 0px 0px 8px rgba($color: #000, $alpha: 0.35); display: none; width: 300px; border-radius: 4px;
   .head{height: 50px; line-height: 50px; padding: 0 15px; box-sizing: border-box; border-radius: 4px 4px 0 0;
-  color: $cfff; font-family: $d-fz; font-size: 16px; background-color: $blueBg;
-    .btnClose{position: absolute; top: 17px; right: 15px; width: 21px; height: 21px; background: url("../../images/ico/ico-pop-close.png") no-repeat center;}
+  color: $cfff; font-family: $d-fz; font-size: 1em; background-color: $blueBg;
+    .btnClose{position: absolute; top: 5px; right: 10px; color: #fff;
+      svg{fill: currentColor;}
+    }
 }
 .cont{padding: 20px; box-sizing: border-box; border-radius: 0 0 4px 4px; 
-font-family: $d-fz; font-size: 14px; background-color: $whiteBg;}
+font-family: $d-fz; font-size: 0.88em; background-color: $whiteBg;}
 }
 
 .btnShowHide{position: absolute; top: 620px; left: 50%; transform: translateX(-50%); display: flex; align-items: center; 
 justify-content: center; height: 50px; line-height: 50px;padding: 0 20px; box-sizing: border-box; border-radius: 4px; 
-font-family: $d-fz; font-size: 16px; color: $cfff; background-color: $blueBg;}
+font-family: $d-fz; font-size: 1em; color: $cfff; background-color: $blueBg;}
 .exDimmed{display: none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0, 0, 0,0.6);}
 }
                     </code>
@@ -487,11 +489,11 @@ font-family: $d-fz; font-size: 16px; color: $cfff; background-color: $blueBg;}
                 <div class="highlightArea cScroll">
                   <pre>
                     <code class="language-css">
-.wrap {
+#wrap {
   position: relative;
 }
 
-.wrap .popup {
+#wrap .popup {
   display: none;
   position: fixed; 
   top: 50%; 
@@ -505,7 +507,7 @@ font-family: $d-fz; font-size: 16px; color: $cfff; background-color: $blueBg;}
   z-index: 10000;
 }
 
-.wrap .popup .head {
+#wrap .popup .head {
   height: 50px;
   line-height: 50px;
   padding: 0 15px;
@@ -514,30 +516,32 @@ font-family: $d-fz; font-size: 16px; color: $cfff; background-color: $blueBg;}
   border-radius: 4px 4px 0 0;
   color: #fff;
   font-family: "Noto Sans";
-  font-size: 16px;
+  font-size: 1em;
   background-color: #266bf7;
 }
 
-.wrap .popup .head .btnClose {
+#wrap .popup .head .btnClose {
   position: absolute;
-  top: 17px;
-  right: 15px;
-  width: 21px;
-  height: 21px;
-  background: url("../../images/ico/ico-pop-close.png") no-repeat center;
+  top: 5px;
+  right: 10px;
+  color: #fff;
 }
 
-.wrap .popup .cont {
+#wrap .popup .head .btnClose svg {
+  fill: currentColor;
+}
+
+#wrap .popup .cont {
   padding: 20px;
   -webkit-box-sizing: border-box;
       box-sizing: border-box;
   border-radius: 0 0 4px 4px;
   font-family: "Noto Sans";
-  font-size: 14px;
+  font-size: 0.88em;
   background-color: #fff;
 }
 
-.wrap .btnShowHide {
+#wrap .btnShowHide {
   position: absolute;
   top: 620px;
   left: 50%;
@@ -559,12 +563,12 @@ font-family: $d-fz; font-size: 16px; color: $cfff; background-color: $blueBg;}
       box-sizing: border-box;
   border-radius: 4px;
   font-family: "Noto Sans";
-  font-size: 16px;
+  font-size: 1em;
   color: #fff;
   background-color: #266bf7;
 }
 
-.wrap .exDimmed {
+#wrap .exDimmed {
   display: none;
   position: fixed;
   z-index: 9999;
@@ -583,8 +587,8 @@ font-family: $d-fz; font-size: 16px; color: $cfff; background-color: $blueBg;}
                 <div class="highlightArea cScroll">
                   <pre>
                     <code class="language-javascript">
-$(document).ready(function(){
-    $('.wrap .btnShowHide').on({
+$(function(){
+    $('.btnShowHide').on({
         "click":function(){
             $('.popup').show();
             $('.exDimmed').show();
@@ -604,7 +608,7 @@ $(document).ready(function(){
               </div>
             </div>
             <div class="btnArea sb">
-              <a href="/images/ico/ico-close.svg" download="popup-popup-showhide-img" title="파일 다운로드" class="button Bgblue btnDataDownload">
+              <a href="../../images/ico/ico-close.svg" download="popup-popup-showhide-img" title="파일 다운로드" class="button Bgblue btnDataDownload">
                 <span>다운로드</span>
                 <svg width="24px" height="24px" version="1.1" viewBox="0 0 700 700">
                   <g>

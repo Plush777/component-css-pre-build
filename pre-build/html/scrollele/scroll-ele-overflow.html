@@ -320,8 +320,10 @@
                 <div class="highlightArea cScroll">
                   <pre>
                               <code class="language-html">
-&lt;div class="exBox overflow-y"&gt;
-    &lt;div class="overflowDiv"&gt;&lt;/div&gt;
+&lt;div id="wrap"&gt;                                
+  &lt;div class="exBox"&gt;
+      &lt;div class="overflowDiv"&gt;&lt;/div&gt;
+  &lt;/div&gt;
 &lt;/div&gt;
                               </code>
                             </pre>
@@ -332,7 +334,7 @@
                 <div class="highlightArea cScroll">
                   <pre>
                               <code class="language-scss">
-.exBox{border: 1px solid #222; height: 150px;
+.exBox{border: 1px solid #222; height: 150px; overflow-y: auto;
   .overflowDiv{width: 100%; height: 200px;}
 }   
                               </code>
@@ -347,6 +349,7 @@
 .exBox {
   border: 1px solid #222;
   height: 150px;
+  overflow-y: auto;
 }
 
 .exBox .overflowDiv {

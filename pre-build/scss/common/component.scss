@@ -82,6 +82,8 @@ body{
   --primary: #266bf7;
   --primary-type02: #266bf7;
   --primary-type03: #1694d2;
+  --primary-shadow: rgba(49, 132, 253, 0.5);
+  --primary-hover: #0d61e0;
   --black-white: #000;
   --white-black21: #fff;
   --c-333-white: #333;
@@ -136,6 +138,8 @@ body[data-theme='light']{
   --primary: #266bf7;
   --primary-type02: #266bf7;
   --primary-type03: #1694d2;
+  --primary-shadow: rgba(49, 132, 253, 0.5);
+  --primary-hover: #0d61e0;
   --black-white: #000;
   --white-black21: #fff;
   --c-333-white: #333;
@@ -190,6 +194,8 @@ body[data-theme='dark']{
   --primary: #2196F3;
   --primary-type02: rgba(89,148,241,1);
   --primary-type03: rgba(149,196,232,1);
+  --primary-shadow: rgba(2, 72, 174, 0.5);
+  --primary-hover: #1e83d6;
   --black-white: #fff;
   --white-black21: #212121;
   --c-333-white: #fff;
@@ -578,7 +584,7 @@ a{
 }
 
 .button{display: flex; align-items: center; justify-content: center; height: 34px; line-height: 34px;
-padding: 0 10px; box-sizing: border-box; border-radius: 4px; font-family: $d-fz;
+padding: 0 10px; box-sizing: border-box; border-radius: 4px; font-family: $d-fz; transition: .3s;
 font-size: 14px; color: $cfff;
   &.btnResult{
     span{margin-right: 7px;}
@@ -586,7 +592,9 @@ font-size: 14px; color: $cfff;
   }
   &.w75{min-width: 75px;}
   &.type01{padding: 0 10px 0 5px;}
-  &.Bgblue{background-color: var(--primary);}
+  &.Bgblue{background-color: var(--primary);
+    &:focus{box-shadow: 0 0 0 4px var(--primary-shadow)}}
+    &:hover{background-color: var(--primary-hover);}
 }
 
 .btnArea{position: relative; display: flex;

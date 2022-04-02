@@ -263,8 +263,8 @@ svg{fill: currentColor;
   .mainTxt{color: var(--d-c-text);}
   &.main{position: relative; transition: .5s; background-color: #4e4e4e;
     .logo a{display: block; width: 800px; height: 136px; transition: .5s ease-in-out;
-    background: url("../../images/common/main-logo-g.png")no-repeat center;
-      &.change{background: url("../../images/common/main-logo-w.png")no-repeat center;}
+    background: url("../../images/common/main-logo-g.png") no-repeat center;
+      &.change{background: url("../../images/common/main-logo-w.png") no-repeat center;}
     } 
     .centerArea{position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); text-align: center;}
     .btnStart{position: relative; display: inline-block; width: 170px; height: 56px; box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);

@@ -130,6 +130,8 @@ body {
   --primary: #266bf7;
   --primary-type02: #266bf7;
   --primary-type03: #1694d2;
+  --primary-shadow: rgba(49, 132, 253, 0.5);
+  --primary-hover: #0d61e0;
   --black-white: #000;
   --white-black21: #fff;
   --c-333-white: #333;
@@ -177,6 +179,8 @@ body[data-theme='light'] {
   --primary: #266bf7;
   --primary-type02: #266bf7;
   --primary-type03: #1694d2;
+  --primary-shadow: rgba(49, 132, 253, 0.5);
+  --primary-hover: #0d61e0;
   --black-white: #000;
   --white-black21: #fff;
   --c-333-white: #333;
@@ -224,6 +228,8 @@ body[data-theme='dark'] {
   --primary: #2196F3;
   --primary-type02: rgba(89,148,241,1);
   --primary-type03: rgba(149,196,232,1);
+  --primary-shadow: rgba(2, 72, 174, 0.5);
+  --primary-hover: #1e83d6;
   --black-white: #fff;
   --white-black21: #212121;
   --c-333-white: #fff;
@@ -1348,6 +1354,8 @@ a.mail {
           box-sizing: border-box;
   border-radius: 4px;
   font-family: "Noto Sans";
+  -webkit-transition: .3s;
+  transition: .3s;
   font-size: 14px;
   color: #fff;
 }
@@ -1371,6 +1379,15 @@ a.mail {
 
 .button.Bgblue {
   background-color: var(--primary);
+}
+
+.button.Bgblue:focus {
+  -webkit-box-shadow: 0 0 0 4px var(--primary-shadow);
+          box-shadow: 0 0 0 4px var(--primary-shadow);
+}
+
+.button:hover {
+  background-color: var(--primary-hover);
 }
 
 .btnArea {

@@ -322,7 +322,7 @@
         &:hover{
             &:before{transform: scaleX(1);}
             span{color: $c333;
-                &:after{background: url("../../images/ico/ico-arrow-right-bk-shw.png")no-repeat center;}
+                &:after{background: url("../../images/ico/ico-arrow-right-bk-shw.png") no-repeat center;}
             }
         }
     }

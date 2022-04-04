@@ -11,9 +11,181 @@
     <title>Component css</title>
 </head>
 
-<body>
-    <div id="wrap" class="main" style="background-color: #fff;">
-        <div id="header"></div>
+<body style="background-color: #fff; ">
+    <div id="wrap" class="main">
+        <header id="header">
+            <div class="inner">
+                <div class="logoArea">
+                    <h1>
+                        <a href="index.html">
+                            <img src="../images/common/logo.png" alt="component CSS" title="component CSS">
+                        </a>
+                    </h1>
+                </div>
+                <nav class="menuArea">
+                    <ul>
+                        <li>
+                            <a href="../html/sub_first.html">Introduction</a>
+                        </li>
+                        <li>
+                            <a href="#">Guides</a>
+                        </li>
+                        <li>
+                            <a href="#">More</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="mobileSide">
+                    <button type="button" class="btnMobileMenu">
+                        <svg width="24" height="15" viewBox="0 0 28.579 19.052">
+                            <path id="bar" d="M4.5,24.877H33.079v3.175H4.5Zm0-7.939H33.079v3.175H4.5ZM4.5,9H33.079v3.175H4.5Z" transform="translate(-4.5 -9)" fill-rule="evenodd"/>
+                          </svg>
+                        <span class="hidden">모바일 메뉴</span>
+                    </button>
+                </div>
+            </div>
+        </header>
+        <nav id="sideBar">
+            <div class="head">
+                <svg class="sideBarClose" width="18" height="18" viewBox="0 0 21 21">
+                    <path id="Icon_material-close" data-name="Icon material-close" d="M28.5,9.615,26.385,7.5,18,15.885,9.615,7.5,7.5,9.615,15.885,18,7.5,26.385,9.615,28.5,18,20.115,26.385,28.5,28.5,26.385,20.115,18Z" transform="translate(-7.5 -7.5)"/>
+                </svg>
+            </div>
+            <ul>
+                <li>
+                    <a href="">Introduction</a>
+                </li>
+                <li>
+                    <a href="">Guides</a>
+                </li>
+                <li>
+                    <a href="">More</a>
+                </li>
+            </ul>
+        </nav>
+        <div id="visualArea">
+            <div class="inner">
+                <div class="centerTxt">
+                    <h1>
+                        <p>개발자 여러분들을 위한</p>
+                        <p><em>CSS</em> 코드들을 여기서 만나보세요!</p>
+                    </h1>
+                    <div class="flex jc">
+                        <button type="button" class="btnStarted">시작하기
+                            <svg width="12" height="12" viewBox="0 0 12 12">
+                                <path id="패스_1" data-name="패스 1" d="M7.23,1A.374.374,0,0,0,7.106.721L6.485.12a.4.4,0,0,0-.572,0L.124,5.723a.37.37,0,0,0,0,.553l5.789,5.6a.4.4,0,0,0,.572,0l.621-.6a.37.37,0,0,0,0-.553L2.223,6,7.106,1.274A.374.374,0,0,0,7.23,1ZM12,1a.374.374,0,0,0-.124-.277l-.621-.6a.4.4,0,0,0-.572,0l-5.789,5.6a.37.37,0,0,0,0,.553l5.789,5.6a.4.4,0,0,0,.572,0l.621-.6a.37.37,0,0,0,0-.553L6.994,6l4.882-4.726A.374.374,0,0,0,12,1Z" transform="translate(12 12) rotate(180)"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>     
+            </div>
+        </div>
+        
+        <main class="mainContainer">
+            <div class="introArea">
+                <h2>
+                    <strong>Coding of Happiness</strong>
+                </h2>
+                <div class="desc">
+                    <p>여러가지 구성요소들의 CSS 코드를 제공하며, <br/>더 나아가 CSS 뿐이아닌 HTML , SCSS , Javascript 코드 까지 제공합니다.</p>
+                </div>
+            </div>
+            <section class="section">
+                <div class="lt">
+                    <div class="titArea">
+                        <h3>Immediate use</h3>
+                    </div>
+                    <div class="bottomTxt">
+                        <p>원하는 구성요소의 코드들을 복사하고,<br/>본인 프로젝트에 코드를 붙여넣어서 바로 사용하세요.</p>
+                    </div>
+                </div>
+                <div class="rt">
+                    <div class="imgBox">
+                        <img src="../images/common/img-dummy02.png" alt="첫번째 더미 이미지">
+                    </div>
+                </div>
+            </section>
+
+            <section class="section reverse">
+                <div class="lt">
+                    <div class="imgBox">
+                        <img src="../images/common/img-dummy03.png" alt="두번째 더미 이미지">
+                    </div>
+                </div>
+                <div class="rt">
+                    <div class="titArea">
+                        <h3>All browsers</h3>
+                    </div>
+                    <div class="bottomTxt">
+                        <p>IE를 제외한 모든 최신 브라우저에서<br/>작동합니다. 안심하고 사용하세요!</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="lt">
+                    <div class="titArea">
+                        <h3>Many components</h3>
+                    </div>
+                    <div class="bottomTxt">
+                        <p>총 43개의 컴포넌트들이 기록되어 있습니다.<br/>원하는 것을 골라서 사용하세요!</p>
+                    </div>
+                </div>
+                <div class="rt">
+                    <div class="imgBox">
+                        <img src="../images/common/img-dummy04.png" alt="세번째 더미 이미지">
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer id="footer">
+            <div class="inner">
+                <div class="bottomLogo">
+                    <a href="index.html">
+                        <img src="../images/common/logo.png" alt="component CSS" title="component CSS">
+                    </a>
+                </div>
+                <div class="info">
+                    <ul>
+                        <li>
+                            <a href="../html/sub_first.html">사이트 소개</a>
+                        </li>
+                        <li>
+                            <a href="#">가이드</a>
+                        </li>
+                        <li>
+                            <a href="mailto:sky11916@naver.com">문의</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="social">
+                    <ul>
+                        <li>
+                            <a href="https://github.com/Plush777/component-css" title="Github">
+                                <svg width="18.857" height="18.391" viewBox="0 0 18.857 18.391">
+                                    <path id="github" d="M12.429,3A9.429,9.429,0,0,0,9.447,21.375c.471.082.647-.2.647-.449,0-.223-.012-.965-.012-1.756-2.368.437-2.981-.577-3.17-1.108a3.435,3.435,0,0,0-.966-1.332c-.33-.176-.8-.613-.012-.624a1.887,1.887,0,0,1,1.45.966,2.015,2.015,0,0,0,2.746.778,1.983,1.983,0,0,1,.6-1.261c-2.1-.236-4.29-1.049-4.29-4.656A3.671,3.671,0,0,1,7.408,9.4,3.388,3.388,0,0,1,7.5,6.9s.789-.247,2.593.967a8.885,8.885,0,0,1,4.714,0C16.613,6.641,17.4,6.9,17.4,6.9A3.388,3.388,0,0,1,17.5,9.4a3.648,3.648,0,0,1,.966,2.533c0,3.619-2.2,4.42-4.3,4.656a2.233,2.233,0,0,1,.637,1.744c0,1.261-.012,2.274-.012,2.593,0,.247.177.541.649.447A9.433,9.433,0,0,0,12.429,3Z" transform="translate(-3 -3)" fill-rule="evenodd"/>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="Discord">
+                                <svg width="17.632" height="19.537" viewBox="0 0 17.632 19.537">
+                                    <path id="discord" d="M17.264,0a2.142,2.142,0,0,1,2.122,2.015V19.537l-2.179-1.851L16.01,16.6,14.7,15.459l.545,1.8H3.823a2.02,2.02,0,0,1-2.068-2.016V2.019A2.061,2.061,0,0,1,3.826,0H17.258Zm-4.98,4.626h-.024l-.164.163A6.563,6.563,0,0,1,14.6,6.04a8.862,8.862,0,0,0-3.048-.926,8.358,8.358,0,0,0-2.015,0H9.373a7.253,7.253,0,0,0-2.287.6c-.38.165-.6.274-.6.274A5.806,5.806,0,0,1,9.1,4.735l-.11-.11A4.89,4.89,0,0,0,6.16,5.659a12.739,12.739,0,0,0-1.47,5.715,3.552,3.552,0,0,0,3.047,1.47s.326-.434.656-.816a3.221,3.221,0,0,1-1.742-1.143,2.718,2.718,0,0,1,.273.163h.049a.064.064,0,0,1,.049.024v0a.062.062,0,0,0,.049.024c.269.111.537.22.757.326a6.659,6.659,0,0,0,1.465.436,8.353,8.353,0,0,0,2.613,0,7.579,7.579,0,0,0,1.465-.435,11.762,11.762,0,0,0,1.137-.6,3.235,3.235,0,0,1-1.8,1.143c.269.379.647.814.647.814a4.249,4.249,0,0,0,3.15-1.405,12.712,12.712,0,0,0-1.478-5.715,4.9,4.9,0,0,0-2.8-1.026l.046-.016Zm.137,3.593A1.09,1.09,0,1,1,11.387,9.31a1.062,1.062,0,0,1,1.034-1.091Zm-3.7,0A1.09,1.09,0,1,1,7.685,9.31,1.06,1.06,0,0,1,8.722,8.219Z" transform="translate(-1.755)" fill="#222"/>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="Instagram">
+                                <svg width="18.859" height="18.858" viewBox="0 0 18.859 18.858">
+                                    <path id="instagram" d="M12.429,3c-2.561,0-2.881.011-3.887.057A6.939,6.939,0,0,0,6.253,3.5,4.819,4.819,0,0,0,3.495,6.253a6.952,6.952,0,0,0-.439,2.289C3.011,9.547,3,9.868,3,12.429s.011,2.881.057,3.887A6.939,6.939,0,0,0,3.5,18.6a4.817,4.817,0,0,0,2.758,2.758,6.952,6.952,0,0,0,2.289.439c1.006.045,1.327.057,3.887.057s2.881-.011,3.887-.057a6.939,6.939,0,0,0,2.289-.439A4.817,4.817,0,0,0,21.363,18.6a6.952,6.952,0,0,0,.439-2.289c.045-1.006.057-1.327.057-3.887s-.011-2.881-.057-3.887a6.939,6.939,0,0,0-.439-2.289,4.817,4.817,0,0,0-2.758-2.758,6.952,6.952,0,0,0-2.289-.439C15.31,3.011,14.99,3,12.429,3m0,1.7c2.517,0,2.815.009,3.809.055a5.238,5.238,0,0,1,1.752.324,3.121,3.121,0,0,1,1.79,1.79A5.233,5.233,0,0,1,20.1,8.618c.045,1,.055,1.292.055,3.81s-.009,2.815-.055,3.809a5.272,5.272,0,0,1-.324,1.752,3.121,3.121,0,0,1-1.79,1.79,5.233,5.233,0,0,1-1.751.324c-.994.045-1.292.055-3.81.055S9.612,20.149,8.62,20.1a5.271,5.271,0,0,1-1.752-.324,3.121,3.121,0,0,1-1.79-1.79,5.2,5.2,0,0,1-.324-1.751c-.045-1-.055-1.292-.055-3.81s.009-2.815.055-3.809a5.238,5.238,0,0,1,.324-1.752,3.121,3.121,0,0,1,1.79-1.79,5.2,5.2,0,0,1,1.751-.324c1-.045,1.292-.055,3.81-.055m0,10.873a3.143,3.143,0,1,1,3.143-3.143,3.142,3.142,0,0,1-3.143,3.143m0-7.984a4.842,4.842,0,1,0,4.842,4.842,4.842,4.842,0,0,0-4.842-4.842M18.593,7.4a1.131,1.131,0,1,1-1.131-1.131A1.131,1.131,0,0,1,18.593,7.4" transform="translate(-3 -3)" fill="#222" fill-rule="evenodd"/>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
     </div>
 </body>
 

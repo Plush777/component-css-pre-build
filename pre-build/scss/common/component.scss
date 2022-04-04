@@ -1,5 +1,5 @@
 @charset "utf-8";
-
+ 
 @font-face {
   font-family: 'Noto Sans Light';
   font-style: normal;
@@ -24,7 +24,27 @@
   src: url(../font/notoSans/eot/NotoSansKR-Medium-Hestia.eot?#iefix) format("embedded-opentype"), url(../font/notoSans/woff/NotoSansKR-Medium-Hestia.woff) format("woff");
 }
 
+@font-face {
+  font-family: 'lv1Gothic';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'lv1GothicBold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Bold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@import url(//fonts.googleapis.com/earlyaccess/nanumgothic.css);
+.nanumgothic * {
+ font-family: 'Nanum Gothic', sans-serif;
+}
+
 @import '../common/variable.scss';    
+
 
 /* reset */
 :root{overflow-wrap: break-word; color-scheme: light dark;}
@@ -763,3 +783,4 @@ background-color: rgba($color: $blackBg, $alpha: 0.65);
 @import '../component/popup.scss';
 @import '../component/etc.scss';
 @import '../common/media.scss';
+@import '../common/main.scss';

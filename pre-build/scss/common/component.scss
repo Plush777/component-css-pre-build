@@ -1,5 +1,5 @@
 @charset "utf-8";
-
+ 
 @font-face {
   font-family: 'Noto Sans Light';
   font-style: normal;
@@ -24,7 +24,27 @@
   src: url(../font/notoSans/eot/NotoSansKR-Medium-Hestia.eot?#iefix) format("embedded-opentype"), url(../font/notoSans/woff/NotoSansKR-Medium-Hestia.woff) format("woff");
 }
 
+@font-face {
+  font-family: 'lv1Gothic';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'lv1GothicBold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Bold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@import url(//fonts.googleapis.com/earlyaccess/nanumgothic.css);
+.nanumgothic * {
+ font-family: 'Nanum Gothic', sans-serif;
+}
+
 @import '../common/variable.scss';    
+
 
 /* reset */
 :root{overflow-wrap: break-word; color-scheme: light dark;}
@@ -261,24 +281,24 @@ svg{fill: currentColor;
 #wrap{width: 100%; height: 100%;
   &.scrollHidden{overflow: hidden;}
   .mainTxt{color: var(--d-c-text);}
-  &.main{position: relative; transition: .5s; background-color: #4e4e4e;
-    .logo a{display: block; width: 800px; height: 136px; transition: .5s ease-in-out;
-    background: url("../../images/common/main-logo-g.png") no-repeat center;
-      &.change{background: url("../../images/common/main-logo-w.png") no-repeat center;}
-    } 
-    .centerArea{position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); text-align: center;}
-    .btnStart{position: relative; display: inline-block; width: 170px; height: 56px; box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
-    background-color: rgba($color: $whiteBg, $alpha: 0.5); transform: perspective(1px) translateZ(0); 
-      span{position: relative; font-size: 1.38em; font-family: $d-fz; transition: .3s;
-      color: $cfff; letter-spacing: 6.6px;
-        &:after{content: ''; position: absolute; top: 6px; right: -30px; min-width: 20px; height: 20px; transition: .3s;}
-      }
-      &:before{content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: -1;
-      transform: scaleX(0); transform-origin: 0 50%;  transition-duration: 0.3s; transition-property: transform; 
-      transition-timing-function: ease-out; background: $whiteBg;}
-    }
-    &.blue{background: #1694d2; transition: .5s ease-in-out;}
-  }
+  // &.main{position: relative; transition: .5s; background-color: #4e4e4e;
+  //   .logo a{display: block; width: 800px; height: 136px; transition: .5s ease-in-out;
+  //   background: url("../../images/common/main-logo-g.png") no-repeat center;
+  //     &.change{background: url("../../images/common/main-logo-w.png") no-repeat center;}
+  //   } 
+  //   .centerArea{position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); text-align: center;}
+  //   .btnStart{position: relative; display: inline-block; width: 170px; height: 56px; box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  //   background-color: rgba($color: $whiteBg, $alpha: 0.5); transform: perspective(1px) translateZ(0); 
+  //     span{position: relative; font-size: 1.38em; font-family: $d-fz; transition: .3s;
+  //     color: $cfff; letter-spacing: 6.6px;
+  //       &:after{content: ''; position: absolute; top: 6px; right: -30px; min-width: 20px; height: 20px; transition: .3s;}
+  //     }
+  //     &:before{content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: -1;
+  //     transform: scaleX(0); transform-origin: 0 50%;  transition-duration: 0.3s; transition-property: transform; 
+  //     transition-timing-function: ease-out; background: $whiteBg;}
+  //   }
+  //   &.blue{background: #1694d2; transition: .5s ease-in-out;}
+  // }
 
   /* update page */
   &.update{
@@ -763,3 +783,4 @@ background-color: rgba($color: $blackBg, $alpha: 0.65);
 @import '../component/popup.scss';
 @import '../component/etc.scss';
 @import '../common/media.scss';
+@import '../common/main.scss';

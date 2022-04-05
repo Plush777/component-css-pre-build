@@ -376,8 +376,4 @@ document.addEventListener('DOMContentLoaded', () => {
     if (window.matchMedia("screen and (max-width: 1280px)").matches) {
         gnbList.removeClass('twoLine');
     } 
-
-    if ( event.persisted || (window.performance && window.performance.navigation.type == 2)) {
-        location.href = document.referrer;
-    }
 });

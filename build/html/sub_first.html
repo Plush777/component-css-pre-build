@@ -709,6 +709,9 @@ $(function () {
   </div>
   <script>
     fouc(document.documentElement);
+    window.onbeforeunload = function() {
+	return "?";
+}
   </script>
 </body>
 </html>

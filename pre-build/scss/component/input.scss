@@ -31,6 +31,7 @@ background-color: var(--fff-black21);
 input{height: 30px; border: 1px solid var(--d-bdc); margin: 0 5px 0 0; box-sizing: border-box; 
 font-family: $d-fz; border-radius: 4px; color: var(--c-333-white); background-color: var(--d-bg-input);
     &.full{width: 100%;}
+    &:focus{box-shadow: 0 0 0 4px var(--primary-shadow); outline: 0;}
 }
     
 input[type="image"],input[type="color"],input[type="button"]{display: inline-block; vertical-align: middle;}

@@ -25,7 +25,7 @@
       <div class="leftArea cScroll">
         <ul class="leftMenu">
           <li>
-            <a href="../../html/main.html" title="메인으로">
+            <a href="index.html" title="메인으로">
               <img src="../../images/common/logo.png" class="lightLogo" alt="서브 메인로고">
               <img src="../../images/common/main-logo-w.png" class="darkLogo" alt="서브 메인로고" />
               <span class="hidden">메인으로</span>
@@ -36,7 +36,7 @@
               <a href="../../html/sub_first.html" title="홈">Home</a>
             </span>
           </li>
-          <li class="active">
+          <li id="currentDep1">
             <span>
               <a href="#none" title="Header">Header
                 <svg viewBox="0 0 700 700">
@@ -45,8 +45,8 @@
                 </svg>
               </a>
             </span>
-            <ul class="leftSubMenu block">
-              <li class="active">
+            <ul class="leftSubMenu">
+              <li id="currentDep2">
                 <a href="../header/header-header-fixed.html" title="Header fixed">Header fixed</a>
               </li>
               <li>
@@ -619,6 +619,9 @@ display: flex; align-items: center; justify-content: center; background-color: #
       </button>
     </div>
   </div>
+  <script>
+    $('#currentDep1,#currentDep2').addClass('active');
+  </script>
 </body>
 
 </html>

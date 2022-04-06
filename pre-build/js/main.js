@@ -1,7 +1,7 @@
 $(function () {
     $('.btnStarted').on({
         "click": function () {
-            location.href = 'sub_first.html';
+            location.href = 'html/sub_first.html';
         }
     });
 
@@ -29,5 +29,11 @@ $(function () {
 		$('#sideBar').removeClass('active');
         $('body').css('overflow', 'auto');
 	});
+
+    $('#sideBar ul li:last-child a').on({
+        "click": function () {
+            $(this).toggleClass('active');
+        }
+    });
 });
 

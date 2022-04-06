@@ -378,11 +378,11 @@ overflow-y: auto; background-color: var(--d-bg-left-menu); z-index: 1100;
         span>a{color: var(--primary-type02);
           svg{top: 24px; transform: rotate(180deg);}
         }
+        .leftSubMenu{display: block;}
       }
       >a{display: block;}
       >ul.leftSubMenu{display: none; padding: 16px 28px 16px 28px; box-sizing: border-box;
       border-bottom: 1px solid var(--d-bdc); background-color: var(--d-bg-left-menu-dep2);
-        &.block{display: block;}
         li{border-bottom: 1px solid var(--d-bdc);
           a{position: relative; display: block; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; 
           padding-bottom: 8px; font-family: $d-fz; font-size: 1.13em; color: var(--c-333-white);

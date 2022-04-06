@@ -17,6 +17,12 @@
   <script type="text/javascript" src="../js/error.js"></script>
   <script src="../js/darkmode.js" defer></script>
   <title>Component css</title>
+  <script>
+    const fouc = (F) => {
+      F.className = F.className.replace(/\bno-display\b/, 'show-display');
+      document.documentElement = F;
+    };
+  </script>
 </head>
 
 <body>
@@ -25,7 +31,7 @@
       <div class="leftArea cScroll">
         <ul class="leftMenu">
           <li>
-            <a href="index.html" title="메인으로">
+            <a href="../index.html" title="메인으로">
               <img src="../images/common/logo.png" class="lightLogo" alt="서브 메인로고">
               <img src="../images/common/main-logo-w.png" class="darkLogo" alt="서브 메인로고" />
               <span class="hidden">메인으로</span>

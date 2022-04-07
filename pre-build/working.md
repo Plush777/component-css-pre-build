@@ -6,8 +6,21 @@
 ## 컨텐츠
 <br>
 
-0. Main
-- START 버튼을 누르면 Home (첫 서브페이지 화면) 으로 이동
+0. Main (22/04/07)
+- Introduction 
+> 클릭 시 첫 서브페이지로 이동
+
+<br>
+
+- Guides
+> 미정
+
+<br>
+
+- More
+> 호버 시 기타 SNS 링크 표출
+
+<br><br>
 
 1. Home 
 - 서브페이지 중에서 첫번째로 보이는 화면

@@ -43,6 +43,7 @@
         &::-webkit-scrollbar{display: none;}
         &.mobScroll::-webkit-scrollbar{display: block;} //모바일에서도 스크롤보이게
     }
+    .mainTxt p.web{display: none;}
     .leftArea{left: -301px; transition: .3s;
         .leftMenu li{
             &:first-child >a>img{width: 53%;}
@@ -142,7 +143,7 @@
     }
 
     .btnArea{
-        .button{align-items: baseline; height: 30px; line-height: 30px; font-size: 0.75em;}
+        .button{align-items: center; height: 30px; line-height: 30px; font-size: 0.75em;}
     }
 
     i.ico{
@@ -307,7 +308,9 @@
             }
               &.btnDarkMode{
                 &:hover{
-                  .toolTip.more{opacity: 1; visibility: visible;}
+                  .toolTip{
+                      &.dk,&.lgt{opacity: 1; visibility: visible;}
+                  }
                 }
             }
         }

@@ -35,5 +35,16 @@ $(function () {
             $(this).toggleClass('active');
         }
     });
+
+    let decidedScrollTop = 120;
+    $(window).scroll(function () {
+        let st = $(this).scrollTop();
+        if (st > decidedScrollTop) {
+            $('#header').addClass('fixed');
+        } else if (st < decidedScrollTop) {
+            $('#header').removeClass('fixed');
+        }
+        lastScrollTop = st;
+    });
 });
 

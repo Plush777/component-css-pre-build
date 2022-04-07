@@ -454,6 +454,12 @@ overflow-y: auto; background-color: var(--d-bg-left-menu); z-index: 1100;
           span{display: block; min-width: 60px; padding: 5px 0; box-sizing: border-box; color: $cfff;
           font-family: $d-fz; font-size: 0.69em; border-radius: 3px; text-align: center;
           background-color: $c333;}
+          &.dk{left: -21px;
+            span{min-width: 75px; padding: 5px;}
+          }
+          &.lgt{left: -28px;
+            span{min-width: 85px;}
+          }
         }
         &:before{content: ''; opacity: 0; visibility: hidden; position: absolute; left: 50%; transform: translateX(-50%); top: -5px; z-index: -1;
         width: 40px; height: 40px; border-radius: 50px; transition: .5s ease-in-out; background-color: var(--d-bg-hv-util-area-circle);}

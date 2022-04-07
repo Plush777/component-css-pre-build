@@ -136,13 +136,22 @@ $(function () {
         "click": function () {
             const moreSubMenu = $(this).find('.moreSubMenu');
             const moreTooltip = $(this).find('.toolTip.more');
-
             $(moreSubMenu).toggleClass('active');
             if (moreSubMenu.hasClass('active')) {
+                $(moreSubMenu).attr('aria-expanded', 'true');
                 $(moreTooltip).hide();
+                $(moreSubMenu).next('.hidden').text('더보기 접기');
             } else if (!moreSubMenu.hasClass('active')) {
+                $(moreSubMenu).attr('aria-expanded', 'false');
                 $(moreTooltip).show();
+                $(moreSubMenu).next('.hidden').text('더보기 펼치기');
             }
+        }
+    });
+
+    $('.utilArea li .btnMore .moreSubMenu').each(function (index) {
+        if (!$(this).hasClass('active')) {
+            $(this).attr('aria-expanded', 'false');
         }
     });
 
@@ -150,6 +159,8 @@ $(function () {
         "click": function (e) {
             if (!$(e.target).closest('.utilArea li .btnMore').length) {
                 $('.moreSubMenu').removeClass('active');
+                $('.moreSubMenu').attr('aria-expanded', 'false');
+                $('.moreSubMenu').next('.hidden').text('더보기 펼치기');
             }
         }
     });
@@ -160,8 +171,15 @@ $(function () {
         "click": function () {
             $(this).addClass('active').siblings('li').removeClass('active');
             $(this).closest('.tabNav').siblings('.tabCont').eq($(this).index()).addClass('active').siblings('.tabCont').removeClass('active');
+            $(this).attr('aria-selected', 'true').siblings('li').attr('aria-selected', 'false')
         }
     })
+
+    $(tabList).each(function (index) {
+        if ($(this).hasClass('active')) {
+            $(this).attr('aria-selected', 'true');
+        }
+    });
 
     /* prism js 코드 하이라이트 툴팁에 클래스추가 */
     $(tabList).on({
@@ -181,16 +199,17 @@ $(function () {
     });
 
     /* lnb 슬라이드토글 */
-    $('.leftArea .leftMenu > li > span').on({
+    $('.leftArea .leftMenu > li').on({
         "click": function () {
-            $(this).next('.leftSubMenu').stop().slideToggle();
-            $(this).parent('li').toggleClass('active').siblings('li').removeClass('active').find('.leftSubMenu').slideUp();
+            $(this).find('.leftSubMenu').stop().slideToggle();
+            $(this).toggleClass('active').siblings('li').removeClass('active').find('.leftSubMenu').slideUp();
         }
     });
 
     /* lnb dep3 메뉴 */
     $('.leftArea .leftMenu > li > .leftSubMenu>.dep3Cont').on({
-        "click": function () {
+        "click": function (e) {
+            e.stopImmediatePropagation();
             $(this).find('.dep3').stop().slideToggle();
             $(this).toggleClass('on').siblings('li').removeClass('on').find('.leftSubMenu').slideUp();
         }
@@ -320,11 +339,6 @@ function prevent(e) {
     e.stopImmediatePropagation();
 }
 
-const fouc = (F) => {
-    F.className = F.className.replace(/\bno-display\b/, 'show-display');
-    document.documentElement = F;
-};
-
 // $(document).on('keydown', function (e) {
 //     if (e.keyCode == 123) { //f12
 //         return false;
@@ -376,4 +390,43 @@ document.addEventListener('DOMContentLoaded', () => {
     if (window.matchMedia("screen and (max-width: 1280px)").matches) {
         gnbList.removeClass('twoLine');
     } 
+
+    $('.btnBack').attr('title','홈으로 이동');
+    
+    /*사용자가 다크모드인지 라이트모드인지 모르기때문에
+    each문이랑 클릭 이벤트를 동일하게 해줌*/
+
+    const $btnDk = $('.btnDarkMode');
+    
+    $btnDk.each(function () {
+        if(localStorage.getItem('theme') === 'dark'){
+            $(this).attr('aria-pressed', 'true');
+            $(this).find('.hidden').text('라이트모드 전환');
+            $(this).find('.toolTip').addClass('lgt');
+            $(this).find('.toolTip').children('span').text('라이트모드 전환');
+        } else if($(localStorage.getItem('theme') === 'light')) {
+            $(this).attr('aria-pressed', 'false');
+            $(this).find('.hidden').text('다크모드 전환');
+            $(this).find('.toolTip').addClass('dk');
+            $(this).find('.toolTip').children('span').text('다크모드 전환');
+        }
+    });
+
+    $btnDk.on({
+        'click': function () {
+            if(localStorage.getItem('theme') === 'dark'){
+                $(this).attr('aria-pressed', 'true');
+                $(this).find('.hidden').text('라이트모드 전환');
+                $(this).find('.toolTip').removeClass('dk');
+                $(this).find('.toolTip').addClass('lgt');
+                $(this).find('.toolTip').children('span').text('라이트모드 전환');
+            } else if($(localStorage.getItem('theme') === 'light')) {
+                $(this).attr('aria-pressed', 'false');
+                $(this).find('.hidden').text('다크모드 전환');
+                $(this).find('.toolTip').removeClass('lgt');
+                $(this).find('.toolTip').addClass('dk');
+                $(this).find('.toolTip').children('span').text('다크모드 전환');
+            }
+        }
+    });
 });

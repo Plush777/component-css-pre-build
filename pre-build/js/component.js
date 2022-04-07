@@ -395,25 +395,38 @@ document.addEventListener('DOMContentLoaded', () => {
     
     /*사용자가 다크모드인지 라이트모드인지 모르기때문에
     each문이랑 클릭 이벤트를 동일하게 해줌*/
-    $('.btnDarkMode').each(function () {
+
+    const $btnDk = $('.btnDarkMode');
+    
+    $btnDk.each(function () {
         if(localStorage.getItem('theme') === 'dark'){
             $(this).attr('aria-pressed', 'true');
             $(this).find('.hidden').text('라이트모드 전환');
+            $(this).find('.toolTip').addClass('lgt');
+            $(this).find('.toolTip').children('span').text('라이트모드 전환');
         } else if($(localStorage.getItem('theme') === 'light')) {
             $(this).attr('aria-pressed', 'false');
             $(this).find('.hidden').text('다크모드 전환');
+            $(this).find('.toolTip').addClass('dk');
+            $(this).find('.toolTip').children('span').text('다크모드 전환');
         }
     });
 
-    $('.btnDarkMode').on({
+    $btnDk.on({
         'click': function () {
             if(localStorage.getItem('theme') === 'dark'){
                 $(this).attr('aria-pressed', 'true');
                 $(this).find('.hidden').text('라이트모드 전환');
+                $(this).find('.toolTip').removeClass('dk');
+                $(this).find('.toolTip').addClass('lgt');
+                $(this).find('.toolTip').children('span').text('라이트모드 전환');
             } else if($(localStorage.getItem('theme') === 'light')) {
                 $(this).attr('aria-pressed', 'false');
                 $(this).find('.hidden').text('다크모드 전환');
+                $(this).find('.toolTip').removeClass('lgt');
+                $(this).find('.toolTip').addClass('dk');
+                $(this).find('.toolTip').children('span').text('다크모드 전환');
             }
         }
-    })
+    });
 });

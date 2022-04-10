@@ -135,6 +135,12 @@ input.full {
   width: 100%;
 }
 
+input:focus {
+  -webkit-box-shadow: 0 0 0 4px var(--primary-shadow);
+          box-shadow: 0 0 0 4px var(--primary-shadow);
+  outline: 0;
+}
+
 input[type="image"], input[type="color"], input[type="button"] {
   display: inline-block;
   vertical-align: middle;

@@ -3,21 +3,21 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="color-scheme" content="light dark" />
-  <link rel="icon" href="../images/ico/ico-favi.png" sizes="16x16" />
-  <link rel="stylesheet" href="../css/common/component.css" type="text/css" />
-  <link rel="stylesheet" href="../css/common/skeleton.css" type="text/css" />
-  <link rel="stylesheet" href="../css/library/prism.css" type="text/css" />
-  <script type="text/javascript" src="../lib/jquery-1.12.4.js"></script>
-  <script type="text/javascript" src="../lib/swiper/js/swiper.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
-  <script src="../lib/prism.js"></script>
-  <script type="text/javascript" src="../js/component.js"></script>
-  <script type="text/javascript" src="../js/error.js"></script>
-  <script src="../js/darkmode.js" defer></script>
-  <title>Component css</title>
-  <script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="color-scheme" content="light dark" />
+<link rel="icon" href="../../images/ico/ico-favi.png" sizes="16x16" />
+<link rel="stylesheet" href="../../css/common/component.css" type="text/css" />
+<link rel="stylesheet" href="../../css/common/skeleton.css" type="text/css" />
+<link rel="stylesheet" href="../../css/library/prism.css" />
+<script type="text/javascript" src="../../lib/jquery-1.12.4.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
+<script src="../../lib/prism.js"></script>
+<script src="../../lib/jquery-cookie-master/src/jquery.cookie.js"></script>
+<script src="../../js/component/input.js"></script>
+<script src="../../js/component.js"></script>
+<script src="../../js/darkmode.js" defer></script>
+<title>Component css</title>
+<script>
     const fouc = (F) => {
       F.className = F.className.replace(/\bno-display\b/, 'show-display');
       document.documentElement = F;
@@ -32,14 +32,14 @@
         <ul class="leftMenu">
           <li>
             <a href="../index.html" title="메인으로">
-              <img src="../images/common/logo.png" class="lightLogo" alt="서브 메인로고">
-              <img src="../images/common/main-logo-w.png" class="darkLogo" alt="서브 메인로고" />
+              <img src="../../images/common/logo.png" class="lightLogo" alt="서브 메인로고">
+              <img src="../../images/common/main-logo-w.png" class="darkLogo" alt="서브 메인로고" />
               <span class="hidden">메인으로</span>
             </a>
           </li>
-          <li class="active">
+          <li>
             <span>
-              <a href="sub_first.html" title="홈">Home</a>
+              <a href="../../html/sub_first.html" title="홈">Home</a>
             </span>
           </li>
           <li>
@@ -53,19 +53,19 @@
             </span>
             <ul class="leftSubMenu">
               <li>
-                <a href="../html/header/header-header-fixed.html" title="Header fixed">Header fixed</a>
+                <a href="../header/header-header-fixed.html" title="Header fixed">Header fixed</a>
               </li>
               <li>
-                <a href="../html/header/hedaer-header-toggle.html" title="Header Toggle">Header Toggle</a>
+                <a href="../header/hedaer-header-toggle.html" title="Header Toggle">Header Toggle</a>
               </li>
               <li>
-                <a href="../html/header/header-header-sticky.html" title="Sticky Header">Sticky Header</a>
+                <a href="../header/header-header-sticky.html" title="Sticky Header">Sticky Header</a>
               </li>
             </ul>
           </li>
           <li>
             <span>
-              <a href="#none" title="GNB">GNB
+              <a href="javascript:void(0)" title="GNB">GNB
                 <svg viewBox="0 0 700 700">
                   <path
                     d="m350 446.25c-4.4805 0-8.9609-1.7148-12.371-5.1289l-245-245c-6.8438-6.8438-6.8438-17.902 0-24.746l52.5-52.5c6.8438-6.8438 17.902-6.8438 24.746 0l180.12 180.13 180.13-180.12c6.8438-6.8438 17.902-6.8438 24.746 0l52.5 52.5c6.8438 6.8438 6.8438 17.902 0 24.746l-245 245c-3.4141 3.4102-7.8945 5.125-12.375 5.125z" />
@@ -74,22 +74,22 @@
             </span>
             <ul class="leftSubMenu">
               <li>
-                <a href="../html/gnb/gnb-hover-full-dropdown.html" title="GNB Hover Full Dropdown">GNB Hover Full
+                <a href="../gnb/gnb-hover-full-dropdown.html" title="GNB Hover Full Dropdown">GNB Hover Full
                   Dropdown</a>
               </li>
               <li>
-                <a href="../html/gnb/gnb-menu-hover-full-dropdown.html" title="GNB Menu hover Full Dropdown">GNB Menu
+                <a href="../gnb/gnb-menu-hover-full-dropdown.html" title="GNB Menu hover Full Dropdown">GNB Menu
                   hover Full Dropdown</a>
               </li>
               <li>
-                <a href="../html/gnb/gnb-hoverable-dropdown.html" title="GNB Hoverable Dropdown">GNB Hoverable
+                <a href="../gnb/gnb-hoverable-dropdown.html" title="GNB Hoverable Dropdown">GNB Hoverable
                   Dropdown</a>
               </li>
             </ul>
           </li>
           <li>
             <span>
-              <a href="#none" title="Footer">Footer
+              <a href="javascript:void(0)" title="Footer">Footer
                 <svg viewBox="0 0 700 700">
                   <path
                     d="m350 446.25c-4.4805 0-8.9609-1.7148-12.371-5.1289l-245-245c-6.8438-6.8438-6.8438-17.902 0-24.746l52.5-52.5c6.8438-6.8438 17.902-6.8438 24.746 0l180.12 180.13 180.13-180.12c6.8438-6.8438 17.902-6.8438 24.746 0l52.5 52.5c6.8438 6.8438 6.8438 17.902 0 24.746l-245 245c-3.4141 3.4102-7.8945 5.125-12.375 5.125z" />
@@ -98,16 +98,16 @@
             </span>
             <ul class="leftSubMenu">
               <li>
-                <a href="../html/footer/footer-footer-basic.html" title="Footer basic">Footer basic</a>
+                <a href="../footer/footer-footer-basic.html" title="Footer basic">Footer basic</a>
               </li>
               <li>
-                <a href="../html/footer/footer-footer-fixed.html" title="Footer fixed">Footer fixed</a>
+                <a href="../footer/footer-footer-fixed.html" title="Footer fixed">Footer fixed</a>
               </li>
             </ul>
           </li>
           <li>
             <span>
-              <a href="#none" title="Layout">Layout
+              <a href="javascript:void(0)" title="Layout">Layout
                 <svg viewBox="0 0 700 700">
                   <path
                     d="m350 446.25c-4.4805 0-8.9609-1.7148-12.371-5.1289l-245-245c-6.8438-6.8438-6.8438-17.902 0-24.746l52.5-52.5c6.8438-6.8438 17.902-6.8438 24.746 0l180.12 180.13 180.13-180.12c6.8438-6.8438 17.902-6.8438 24.746 0l52.5 52.5c6.8438 6.8438 6.8438 17.902 0 24.746l-245 245c-3.4141 3.4102-7.8945 5.125-12.375 5.125z" />
@@ -116,82 +116,77 @@
             </span>
             <ul class="leftSubMenu">
               <li>
-                  <a href="../html/layout/layout-centerEle.html" title="Center element">Center element</a>
+                <a href="../layout/layout-centerEle.html" title="Center element">Center element</a>
               </li>
               <li>
-                  <a href="../html/layout/layout-tab.html" title="Tab">Tab</a>
+                <a href="../layout/layout-tab.html" title="Tab">Tab</a>
               </li>
               <li>
-                  <a href="../html/layout/layout-bg-image.html" title="Background-image 100%">Background-image
-                      100%</a>
+                <a href="../layout/layout-bg-image.html" title="Background-image 100%">Background-image 100%</a>
               </li>
               <li>
-                  <a href="../html/layout/layout-leftMenu.html" title="Left menu">Left menu</a>
+                <a href="../layout/layout-leftMenu.html" title="Left menu">Left menu</a>
               </li>
               <li>
-                  <a href="../html/layout/layout-floatingMenu.html" title="Floating menu">Floating
-                      menu</a>
+                <a href="../layout/layout-floatingMenu.html" title="Floating menu">Floating menu</a>
               </li>
               <li class="disabled">
-                  <a href="#none" title="Slide">Slide</a>
+                <a href="#none" title="Slide">Slide</a>
               </li>
               <li class="dep3Cont">
-                  <a href="#none" title="Flex Layout">Flex Layout
-                      <svg width="18" height="18" viewBox="0 0 18 18" class="unfold">
-                          <path id="ios-plus-empty"
-                              d="M27,18.633H18.563V27H17.368V18.633H9V17.438h8.367V9h1.195v8.438H27Z"
-                              transform="translate(-9 -9)"></path>
-                      </svg>
-                      <svg width="16" height="1" viewBox="0 0 16 1" class="fold">
-                          <rect id="사각형_14" data-name="사각형 14" width="16" height="1"></rect>
-                      </svg>
-                  </a>
-                  <ul class="dep3">
-                      <li>
-                          <a href="#none" title="flex box" onclick="prevent(event)">flex box</a>
-                      </li>
-                      <li>
-                          <a href="../html/layout/layout-flex-direction.html"
-                              title="flex-direction">flex-direction</a>
-                      </li>
-                      <li>
-                          <a href="../html/layout/layout-justify-content.html"
-                              title="justify-content">justify-content</a>
-                      </li>
-                      <li>
-                          <a href="../html/layout/layout-align-items.html" title="align-items">align-items</a>
-                      </li>
-                      <li>
-                          <a href="../html/layout/layout-flex-basis.html" title="flex-basis">flex-basis</a>
-                      </li>
-                      <li>
-                          <a href="../html/layout/layout-flex-grow.html" title="flex-grow">flex-grow</a>
-                      </li>
-                      <li>
-                          <a href="../html/layout/layout-flex-shrink.html" title="flex-shrink">flex-shrink</a>
-                      </li>
-                      <li>
-                          <a href="../html/layout/layout-flex-option.html" title="flex">flex</a>
-                      </li>
-                      <li>
-                          <a href="../html/layout/layout-flex-wrap.html" title="flex-wrap">flex-wrap</a>
-                      </li>
-                      <li>
-                          <a href="../html/layout/layout-gap.html" title="gap">gap</a>
-                      </li>
-                      <li>
-                          <a href="../html/layout/layout-order.html" title="order">order</a>
-                      </li>
-                  </ul>
+                <a href="#none" title="Flex Layout">Flex Layout
+                  <svg width="18" height="18" viewBox="0 0 18 18" class="unfold">
+                    <path id="ios-plus-empty" d="M27,18.633H18.563V27H17.368V18.633H9V17.438h8.367V9h1.195v8.438H27Z"
+                      transform="translate(-9 -9)"></path>
+                  </svg>
+                  <svg width="16" height="1" viewBox="0 0 16 1" class="fold">
+                    <rect id="사각형_14" data-name="사각형 14" width="16" height="1"></rect>
+                  </svg>
+                </a>
+                <ul class="dep3">
+                  <li>
+                    <a href="../layout/layout-flex.html" title="flex box">flex box</a>
+                  </li>
+                  <li>
+                    <a href="../layout/layout-flex-direction.html" title="flex-direction">flex-direction</a>
+                  </li>
+                  <li>
+                    <a href="../layout/layout-justify-content.html" title="justify-content">justify-content</a>
+                  </li>
+                  <li>
+                    <a href="../layout/layout-align-items.html" title="align-items">align-items</a>
+                  </li>
+                  <li>
+                    <a href="../layout/layout-flex-basis.html" title="flex-basis">flex-basis</a>
+                  </li>
+                  <li>
+                    <a href="../layout/layout-flex-grow.html" title="flex-grow">flex-grow</a>
+                  </li>
+                  <li>
+                    <a href="../layout/layout-flex-shrink.html" title="flex-shrink">flex-shrink</a>
+                  </li>
+                  <li>
+                    <a href="../layout/layout-flex-option.html" title="flex">flex</a>
+                  </li>
+                  <li>
+                    <a href="../layout/layout-flex-wrap.html" title="flex-wrap">flex-wrap</a>
+                  </li>
+                  <li>
+                    <a href="../layout/layout-gap.html" title="gap">gap</a>
+                  </li>
+                  <li>
+                    <a href="../layout/layout-order.html" title="order">order</a>
+                  </li>
+                </ul>
               </li>
               <li class="disabled">
-                  <a href="#none" title="Grid">Grid</a>
+                <a href="#none" title="Grid">Grid</a>
               </li>
-          </ul>
+            </ul>
           </li>
           <li>
             <span>
-              <a href="#none" title="Input">Input
+              <a href="javascript:void(0)" title="Input">Input
                 <svg viewBox="0 0 700 700">
                   <path
                     d="m350 446.25c-4.4805 0-8.9609-1.7148-12.371-5.1289l-245-245c-6.8438-6.8438-6.8438-17.902 0-24.746l52.5-52.5c6.8438-6.8438 17.902-6.8438 24.746 0l180.12 180.13 180.13-180.12c6.8438-6.8438 17.902-6.8438 24.746 0l52.5 52.5c6.8438 6.8438 6.8438 17.902 0 24.746l-245 245c-3.4141 3.4102-7.8945 5.125-12.375 5.125z" />
@@ -200,25 +195,25 @@
             </span>
             <ul class="leftSubMenu">
               <li>
-                <a href="../html/input/input-inputStyle.html" title="Input">input</a>
+                <a href="../input/input-inputStyle.html" title="Input">input</a>
               </li>
               <li>
-                <a href="../html/input/input-radioStyle.html" title="Radio">radio</a>
+                <a href="../input/input-radioStyle.html" title="Radio">radio</a>
               </li>
               <li>
-                <a href="../html/input/input-selectStyle.html" title="Select">select</a>
+                <a href="../input/input-selectStyle.html" title="Select">select</a>
               </li>
               <li>
-                <a href="../html/input/input-textareaStyle.html" title="textarea">textarea</a>
+                <a href="../input/input-textareaStyle.html" title="textarea">textarea</a>
               </li>
               <li>
-                <a href="../html/input/input-chkboxStyle.html" title="checkbox">checkbox</a>
+                <a href="../input/input-chkboxStyle.html" title="checkbox">checkbox</a>
               </li>
             </ul>
           </li>
           <li>
             <span>
-              <a href="#none" title="Scroll element">Scroll element
+              <a href="javascript:void(0)" title="Scroll element">Scroll element
                 <svg viewBox="0 0 700 700">
                   <path
                     d="m350 446.25c-4.4805 0-8.9609-1.7148-12.371-5.1289l-245-245c-6.8438-6.8438-6.8438-17.902 0-24.746l52.5-52.5c6.8438-6.8438 17.902-6.8438 24.746 0l180.12 180.13 180.13-180.12c6.8438-6.8438 17.902-6.8438 24.746 0l52.5 52.5c6.8438 6.8438 6.8438 17.902 0 24.746l-245 245c-3.4141 3.4102-7.8945 5.125-12.375 5.125z" />
@@ -227,16 +222,16 @@
             </span>
             <ul class="leftSubMenu">
               <li>
-                <a href="../html/scrollele/scroll-ele-table.html" title="Table inner scroll">Table inner scroll</a>
+                <a href="../scrollele/scroll-ele-table.html" title="Table inner scroll">Table inner scroll</a>
               </li>
               <li>
-                <a href="../html/scrollele/scroll-ele-overflow.html" title="Overflow scroll">Overflow scroll</a>
+                <a href="../scrollele/scroll-ele-overflow.html" title="Overflow scroll">Overflow scroll</a>
               </li>
             </ul>
           </li>
           <li>
             <span>
-              <a href="#none" title="Custom">Custom
+              <a href="javascript:void(0)" title="Custom">Custom
                 <svg viewBox="0 0 700 700">
                   <path
                     d="m350 446.25c-4.4805 0-8.9609-1.7148-12.371-5.1289l-245-245c-6.8438-6.8438-6.8438-17.902 0-24.746l52.5-52.5c6.8438-6.8438 17.902-6.8438 24.746 0l180.12 180.13 180.13-180.12c6.8438-6.8438 17.902-6.8438 24.746 0l52.5 52.5c6.8438 6.8438 6.8438 17.902 0 24.746l-245 245c-3.4141 3.4102-7.8945 5.125-12.375 5.125z" />
@@ -245,19 +240,19 @@
             </span>
             <ul class="leftSubMenu">
               <li>
-                <a href="../html/custom/custom-contextMenu.html" title="Context Menu">Context Menu</a>
+                <a href="../custom/custom-contextMenu.html" title="Context Menu">Context Menu</a>
               </li>
               <li>
-                <a href="../html/custom/custom-scroll.html" title="Scroll design">Scroll design</a>
+                <a href="../custom/custom-scroll.html" title="Scroll design">Scroll design</a>
               </li>
               <li>
-                <a href="../html/custom/custom-toolTip.html" title="toolTip">toolTip</a>
+                <a href="../custom/custom-toolTip.html" title="toolTip">toolTip</a>
               </li>
             </ul>
           </li>
           <li>
             <span>
-              <a href="#none" title="Popup">Popup
+              <a href="javascript:void(0)" title="Popup">Popup
                 <svg viewBox="0 0 700 700">
                   <path
                     d="m350 446.25c-4.4805 0-8.9609-1.7148-12.371-5.1289l-245-245c-6.8438-6.8438-6.8438-17.902 0-24.746l52.5-52.5c6.8438-6.8438 17.902-6.8438 24.746 0l180.12 180.13 180.13-180.12c6.8438-6.8438 17.902-6.8438 24.746 0l52.5 52.5c6.8438 6.8438 6.8438 17.902 0 24.746l-245 245c-3.4141 3.4102-7.8945 5.125-12.375 5.125z" />
@@ -266,19 +261,19 @@
             </span>
             <ul class="leftSubMenu">
               <li>
-                <a href="../html/popup/popup-popup-showhide.html" title="Popup show/hide">Popup show/hide</a>
+                <a href="../popup/popup-popup-showhide.html" title="Popup show/hide">Popup show/hide</a>
               </li>
               <li>
-                <a href="../html/popup/popup-toast.html" title="Toast popup">Toast popup</a>
+                <a href="../popup/popup-toast.html" title="Toast popup">Toast popup</a>
               </li>
               <li>
-                <a href="../html/popup/popup-drag.html" title="Drag popup">Drag popup</a>
+                <a href="../popup/popup-drag.html" title="Drag popup">Drag popup</a>
               </li>
             </ul>
           </li>
-          <li>
-            <span title="Etc">
-              <a href="#none" title="Etc">Etc
+          <li class="active">
+            <span>
+              <a href="javascript:void(0)" title="Etc">Etc
                 <svg viewBox="0 0 700 700">
                   <path
                     d="m350 446.25c-4.4805 0-8.9609-1.7148-12.371-5.1289l-245-245c-6.8438-6.8438-6.8438-17.902 0-24.746l52.5-52.5c6.8438-6.8438 17.902-6.8438 24.746 0l180.12 180.13 180.13-180.12c6.8438-6.8438 17.902-6.8438 24.746 0l52.5 52.5c6.8438 6.8438 6.8438 17.902 0 24.746l-245 245c-3.4141 3.4102-7.8945 5.125-12.375 5.125z" />
@@ -289,47 +284,48 @@
               <li class="dep3Cont">
                 <a href="#none" title="Animation element">Animation element
                   <svg width="18" height="18" viewBox="0 0 18 18" class="unfold">
-                    <path id="ios-plus-empty" d="M27,18.633H18.563V27H17.368V18.633H9V17.438h8.367V9h1.195v8.438H27Z" transform="translate(-9 -9)"/>
+                    <path id="ios-plus-empty" d="M27,18.633H18.563V27H17.368V18.633H9V17.438h8.367V9h1.195v8.438H27Z"
+                      transform="translate(-9 -9)" />
                   </svg>
                   <svg width="16" height="1" viewBox="0 0 16 1" class="fold">
-                    <rect id="사각형_14" data-name="사각형 14" width="16" height="1"/>
+                    <rect id="사각형_14" data-name="사각형 14" width="16" height="1" />
                   </svg>
                 </a>
                 <ul class="dep3">
                   <li>
-                    <a href="../html/etc/etc-top-button.html" title="Top button">Top button</a>
+                    <a href="../etc/etc-top-button.html" title="Top button">Top button</a>
                   </li>
                   <li>
-                    <a href="../html/etc/etc-rotate.html" title="Rotate element">Rotate element</a>
+                    <a href="../etc/etc-rotate.html" title="Rotate element">Rotate element</a>
                   </li>
                   <li>
-                    <a href="../html/etc/etc-border.html" title="Boarder animation">Boarder animation</a>
+                    <a href="../etc/etc-border.html" title="Boarder animation">Boarder animation</a>
                   </li>
                   <li>
-                    <a href="../html/etc/etc-fadeinout.html" title="Fade in/out">Fade in/out</a>
+                    <a href="../etc/etc-fadeinout.html" title="Fade in/out">Fade in/out</a>
                   </li>
                   <li>
-                    <a href="../html/etc/etc-accordion.html" title="Accordion">Accordion</a>
+                    <a href="../etc/etc-accordion.html" title="Accordion">Accordion</a>
                   </li>
                 </ul>
               </li>
               <li>
-                <a href="../html/etc/etc-ellipsis.html" title="Text ellipsis">Text ellipsis</a>
+                <a href="../etc/etc-ellipsis.html" title="Text ellipsis">Text ellipsis</a>
               </li>
-              <li class="dep3Cont">
+              <li class="dep3Cont on">
                 <a href="#none" title="Key frames">Key frames
-                  <svg width="18" height="18" viewBox="0 0 18 18" class="unfold">
-                    <path id="ios-plus-empty" d="M27,18.633H18.563V27H17.368V18.633H9V17.438h8.367V9h1.195v8.438H27Z" transform="translate(-9 -9)"/>
-                  </svg>
-                  <svg width="16" height="1" viewBox="0 0 16 1" class="fold">
-                    <rect id="사각형_14" data-name="사각형 14" width="16" height="1"/>
-                  </svg>
-                </a>
-                <ul class="dep3">
-                  <li>
-                    <a href="../html/keyFrames/keyFrames-wave.html" title="Wave">Wave</a>
-                  </li>
-                </ul>
+                    <svg width="18" height="18" viewBox="0 0 18 18" class="unfold">
+                      <path id="ios-plus-empty" d="M27,18.633H18.563V27H17.368V18.633H9V17.438h8.367V9h1.195v8.438H27Z" transform="translate(-9 -9)"/>
+                    </svg>
+                    <svg width="16" height="1" viewBox="0 0 16 1" class="fold">
+                      <rect id="사각형_14" data-name="사각형 14" width="16" height="1"/>
+                    </svg>
+                  </a>
+                  <ul class="dep3 block">
+                    <li class="active">
+                      <a href="../html/keyFrames/keyFrames-wave.html" title="Wave">Wave</a>
+                    </li>
+                  </ul>
               </li>
             </ul>
           </li>
@@ -355,7 +351,7 @@
                     <path fill-rule="evenodd"
                         d="M17.8913288,10 L11.8900003,3.99867157 L5.88867192,10 L5.89001465,10 L5.89001465,20 L17.8900146,20 L17.8900146,10 L17.8913288,10 Z M19.8900146,11.9986859 L19.8900146,20 C19.8900146,21.1045695 18.9945841,22 17.8900146,22 L5.89001465,22 C4.78544515,22 3.89001465,21.1045695 3.89001465,20 L3.89001465,11.9986573 L2.41319817,13.4754737 L1,12.0622756 L10.4769858,2.5852898 C11.2573722,1.8049034 12.5226285,1.8049034 13.3030149,2.5852898 L22.7800007,12.0622756 L21.3668025,13.4754737 L19.8900146,11.9986859 Z" />
                 </svg>
-                <span class="hidden">뒤로가기</span>
+                <span class="hidden">홈으로 이동</span>
             </button>
         </div>
 
@@ -408,7 +404,6 @@
                                 d="M3.242,13.969a3.122,3.122,0,0,1,2.289.954,3.315,3.315,0,0,1,0,4.654,3.122,3.122,0,0,1-2.289.954,3.122,3.122,0,0,1-2.289-.954,3.316,3.316,0,0,1,0-4.654,3.121,3.121,0,0,1,2.289-.954Zm19.533,0a3.122,3.122,0,0,1,2.289.954,3.315,3.315,0,0,1,0,4.654,3.224,3.224,0,0,1-4.579,0,3.316,3.316,0,0,1,0-4.654,3.12,3.12,0,0,1,2.289-.954Zm-9.766,0a3.122,3.122,0,0,1,2.289.954,3.315,3.315,0,0,1,0,4.654,3.224,3.224,0,0,1-4.579,0,3.316,3.316,0,0,1,0-4.654,3.12,3.12,0,0,1,2.289-.954Z"
                                 transform="translate(0 -13.969)" />
                         </svg>
-                        <span class="hidden">더보기</span>
                         <div class="moreSubMenu">
                             <ul>
                                 <li>
@@ -418,13 +413,14 @@
                                     <a href="https://velog.io/@sky" target="_blank">Velog</a>
                                 </li>
                                 <li>
-                                    <a href="update-note.html" target="_blank">Update note</a>
+                                    <a href="../update-note.html" target="_blank">Update note</a>
                                 </li>
                                 <li>
                                     <a href="https://www.buymeacoffee.com/P1ush" target="_blank">buymeacoffee</a>
                                 </li>
                             </ul>
                         </div>
+                        <span class="hidden">더보기 펼치기</span>
                         <div class="toolTip more">
                             <span>더보기</span>
                         </div>
@@ -440,71 +436,7 @@
         <div class="inner">
           <div class="textBox">
             <div class="titleH1">
-              <h1>component css 가 뭔가요?</h1>
-            </div>
-            <div class="mainTxt">
-              <div class="skelRow">
-                  <p>component css는 웹 퍼블리싱 작업에 자주 사용되는 요소들의 스타일에 대한 가이드 라인을 제공합니다! </p>
-              </div>
-              <div class="skelRow">
-                  <p>페이지마다 재사용될만한 구성요소들의 마크업 (html) 과 스타일 (css) 또는 js 코드들을 기록하여 번거롭게 직접 코딩하지 않고
-                  </p>
-              </div>
-              <div class="skelRow">
-                  <p>필요한 코드만 긁어서 본인 프로젝트에 사용할 수 있습니다.</p>
-              </div>
-              <br>
-              <div class="skelRow">
-                  <p>앞으로 더 많은 스타일 컴포넌트들을 기록할 예정이며, 추후에 추가될 mobile, keyframe, grid layout ,slide layout에 대한
-                  가이드도 제공할 예정입니다. 
-                  </p>
-              </div>
-              <br><br>
-              <div class="innerTxt">
-                <div class="skelRow wd120">
-                    <strong>라이센스</strong>
-                </div>
-                <div class="skelRow">
-                    <p>해당 프로젝트에 사용 된 라이브러리 및 플러그인들은 <a href="../html/license.html" class="link" target="_blank">여기서</a>
-                      확인하세요.
-                    </p>
-                </div>
-              </div>
-              <div class="innerTxt">
-                <div class="skelRow wd120">
-                    <strong>더 많은 컴포넌트들</strong>
-                </div>
-                <div class="skelRow">
-                    <p>꾸준한 업데이트를 통해 현재보다 더 많은 컴포넌트들을 기록할 예정입니다. 조금만 기다려주세요!</p>
-                </div>
-              </div>
-              <div class="innerTxt">
-                <div class="skelRow wd120">
-                    <strong>업데이트 소식</strong>
-                </div>
-                <div class="skelRow">
-                    <p>특별한건 아니지만, <a class="link" href="update-note.html" target="_blank">여기서</a>
-                      업데이트 로그를 작성하고 있습니다. 궁금하시다면 참고해보세요!</p>
-                </div>
-              </div>
-              <div class="innerTxt">
-                <div class="skelRow wd120">
-                    <strong>피드백</strong>
-                </div>
-                <div class="skelRow">
-                    <p>코드의 문제점 , 건의사항 등등 component css에 대한 피드백은 <a class="mail"
-                      href="mailto:sky11916@naver.com">sky11916@naver.com</a> 으로 부탁해요!</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="textBox">
-            <div class="titleH2">
-              <h2>기본 세팅 가이드</h2>
-            </div>
-            <div class="mainTxt">
-              <p>해당 프로젝트에서 쓰인 HTML/SCSS/CSS/JS 기본 세팅 구조입니다.</p>
+              <h1>Wave</h1>
             </div>
             <div class="tabWrap type01">
               <div class="tabNav">
@@ -512,29 +444,16 @@
                   <li class="active orange" tabindex="0">HTML</li>
                   <li class="pink" tabindex="0">SCSS</li>
                   <li class="blue" tabindex="0">CSS</li>
-                  <li class="yellow" tabindex="0">JS</li>
                 </ul>
               </div>
 
               <div class="tabCont active">
                 <div class="highlightArea cScroll">
-                  <pre>
-                      <code class="language-html">
-&lt;!DOCTYPE html&gt;
-&lt;html lang="ko"&gt;
-&lt;head&gt;
-    &lt;meta charset="UTF-8" /&gt;
-    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
-    &lt;link rel="stylesheet" href="" type="text/css" /&gt;
-    &lt;script type="text/javascript" src=""&gt;&lt;/script&gt;
-    &lt;title&gt;&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;div id="wrap"&gt;
-        
-    &lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
+                    <pre>
+                        <code class="language-html">
+&lt;div id="wrap"&gt;
+    &lt;div class="divWave"&gt;&lt;/div&gt;
+&lt;/div&gt;
                         </code>
                     </pre>
                 </div>
@@ -542,161 +461,102 @@
 
               <div class="tabCont">
                 <div class="highlightArea cScroll">
-                  <pre>
-                      <code class="language-scss">
-/* text color */
-$c20 : #202020 !default;  
-$c222 : #222 !default;
-$c333 : #333 !default;
-$c70 : #707070 !default;
-$cddd : #ddd !default;
-$c000 : #000 !default;
-$c-ccc : #ccc !default;
-$cfff : #fff !default;
-$d-fz : 'Noto Sans';
-$emphasisType01 : #266bf7 !default;
-$emphasisType02: #1694d2 !default;
+                    <pre>
+                        <code class="language-scss">
+.divWave{position: absolute; bottom: 0; left: 0; width: 100%; height: 100%; z-index: 1;
+background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg"); background-repeat: repeat-x; background-position: 0px bottom; 
+background-size: 1920px auto; overflow: hidden; opacity: 0.7; animation-name: wave; animation-duration: 50s; animation-iteration-count: infinite;
+animation-timing-function: linear;}
 
-/* background */
-$blueBg : $emphasisType01;
-$whiteBg : $cfff;
-$cccBg : $c-ccc;
-$dddBg : $cddd;
-$_222Bg : $c222;
-$_333Bg : $c333;
-$blackBg : $c000;
-
-@font-face {
-  font-family: 'Noto Sans';
-  font-style: normal;
-  font-weight: 400;
-  src: url(./font/notoSans/eot/NotoSansKR-Regular-Hestia.eot);
-  src: url(./font/notoSans/eot/NotoSansKR-Regular-Hestia.eot?#iefix) format("embedded-opentype"), url(./font/notoSans/woff/NotoSansKR-Regular-Hestia.woff) format("woff");
+@keyframes wave {
+    0%{background-position: 0px bottom;}
+    100%{background-position: 1920px bottom;}
 }
-
-/* reset */
-:root{overflow-wrap: break-word;}
-body,html{width: 100%;height: 100%;margin: 0;padding: 0; font-family:'Noto Sans DemLight', "맑은 고딕", "Malgun Gothic", Dotum, sans-serif;
-font-size:13px;color: $c333;letter-spacing:-0.045em !important;}
-:where(html, body, div, span, object,h1, h2, h3, h4, h5, h6, p, blockquote, a, button, abbr, address, 
-img, q,dl, dt, dd, ol, ul, li,fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr,
-th, td,article, aside, footer, header, section, summary){
-  margin:0;padding:0;border:0;font:inherit;
-}
-:where(article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section){display: block;}
-ol,ul,li{list-style: none;}
-table{border-collapse: collapse;border-spacing: 0;}
-a{text-decoration: none;color: inherit;}
-address{font-style: normal;}
-button{display: inline-block;border: none;background-color: transparent;cursor: pointer;}
-input,button,a,select,option{font-family:inherit;font-size:inherit;}
-button:focus{outline:none;}
-caption,hr{display:none;}
-pre{word-break:break-all;white-space:pre-line;margin: 0 !important;}
-                      </code>
-                  </pre>
+                        </code>
+                    </pre>
                 </div>
               </div>
 
               <div class="tabCont">
                 <div class="highlightArea cScroll">
-                  <pre>
-                      <code class="language-css">
-@font-face {
-  font-family: 'Noto Sans';
-  font-style: normal;
-  font-weight: 400;
-  src: url(./font/notoSans/eot/NotoSansKR-Regular-Hestia.eot);
-  src: url(./font/notoSans/eot/NotoSansKR-Regular-Hestia.eot?#iefix) format("embedded-opentype"), url(./font/notoSans/woff/NotoSansKR-Regular-Hestia.woff) format("woff");
+                    <pre>
+                        <code class="language-css">
+.divWave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg");
+    background-repeat: repeat-x;
+    background-position: 0px bottom;
+    background-size: 1920px auto;
+    overflow: hidden;
+    opacity: 0.7;
+    -webkit-animation-name: wave;
+            animation-name: wave;
+    -webkit-animation-duration: 50s;
+            animation-duration: 50s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
 }
 
-:root {
-  overflow-wrap: break-word;
+@-webkit-keyframes wave {
+    0% {
+        background-position: 0px bottom;
+    }
+    100% {
+        background-position: 1920px bottom;
+    }
 }
 
-body, html {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  font-family: 'Noto Sans DemLight', "맑은 고딕", "Malgun Gothic", Dotum, sans-serif;
-  font-size: 13px;
-  color: #333;
-  letter-spacing: -0.045em !important;
+@keyframes wave {
+    0% {
+        background-position: 0px bottom;
+    }
+    100% {
+        background-position: 1920px bottom;
+    }
 }
-
-:where(html, body, div, span, object, h1, h2, h3, h4, h5, h6, p, blockquote, a, button, abbr, address, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, footer, header, section, summary) {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font: inherit;
-}
-
-:where(article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section) {
-  display: block;
-}
-
-ol, ul, li {
-  list-style: none;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-address {
-  font-style: normal;
-}
-
-button {
-  display: inline-block;
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-}
-
-input, button, a, select, option {
-  font-family: inherit;
-  font-size: inherit;
-}
-
-button:focus {
-  outline: none;
-}
-
-caption, hr {
-  display: none;
-}
-
-pre {
-  word-break: break-all;
-  white-space: pre-line;
-  margin: 0 !important;
-}
-                      </code>
-                  </pre>
-                </div>
-              </div>
-
-              <div class="tabCont">
-                <div class="highlightArea cScroll">
-                  <pre>
-                      <code class="language-javascript">
-$(function () {
-
-});
-                      </code>
-                  </pre>
+                        </code>
+                    </pre>
                 </div>
               </div>
             </div>
+            <div class="btnArea end">
+              <button type="button" class="button Bgblue btnResult">
+                <span>결과보기</span>
+                <svg viewBox="0 0 7.152 11.14">
+                  <path id="_777" data-name="777"
+                    d="M11.571,7.893,6.443,13.014a.434.434,0,0,1-.622,0L.694,7.893a.442.442,0,0,1,0-.629l1.147-1.14a.434.434,0,0,1,.622,0L6.133,9.794,9.8,6.124a.434.434,0,0,1,.622,0l1.147,1.14a.442.442,0,0,1,0,.629Z"
+                    transform="translate(-5.993 11.703) rotate(-90)" />
+                </svg>
+              </button>
+            </div>
           </div>
+        </div>
+      </div>
+    </div>
+    <div id="frameBody" class="overflow-y">
+      <div id="toast">
+        <span>Esc 혹은 우측 상단 X 버튼을 눌러 결과창을 닫을 수 있습니다. </span>
+      </div>
+      <div class="btnArea">
+        <button type="button" class="frameClose">
+          <svg viewBox="0 0 16 16">
+            <path id="icon"
+              d="M5.707,7.121,1.414,11.414,0,10,4.293,5.707,0,1.414,1.414,0,5.707,4.293,10,0l1.414,1.414L7.121,5.707,11.414,10,10,11.414,5.707,7.121Z"
+              transform="translate(2.293 2.293)" />
+          </svg>
+          <span class="hidden">프레임 창닫기</span>
+        </button>
+      </div>
+      <div class="wrap pre wave allRes">
+        <div class="container">
+            <div class="divWave"></div>
         </div>
       </div>
     </div>
@@ -706,7 +566,7 @@ $(function () {
         <p>아래 주소를 복사하여 다른 곳에 붙여넣으세요.</p>
         <div class="inputArea flex">
           <input type="text" id="subUrl" class="full">
-          <button type="button" data-clipboard-target="#subUrl" class="btn button Bgblue w75">
+          <button type="button" data-clipboard-target="#subUrl" class="button Bgblue w75 btn">
             복사
           </button>
         </div>
@@ -714,7 +574,31 @@ $(function () {
     </div>
   </div>
   <div id="dimmed"></div>
-
+    <div class="popup mobileResult">
+      <div class="cont">
+        <div class="inner">
+          <strong>결과를 보기 전에 잠깐!</strong>
+          <p>모바일 환경에서는 코드 결과가 gif로 표시됩니다.</p>
+          <p>그래도 결과를 볼까요?</p>
+          <p>(제대로 된 결과를 보려면 노트북 또는 데스크탑에서 실행해주세요.)</p>
+          <div class="todayClose">
+            <label for="todayChk" class="todayChkClose">
+              <input type="checkbox" id="todayChk">
+              <span>오늘 하루 그만보기</span>
+            </label>
+          </div>
+        </div>
+        <div class="btnArea">
+          <button type="button" class="btnCancel">
+            <span>취소</span>
+          </button>
+          <button type="button" class="btnConfirm">
+            <span>확인</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="dimmed"></div>
     <div class="topArea">
       <button type="button" class="backtoTop">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
@@ -729,4 +613,5 @@ $(function () {
     fouc(document.documentElement);
   </script>
 </body>
+
 </html>

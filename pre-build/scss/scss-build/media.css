@@ -67,6 +67,9 @@
   *.mobScroll::-webkit-scrollbar {
     display: block;
   }
+  .mainTxt p.web {
+    display: none;
+  }
   .leftArea {
     left: -301px;
     -webkit-transition: .3s;
@@ -224,9 +227,9 @@
     height: 2px;
   }
   .btnArea .button {
-    -webkit-box-align: baseline;
-        -ms-flex-align: baseline;
-            align-items: baseline;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     height: 30px;
     line-height: 30px;
     font-size: 0.75em;
@@ -423,7 +426,7 @@
     opacity: 1;
     visibility: visible;
   }
-  .headArea > .inner .utilArea li button.btnDarkMode:hover .toolTip.more, .headArea > .inner .utilArea li a.btnDarkMode:hover .toolTip.more {
+  .headArea > .inner .utilArea li button.btnDarkMode:hover .toolTip.dk, .headArea > .inner .utilArea li button.btnDarkMode:hover .toolTip.lgt, .headArea > .inner .utilArea li a.btnDarkMode:hover .toolTip.dk, .headArea > .inner .utilArea li a.btnDarkMode:hover .toolTip.lgt {
     opacity: 1;
     visibility: visible;
   }

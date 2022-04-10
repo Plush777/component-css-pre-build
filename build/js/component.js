@@ -68,7 +68,7 @@ $(function () {
     }
 
     if (window.matchMedia("screen and (max-width: 1280px)").matches) {
-        console.log("해상도가 1280px 이하입니다");
+        // console.log("해상도가 1280px 이하입니다");
         documentBody.addClass('mobileType');
     } else {
         documentBody.removeClass('mobileType');
@@ -212,6 +212,7 @@ $(function () {
             e.stopImmediatePropagation();
             $(this).find('.dep3').stop().slideToggle();
             $(this).toggleClass('on').siblings('li').removeClass('on').find('.leftSubMenu').slideUp();
+            $(this).siblings('.dep3Cont').find('.dep3').removeClass('block').css('display', 'none');
         }
     });
 
@@ -222,13 +223,13 @@ $(function () {
     /* 서브 홈버튼 */
     $(btnBack).on({
         "click": function () {
-            location.href = urlArr[0] + '/' + 'html/sub_first.html';
+            location.href = urlArr[0] + '/' + 'sub_first.html';
         }
     })
 
     /* 히스토리 개수 */
     historyCount = history.length;
-    console.log("히스토리 개수는 " + historyCount + "개 입니다.");
+    // console.log("히스토리 개수는 " + historyCount + "개 입니다.");
 
     function historyCountCheck() {
         let backArea = $('.backArea');
@@ -328,7 +329,7 @@ $(function () {
         $(document).on('keyup', function (e) {
             if (e.keyCode == 27) {
                 $('.popup.share,#dimmed').fadeOut();
-                console.log('esc가 감지되어 공유하기 팝업을 닫습니다.');
+                // console.log('esc가 감지되어 공유하기 팝업을 닫습니다.');
             }
         });
     }

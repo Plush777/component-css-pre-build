@@ -255,4 +255,49 @@
   visibility: visible;
   height: 200px;
 }
+
+#frameBody .wrap.pre.wave {
+  position: relative;
+}
+
+#frameBody .wrap.pre.wave .divWave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg");
+  background-repeat: repeat-x;
+  background-position: 0px bottom;
+  background-size: 1920px auto;
+  overflow: hidden;
+  opacity: 0.7;
+  -webkit-animation-name: wave;
+          animation-name: wave;
+  -webkit-animation-duration: 50s;
+          animation-duration: 50s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+@-webkit-keyframes wave {
+  0% {
+    background-position: 0px bottom;
+  }
+  100% {
+    background-position: 1920px bottom;
+  }
+}
+
+@keyframes wave {
+  0% {
+    background-position: 0px bottom;
+  }
+  100% {
+    background-position: 1920px bottom;
+  }
+}
 /*# sourceMappingURL=etc.css.map */

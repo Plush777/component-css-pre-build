@@ -354,19 +354,21 @@
 
         /* color */
         --d-c-text: #202020;
-        
+
         /* primary & common */
         --primary: #266bf7;
         --primary-type02: #266bf7;
         --primary-type03: #1694d2;
+        --primary-shadow: rgba(49, 132, 253, 0.5);
+        --primary-hover: #0d61e0;
         --black-white: #000;
-        --ddd-black21: #ddd;
+        --white-black21: #fff;
         --c-333-white: #333;
 
         /* sc */
-        --d-sc-thumb: #ccc;
-        --d-sc-track: #e9e9e9;
-        --d-sc-hv-thumb: #b6b6b6;
+        --d-sc-thumb: #D3D1CB;
+        --d-sc-track: #EDECE9;
+        --d-sc-hv-thumb: #AEACA6;
         --d-sc-at-thumb: #808080;
 
         /* pagination */
@@ -421,9 +423,9 @@
         --c-333-white: #fff;
 
         /* sc */
-        --d-sc-thumb: #686868;
-        --d-sc-track: #424242;
-        --d-sc-hv-thumb: #7b7b7b;
+        --d-sc-thumb: #474C50;
+        --d-sc-track: #272727;
+        --d-sc-hv-thumb: #585959;
         --d-sc-at-thumb: #b6b6b6;
 
         /* pagination */

@@ -206,10 +206,21 @@ $(function () {
         }
     });
 
+    $('.leftArea .leftMenu > li > .leftSubMenu > li').on({
+        "click": function (e) {
+            e.stopPropagation();
+        }
+    });
+
+    $('.leftArea .leftMenu > li > .leftSubMenu > .dep3Cont > .dep3 > li').on({
+        "click": function (e) {
+            e.stopPropagation();
+        }
+    });
+
     /* lnb dep3 메뉴 */
     $('.leftArea .leftMenu > li > .leftSubMenu>.dep3Cont').on({
-        "click": function (e) {
-            e.stopImmediatePropagation();
+        "click": function () {
             $(this).find('.dep3').stop().slideToggle();
             $(this).toggleClass('on').siblings('li').removeClass('on').find('.leftSubMenu').slideUp();
             $(this).siblings('.dep3Cont').find('.dep3').removeClass('block').css('display', 'none');

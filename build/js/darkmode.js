@@ -1,21 +1,8 @@
 const darkModeEvent = document.querySelector('.btnDarkMode');
 let choiceTheme = localStorage.getItem('theme');
 let prefersTheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
+let prefersTheme2 = window.matchMedia('(prefers-color-scheme: light)').matches;
 const domBody = document.body;
-let setMode = prefersTheme ? 'dark' : 'light';
-
-darkModeLoad = () => {
-    const loadBody = document.body;
-
-    let cookBody = loadBody.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
-    currentBody = cookBody;
-
-    let endDate = new Date();
-    endDate.setFullYear(endDate.getFullYear() + 10);
-
-    document.cookie = 'theme=' + (currentBody == 'light' ? 'light' : 'dark') + '; Expires=' + endDate + ';'
-    console.log(document.cookie);
-}
 
 window.onload = () => {
     if (choiceTheme === 'dark') {
@@ -49,6 +36,4 @@ darkModeEvent.addEventListener('click', () => {
     } else {
         darkDeactive();
     }
-
-    darkModeLoad();
 });

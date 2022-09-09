@@ -15,7 +15,6 @@
 <script src="../../lib/jquery-cookie-master/src/jquery.cookie.js"></script>
 <script src="../../js/component/header.js"></script>
 <script src="../../js/component.js"></script>
-<script src="../../js/darkmode.js" defer></script>
 <title>Component css</title>
 <script>
     const fouc = (F) => {
@@ -136,11 +135,11 @@
               <li class="dep3Cont">
                 <a href="#none" title="Flex Layout">Flex Layout
                   <svg width="18" height="18" viewBox="0 0 18 18" class="unfold">
-                    <path id="ios-plus-empty" d="M27,18.633H18.563V27H17.368V18.633H9V17.438h8.367V9h1.195v8.438H27Z"
+                    <path d="M27,18.633H18.563V27H17.368V18.633H9V17.438h8.367V9h1.195v8.438H27Z"
                       transform="translate(-9 -9)"></path>
                   </svg>
                   <svg width="16" height="1" viewBox="0 0 16 1" class="fold">
-                    <rect id="사각형_14" data-name="사각형 14" width="16" height="1"></rect>
+                    <rect data-name="사각형 14" width="16" height="1"></rect>
                   </svg>
                 </a>
                 <ul class="dep3">
@@ -284,11 +283,11 @@
               <li class="dep3Cont">
                 <a href="#none" title="Animation element">Animation element
                   <svg width="18" height="18" viewBox="0 0 18 18" class="unfold">
-                    <path id="ios-plus-empty" d="M27,18.633H18.563V27H17.368V18.633H9V17.438h8.367V9h1.195v8.438H27Z"
+                    <path d="M27,18.633H18.563V27H17.368V18.633H9V17.438h8.367V9h1.195v8.438H27Z"
                       transform="translate(-9 -9)" />
                   </svg>
                   <svg width="16" height="1" viewBox="0 0 16 1" class="fold">
-                    <rect id="사각형_14" data-name="사각형 14" width="16" height="1" />
+                    <rect data-name="사각형 14" width="16" height="1" />
                   </svg>
                 </a>
                 <ul class="dep3">
@@ -339,7 +338,7 @@
                     <path fill-rule="evenodd"
                         d="M17.8913288,10 L11.8900003,3.99867157 L5.88867192,10 L5.89001465,10 L5.89001465,20 L17.8900146,20 L17.8900146,10 L17.8913288,10 Z M19.8900146,11.9986859 L19.8900146,20 C19.8900146,21.1045695 18.9945841,22 17.8900146,22 L5.89001465,22 C4.78544515,22 3.89001465,21.1045695 3.89001465,20 L3.89001465,11.9986573 L2.41319817,13.4754737 L1,12.0622756 L10.4769858,2.5852898 C11.2573722,1.8049034 12.5226285,1.8049034 13.3030149,2.5852898 L22.7800007,12.0622756 L21.3668025,13.4754737 L19.8900146,11.9986859 Z" />
                 </svg>
-                <span class="hidden">홈으로 이동</span>
+                <span class="hidden">뒤로가기</span>
             </button>
         </div>
 
@@ -356,9 +355,6 @@
                                 d="M15.2398038,3.86764935 C13.8204659,5.18476989 13,7.02542894 13,9 C13,12.8659932 16.1340068,16 20,16 C20.1451744,16 20.2897556,15.9955942 20.4336241,15.986821 L22.4431545,15.8642776 L21.3266144,17.5395589 C19.4842735,20.3038478 16.3853769,22 13,22 C7.4771525,22 3,17.5228475 3,12 C3,6.4771525 7.4771525,2 13,2 C13.5846805,2 14.1634362,2.05028518 14.7316831,2.14956084 L16.7173912,2.49647429 L15.2398038,3.86764935 Z M5,12 C5,16.418278 8.581722,20 13,20 C15.0609678,20 16.9878304,19.215338 18.4414082,17.8655328 C14.2137018,17.1274203 11,13.4390103 11,9 C11,7.19183498 11.5366814,5.46848045 12.5051382,4.01505578 C8.31734829,4.27062453 5,7.74790816 5,12 Z" />
                         </svg>
                         <span class="hidden">다크모드 전환</span>
-                        <div class="toolTip">
-                            <span>다크모드 전환</span>
-                        </div>
                     </button>
                 </li>
                 <li>
@@ -375,7 +371,7 @@
                     </a>
                 </li>
                 <li>
-                    <button type="button" class="btnShare">
+                    <div class="btnShare">
                         <svg width="24" height="24.004" viewBox="0 0 24 24.004">
                             <path id="share"
                                 d="M22.259,22.38a4.5,4.5,0,1,1-1.2,2.4L13.75,21.113a4.5,4.5,0,1,1,0-6.226l7.309-3.665a4.5,4.5,0,1,1,1.2,2.4l-7.316,3.657a4.533,4.533,0,0,1,0,1.443l7.316,3.657ZM25.5,12A1.5,1.5,0,1,0,24,10.5,1.5,1.5,0,0,0,25.5,12Zm0,15A1.5,1.5,0,1,0,24,25.5,1.5,1.5,0,0,0,25.5,27Zm-15-7.5A1.5,1.5,0,1,0,9,18,1.5,1.5,0,0,0,10.5,19.5Z"
@@ -385,16 +381,17 @@
                         <div class="toolTip share">
                             <span>공유하기</span>
                         </div>
-                    </button>
+                    </div>
 
                 </li>
                 <li>
-                    <button type="button" class="btnMore">
+                    <div class="btnMore">
                         <svg width="26.018" height="6.561" viewBox="0 0 26.018 6.561">
                             <path id="more"
                                 d="M3.242,13.969a3.122,3.122,0,0,1,2.289.954,3.315,3.315,0,0,1,0,4.654,3.122,3.122,0,0,1-2.289.954,3.122,3.122,0,0,1-2.289-.954,3.316,3.316,0,0,1,0-4.654,3.121,3.121,0,0,1,2.289-.954Zm19.533,0a3.122,3.122,0,0,1,2.289.954,3.315,3.315,0,0,1,0,4.654,3.224,3.224,0,0,1-4.579,0,3.316,3.316,0,0,1,0-4.654,3.12,3.12,0,0,1,2.289-.954Zm-9.766,0a3.122,3.122,0,0,1,2.289.954,3.315,3.315,0,0,1,0,4.654,3.224,3.224,0,0,1-4.579,0,3.316,3.316,0,0,1,0-4.654,3.12,3.12,0,0,1,2.289-.954Z"
                                 transform="translate(0 -13.969)" />
                         </svg>
+                        <span class="hidden">더보기</span>
                         <div class="moreSubMenu">
                             <ul>
                                 <li>
@@ -404,18 +401,17 @@
                                     <a href="https://velog.io/@sky" target="_blank">Velog</a>
                                 </li>
                                 <li>
-                                    <a href="../update-note.html" target="_blank">Update note</a>
+                                    <a href="update-note.html" target="_blank">Update note</a>
                                 </li>
                                 <li>
                                     <a href="https://www.buymeacoffee.com/P1ush" target="_blank">buymeacoffee</a>
                                 </li>
                             </ul>
                         </div>
-                        <span class="hidden">더보기 펼치기</span>
                         <div class="toolTip more">
                             <span>더보기</span>
                         </div>
-                    </button>
+                    </div>
                 </li>
             </ul>
         </div>
@@ -431,11 +427,19 @@
             </div>
             <div class="tabWrap type01">
               <div class="tabNav">
-                <ul class="tabList">
-                  <li class="active orange" tabindex="0">HTML</li>
-                  <li class="pink" tabindex="0">SCSS</li>
-                  <li class="blue" tabindex="0">CSS</li>
-                  <li class="yellow" tabindex="0">JS</li>
+                <ul class="tabList" role="tablist">
+                  <li class="active orange">
+                    <a href="javascript:void(0)" role="tab">HTML</a>
+                  </li>
+                  <li class="pink">
+                    <a href="javascript:void(0)" role="tab">SCSS</a>
+                  </li>
+                  <li class="blue">
+                    <a href="javascript:void(0)" role="tab">CSS</a>
+                  </li>
+                  <li class="yellow">
+                    <a href="javascript:void(0)" role="tab">JS</a>
+                  </li>
                 </ul>
               </div>
 
@@ -588,7 +592,7 @@ $(function() {
       <div class="btnArea">
         <button type="button" class="frameClose">
           <svg viewBox="0 0 16 16">
-            <path id="icon"
+            <path
               d="M5.707,7.121,1.414,11.414,0,10,4.293,5.707,0,1.414,1.414,0,5.707,4.293,10,0l1.414,1.414L7.121,5.707,11.414,10,10,11.414,5.707,7.121Z"
               transform="translate(2.293 2.293)"></path>
           </svg>
@@ -622,7 +626,7 @@ $(function() {
       </div>
     </div>
   </div>
-  <div id="dimmed"></div>
+  <div class="dimmed"></div>
 
     <div class="popup mobileResult">
       <div class="cont">
@@ -648,7 +652,7 @@ $(function() {
         </div>
       </div>
     </div>
-    <div id="dimmed"></div>
+    <div class="dimmed"></div>
     <div class="topArea">
       <button type="button" class="backtoTop">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
@@ -662,6 +666,7 @@ $(function() {
   <script>
     fouc(document.documentElement);
   </script>
+  <script src="../../js/darkmode.js"></script>
 </body>
 
 </html>

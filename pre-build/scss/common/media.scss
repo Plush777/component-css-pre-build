@@ -290,7 +290,7 @@
     }
 
     .headArea > .inner .utilArea li{
-        button,a{
+        button,a,div{
             &.btnMail{
                 &:hover{
                     .toolTip.mail{opacity: 1; visibility: visible;}

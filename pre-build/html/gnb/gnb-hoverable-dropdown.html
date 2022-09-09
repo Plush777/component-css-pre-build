@@ -116,11 +116,11 @@
               <li class="dep3Cont">
                 <a href="#none" title="Flex Layout">Flex Layout
                   <svg width="18" height="18" viewBox="0 0 18 18" class="unfold">
-                    <path id="ios-plus-empty" d="M27,18.633H18.563V27H17.368V18.633H9V17.438h8.367V9h1.195v8.438H27Z"
+                    <path d="M27,18.633H18.563V27H17.368V18.633H9V17.438h8.367V9h1.195v8.438H27Z"
                       transform="translate(-9 -9)"></path>
                   </svg>
                   <svg width="16" height="1" viewBox="0 0 16 1" class="fold">
-                    <rect id="사각형_14" data-name="사각형 14" width="16" height="1"></rect>
+                    <rect data-name="사각형 14" width="16" height="1"></rect>
                   </svg>
                 </a>
                 <ul class="dep3">
@@ -264,11 +264,11 @@
               <li class="dep3Cont">
                 <a href="#none" title="Animation element">Animation element
                   <svg width="18" height="18" viewBox="0 0 18 18" class="unfold">
-                    <path id="ios-plus-empty" d="M27,18.633H18.563V27H17.368V18.633H9V17.438h8.367V9h1.195v8.438H27Z"
+                    <path d="M27,18.633H18.563V27H17.368V18.633H9V17.438h8.367V9h1.195v8.438H27Z"
                       transform="translate(-9 -9)" />
                   </svg>
                   <svg width="16" height="1" viewBox="0 0 16 1" class="fold">
-                    <rect id="사각형_14" data-name="사각형 14" width="16" height="1" />
+                    <rect  data-name="사각형 14" width="16" height="1" />
                   </svg>
                 </a>
                 <ul class="dep3">
@@ -311,11 +311,19 @@
             </div>
             <div class="tabWrap type01">
               <div class="tabNav">
-                <ul class="tabList">
-                  <li class="active orange" tabindex="0">HTML</li>
-                  <li class="pink" tabindex="0">SCSS</li>
-                  <li class="blue" tabindex="0">CSS</li>
-                  <li class="yellow" tabindex="0">JS</li>
+                <ul class="tabList" role="tablist">
+                  <li class="active orange">
+                    <a href="javascript:void(0)" role="tab">HTML</a>
+                  </li>
+                  <li class="pink">
+                    <a href="javascript:void(0)" role="tab">SCSS</a>
+                  </li>
+                  <li class="blue">
+                    <a href="javascript:void(0)" role="tab">CSS</a>
+                  </li>
+                  <li class="yellow">
+                    <a href="javascript:void(0)" role="tab">JS</a>
+                  </li>
                 </ul>
               </div>
 
@@ -547,7 +555,7 @@ $(function(){
       <div class="btnArea">
         <button type="button" class="frameClose">
           <svg viewBox="0 0 16 16">
-            <path id="icon"
+            <path
               d="M5.707,7.121,1.414,11.414,0,10,4.293,5.707,0,1.414,1.414,0,5.707,4.293,10,0l1.414,1.414L7.121,5.707,11.414,10,10,11.414,5.707,7.121Z"
               transform="translate(2.293 2.293)"></path>
           </svg>
@@ -674,7 +682,7 @@ $(function(){
         </div>
       </div>
     </div>
-    <div id="dimmed"></div>
+    <div class="dimmed"></div>
 
     <div class="topArea">
       <button type="button" class="backtoTop">

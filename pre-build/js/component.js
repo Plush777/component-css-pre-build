@@ -1,7 +1,7 @@
 $(function () {
     const frameBody = $('#frameBody');
     const documentBody = $('body');
-    const dimmed = $('#dimmed');
+    const dimmed = $('.dimmed');
     const mobilePopupResult = $('.popup.mobileResult');
     const btnBack = $('.btnBack');
     const toast = $('#toast');
@@ -18,12 +18,12 @@ $(function () {
                 const cook = $.cookie('mobileResultPopup');
                 if (cook == "ok") {
                     mobilePopupResult.hide();
-                    dimmed.hide();
+                    mobilePopupResult.next(dimmed).hide();
                     frameBody.addClass('show');
                     frameBody.removeClass('hide');
                 } else {
                     mobilePopupResult.show();
-                    dimmed.show();
+                    mobilePopupResult.next(dimmed).show();
                 }
             }
         });
@@ -33,7 +33,7 @@ $(function () {
         "click": function () {
             frameBody.addClass('show');
             mobilePopupResult.hide();
-            dimmed.hide();
+            mobilePopupResult.next(dimmed).hide();
             if (frameBody.hasClass('hide')) {
                 frameBody.removeClass('hide');
             }
@@ -43,7 +43,7 @@ $(function () {
     $('.btnCancel').on({
         "click": function () {
             mobilePopupResult.hide();
-            dimmed.hide();
+            mobilePopupResult.next(dimmed).hide();
         }
     });
 
@@ -53,7 +53,7 @@ $(function () {
                 $.cookie('mobileResultPopup', 'ok', { expires: 1, path: '/' });
             }
             mobilePopupResult.hide();
-            dimmed.hide();
+            mobilePopupResult.next(dimmed).hide();
             frameBody.addClass('show');
         }
     });
@@ -72,7 +72,7 @@ $(function () {
         documentBody.addClass('mobileType');
     } else {
         documentBody.removeClass('mobileType');
-    } 
+    }
 
     if (window.matchMedia("screen and (max-width: 600px)").matches) {
         $('.moreArea').on({
@@ -94,7 +94,7 @@ $(function () {
 
     $('.btnShare').on({
         "click": function () {
-            dimmed.fadeIn();
+            $('.popup.share').next(dimmed).fadeIn();
             $('.popup.share').fadeIn();
             popupEscEvent();
         }
@@ -149,7 +149,7 @@ $(function () {
         }
     });
 
-    $('.utilArea li .btnMore .moreSubMenu').each(function (index) {
+    $('.utilArea li .btnMore .moreSubMenu').each(function () {
         if (!$(this).hasClass('active')) {
             $(this).attr('aria-expanded', 'false');
         }
@@ -198,6 +198,8 @@ $(function () {
         }
     });
 
+    $('.tabCont').attr('role', 'tabpanel');
+
     /* lnb 슬라이드토글 */
     $('.leftArea .leftMenu > li').on({
         "click": function () {
@@ -226,6 +228,28 @@ $(function () {
             $(this).siblings('.dep3Cont').find('.dep3').removeClass('block').css('display', 'none');
         }
     });
+
+    $('.leftArea .leftMenu > li span > a').attr({
+        'role': 'button',
+        'aria-controls': 'leftSubMenu',
+    });
+
+    $('.leftArea .leftMenu > li span > a').each(function () {
+        if ($(this).closest('li').hasClass('active')) {
+            $(this).attr('aria-expanded', 'true');
+        } else {
+            $(this).attr('aria-expanded', 'false');
+        }
+    });
+
+    $('.leftArea .leftMenu > li .leftSubMenu').attr('role', 'region');
+
+    $('.leftArea .leftMenu > li span > a').on({
+        "click": function () {
+            $(this).attr('aria-expanded', 'true').closest('li').siblings('li').find('a').attr('aria-expanded', 'false');
+        }
+    });
+
 
     let urlState = window.location.pathname;
     let urlArr = urlState.split('/');
@@ -339,7 +363,7 @@ $(function () {
     function popupEscEvent() {
         $(document).on('keyup', function (e) {
             if (e.keyCode == 27) {
-                $('.popup.share,#dimmed').fadeOut();
+                $('.popup.share,.dimmed').fadeOut();
                 // console.log('esc가 감지되어 공유하기 팝업을 닫습니다.');
             }
         });
@@ -366,10 +390,10 @@ function prevent(e) {
 // });
 
 // 우클릭 방지
-$(document).on("contextmenu", function (e) {        
-    e.preventDefault();
-    alert("우클릭은 금지되었습니다.");
-});
+// $(document).on("contextmenu", function (e) {
+//     e.preventDefault();
+//     alert("우클릭은 금지되었습니다.");
+// });
 
 document.addEventListener('DOMContentLoaded', () => {
     const el = document.documentElement;
@@ -401,22 +425,22 @@ document.addEventListener('DOMContentLoaded', () => {
     gnbList.addClass('twoLine');
     if (window.matchMedia("screen and (max-width: 1280px)").matches) {
         gnbList.removeClass('twoLine');
-    } 
+    }
 
-    $('.btnBack').attr('title','홈으로 이동');
-    
+    $('.btnBack').attr('title', '홈으로 이동');
+
     /*사용자가 다크모드인지 라이트모드인지 모르기때문에
     each문이랑 클릭 이벤트를 동일하게 해줌*/
 
     const $btnDk = $('.btnDarkMode');
-    
+
     $btnDk.each(function () {
-        if(localStorage.getItem('theme') === 'dark'){
+        if (localStorage.getItem('theme') === 'dark') {
             $(this).attr('aria-pressed', 'true');
             $(this).find('.hidden').text('라이트모드 전환');
             $(this).find('.toolTip').addClass('lgt');
             $(this).find('.toolTip').children('span').text('라이트모드 전환');
-        } else if($(localStorage.getItem('theme') === 'light')) {
+        } else if ($(localStorage.getItem('theme') === 'light')) {
             $(this).attr('aria-pressed', 'false');
             $(this).find('.hidden').text('다크모드 전환');
             $(this).find('.toolTip').addClass('dk');
@@ -426,13 +450,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     $btnDk.on({
         'click': function () {
-            if(localStorage.getItem('theme') === 'dark'){
+            if (localStorage.getItem('theme') === 'dark') {
                 $(this).attr('aria-pressed', 'true');
                 $(this).find('.hidden').text('라이트모드 전환');
                 $(this).find('.toolTip').removeClass('dk');
                 $(this).find('.toolTip').addClass('lgt');
                 $(this).find('.toolTip').children('span').text('라이트모드 전환');
-            } else if($(localStorage.getItem('theme') === 'light')) {
+            } else if ($(localStorage.getItem('theme') === 'light')) {
                 $(this).attr('aria-pressed', 'false');
                 $(this).find('.hidden').text('다크모드 전환');
                 $(this).find('.toolTip').removeClass('lgt');
@@ -441,4 +465,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     });
+
+    //svg path id 제거
 });

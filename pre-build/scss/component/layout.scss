@@ -73,8 +73,8 @@
         #floatingMenu{position: fixed; right: 40px; bottom: 20px;
           .menuArea{
             .btnMenuList{display: flex; align-items: center; justify-content: center; width: 56px; height: 56px; border-radius: 50px; 
-            box-shadow: 0px 0px 8px 4px rgba($color: $blackBg, $alpha: 0.25); background-color: $c333;
-              >svg{width: 26px; height: 26px;}
+            box-shadow: 0px 0px 8px 4px rgba($color: $blackBg, $alpha: 0.25); background-color: $c333; cursor: pointer;
+              >svg{width: 26px; height: 26px; fill: #fff;}
               &:hover ul.menuList{
                 li{visibility: visible; transform: translateY(0) scale(1);}
               }
@@ -83,7 +83,7 @@
               li{visibility: hidden; transform: translateY(0) scale(0); transition: .5s; transition-delay: 0.03s;
               width: 56px; height: 56px; border-radius: 50px; box-shadow: 0px 0px 8px 4px rgba($color: $blackBg, $alpha: 0.25); background-color: $c333;
                 a{display: flex; align-items: center; justify-content: center; width: inherit; height: inherit;
-                  svg{
+                  svg{fill: #fff;
                     &.github{width: 38px; height: 38px;}
                     &.bookmark{width: 34px; height: 34px;}
                     &.download{width: 32px; height: 32px;}
@@ -190,13 +190,15 @@
     .tabCont{display: none;
       &.active{display: block;}
     }
-    .tabNav .tabList{display: flex;}
+    .tabNav .tabList{display: flex;
+      li a{width: 100%; display: flex; justify-content: center;}
+    }
   
     &.type01{margin-bottom: 30px;
       >.tabNav{margin-bottom: 15px;
         >.tabList{border-bottom: 2px solid var(--d-bdc); border-radius: 4px;
           >li{position: relative; flex: 1; height: 35px; line-height: 35px;font-size: 1.13em;
-          cursor: pointer; text-align: center; color: var(--black-white); font-family: $d-fz;
+          text-align: center; color: var(--black-white); font-family: $d-fz;
             &.orange.active:before{background-color: #ed5e26;}
             &.pink.active:before{background-color: #cf649a;}
             &.blue.active:before{background-color: #2693cc;}

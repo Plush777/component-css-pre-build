@@ -116,11 +116,11 @@
               <li class="dep3Cont">
                 <a href="#none" title="Flex Layout">Flex Layout
                   <svg width="18" height="18" viewBox="0 0 18 18" class="unfold">
-                    <path id="ios-plus-empty" d="M27,18.633H18.563V27H17.368V18.633H9V17.438h8.367V9h1.195v8.438H27Z"
+                    <path d="M27,18.633H18.563V27H17.368V18.633H9V17.438h8.367V9h1.195v8.438H27Z"
                       transform="translate(-9 -9)"></path>
                   </svg>
                   <svg width="16" height="1" viewBox="0 0 16 1" class="fold">
-                    <rect id="사각형_14" data-name="사각형 14" width="16" height="1"></rect>
+                    <rect data-name="사각형 14" width="16" height="1"></rect>
                   </svg>
                 </a>
                 <ul class="dep3">
@@ -264,11 +264,11 @@
               <li class="dep3Cont">
                 <a href="#none" title="Animation element">Animation element
                   <svg width="18" height="18" viewBox="0 0 18 18" class="unfold">
-                    <path id="ios-plus-empty" d="M27,18.633H18.563V27H17.368V18.633H9V17.438h8.367V9h1.195v8.438H27Z"
+                    <path d="M27,18.633H18.563V27H17.368V18.633H9V17.438h8.367V9h1.195v8.438H27Z"
                       transform="translate(-9 -9)" />
                   </svg>
                   <svg width="16" height="1" viewBox="0 0 16 1" class="fold">
-                    <rect id="사각형_14" data-name="사각형 14" width="16" height="1" />
+                    <rect data-name="사각형 14" width="16" height="1" />
                   </svg>
                 </a>
                 <ul class="dep3">
@@ -316,10 +316,16 @@
 
             <div class="tabWrap type01">
               <div class="tabNav">
-                <ul class="tabList">
-                  <li class="active orange" tabindex="0">HTML</li>
-                  <li class="pink" tabindex="0">SCSS</li>
-                  <li class="blue" tabindex="0">CSS</li>
+                <ul class="tabList" role="tablist">
+                  <li class="active orange">
+                    <a href="javascript:void(0)" role="tab">HTML</a>
+                  </li>
+                  <li class="pink">
+                    <a href="javascript:void(0)" role="tab">SCSS</a>
+                  </li>
+                  <li class="blue">
+                    <a href="javascript:void(0)" role="tab">CSS</a>
+                  </li>
                 </ul>
               </div>
 
@@ -389,13 +395,13 @@
   &lt;/div&gt;
 
   &lt;div class="textBox"&gt;
-      &lt;label for="input13"&gt;라벨&lt;/label&gt;
-      &lt;input type="hidden" id="input13"&gt;
+      &lt;label&gt;라벨&lt;/label&gt;
+      &lt;input type="hidden"&gt;
   &lt;/div&gt;
 
   &lt;div class="textBox"&gt;
       &lt;label for="input14"&gt;라벨&lt;/label&gt;
-      &lt;input type="image" id="input14"&gt;
+      &lt;input type="image" id="input14" alt="image"&gt;
   &lt;/div&gt;
 
   &lt;div class="textBox"&gt;
@@ -543,15 +549,15 @@ input {
                   <div class="titleH3">
                     <h3>type : hidden</h3>
                   </div>
-                  <label for="input13">라벨</label>
-                  <input type="hidden" id="input13">
+                  <label>라벨</label>
+                  <input type="hidden">
                 </div>
                 <div class="textBox">
                   <div class="titleH3">
                     <h3>type : image</h3>
                   </div>
                   <label for="input14">라벨</label>
-                  <input type="image" id="input14">
+                  <input type="image" id="input14" alt="image">
                 </div>
                 <div class="textBox">
                   <div class="titleH3">

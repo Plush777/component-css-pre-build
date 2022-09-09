@@ -44,16 +44,16 @@
             }
         }
         &.active{right: 0;}
-        ~#dimmed{display: block; z-index: 100; backdrop-filter: initial;}
+        ~.dimmed{display: block; z-index: 100; backdrop-filter: initial;}
     }
 
     #visualArea{width: 100%; height: 400px; background-color: #292A2D; background-image: url("../../images/common/img-dummy01.png"); background-repeat: no-repeat;
     background-position: center; background-attachment: fixed; background-size: cover;
         >.inner{display: flex; align-items: center; justify-content: center; height: 100%; text-align: center;
             .centerTxt{display: flex; flex-direction: column;
-                h1 p{font-size: 32px; font-family: 'lv1Gothic'; color: $cfff;
+                h1 span{display: block; font-size: 32px; font-family: 'lv1Gothic'; color: $cfff;
                     em{font-family: 'lv1GothicBold'; font-style: normal; color: #4FC5F5;}
-                    +p{margin-top: 8px;}
+                    +span{margin-top: 8px;}
                 }
                 .btnStarted{width: 130px; height: 45px; margin-top: 40px; color: $c000; font-family: 'lv1Gothic'; 
                 border-radius: 35px; font-size: 18px; background-color: #fff; transition: .5s;
@@ -153,7 +153,7 @@
         }
         #visualArea>.inner{
             .centerTxt{
-                h1 p{font-size: 28px;}
+                h1 span{font-size: 28px;}
                 .btnStarted{width: 110px; height: 40px; font-size: 0.875em;
                     svg{width: 10px; height: 10px;}
                 }
@@ -194,7 +194,7 @@
     .web{display: none !important;}
     #wrap.main{
         #visualArea>.inner{padding: 0 20px;
-            .centerTxt h1 p{font-size: 1.5em;}
+            .centerTxt h1 span{font-size: 1.5em;}
         }
         .mainContainer{
             .section{

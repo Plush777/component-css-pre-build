@@ -281,24 +281,6 @@ svg{fill: currentColor;
 #wrap{width: 100%; height: 100%;
   &.scrollHidden{overflow: hidden;}
   .mainTxt{color: var(--d-c-text);}
-  // &.main{position: relative; transition: .5s; background-color: #4e4e4e;
-  //   .logo a{display: block; width: 800px; height: 136px; transition: .5s ease-in-out;
-  //   background: url("../../images/common/main-logo-g.png") no-repeat center;
-  //     &.change{background: url("../../images/common/main-logo-w.png") no-repeat center;}
-  //   } 
-  //   .centerArea{position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); text-align: center;}
-  //   .btnStart{position: relative; display: inline-block; width: 170px; height: 56px; box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
-  //   background-color: rgba($color: $whiteBg, $alpha: 0.5); transform: perspective(1px) translateZ(0); 
-  //     span{position: relative; font-size: 1.38em; font-family: $d-fz; transition: .3s;
-  //     color: $cfff; letter-spacing: 6.6px;
-  //       &:after{content: ''; position: absolute; top: 6px; right: -30px; min-width: 20px; height: 20px; transition: .3s;}
-  //     }
-  //     &:before{content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: -1;
-  //     transform: scaleX(0); transform-origin: 0 50%;  transition-duration: 0.3s; transition-property: transform; 
-  //     transition-timing-function: ease-out; background: $whiteBg;}
-  //   }
-  //   &.blue{background: #1694d2; transition: .5s ease-in-out;}
-  // }
 
   /* update page */
   &.update{
@@ -370,8 +352,9 @@ overflow-y: auto; background-color: var(--d-bg-left-menu); z-index: 1100;
       >span{display: block;
         a{display: block; /*align-items: center; justify-content: space-between;*/ position: relative; padding: 16px 0; 
         text-indent: 28px;border-bottom: 1px solid var(--d-bdc); text-overflow: ellipsis; overflow: hidden;
-        white-space: nowrap; font-family: $d-fz; font-size: 1.38em; color: var(--c-333-white); transition: .5s;
+        white-space: nowrap; font-family: $d-fz; font-size: 1.38em; color: var(--c-333-white); transition: .5s color;
             svg{position: absolute; top: 27px; right: 0; width: 30px; height: 18px; margin-right: 17px; transition: .5s;}
+            &:focus{outline-offset: -5px;}
         }
       }
       &.active{
@@ -463,7 +446,7 @@ overflow-y: auto; background-color: var(--d-bg-left-menu); z-index: 1100;
         }
         &:before{content: ''; opacity: 0; visibility: hidden; position: absolute; left: 50%; transform: translateX(-50%); top: -5px; z-index: -1;
         width: 40px; height: 40px; border-radius: 50px; transition: .5s ease-in-out; background-color: var(--d-bg-hv-util-area-circle);}
-        button,a{display: block; color: var(--black-white);
+        button,a,div{display: block; color: var(--black-white); cursor: pointer;
           &:where(.btnMail,.btnShare,.btnMore){
             >svg{width: $util-svg-size; height: $util-svg-size;}
           }
@@ -629,7 +612,7 @@ font-size: 14px; color: $cfff;
   &.mob{display: none;}
 }
 
-#dimmed{display: none; position: fixed; z-index: 9998; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0, 0, 0,0.6); backdrop-filter: blur(2.5px);}
+#dimmed,.dimmed{display: none; position: fixed; z-index: 9998; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0, 0, 0,0.6); backdrop-filter: blur(2.5px);}
 
 code[class*=language-], pre[class*=language-] pre{white-space: pre-wrap !important; padding: 16px !important; font-size: 1em !important;
 word-break: break-all !important;}
